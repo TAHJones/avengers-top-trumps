@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Avengers top trumps game. Single page web app built using Marvel API">
+  <meta name="author" content="Thomas Jones">
+  <title>Jasmine Testing</title>
+
+  <!--load stylesheets-->
+  <link rel="stylesheet" href="assets/css/grid.css" type="text/css" />
+  <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
+
+  <!--load jasmine framework-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/jasmine.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/jasmine-html.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/boot.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/jasmine.css" />
+
+  <!--load scripts-->
+  <script type="text/javascript" src="assets/data/characters.js"></script>
+  <script type="text/javascript" src="assets/jasmine/mock-ajax/mock-ajax.js"></script>
+  <script type="text/javascript" src="assets/jasmine/src/jasmineSrc.js"></script>
+
+  <!--load tests-->
+  <script type="text/javascript" src="assets/jasmine/spec/jasmineSpec.js"></script>
+</head>
+
+<body>
+
+<!--targeted by getHeroCatergoryScore function-->
+<div id="jasmineHeroInfo"><h2>Dr Strange</h2>
+  <ul id="drstrange" class="hero-list">
+    <li><a class="hero-list-inactive">Agility: 5</a></li>
+    <li><a class="hero-list-inactive">Intelligence: 10</a></li>
+    <li><a class="selected-catergory">Magic: 10</a></li>
+    <li><a class="hero-list-inactive">Strength: 4</a></li>
+    <li><a class="hero-list-inactive">Speed: 4</a></li>
+    <li><a class="hero-list-inactive">Technology: 1</a></li>
+  </ul>
+</div>
+
+<!--targeted by getVillainCatergoryScore function-->
+<div id="jasmineVillainInfo"><h2>Ultron</h2>
+  <ul id="ultron" class="villain-list">
+    <li><a class="villain-list-inactive">Agility: 8</a></li>
+    <li><a class="villain-list-inactive">Intelligence: 9</a></li>
+    <li><a class="villain-list-inactive">Magic: 1</a></li>
+    <li><a class="villain-list-inactive">Strength: 9</a></li>
+    <li><a class="villain-list-inactive">Speed: 9</a></li>
+    <li><a class="villain-list-inactive">Technology: 9</a></li>
+  </ul>
+</div>
+
+<!--targeted by getHeroCatergoryScore function-->
+<div id="jasmineHeroInfo"><h2>Ironman</h2>
+  <ul id="ironman" class="hero-list">
+    <li><a class="hero-list-inactive">Agility: 7</a></li>
+    <li><a class="hero-list-inactive">Intelligence: 10</a></li>
+    <li><a class="hero-list-inactive">Magic: 1</a></li>
+    <li><a class="hero-list-inactive">Strength: 9</a></li>
+    <li><a class="hero-list-inactive">Speed: 9</a></li>
+    <li><a class="selected-catergory">Technology: 10</a></li>
+  </ul>
+</div>
+
+<!--targeted by getVillainCatergoryScore function-->
+<div id="jasmineVillainInfo"><h2>Ebony Maw</h2>
+  <ul id="ebonymaw" class="villain-list">
+    <li><a class="villain-list-inactive">Agility: 4</a></li>
+    <li><a class="villain-list-inactive">Intelligence: 9</a></li>
+    <li><a class="villain-list-inactive">Magic: 10</a></li>
+    <li><a class="villain-list-inactive">Strength: 2</a></li>
+    <li><a class="villain-list-inactive">Speed: 2</a></li>
+    <li><a class="villain-list-inactive">Technology: 8</a></li>
+  </ul>
+</div>
+
+<!--targeted by getHeroCatergoryScore function-->
+<div id="jasmineHeroInfo"><h2>Hulk</h2>
+  <ul id="hulk" class="hero-list">
+    <li><a class="hero-list-inactive">Agility: 4</a></li>
+    <li><a class="selected-catergory">Intelligence: 2</a></li>
+    <li><a class="hero-list-inactive">Magic: 1</a></li>
+    <li><a class="hero-list-inactive">Strength: 10</a></li>
+    <li><a class="hero-list-inactive">Speed: 8</a></li>
+    <li><a class="hero-list-inactive">Technology: 1</a></li>
+  </ul>
+</div>
+
+<!--targeted by getVillainCatergoryScore function-->
+<div id="jasmineVillainInfo"><h2>Mandarin</h2>
+  <ul id="mandarin" class="villain-list">
+    <li><a class="villain-list-inactive">Agility: 7</a></li>
+    <li><a class="villain-list-inactive">Intelligence: 8</a></li>
+    <li><a class="villain-list-inactive">Magic: 1</a></li>
+    <li><a class="villain-list-inactive">Strength: 8</a></li>
+    <li><a class="villain-list-inactive">Speed: 7</a></li>
+    <li><a class="villain-list-inactive">Technology: 7</a></li>
+  </ul>
+</div>
+
+<!--targeted by getHeroCatergoryScore function-->
+<div id="jasmineHeroInfo"><h2>Captain Marvel</h2>
+  <ul id="captainmarvel" class="hero-list">
+    <li><a class="selected-catergory">Agility: 7</a></li>
+    <li><a class="hero-list-inactive">Intelligence: 5</a></li>
+    <li><a class="hero-list-inactive">Magic: 8</a></li>
+    <li><a class="hero-list-inactive">Strength: 9</a></li>
+    <li><a class="hero-list-inactive">Speed: 10</a></li>
+    <li><a class="hero-list-inactive">Technology: 8</a></li>
+  </ul>
+</div>
+
+<!--targeted by getVillainCatergoryScore function-->
+<div id="jasmineVillainInfo"><h2>Loki</h2>
+  <ul id="loki" class="villain-list">
+    <li><a class="villain-list-inactive">Agility: 8</a></li>
+    <li><a class="villain-list-inactive">Intelligence: 10</a></li>
+    <li><a class="villain-list-inactive">Magic: 9</a></li>
+    <li><a class="villain-list-inactive">Strength: 7</a></li>
+    <li><a class="villain-list-inactive">Speed: 7</a></li>
+    <li><a class="villain-list-inactive">Technology: 9</a></li>
+  </ul>
+</div>
+
+<!--targeted by getHeroCatergoryScore function-->
+<div id="jasmineHeroInfo"><h2>Hawkeye</h2>
+  <ul id="hawkeye" class="hero-list">
+    <li><a class="hero-list-inactive">Agility: 8</a></li>
+    <li><a class="hero-list-inactive">Intelligence: 7</a></li>
+    <li><a class="selected-catergory">Magic: 1</a></li>
+    <li><a class="hero-list-inactive">Strength: 6</a></li>
+    <li><a class="hero-list-inactive">Speed: 8</a></li>
+    <li><a class="hero-list-inactive">Technology: 4</a></li>
+  </ul>
+</div>
+
+<!--targeted by getVillainCatergoryScore function-->
+<div id="jasmineVillainInfo"><h2>Thanos</h2>
+  <ul id="thanos" class="villain-list">
+    <li><a class="villain-list-inactive">Agility: 9</a></li>
+    <li><a class="villain-list-inactive">Intelligence: 10</a></li>
+    <li><a class="villain-list-inactive">Magic: 1</a></li>
+    <li><a class="villain-list-inactive">Strength: 10</a></li>
+    <li><a class="villain-list-inactive">Speed: 9</a></li>
+    <li><a class="villain-list-inactive">Technology: 10</a></li>
+  </ul>
+</div>
+
+<!--targeted by getHeroCatergoryScore function-->
+<div id="jasmineHeroInfo"><h2>Antman</h2>
+  <ul id="antman" class="hero-list">
+    <li><a class="hero-list-inactive">Agility: 10</a></li>
+    <li><a class="hero-list-inactive">Intelligence: 6</a></li>
+    <li><a class="hero-list-inactive">Magic: 1</a></li>
+    <li><a class="hero-list-inactive">Strength: 8</a></li>
+    <li><a class="selected-catergory">Speed: 6</a></li>
+    <li><a class="hero-list-inactive">Technology: 9</a></li>
+  </ul>
+</div>
+
+<!--targeted by getVillainCatergoryScore function-->
+<div id="jasmineVillainInfo"><h2>Magneto</h2>
+  <ul id="magneto" class="villain-list">
+    <li><a class="villain-list-inactive">Agility: 7</a></li>
+    <li><a class="villain-list-inactive">Intelligence: 8</a></li>
+    <li><a class="villain-list-inactive">Magic: 9</a></li>
+    <li><a class="villain-list-inactive">Strength: 6</a></li>
+    <li><a class="villain-list-inactive">Speed: 6</a></li>
+    <li><a class="villain-list-inactive">Technology: 9</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
