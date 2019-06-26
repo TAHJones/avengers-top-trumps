@@ -230,7 +230,7 @@ var dots = document.getElementsByClassName("dot"); // target all elements with '
 var hideDots = document.getElementById("dotSelector");
 
 // get index number of clicked 'dot' div and send to showSuperhero function
-(function currentSlide(n) {
+/*(function currentSlide(n) {
   for(var i=0; i < n.length; i++) {
     n[i].index = i; // use loop counter to set the index number for each div element
     n[i].addEventListener('click', function(e) { // add 'click' event listerner to div elements
@@ -238,7 +238,19 @@ var hideDots = document.getElementById("dotSelector");
       showSuperhero(slideIndex = dotIndex); // send clicked dot index number to showSuperhero function
     }, false);
   }
-})(dots); // run currentSlide IIFE function as with collection of 'dot' divs
+})(dots);*/ // run currentSlide IIFE function as with collection of 'dot' divs
+
+function currentSlide(n) {
+  for(var i=0; i < n.length; i++) {
+    n[i].index = i; // use loop counter to set the index number for each div element
+    n[i].addEventListener('click', function(e) { // add 'click' event listerner to div elements
+      var dotIndex = e.target.index + 1; // get index number of clicked dot & change index base number to 1 to match  slideIndex number
+      showSuperhero(slideIndex = dotIndex); // send clicked dot index number to showSuperhero function
+    }, false);
+  }
+};
+
+currentSlide(dots);
 
 var heroName; // declare superheroName variable in global scope so it can be used by multiple functions
 var superheroName; // declare superheroName variable in global scope so it can be used by multiple functions
@@ -256,6 +268,8 @@ function showSuperhero(n) {
 
     var heroImg = document.getElementById('heroImg');
     var heroInfo = document.getElementById('heroInfo');
+    var dotSelector = document.getElementById("dotSelector"); // get dot selector with active class added so can be reinseted as dynamic content
+    console.log(typeof(dotSelector));
     // use slideIndex number -1 as index no. of return array from getSuperheroList function to select individual superhero property name
     superheroName = getSuperheroList()[slideIndex-1];
 
@@ -276,7 +290,7 @@ function showSuperhero(n) {
                         <div id="infoOverlayId" class="info-overlay">
                           <button id="infoOverlayButton" class="info-overlay-text">More Info</button>
                         </div>`;
-
+    heroImg.appendChild(dotSelector); // append dotselector with selected hero to heroimg element
     var marvelDataBg = document.getElementById("marvelDataBg");
     var infoOverlayButton = document.getElementById("infoOverlayButton"); // add event listener to infoOverlayButton to reveal marvelData modal
     infoOverlayButton.addEventListener("click", function(){
@@ -305,8 +319,8 @@ function showSuperhero(n) {
     var heroInfoLink = document.getElementById("heroList");
     var heroInfoList = document.querySelectorAll(".hero-list a");
     var selectHeroButton = document.getElementById('selectHeroButton');
-    var villainColumn = document.getElementById("villainColumn");
-    var heroColumn = document.getElementById("heroColumn");
+    // var villainColumn = document.getElementById("villainColumn");
+    // var heroColumn = document.getElementById("heroColumn");
 
     // each time a new hero is selected reset css styles to inactive if set to active
     if(selectHeroButton.className === "select-hero select-hero-active"){
@@ -344,9 +358,9 @@ function showSuperhero(n) {
         var infoOverlayId = document.getElementById("infoOverlayId");
         var infoOverlayParent = infoOverlayId.parentNode;
         infoOverlayParent.removeChild(infoOverlayId); // remove info overlay when hero is selected
-        villainColumn.classList.remove("villain-column-hidden"); // remove class that hides villain before hero is selected on small screen
-        villainColumn.classList.add("villain-column-visible"); // make hidden villain visible when hero is selected on small screen
-        heroColumn.classList.add("hero-column-hidden"); // remove hero name when villain name is visible
+        // villainColumn.classList.remove("villain-column-hidden"); // remove class that hides villain before hero is selected on small screen
+        // villainColumn.classList.add("villain-column-visible"); // make hidden villain visible when hero is selected on small screen
+        // heroColumn.classList.add("hero-column-hidden"); // remove hero name when villain name is visible
       }
     }, false);
 }
@@ -395,15 +409,15 @@ function showSupervillain() {
     selectVillainButton.className = "select-villain select-villain-selected";
     villainImg.firstElementChild.style.border = "4px solid #FFA94A";
 
-    var villainColumn = document.getElementById("villainColumn");
-    var heroColumn = document.getElementById("heroColumn");
-    setTimeout(function(){
+    // var villainColumn = document.getElementById("villainColumn");
+    // var heroColumn = document.getElementById("heroColumn");
+    /*setTimeout(function(){
       villainColumn.classList.remove("villain-column-visible"); // remove class that hides villain before hero is selected on small screen
       villainColumn.classList.add("villain-column-hidden"); // make hidden villain visible when hero is selected on small screen
       heroColumn.classList.remove("hero-column-hidden"); // remove hero name when villain name is visible
       heroColumn.classList.add("hero-column-visible"); // remove hero name when villain name is visible
 
-    },2000);
+    },2000);*/
   }
 }
 
@@ -689,7 +703,72 @@ function resetGame(){
   }
     var heroImg = document.getElementById('heroImg');
     var heroInfo = document.getElementById('heroInfo');
-    heroImg.innerHTML = `<img src="assets/img/questionmarkorange.png">`; // reset image path back to red question mark image
+    heroImg.innerHTML = `<img src="assets/img/questionmarkorange.png">
+                        <!-- The dots/circles -->
+        								<div id="dotSelector" class="dot-selector">
+        									<div class="dot tooltip antman">
+        										<img class="tooltipimg" src="assets/img/antman.png">
+        										<span class="tooltiptext">Antman</span>
+        									</div>
+        									<div class="dot tooltip blackwidow">
+        										<img class="tooltipimg" src="assets/img/blackwidow.png">
+        										<span class="tooltiptext">Black Widow</span>
+        									</div>
+        									<div class="dot tooltip captainamerica">
+        										<img class="tooltipimg" src="assets/img/captainamerica.png">
+        										<span class="tooltiptext">Captain America</span>
+        									</div>
+        									<div class="dot tooltip captainmarvel">
+        										<img class="tooltipimg" src="assets/img/captainmarvel.png">
+        										<span class="tooltiptext">Captain Marvel</span>
+        									</div>
+        									<div class="dot tooltip deadpool">
+        										<img class="tooltipimg" src="assets/img/deadpool.png">
+        										<span class="tooltiptext">Deadpool</span>
+        									</div>
+        									<div class="dot tooltip drstrange">
+        										<img class="tooltipimg" src="assets/img/drstrange.png">
+        										<span class="tooltiptext">Dr Strange</span>
+        									</div>
+        									<div class="dot tooltip falcon">
+        										<img class="tooltipimg" src="assets/img/falcon.png">
+        										<span class="tooltiptext">Falcon</span>
+        									</div>
+        									<div class="dot tooltip hawkeye">
+        										<img class="tooltipimg" src="assets/img/hawkeye.png">
+        										<span class="tooltiptext">Hawkeye</span>
+        									</div>
+        									<div class="dot tooltip hulk">
+        										<img class="tooltipimg" src="assets/img/hulk.png">
+        										<span class="tooltiptext">Hulk</span>
+        									</div>
+        									<div class="dot tooltip ironman">
+        										<img class="tooltipimg" src="assets/img/ironman.png">
+        										<span class="tooltiptext">Ironman</span>
+        									</div>
+        									<div class="dot tooltip scarletwitch">
+        										<img class="tooltipimg" src="assets/img/scarletwitch.png">
+        										<span class="tooltiptext">Scarlet Witch</span>
+        									</div>
+        									<div class="dot tooltip spiderman">
+        										<img class="tooltipimg" src="assets/img/spiderman.png">
+        										<span class="tooltiptext">Spiderman</span>
+        									</div>
+        									<div class="dot tooltip thor">
+        										<img class="tooltipimg" src="assets/img/thor.png">
+        										<span class="tooltiptext">Thor</span>
+        									</div>
+        									<div class="dot tooltip warmachine">
+        										<img class="tooltipimg" src="assets/img/warmachine.png">
+        										<span class="tooltiptext">War Machine</span>
+        									</div>
+        									<div class="dot tooltip vision">
+        										<img class="tooltipimg" src="assets/img/vision.png">
+        										<span class="tooltiptext">Vision</span>
+        									</div>
+        								</div>
+        								<!-- The dots/circles-end -->`; // reset image path back to question mark image
+        								
     heroInfo.innerHTML = `<h2>Superhero</h2>
                             <ul id="heroList" class="hero-list">
                               <li><a class="hero-list-inactive">Agility: ?</a></li>
@@ -703,8 +782,8 @@ function resetGame(){
     selectHeroButton.className = "select-hero select-hero-inactive";
     selectHeroButton.textContent = "Select Hero";
     selectHeroButton.style.border = "solid 4px #5C5787";
-    var activeDot= document.querySelector("div.active");
-    activeDot.classList.remove("active");
+    // var activeDot= document.querySelector("div.active");
+    // activeDot.classList.remove("active");
 
     hideDots.style.visibility = "visible";
     prevSlide.style.visibility = "visible";
@@ -733,6 +812,7 @@ function resetGame(){
         resultsModal.className = "results-modal";
       },2500); // delay rest of class names until fadeout effect is complete
     }
+    currentSlide(dots); // bind event listener to dot selector when reset happens
 } // resetGame function end
 
 var selectVillainButton = document.getElementById('selectVillainButton'); // target select villain button
@@ -755,10 +835,10 @@ resultsModal.addEventListener('click', function(e){
   }
 },false);
 
-var heroColumn = document.getElementById("heroColumn");
-var villainColumn = document.getElementById("villainColumn");
+// var heroColumn = document.getElementById("heroColumn");
+// var villainColumn = document.getElementById("villainColumn");
 
-function myFunction(x) {
+/*function myFunction(x) {
   if (x.matches) { // If media query matches x variable
     heroColumn.className = "hero-column";
     villainColumn.className = "villain-column";
@@ -766,11 +846,32 @@ function myFunction(x) {
     heroColumn.className = "col col-xs-4 col-xs-offset-1"
     villainColumn.className = "col col-xs-4";
   }
+}*/
+
+// var x = window.matchMedia("(max-width: 409px)")
+// myFunction(x) // Call listener function at run time
+// x.addListener(myFunction) // Attach listener function on state changes
+
+
+
+var pageBg = document.getElementById("pageBg");
+
+// console.log(pageBg);
+// console.log(pageBg.style.width);
+
+function getPageHeight(){
+  // var pageHeight;
+  var h = window.innerHeight;
+  var pageHeight = h.toString() + "px";
+  // console.log(pageHeight);
+  // console.log(typeof(h));
+  pageBg.style.height = pageHeight;
 }
-
-var x = window.matchMedia("(max-width: 409px)")
-myFunction(x) // Call listener function at run time
-x.addListener(myFunction) // Attach listener function on state changes
+  // console.log(pageBg.style.width);
 
 
-
+window.addEventListener("load", function() {
+  getPageHeight();
+  window.addEventListener("resize", getPageHeight); 
+  // console.log('All assets are loaded');
+});
