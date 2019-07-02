@@ -68,7 +68,7 @@ h1 {
 	}
 }
 
-@media (min-width: 768px) and (max-height: 749px){
+@media (min-width: 768px) and (min-height: 600px) and (max-height: 749px){
   h1 {
     font-size: 26px;
 		margin: 18px 0 16px;
@@ -82,18 +82,18 @@ h1 {
 	}	
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (min-height: 600px) {
   header {
     height: 14%;
   }
  
-/*  h1 {
+  h1 {
     font-size: 30px;
-		margin: 22px 0 20px;
-	}*/
+		margin: 20px 0 20px;
+	}
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (min-height: 730px) {
   header {
     height: 14%;
   }
@@ -254,7 +254,7 @@ li {
   }	
 }
 
-@media (min-width: 570px) and (max-height: 719px) {
+@media (min-width: 570px) and (min-height: 600px) and (max-height: 719px) {
   .score-counter {
   	top: 12px;
   }
@@ -284,7 +284,7 @@ li {
   }
 }*/
 
-@media (min-width: 768px) and (max-height: 749px){
+@media (min-width: 768px) and (min-height: 600px) and (max-height: 749px){
   .score-counter {
   	top: 13px;
   }
@@ -314,7 +314,7 @@ li {
   }*/
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (min-height: 730px) {
   .score-counter {
   	top: 15px;
   }
@@ -354,7 +354,6 @@ li {
 	transform: translate(-50%,-50%);
 	height: 85%;
 }
-
 
 #heroImg,
 #villainImg {
@@ -406,7 +405,6 @@ li {
   bottom: 0;
   left: 0%;
   right: 0%;
-
 }
 
 .info-overlay-text {
@@ -447,10 +445,10 @@ li {
 }
 
 @media (min-width: 520px) {
-  .hero-slider,
+  /*.hero-slider,
   .villain-slider {
     width: 40%;
-  }
+  }*/
 
 	#heroImg,
 	#villainImg {
@@ -466,6 +464,20 @@ li {
 }
 
 @media (min-width: 520px) and (max-height: 449px) {
+	.hero-slider,
+	.villain-slider {
+		border-style: none;
+		width: 38%;
+	}
+
+	.hero-slider {
+		left: 7.5%;
+	}
+
+	.villain-slider {
+		left: 54.5%;
+	}
+
   #heroImg > img,
   #villainImg > img,
   .overlay {
@@ -489,15 +501,7 @@ li {
   #heroImg > img,
   #villainImg > img,
   .overlay {
-    /*background-color: #000;*/
-    /*border: 4px solid #222;*/
-    /*border-radius: 6px;*/
-    /*display: block;*/
-    /*margin: 12px auto 16px;*/
-		/*position: absolute;*/
 		top: 19%;
-		/*left: 50%;*/
-		/*transform: translate(-50%,-50%);*/
     height: 150px;
     width: 150px;
   }
@@ -549,7 +553,7 @@ li {
   }
 }
 
-@media (min-width: 690px) {
+@media (min-height: 690px) {
 	.hero-slider,
 	.villain-slider {
 		width: 36%;
@@ -595,16 +599,7 @@ li {
 	} 
 }
 
-@media (min-width: 768px) and (max-height: 589px) {
-	#heroImg > img,
-  #villainImg > img,
-  .overlay {
-    height: 150px;
-    width: 150px;
-  }
-}
-
-@media (min-width: 768px) and (min-height: 590px) and (max-height: 749px) {
+@media (min-width: 768px) and (min-height: 600px) and (max-height: 749px) {
 	#heroImg > img,
   #villainImg > img,
   .overlay {
@@ -614,16 +609,9 @@ li {
 }
 
 @media (min-width: 768px) and (min-height: 750px) {
-  .image-slider {
-    /*height: 840px;*/
-  }
-
 	#heroImg,
 	#villainImg {
-		/*position: absolute;*/
 		top: 20%;
-		/*left: 50%;*/
-		/*transform: translate(-50%,-50%);*/
 	}
 
   #heroImg > img,
@@ -635,13 +623,19 @@ li {
 
 	.info-overlay-text {
 		font-size: 14px;
-		/* padding: 4px 9px; */
 		top: 84.5%;
 		width: 96%;
 	}
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px) and (max-height: 599px) {
+  .hero-slider,
+  .villain-slider {
+    width: 30%;
+  }
+}
+
+@media (min-width: 992px) and (min-height: 600px) {
   .hero-slider,
   .villain-slider {
     width: 30%;
@@ -655,7 +649,9 @@ li {
 	.villain-slider {
 	  left: 55%;
 	} 
+}
 
+@media (min-width: 992px) and (min-height: 760px) {
   .image-slider {
     /*height: 840px;*/
   }
@@ -681,7 +677,6 @@ li {
 
 #heroInfo h2,
 #villainInfo h2 {
-  /*margin-bottom: 15px;*/
   text-align: center;
   font-weight: bold;
   color: #EF9B3F;
@@ -788,7 +783,7 @@ li {
 }
 
 @media (min-width: 520px) and (max-height:449px) {
-	.hero-slider,
+	/*.hero-slider,
 	.villain-slider {
 		border-style: none;
 		width: 38%;
@@ -800,7 +795,7 @@ li {
 
 	.villain-slider {
 		left: 54.5%;
-	}
+	}*/
 
 	#heroInfo,
 	#villainInfo {
@@ -1036,17 +1031,11 @@ li {
   }
 }
 
-@media (min-width: 768px) and (max-height: 620px){
+@media (min-width: 768px) and (min-height: 600px) and (max-height: 620px){
 	#heroInfo,
 	#villainInfo {
 		top: 66%;
 	}
-
-	/*@media (min-width: 768px) and (min-height: 621px) and (max-height: 749px){
-  #heroInfo,
-  #villainInfo {
-    top: 62%;
-  }*/
 
   #heroInfo h2,
   #villainInfo h2 {
@@ -1169,7 +1158,7 @@ li {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (min-height: 760px) {
   #heroInfo,
   #villainInfo {
     top: 64%;
@@ -1312,15 +1301,15 @@ li {
 	.prev,
 	.next {
     font-size: 22px;
-		top: 10px;
+		top: 12px;
 	}
 
   .prev {
-    left: -95px;
+    left: -88px;
   }
   
   .next {
-    left: 70px;
+    left: 62px;
   }
 }
 
@@ -1340,7 +1329,7 @@ li {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (min-height: 760px){
 	.prev, .next {
 		top: 13px;
 	}
@@ -1502,11 +1491,11 @@ li {
 	}
 }
 
-@media (min-width: 768px) and (max-height: 749px){
+@media (min-width: 768px) and (min-height: 600px) and (max-height: 749px){
 	.select-hero {
 		font-size: 14px;
 		height: 40px;
-		width: 135px;
+		width: 120px;
 	}
 
 	.select-villain {
@@ -1529,7 +1518,7 @@ li {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (min-height: 760px) {
 	.select-hero {
 		font-size: 20px;
 		width: 160px;
@@ -1537,7 +1526,7 @@ li {
 	
   .select-villain {
     font-size: 20px;
-    /*width: 180px;*/
+    width: 180px;
   }
 }
 
@@ -1833,22 +1822,6 @@ li {
 	}
 }
 
-@media (min-width: 768px) and (min-height: 750px){
-	.dot-selector {
-		/*display: block;*/
-		/*top: 100%;*/
-		/*left: 51%;*/
-		width: 180px;
-	}
-
-	.dot {
-		/*cursor: pointer;*/
-		height: 7px;
-		width: 7px;
-		/* margin: .3px; */
-	}	
-}
-
 @media (min-width: 768px) and (max-height: 589px) {
 	.dot-selector {
 		width: 150px;
@@ -1871,20 +1844,15 @@ li {
 	}	
 }
 
-
-@media (min-width: 768px) {
+@media (min-width: 768px) and (min-height: 600px) {
 	.dot-selector {
 		display: block;
 		top: 100%;
 		left: 51%;
-		/*width: 180px;*/
 	}
 
 	.dot {
 		cursor: pointer;
-		/*height: 7px;*/
-		/*width: 7px;*/
-		/* margin: .3px; */
 	}
 
 	.tooltip > .tooltiptext {
@@ -2021,7 +1989,25 @@ li {
   }
 }
 
-@media (min-width: 992px) {
+
+@media (min-width: 768px) and (min-height: 750px){
+	.dot-selector {
+		/*display: block;*/
+		/*top: 100%;*/
+		/*left: 51%;*/
+		width: 180px;
+	}
+
+	.dot {
+		/*cursor: pointer;*/
+		height: 7px;
+		width: 7px;
+		/* margin: .3px; */
+	}	
+}
+
+
+@media (min-width: 992px) and (min-height: 760px) {
 	.dot-selector {
 		display: block;
 		top: 101%;
