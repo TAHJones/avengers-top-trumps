@@ -93,6 +93,18 @@ h1 {
 	}
 }
 
+@media (min-width: 992px) and (min-height: 680px) and (max-height: 729px) {
+  header {
+    height: 14%;
+  }
+
+	h1 {
+		/*margin-bottom: 20px;*/
+    font-size: 32px;
+		margin: 18px 0;
+	}
+}
+
 @media (min-width: 992px) and (min-height: 730px) {
   header {
     height: 14%;
@@ -110,6 +122,10 @@ h1 {
 /*GENERAL*/
 
 * {box-sizing:border-box}
+
+html {
+	  background-color: #000;
+}
 
 body {
     font-family: 'Chakra', sans-serif;
@@ -312,6 +328,26 @@ li {
 /*  .score-counter-list > li > img {
     width: 29px;
   }*/
+}
+
+@media (min-width: 992px) and (min-height: 600px) and (max-height: 679px){
+  .score-counter {
+  	top: 10px;
+  }
+
+  .score-counter-list > li > img {
+    width: 25px;
+  }
+}
+
+@media (min-width: 992px) and (min-height: 680px) and (max-height: 729px){
+  .score-counter {
+  	top: 13px;
+  }
+
+  .score-counter-list > li > img {
+    width: 27px;
+  }
 }
 
 @media (min-width: 992px) and (min-height: 730px) {
@@ -628,14 +664,15 @@ li {
 	}
 }
 
-@media (min-width: 992px) and (max-height: 599px) {
+/*@media (min-width: 992px) and (max-height: 599px) {
   .hero-slider,
   .villain-slider {
     width: 30%;
   }
-}
+}*/
 
-@media (min-width: 992px) and (min-height: 600px) {
+/*@media (min-width: 992px) and (min-height: 600px) {*/
+@media (min-width: 992px) {
   .hero-slider,
   .villain-slider {
     width: 30%;
@@ -2406,7 +2443,7 @@ opacity:1
   width: 160px;
 }
 
-.marvel-data-button {
+/*.marvel-data-button {
   background-color: #4A3CC9;
   border: solid 4px #bbb;
   border-radius: 6px;
@@ -2427,7 +2464,7 @@ opacity:1
   background-color: #fff;
   border-color: #534AD2;
   color: #1D0B46;
-}
+}*/
 
 @media (min-width: 520px) {
   .results-modal-inner > h2 {
@@ -2481,7 +2518,7 @@ opacity:1
   }
 	
 	.hero-modal-image {
-		top: 15%;
+		top: 15%=
 		/*width: 170px;*/
 	}
 
@@ -2940,35 +2977,43 @@ opacity:1
 
 .marvel-data-bg {
   position: absolute;
-  background-color: rgba(0,0,0,.9);
+  /*background-color: #1D0B46;*/
+  /*background-color: rgba(0,0,0,.9);*/
+  background-color: #000;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  height: 800px;
 }
 
 .marvel-data {
   background-color: #392569;
-  border: solid 6px #7269C2;
-  border-radius: 6px;
+  /*background-color: rgba(0,0,0,.9);*/
+  /*border: solid 6px #7269C2;*/
+  /*border-radius: 6px;*/
+  border-style: none;
   margin: 0 auto;
   padding: 20px;
   padding-top: 24px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%
+  /*position: absolute;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*transform: translateX(-50%);*/
+  /*width: 80%*/
+  min-height: 80%;
+	width: 80%;
+	max-width: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .marvel-data-hide {
-  /*opacity: 0;*/
   display: none
 }
 
 .marvel-data-reveal {
-  /*opacity: 1;*/
   display: block;
 }
 
@@ -2977,13 +3022,13 @@ opacity:1
   border-radius: 6px;
   display: block;
   margin: 10px auto;
-  height: 250px;
-  width: 250px;
+  height: 150px;
+  width: 150px;
 }
 
 .marvel-data h2 {
-  font-size: 28px;
-  margin: 30px 0 10px;
+  font-size: 20px;
+  margin: 20px 0 10px;
   text-align: center;
   font-weight: bold;
   color: #EF9B3F;
@@ -2992,9 +3037,8 @@ opacity:1
 .marvel-data p {
   color: #818786;
   font-family: 'Chakra', sans-serif;
-  font-size: 14px;
-  line-height: 25px;
-  margin: 0 30px 20px;
+  font-size: 12px;
+  margin: 10px 0;
   text-align: justify;
 }
 
@@ -3006,17 +3050,571 @@ opacity:1
   font-size: 20px;
   font-style: italic;
   font-weight: bold;
-  margin: 0 auto 15px;
-  padding: 10px 0;
+  /*margin: 0 auto 15px;*/
+  /*padding: 10px 0;*/
   text-align: center;
   text-decoration: none;
   transition: all 0.25s ease-in-out;
-  width: 200px;
+  /*width: 150px;*/
 }
 
 .marvel-data a:hover {
   background-color: #fff;
   color: #968CF3;
+}
+
+.marvel-data-button {
+  background-color: #4A3CC9;
+  border: solid 4px #bbb;
+  border-radius: 6px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px auto 0;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+  width: 150px;
+  height: 45px;
+}
+
+.play-again-button:hover,
+.marvel-data-button:hover {
+  background-color: #fff;
+  border-color: #534AD2;
+  color: #1D0B46;
+}
+
+@media (min-width: 520px) and (min-height: 299px)  {
+	.marvel-data {
+		border: solid 6px #7269C2;
+  	border-radius: 6px;
+		/*min-height: 80%;*/
+		/*width: 80%;*/
+		/*max-width: 500px;*/
+		/*position: absolute;*/
+		/*top: 50%;*/
+		/*left: 50%;*/
+		/*transform: translate(-50%, -50%);*/
+	}
+
+	.marvel-data-img {
+	  position: relative;
+	  top: 0%;
+	}
+
+	.marvel-data-img > img {
+	  margin: 5px auto;
+	  height: 120px;
+	  width: 120px;
+	}
+
+	.marvel-data-name {
+	  position: relative;
+	  top: 20%;
+	}
+
+	.marvel-data-name > h2 {
+		font-size: 20px;
+		margin: 20px 0;
+	}
+
+	.marvel-data-description {
+		display: none;
+		/*max-width: 320px;*/
+		margin: 10px auto;
+	}
+
+	.marvel-data ul {
+		position: relative;
+		top: 20%;
+	}
+
+	.marvel-data a {
+		font-size: 15px;
+		margin: 0 auto 8px;
+		padding: 10px 0;
+		/*width: 200px;*/
+	}
+
+	.marvel-data-button {
+		font-size: 16px;
+		margin: 15px auto 0;
+		/*width: 200px;*/
+		/*height: 50px;*/
+		position: relative;
+		top: 40%;
+	}
+}
+
+@media (min-width: 520px) and (min-height: 300px) and (max-height: 399px) {
+	.marvel-data {
+		/*min-height: 80%;*/
+		/*width: 80%;*/
+		/*max-width: 500px;*/
+		/*border: solid 6px #7269C2;*/
+  /*	border-radius: 6px;*/
+	}
+
+	/*.marvel-data-img {
+	  position: relative;
+	  top: 0%;
+	}*/
+
+	.marvel-data-img > img {
+	  /*margin: 5px auto;*/
+	  height: 120px;
+	  width: 120px;
+	}
+
+	/*.marvel-data-name {
+	  position: relative;
+	  top: 20%;
+	}*/
+
+	.marvel-data-name > h2 {
+		font-size: 18px;
+		margin: 10px 0 0;
+	}
+
+	.marvel-data-description {
+		display: none;
+		/*max-width: 320px;*/
+		/*margin: 10px auto;*/
+	}
+
+	/*.marvel-data-description {
+		max-width: 350px;
+		margin: 10px auto;
+	}*/
+
+	/*.marvel-data ul {
+		position: relative;
+		top: 20%;
+	}*/
+
+	.marvel-data a {
+		font-size: 10px;
+		margin: 0 auto 6px;
+		padding: 6px 0;
+		width: 120px;
+	}
+
+	.marvel-data-button {
+		font-size: 12px;
+		margin: 10px auto 0;
+		width: 120px;
+		height: 40px;
+		/*position: relative;*/
+		/*top: 40%;*/
+	}
+}
+
+@media (min-width: 520px) and (min-height: 400px) and (max-height: 469px) {
+	/*.marvel-data {
+		min-height: 80%;
+		width: 80%;
+		max-width: 500px;
+	}*/
+
+	/*.marvel-data-img {
+	  position: relative;
+	  top: 0%;
+	}*/
+
+	.marvel-data-img > img {
+	  /*margin: 5px auto;*/
+	  height: 150px;
+	  width: 150px;
+	}
+
+	/*.marvel-data-name {
+	  position: relative;
+	  top: 20%;
+	}*/
+
+	.marvel-data-name > h2 {
+		font-size: 20px;
+		margin: 12px 0 0;
+	}
+
+	/*.marvel-data-description {
+		max-width: 350px;
+		margin: 10px auto;
+	}*/
+
+	/*.marvel-data ul {
+		position: relative;
+		top: 20%;
+	}*/
+
+	.marvel-data-description {
+		display: block;
+	}
+
+	.marvel-data a {
+		font-size: 12px;
+		margin: 0 auto 6px;
+		padding: 6px 0;
+		width: 150px;
+	}
+
+	.marvel-data-button {
+		font-size: 13px;
+		margin: 12px auto 0;
+		width: 150px;
+		height: 45px;
+		/*position: relative;*/
+		/*top: 40%;*/
+	}
+}
+
+@media (min-width: 520px) and (min-height: 470px) and (max-height: 599px) {
+	/*.marvel-data {
+		min-height: 80%;
+		width: 80%;
+		max-width: 400px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}*/
+
+	/*.marvel-data-img {
+	  position: relative;
+	  top: 0%;
+	}*/
+
+	.marvel-data-img > img {
+	  /*margin: 5px auto;*/
+	  height: 160px;
+	  width: 160px;
+	}
+
+	/*.marvel-data-name {
+	  position: relative;
+	  top: 20%;
+	}*/
+
+	.marvel-data-name > h2 {
+		font-size: 20px;
+		margin: 15px 0;
+	}
+
+	.marvel-data-description {
+		display: none;
+		margin: 10px 0;
+	}
+
+	.marvel-data ul {
+		position: relative;
+		top: 18%;
+	}
+
+	.marvel-data a {
+		font-size: 14px;
+		margin: 0 auto 8px;
+		padding: 8px 0;
+		width: 160px;
+	}
+
+	.marvel-data-button {
+		font-size: 15px;
+		margin: 13px auto 0;
+		width: 160px;
+		height: 46px;
+		/*position: relative;*/
+		top: 10%;
+	}
+}
+
+@media (min-width: 520px) and (min-height: 600px) and (max-height: 669px) {
+	/*.marvel-data {
+		min-height: 80%;
+		width: 80%;
+		max-width: 500px;
+	}*/
+
+	/*.marvel-data-img {
+	  position: relative;
+	  top: 0%;
+	}*/
+
+	.marvel-data-img > img {
+	  /*margin: 5px auto;*/
+	  height: 180px;
+	  width: 180px;
+	}
+
+	/*.marvel-data-name {
+	  position: relative;
+	  top: 20%;
+	}*/
+
+	.marvel-data-name > h2 {
+		font-size: 22px;
+		margin: 14px 0 0;
+	}
+
+	/*.marvel-data-description {
+		max-width: 350px;
+		margin: 10px auto;
+	}*/
+
+	/*.marvel-data ul {
+		position: relative;
+		top: 20%;
+	}*/
+
+	.marvel-data-description {
+		display: block;
+	}
+
+	.marvel-data a {
+		font-size: 14px;
+		margin: 0 auto 6px;
+		padding: 6px 0;
+		width: 160px;
+}
+
+	.marvel-data-button {
+		font-size: 16px;
+		margin: 12px auto 0;
+		width: 160px;
+		height: 45px;
+		/*position: relative;*/
+		/*top: 40%;*/
+	}
+}
+
+@media (min-width: 520px) and (min-height: 670px) and (max-height: 739px) {
+	/*.marvel-data {
+		min-height: 80%;
+		width: 80%;
+		max-width: 500px;
+	}*/
+
+	/*.marvel-data-img {
+	  position: relative;
+	  top: 0%;
+	}*/
+
+	.marvel-data-img > img {
+	  /*margin: 5px auto;*/
+	  height: 220px;
+	  width: 220px;
+	}
+
+	/*.marvel-data-name {
+	  position: relative;
+	  top: 20%;
+	}*/
+
+	.marvel-data-name > h2 {
+		font-size: 26px;
+		margin: 20px 0 0;
+	}
+
+	/*.marvel-data-description {
+		max-width: 350px;
+		margin: 10px auto;
+	}*/
+
+	/*.marvel-data ul {
+		position: relative;
+		top: 20%;
+	}*/
+
+	.marvel-data-description {
+		display: block;
+	}
+
+	.marvel-data a {
+		font-size: 15px;
+		margin: 0 auto 6px;
+		padding: 12px 0;
+		width: 220px;
+	}
+
+	.marvel-data-button {
+		font-size: 18px;
+		margin: 13px auto 0;
+		width: 220px;
+		height: 60px;
+		/*position: relative;*/
+		/*top: 40%;*/
+	}
+}
+
+@media (min-width: 520px) and (min-height: 740px) {
+	/*.marvel-data {
+		min-height: 80%;
+		width: 80%;
+		max-width: 500px;
+	}*/
+
+	/*.marvel-data-img {
+	  position: relative;
+	  top: 0%;
+	}*/
+
+	.marvel-data-img > img {
+	  /*margin: 5px auto;*/
+	  height: 250px;
+	  width: 250px;
+	}
+
+	/*.marvel-data-name {
+	  position: relative;
+	  top: 20%;
+	}*/
+
+	.marvel-data-name > h2 {
+		font-size: 28px;
+		margin: 20px 0 0;
+	}
+
+	/*.marvel-data-description {
+		max-width: 350px;
+		margin: 10px auto;
+	}*/
+
+	/*.marvel-data ul {
+		position: relative;
+		top: 20%;
+	}*/
+
+	.marvel-data-description {
+		display: block;
+	}
+
+	.marvel-data a {
+		font-size: 15px;
+		margin: 0 auto 6px;
+		padding: 8px 0;
+		width: 250px;
+	}
+
+	.marvel-data-button {
+		font-size: 18px;
+		margin: 15px auto 0;
+		width: 250px;
+		height: 60px;
+		/*position: relative;*/
+		/*top: 40%;*/
+	}
+}
+
+@media (min-width: 768px) {
+	.marvel-data {
+		min-height: 80%;
+		width: 80%;
+		max-width: 500px;
+	}
+
+	.marvel-data-img {
+	  position: relative;
+	  top: 0%;
+	}
+
+	.marvel-data-img > img {
+	  margin: 5px auto;
+	  height: 250px;
+	  width: 250px;
+	}
+
+	.marvel-data-name {
+	  position: relative;
+	  top: 20%;
+	}
+
+	.marvel-data-name > h2 {
+		font-size: 28px;
+		margin: 20px 0 0;
+	}
+
+	.marvel-data-description {
+		max-width: 350px;
+		margin: 10px auto;
+	}
+
+	.marvel-data ul {
+		position: relative;
+		top: 20%;
+	}
+
+	.marvel-data a {
+		font-size: 15px;
+		margin: 0 auto 8px;
+		padding: 10px 0;
+		width: 250px;
+	}
+
+	.marvel-data-button {
+		font-size: 16px;
+		margin: 15px auto 0;
+		width: 250px;
+		height: 60px;
+		position: relative;
+		top: 40%;
+	}
+}
+
+
+@media (min-width: 992px) {
+	.marvel-data {
+		min-height: 80%;
+		/*width: 80%;*/
+		max-width: 600px;
+	}
+
+	.marvel-data-img {
+	  position: relative;
+	  top: 0%;
+	}
+
+	.marvel-data-img > img {
+	  margin: 5px auto;
+	  height: 300px;
+	  width: 300px;
+	}
+
+	.marvel-data-name {
+	  position: relative;
+	  top: 20%;
+	}
+
+	.marvel-data-name > h2 {
+		font-size: 30px;
+		margin: 30px 0 0;
+	}
+
+	.marvel-data-description {
+		max-width: 400px;
+		margin: 20px auto;
+	}
+
+	.marvel-data ul {
+		position: relative;
+		top: 20%;
+	}
+
+	.marvel-data a {
+		font-size: 18px;
+		margin: 0 auto 8px;
+		padding: 10px 0;
+		width: 300px;
+	}
+
+	.marvel-data-button {
+		font-size: 18px;
+		margin: 30px auto 0;
+		width: 300px;
+		height: 70px;
+		position: relative;
+		top: 40%;
+	}
 }
 
 /*API-MODAL-END*/

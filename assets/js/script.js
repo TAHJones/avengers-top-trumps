@@ -198,10 +198,10 @@ function marvelData(data) {
 
     var fullThumbnailPath = thumbnailPath + "." + thumbnailExtension;
 
-        marvelData.innerHTML = `<div><img src="${fullThumbnailPath}" alt="${marvelName}"></img>
-                                <div><h2>${heroName}</h2></div>
-                                <div><p>${marvelDescription}</p></div>
-                                <div><ul>${marvelResourceList}</ul></div>
+        marvelData.innerHTML = `<div class="marvel-data-img"><img src="${fullThumbnailPath}" alt="${marvelName}"></img>
+                                <div class="marvel-data-name"><h2>${heroName}</h2></div>
+                                <div class="marvel-data-description"><p>${marvelDescription}</p></div>
+                                <div class="marvel-data-urls"><ul>${marvelResourceList}</ul></div>
                                 <button id="marvelDataButton" class="marvel-data-button" type="button">Return</button>`;
 }
 
