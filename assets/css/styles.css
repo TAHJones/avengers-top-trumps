@@ -123,9 +123,9 @@ h1 {
 
 * {box-sizing:border-box}
 
-html {
+/*html {
 	  background-color: #000;
-}
+}*/
 
 body {
     font-family: 'Chakra', sans-serif;
@@ -146,7 +146,7 @@ li {
 
 .page-bg {
 	position: relative;
-	background-color: #000;
+	background-color: #0a1926;
 	/*margin: auto;*/
 }
 
@@ -491,12 +491,19 @@ li {
 		top: 20%;
 	}
 
-	.info-overlay-text {
+	/*.info-overlay-text {
 		font-size: 12px;
 		padding: 5px 10px;
 		top: 81.5%;
 		width: 142px;
-	}
+	}*/
+
+	/*.info-overlay-text {
+		font-size: 10px;
+		padding: 5px 8px;
+		top: 78.5%;
+		width: 113.5px;
+	}*/
 }
 
 @media (min-width: 520px) and (max-height: 449px) {
@@ -521,6 +528,13 @@ li {
     height: 120px;
     width: 120px;
   }
+
+  .info-overlay-text {
+		font-size: 10px;
+		padding: 5px 8px;
+		top: 78.5%;
+		width: 113.5px;
+	}
 }
 
 @media (min-width: 520px) and (min-height: 450px) and (max-height: 529px) {
@@ -531,6 +545,13 @@ li {
     height: 130px;
     width: 130px;
   }
+
+  .info-overlay-text {
+		font-size: 12px;
+		padding: 5px 10px;
+		top: 79.5%;
+		width: 122.5px;
+	}
 }
 
 @media (min-width: 520px) and (min-height: 530px) {
@@ -541,6 +562,11 @@ li {
     height: 150px;
     width: 150px;
   }
+
+	.info-overlay-text {
+		top: 81.5%;
+		width: 143px;
+	}
 }
 
 @media (min-width: 570px) {
@@ -565,10 +591,10 @@ li {
     width: 150px;
   }*/
 
-	.info-overlay-text {
-		top: 83%;
-		width: 157.5px;
-	}
+	/*.info-overlay-text {
+		top: 83.5%;
+		width: 158.5px;
+	}*/
 }
 
 /*@media (min-width: 570px) and (max-height: 689px) {
@@ -611,11 +637,18 @@ li {
     width: 165px;
   }
 
+	/*.info-overlay-text {
+		 font-size: 12px; 
+		 padding: 5px 10px; 
+		top: 83%;
+		width: 157.5px;
+	}*/
+
 	.info-overlay-text {
 		/* font-size: 12px; */
 		/* padding: 5px 10px; */
-		top: 83%;
-		width: 157.5px;
+		top: 83.5%;
+		width: 158.5px;
 	}
 }
 
@@ -632,7 +665,127 @@ li {
 	
 	.villain-slider {
 	  left: 53%;
-	} 
+	}
+	
+  .antman > .tooltipimg {
+    left: -4px;
+  }
+
+  .antman > .tooltiptext {
+    left: -3px;
+  }
+
+  .blackwidow > .tooltipimg {
+    left: -15px;
+  }
+
+  .blackwidow > .tooltiptext {
+    left: -13px;
+  }
+
+  .captainamerica > .tooltipimg {
+    left: -25px;
+  }
+
+  .captainamerica > .tooltiptext {
+    left: -24px;
+  }
+
+  .captainmarvel > .tooltipimg {
+    left: -36px;
+  }
+
+  .captainmarvel > .tooltiptext {
+    left: -34px;
+  }
+
+  .deadpool > .tooltipimg {
+    left: -46px;
+  }
+
+  .deadpool > .tooltiptext {
+    left: -44px;
+  }
+
+  .drstrange .tooltipimg {
+    left: -57px;
+  }
+
+  .drstrange .tooltiptext {
+    left: -56px;
+  }
+
+  .falcon > .tooltipimg {
+    left: -67px;
+  }
+
+  .falcon > .tooltiptext {
+    left: -66px;
+  }
+
+  .hawkeye > .tooltipimg {
+    left: -78px;
+  }
+
+  .hawkeye > .tooltiptext {
+    left: -77px;
+  }
+
+  .hulk > .tooltipimg {
+    left: -88px;
+  }
+
+  .hulk > .tooltiptext {
+    left: -87px;
+  }
+
+  .ironman > .tooltipimg {
+    left: -99px;
+  }
+
+  .ironman > .tooltiptext {
+    left: -98px;
+  }
+
+  .scarletwitch > .tooltipimg {
+    left: -109px;
+  }
+
+  .scarletwitch > .tooltiptext {
+    left: -108px;
+  }
+
+  .spiderman > .tooltipimg {
+    left: -120px;
+  }
+
+  .spiderman > .tooltiptext {
+    left: -119px;
+  }
+
+  .thor > .tooltipimg {
+    left: -130px;
+  }
+
+  .thor > .tooltiptext {
+    left: -129px;
+  }
+
+  .warmachine > .tooltipimg {
+    left: -141px;
+  }
+
+  .warmachine > .tooltiptext {
+    left: -140px;
+  }
+
+  .vision > .tooltipimg {
+    left: -152px;
+  }
+
+  .vision > .tooltiptext {
+    left: -150px;
+  }
 }
 
 @media (min-width: 768px) and (min-height: 600px) and (max-height: 749px) {
@@ -642,6 +795,11 @@ li {
     height: 165px;
     width: 165px;
   }
+
+	.info-overlay-text {
+		top: 83.5%;
+		width: 158.5px;
+	}
 }
 
 @media (min-width: 768px) and (min-height: 750px) {
@@ -656,6 +814,12 @@ li {
     height: 190px;
     width: 190px;
   }
+
+	.tooltip > .tooltipimg {
+		height: 190px;
+		width: 190px;
+		top: -198px;
+	}
 
 	.info-overlay-text {
 		font-size: 14px;
@@ -676,7 +840,6 @@ li {
   .hero-slider,
   .villain-slider {
     width: 30%;
-    /*height: 83.5%;*/
   }
   
 	.hero-slider {
@@ -687,6 +850,10 @@ li {
 	  left: 55%;
 	} 
 }
+
+/*@media (min-width: 992px) and (min-height: 750px) {
+
+}*/
 
 @media (min-width: 992px) and (min-height: 760px) {
   .image-slider {
@@ -1775,7 +1942,6 @@ li {
 .tooltip:hover > .tooltipimg {
   display: block;
   z-index: 1;
-  /*visibility: visible;*/
 }
 
 @media (min-width: 570px) and (min-height: 690px) {
@@ -1885,149 +2051,172 @@ li {
 	.dot-selector {
 		display: block;
 		top: 100%;
-		left: 51%;
+		left: 53%;
 	}
 
 	.dot {
 		cursor: pointer;
 	}
 
+
 	.tooltip > .tooltiptext {
-		width: 186px;
-		top: -43px;
+		width: 161px;
+		top: -42px;
 	}
 
 	.tooltip > .tooltipimg {
-		height: 190px;
-		width: 190px;
-		top: -198px;
-		/*position: absolute;*/
-		/*left: -31px;*/
+		height: 165px;
+		width: 165px;
+		top: -173px;
 	}
 
   .antman > .tooltipimg {
-    left: -7px;
+    left: -4px;
   }
 
   .antman > .tooltiptext {
-    left: -7px;
+    left: -3px;
   }
 
   .blackwidow > .tooltipimg {
-    left: -19px;
+    left: -15px;
   }
 
   .blackwidow > .tooltiptext {
-    left: -17px;
+    left: -13px;
   }
 
   .captainamerica > .tooltipimg {
-    left: -31px;
+    left: -25px;
   }
 
   .captainamerica > .tooltiptext {
-    left: -29px;
+    left: -24px;
   }
 
   .captainmarvel > .tooltipimg {
-    left: -43px;
+    left: -36px;
   }
 
   .captainmarvel > .tooltiptext {
-    left: -42px;
+    left: -34px;
   }
 
   .deadpool > .tooltipimg {
-    left: -55px;
+    left: -46px;
   }
 
   .deadpool > .tooltiptext {
-    left: -66px;
+    left: -44px;
   }
 
   .drstrange .tooltipimg {
-    left: -67px;
+    left: -57px;
   }
 
   .drstrange .tooltiptext {
-    left: -65px;
+    left: -56px;
   }
 
   .falcon > .tooltipimg {
-    left: -79px;
+    left: -67px;
   }
 
   .falcon > .tooltiptext {
-    left: -77px;
+    left: -66px;
   }
 
   .hawkeye > .tooltipimg {
-    left: -91px;
+    left: -78px;
   }
 
   .hawkeye > .tooltiptext {
-    left: -88px;
+    left: -77px;
   }
 
   .hulk > .tooltipimg {
-    left: -103px;
+    left: -88px;
   }
 
   .hulk > .tooltiptext {
-    left: -102px;
+    left: -87px;
   }
 
   .ironman > .tooltipimg {
-    left: -115px;
+    left: -99px;
   }
 
   .ironman > .tooltiptext {
-    left: -112px;
+    left: -98px;
   }
 
   .scarletwitch > .tooltipimg {
-    left: -127px;
+    left: -109px;
   }
 
   .scarletwitch > .tooltiptext {
-    left: -125px;
+    left: -108px;
   }
 
   .spiderman > .tooltipimg {
-    left: -138px;
+    left: -120px;
   }
 
   .spiderman > .tooltiptext {
-    left: -136px;
+    left: -119px;
   }
 
   .thor > .tooltipimg {
-    left: -151px;
+    left: -130px;
   }
 
   .thor > .tooltiptext {
-    left: -150px;
+    left: -129px;
   }
 
   .warmachine > .tooltipimg {
-    left: -163px;
+    left: -141px;
   }
 
   .warmachine > .tooltiptext {
-    left: -161px;
+    left: -140px;
   }
 
   .vision > .tooltipimg {
-    left: -175px;
+    left: -152px;
   }
 
   .vision > .tooltiptext {
-    left: -171px;
+    left: -150px;
   }
 }
 
 
 @media (min-width: 768px) and (min-height: 750px){
+  #heroImg > img,
+  #villainImg > img,
+  .overlay {
+    height: 190px;
+    width: 190px;
+  }
+
+	.tooltip > .tooltipimg {
+		height: 190px;
+		width: 190px;
+		top: -198px;
+	}
+
+	.tooltip > .tooltiptext {
+		width: 187px;
+		top: -42px;
+	}
+
+	.info-overlay-text {
+		font-size: 14px;
+		top: 84.5%;
+		width: 96%;
+	}
+
 	.dot-selector {
 		/*display: block;*/
 		/*top: 100%;*/
@@ -2041,8 +2230,127 @@ li {
 		width: 7px;
 		/* margin: .3px; */
 	}	
-}
 
+  .antman > .tooltipimg {
+    left: -9px;
+  }
+
+  .antman > .tooltiptext {
+    left: -9px;
+  }
+
+  .blackwidow > .tooltipimg {
+    left: -22px;
+  }
+
+  .blackwidow > .tooltiptext {
+    left: -19px;
+  }
+
+  .captainamerica > .tooltipimg {
+    left: -33px;
+  }
+
+  .captainamerica > .tooltiptext {
+    left: -30px;
+  }
+
+  .captainmarvel > .tooltipimg {
+    left: -44px;
+  }
+
+  .captainmarvel > .tooltiptext {
+    left: -43px;
+  }
+
+  .deadpool > .tooltipimg {
+    left: -56px;
+  }
+
+  .deadpool > .tooltiptext {
+    left: -53px;
+  }
+
+  .drstrange .tooltipimg {
+    left: -67px;
+  }
+
+  .drstrange .tooltiptext {
+    left: -66px;
+  }
+
+  .falcon > .tooltipimg {
+    left: -79px;
+  }
+
+  .falcon > .tooltiptext {
+    left: -78px;
+  }
+
+  .hawkeye > .tooltipimg {
+    left: -90px;
+  }
+
+  .hawkeye > .tooltiptext {
+    left: -89px;
+  }
+
+  .hulk > .tooltipimg {
+    left: -102px;
+  }
+
+  .hulk > .tooltiptext {
+    left: -102px;
+  }
+
+  .ironman > .tooltipimg {
+    left: -113px;
+  }
+
+  .ironman > .tooltiptext {
+    left: -112px;
+  }
+
+  .scarletwitch > .tooltipimg {
+    left: -125px;
+  }
+
+  .scarletwitch > .tooltiptext {
+    left: -124px;
+  }
+
+  .spiderman > .tooltipimg {
+    left: -136px;
+  }
+
+  .spiderman > .tooltiptext {
+    left: -135px;
+  }
+
+  .thor > .tooltipimg {
+    left: -148px;
+  }
+
+  .thor > .tooltiptext {
+    left: -147px;
+  }
+
+  .warmachine > .tooltipimg {
+    left: -159px;
+  }
+
+  .warmachine > .tooltiptext {
+    left: -158px;
+  }
+
+  .vision > .tooltipimg {
+    left: -171px;
+  }
+
+  .vision > .tooltiptext {
+    left: -170px;
+  }
+}
 
 @media (min-width: 992px) and (min-height: 760px) {
 	.dot-selector {
@@ -2977,8 +3285,6 @@ opacity:1
 
 .marvel-data-bg {
   position: absolute;
-  /*background-color: #1D0B46;*/
-  /*background-color: rgba(0,0,0,.9);*/
   background-color: #000;
   top: 0;
   left: 0;
@@ -2988,18 +3294,10 @@ opacity:1
 
 .marvel-data {
   background-color: #392569;
-  /*background-color: rgba(0,0,0,.9);*/
-  /*border: solid 6px #7269C2;*/
-  /*border-radius: 6px;*/
   border-style: none;
   margin: 0 auto;
   padding: 20px;
   padding-top: 24px;
-  /*position: absolute;*/
-  /*top: 50%;*/
-  /*left: 50%;*/
-  /*transform: translateX(-50%);*/
-  /*width: 80%*/
   min-height: 80%;
 	width: 80%;
 	max-width: 500px;
@@ -3050,8 +3348,6 @@ opacity:1
   font-size: 20px;
   font-style: italic;
   font-weight: bold;
-  /*margin: 0 auto 15px;*/
-  /*padding: 10px 0;*/
   text-align: center;
   text-decoration: none;
   transition: all 0.25s ease-in-out;
@@ -3086,26 +3382,27 @@ opacity:1
   color: #1D0B46;
 }
 
-@media (min-width: 520px) and (min-height: 299px)  {
+/*@media (min-width: 520px) and (min-height: 299px) and (max-height: 399px) {*/
+@media (min-width: 520px) and (max-height: 299px) {
 	.marvel-data {
 		border: solid 6px #7269C2;
   	border-radius: 6px;
-		/*min-height: 80%;*/
-		/*width: 80%;*/
-		/*max-width: 500px;*/
-		/*position: absolute;*/
-		/*top: 50%;*/
-		/*left: 50%;*/
-		/*transform: translate(-50%, -50%);*/
+		min-height: 80%;
+		width: 80%;
+		max-width: 500px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 
 	.marvel-data-img {
 	  position: relative;
-	  top: 0%;
+	  top: -2%;
 	}
 
 	.marvel-data-img > img {
-	  margin: 5px auto;
+	  margin: 10px auto;
 	  height: 120px;
 	  width: 120px;
 	}
@@ -3122,7 +3419,7 @@ opacity:1
 
 	.marvel-data-description {
 		display: none;
-		/*max-width: 320px;*/
+		max-width: 320px;
 		margin: 10px auto;
 	}
 
@@ -3135,64 +3432,33 @@ opacity:1
 		font-size: 15px;
 		margin: 0 auto 8px;
 		padding: 10px 0;
-		/*width: 200px;*/
+		width: 200px;
 	}
 
 	.marvel-data-button {
 		font-size: 16px;
 		margin: 15px auto 0;
-		/*width: 200px;*/
-		/*height: 50px;*/
+		width: 200px;
+		height: 50px;
 		position: relative;
 		top: 40%;
 	}
 }
 
 @media (min-width: 520px) and (min-height: 300px) and (max-height: 399px) {
-	.marvel-data {
-		/*min-height: 80%;*/
-		/*width: 80%;*/
-		/*max-width: 500px;*/
-		/*border: solid 6px #7269C2;*/
-  /*	border-radius: 6px;*/
-	}
-
-	/*.marvel-data-img {
-	  position: relative;
-	  top: 0%;
-	}*/
-
 	.marvel-data-img > img {
-	  /*margin: 5px auto;*/
 	  height: 120px;
 	  width: 120px;
 	}
 
-	/*.marvel-data-name {
-	  position: relative;
-	  top: 20%;
-	}*/
-
 	.marvel-data-name > h2 {
 		font-size: 18px;
-		margin: 10px 0 0;
+		margin: 10px 0 6px;
 	}
 
 	.marvel-data-description {
 		display: none;
-		/*max-width: 320px;*/
-		/*margin: 10px auto;*/
 	}
-
-	/*.marvel-data-description {
-		max-width: 350px;
-		margin: 10px auto;
-	}*/
-
-	/*.marvel-data ul {
-		position: relative;
-		top: 20%;
-	}*/
 
 	.marvel-data a {
 		font-size: 10px;
@@ -3206,8 +3472,6 @@ opacity:1
 		margin: 10px auto 0;
 		width: 120px;
 		height: 40px;
-		/*position: relative;*/
-		/*top: 40%;*/
 	}
 }
 
@@ -3236,7 +3500,7 @@ opacity:1
 
 	.marvel-data-name > h2 {
 		font-size: 20px;
-		margin: 12px 0 0;
+		margin: 12px 0 10px;
 	}
 
 	/*.marvel-data-description {
