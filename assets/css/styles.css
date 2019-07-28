@@ -1521,11 +1521,11 @@ li {
 	.prev,
 	.next {
     font-size: 24px;
-		top: 13px;
+		top: 16px;
 	}
 
   .prev {
-    left: -105px;
+    left: -102px;
   }
   
   .next {
@@ -2206,8 +2206,13 @@ li {
 		top: -198px;
 	}
 
-	.tooltip > .tooltiptext {
+	/*.tooltip > .tooltiptext {
 		width: 187px;
+		top: -42px;
+	}*/
+
+	.tooltip > .tooltiptext {
+		width: 185px;
 		top: -42px;
 	}
 
