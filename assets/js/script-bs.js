@@ -198,14 +198,16 @@ function marvelData(data) {
 
     var fullThumbnailPath = thumbnailPath + "." + thumbnailExtension;
 
-        marvelData.innerHTML = `<div class="marvel-data-img"><img src="${fullThumbnailPath}" alt="${marvelName}"></img>
-                                <div class="marvel-data-name"><h2>${heroName}</h2></div>
-                                <div class="marvel-data-description"><p>${marvelDescription}</p></div>
-                                <div class="marvel-data-urls"><ul>${marvelResourceList}</ul></div>
-                                <button id="marvelDataButton" class="marvel-data-button" type="button">Return</button>`;
+    marvelData.innerHTML = `<div class="results-modal-inner">
+                              <div class="marvel-data-img"><img src="${fullThumbnailPath}" alt="${marvelName}"></img>
+                              <div class="marvel-data-name"><h2>${heroName}</h2></div>
+                              <div class="marvel-data-description"><p>${marvelDescription}</p></div>
+                              <div class="marvel-data-urls"><ul>${marvelResourceList}</ul></div>
+                              <button id="marvelDataButton" class="marvel-data-button" type="button">Return</button>
+                            </div>`;
 }
-var slideIndex = 0; // set default value to show first slide
 
+var slideIndex = 0; // set default value to show first slide
 
 // target anchor element with 'prev' id
 var prevSlide = document.getElementById('prev');
@@ -416,8 +418,7 @@ function showSupervillain() {
                               <li><a class="villain-list-inactive">Technology: ${technology}</a></li>
                             </ul>`;*/
 
-    villainInfo.innerHTML = `<div class="card-body villain-info" id="villainInfo">
-          								    <h2 class="card-title villain-title">${villainName}</h2>
+    villainInfo.innerHTML = `<h2 class="card-title villain-title">${villainName}</h2>
           										<ul class="list-group villain-list" id="villainList">
           											<li class="list-group-item villain-list-active">Agility: ${agility}</li>
           											<li class="list-group-item villain-list-active" >Intelligence: ${intelligence}</li>
@@ -425,8 +426,7 @@ function showSupervillain() {
           											<li class="list-group-item villain-list-active" >Strength: ${strength}</li>
           											<li class="list-group-item villain-list-active">Speed: ${speed}</li>
           											<li class="list-group-item villain-list-active">Technology: ${technology}</li>
-          										</ul>
-          								  </div>`;
+          										</ul>`;
 
     // change villain button and images styles when villain is selected
     selectVillainButton.textContent = `${villainName}`;
@@ -454,12 +454,14 @@ if(heroScoreCounter > 1){ // check if variable already has recorded score, if it
   heroScoreCounter = 1; // if variable does exist i.e is > 0 declare variable in global scope with value of 1
 }
 
+console.log("heroScoreCounter = " + heroScoreCounter);
+
 function getHeroCatergoryScore(){ // function that returns index number and score of selected catergory
   var heroCatergoryScoreObject = {}; // create object to hold hero catergory score and selected catergory index no.
   var heroList = document.querySelectorAll("#heroList > li"); // get list of anchor elements containing hero catergory scores
   var heroListArray = Array.from(heroList); // convert heroList nodelist to array
   heroListArray.forEach(function(element, index){ // loop through array of anchor elements and select element with selected-catergory class name
-    if(element.className === "selected-catergory"){
+    if(element.classList.contains("selected-catergory")) {
       heroCatergoryScoreObject.selectedCatergoryIndex = index; // add selected catergory index no. to catergoryScoreObject
       var heroCatergoryScoreText = element.textContent;
       var heroCatergoryScore = parseInt(heroCatergoryScoreText.charAt(heroCatergoryScoreText.length-1)); // select last character of string and convert to number
@@ -467,6 +469,7 @@ function getHeroCatergoryScore(){ // function that returns index number and scor
       heroCatergoryScoreObject.heroCatergoryScore = heroCatergoryScore;
     }
   });
+  console.log(heroCatergoryScoreObject);
   return heroCatergoryScoreObject; // return catergoryScoreObject
 } // getHeroCatergoryScore function end
 
@@ -482,14 +485,18 @@ function getVillainCatergoryScore(heroCatergoryScoreObject){  // function that r
       var villainCatergoryScore = parseInt(catergoryScoreText.charAt(catergoryScoreText.length-1)); // select last character of string and convert to number
       villainCatergoryScore === 0 ? villainCatergoryScore = 10 : villainCatergoryScore;  // if villainCatergoryScore = 0 convert to 10
       catergoryScoreObject.villainCatergoryScore = villainCatergoryScore; // add/create villainCatergoryScore key to catergoryScoreObject and add villainCatergoryScore variable as value
+    } else if (element.classList.contains("villain-list-active")) { // select list items with villain-list-active classname
+      element.classList.remove("villain-list-active");
+      element.classList.add("villain-list-inactive");
     }
   });
+  console.log(catergoryScoreObject);
   return catergoryScoreObject;
 } // getVillainCatergoryScore function end
 
 function compareCatergoryScore(catergoryScoreObject){
   var heroCatergoryScore = catergoryScoreObject.heroCatergoryScore;
-  // console.log(catergoryScoreObject.heroCatergoryScore);
+  console.log(catergoryScoreObject.heroCatergoryScore);
   var villainCatergoryScore = catergoryScoreObject.villainCatergoryScore;
 
   var villainImg = document.getElementById("villainImg");
@@ -510,6 +517,8 @@ function compareCatergoryScore(catergoryScoreObject){
     var infinityStoneColor_Won;
     var infinityStoneName_Lost;
     var infinityStoneColor_Lost;
+    // console.log("heroScoreCounter2 = " + heroScoreCounter);
+    // console.log(typeof(heroScoreCounter));
     switch(heroScoreCounter) { // match infinity stone name with counter score number
       case "":
       case 0:
@@ -579,7 +588,34 @@ function compareCatergoryScore(catergoryScoreObject){
               alert("Error! heroScoreCounter variable is not an integer"); // return an error if heroScoreCounter is not an integer
         }
     }
+    
+    				/*<div class="col-sm-10">
+							<div class="card">
+								<div class="card-body">
+									<div class="card-title">
+										
+									</div>
+								</div>
+							</div>
+						</div>*/
+    
     if(result === "win"){
+      resultsModal.innerHTML = `<div class="row h-100 justify-content-center results-modal-inner">
+							                    <div class="my-auto col-sm-10 col-md-8 col-lg-6">
+                                    <h2 class="">${heroName} defeats ${villainName}</h2>
+                                    <img class="hero-modal-image" src="assets/img/${superheroName}.png">
+                                    <div class="results-modal-infinitystone">
+                                      <p>Congratulations you have obtained the <span class="${infinityStoneColor_Won}">${infinityStoneName_Won}</span></p>
+                                      <img class="blinking-border infinitystone-modal-image" src="assets/img/${infinityStoneId}.png">
+                                      <p>Collect all six infinity stones to win the game!</p>
+                                    </div>
+                                    <div class="play-again-button-bg d-flex justify-content-center">
+                                      <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
+                                    </div>
+                                  </div>
+                                 </div>`;    
+    
+/*    if(result === "win"){
       resultsModal.innerHTML = `<div class="results-modal-inner">
                                   <h2>${heroName} defeats ${villainName}</h2>
                                   <img class="hero-modal-image" src="assets/img/${superheroName}.png">
@@ -589,7 +625,7 @@ function compareCatergoryScore(catergoryScoreObject){
                                     <p>Collect all six infinity stones to win the game!</p>
                                   </div>
                                   <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
-                                </div>`;
+                                </div>`;*/
     } else if (result === "firstResultLose"){
       resultsModal.innerHTML = `<div class="results-modal-inner">
                                   <h2>${villainName} defeats ${heroName}</h2>
@@ -624,15 +660,16 @@ function compareCatergoryScore(catergoryScoreObject){
                                 <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
                                 </div>`;
     } else if (result == "draw"){
-      resultsModal.innerHTML = `<div class="results-modal-inner">
+      resultsModal.innerHTML = `<div class="card-body results-modal-inner">
                                   <h2>${heroName} draws with ${villainName}</h2>
                                   <img class="hero-modal-image" src="assets/img/${superheroName}.png">
                                   <div class="results-modal-infinitystone">
-                                    <p>You live to fight another day and still possess the <span class="${infinityStoneColor_Won}">${infinityStoneName_Won}</span></p>
-                                    <img class="blinking-border infinitystone-modal-image" src="assets/img/${infinityStoneId}.png">
-                                    <p>Collect all six infinity stones to win the game!</p>
-                                  </div>
-                                <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
+                                </div>
+                                <div class="card-body">
+                                  <p>You live to fight another day and still possess the <span class="${infinityStoneColor_Won}">${infinityStoneName_Won}</span></p>
+                                  <img class="blinking-border infinitystone-modal-image" src="assets/img/${infinityStoneId}.png">
+                                  <p>Collect all six infinity stones to win the game!</p>
+                                  <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
                                 </div>`;
     } else if (result === "complete"){
       resultsModal.innerHTML = `<div class="results-modal-inner">
@@ -658,7 +695,7 @@ function compareCatergoryScore(catergoryScoreObject){
     }
   } // showResultsModal function end
 
-  var infinityStoneList = document.querySelectorAll(".score-counter-list > li");
+  var infinityStoneList = document.querySelectorAll(".score-counter-list > div");
   var infinityStoneArray = Array.from(infinityStoneList);
   // console.log("hero score is " + heroCatergoryScore);
   // console.log("villain score is " + villainCatergoryScore);
@@ -708,7 +745,7 @@ function compareCatergoryScore(catergoryScoreObject){
     }
     resultsModal.classList.add("modal-fadein");
 } else if(heroCatergoryScore === villainCatergoryScore) {
-  createImgOverlay("Draw", heroImg, "heroOverlayId");
+    createImgOverlay("Draw", heroImg, "heroOverlayId");
     createImgOverlay("Draw", villainImg, "villainOverlayId");
     heroScoreCounter += 0; // keep heroScoreCounter value the same
     infinityStoneId = "infinitystone" + heroScoreCounter.toString(); // add updated result counter to infinityStoneId variable
@@ -750,6 +787,13 @@ function resetGame(){
     var heroInfo = document.getElementById('heroInfo');
     // var dotSelector = document.getElementById('dotSelector');
     // console.log(dotSelector);
+    var dotsArray = Array.from(dots); // convert dots nodelist to array
+    dotsArray.forEach(function(element, index) { // loop through array of list elements
+      if(element.classList.contains("active")) { // select element with active class name
+        element.classList.remove("active"); // remove active class name if present
+      }
+    });
+    
     heroImg.innerHTML = `<img src="assets/img/questionmarkorange.png" class="hero-img" alt="question mark">`;
     /*dotSelector.innerHTML = `<div class="dot tooltip antman">
         										<img class="tooltipimg" src="assets/img/antman.png">
@@ -875,9 +919,9 @@ function resetGame(){
     selectVillainButton.className = "select-villain select-villain-inactive";
     selectVillainButton.textContent = "Select Villain";
     selectVillainButton.style.border = "solid 4px #5C5787";
-    if(resultsModal.className === "results-modal modal-fadein modal-fadeout"){
+    if(resultsModal.className === "col-sm-12 results-modal modal-fadein modal-fadeout"){
       setTimeout(function(){
-        resultsModal.className = "results-modal";
+        resultsModal.className = "col-sm-12 results-modal";
       },2500); // delay rest of class names until fadeout effect is complete
     }
     slideIndex = 0; // reset slideIndex value to show first slide
@@ -902,42 +946,4 @@ resultsModal.addEventListener('click', function(e){
     resultsModal.classList.add("modal-fadeout");
     resetGame(); // reset all elements to 'inactive' state when results modal has been removed
   }
-},false);
-
-// var heroColumn = document.getElementById("heroColumn");
-// var villainColumn = document.getElementById("villainColumn");
-
-/*function myFunction(x) {
-  if (x.matches) { // If media query matches x variable
-    heroColumn.className = "hero-column";
-    villainColumn.className = "villain-column";
-  } else {
-    heroColumn.className = "col col-xs-4 col-xs-offset-1"
-    villainColumn.className = "col col-xs-4";
-  }
-}*/
-
-// var x = window.matchMedia("(max-width: 409px)")
-// myFunction(x) // Call listener function at run time
-// x.addListener(myFunction) // Attach listener function on state changes
-
-
-
-// var pageBg = document.getElementById("pageBg");
-
-// console.log(pageBg);
-// console.log(pageBg.style.width);
-
-/*function getPageHeight(){
-  var pageHeight;
-  var h = window.innerHeight;
-  var pageHeight = h.toString() + "px";
-  pageBg.style.height = pageHeight;
-}*/
-  // console.log(pageBg.style.width);
-
-
-/*window.addEventListener("load", function() {
-  getPageHeight();
-  window.addEventListener("resize", getPageHeight); 
-});*/
+},false)
