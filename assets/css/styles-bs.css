@@ -38,11 +38,29 @@ h1 {
 	background: linear-gradient(to right, #4239B8 , #FFA94A, #4239B8);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	font-size: 30px;
+	font-size: 20px;
 	font-weight: bold;
 	text-align: center;
 	text-transform: uppercase;
 	margin: 10px 0 20px;
+}
+
+@media (min-width: 422px) {
+  h1 {
+    font-size: 22px
+  }
+}
+
+@media (min-width: 461px) {
+  h1 {
+    font-size: 24px
+  }
+}
+
+@media (min-width: 500px) {
+  h1 {
+    font-size: 26px
+  }
 }
 
 /*BANNER-END*/
@@ -82,8 +100,8 @@ p {
 }
 
 .score-counter-list > div > img {
-	margin: 0 2px;
-	width: 30px;
+	margin: 0px 2px 4px;
+	width: 32px;
 	background-color: #000;
 	border-radius: 4px;
 	padding: 6px;
@@ -92,6 +110,17 @@ p {
 /*SCORE-COUNTER-END*/
 
 /*IMAGE-SLIDER*/
+
+@media (max-width: 576px) {
+  
+  .score-counter-list {
+  	margin: 0 auto 20px;
+  }
+
+  .hero-column {
+  	margin-bottom: 15px;
+  }
+}
 
 .hero-slider,
 .villain-slider {
@@ -102,24 +131,71 @@ p {
 	margin: 0 auto;
 }
 
+.img-container {
+  postion: relative;
+  width: 100%;
+}
+
 .hero-img,
-.villain-img,
-.overlay {
+.villain-img {
 	background-color: #000;
 	border: 4px solid #222;
 	border-radius: 6px;
 	display: block;
-	margin: 24px auto;
-	width: 80%;
+	margin: 24px auto 10px;
+	/*width: 190px;*/
+	/*height: 190px;*/
 }
 
-.overlay {
+/*.overlay {
 	background-color: rgba(0, 0, 0, .5);
 	border-radius: 6px;
 	position: absolute;
 	top: 0%;
 	left: 12.5%;
 	height: 30.25%;
+}*/
+
+.overlay {
+	position: absolute;
+	top: 22px;
+	bottom: 0;
+	left: 0;
+	right: 0%;
+	/*height: 192px;*/
+	/*width: 192px;*/
+	opacity: 0;
+	transition: .5s ease-in-out;
+	border: 6px solid #000;
+	border-radius: 6px;
+	background-color: rgba(0, 0, 0, .5);
+	margin: 0 auto;
+}
+
+@media (max-width: 399px) {
+  .hero-img,
+  .villain-img {
+  	width: 190px;
+  	height: 190px;
+  }
+  
+  .overlay {
+  	height: 192px;
+  	width: 192px;
+  }  
+}
+
+@media (min-width: 400px) {
+  .hero-img,
+  .villain-img {
+  	width: 230px;
+  	height: 230px;
+  }
+  
+  .overlay {
+  	height: 232px;
+  	width: 232px;
+  }
 }
 
 .overlay-text {
@@ -137,32 +213,9 @@ p {
 
 .info-overlay {
 	position: absolute;
-	top: 150px;
-	left: 44.25px;
-	/*height: 54px;*/
+	top: 200px;
+	left: 92px;
 }
-
-/*.info-overlay-text {
-	background-color: rgba(34, 34, 34, 0.5);
-	border: none;
-	 border-radius: 2px; 
-	border-bottom-left-radius: 2px;
-	border-bottom-right-radius: 2px;
-	color: #FF9404;
-	font-size: 12px;
-	 position: absolute; 
-	padding: 8px 52px; 
-	 top: 34%; 
-	 left: 50%; 
-	 transform: translate(-50%, -50%); 
-	 -webkit-transform: translate(-50%, -50%); 
-	-ms-transform: translate(-50%, -50%);
-	transition: all 0.25s ease-in-out;
-	text-shadow: 2px 2px 2px #000;
-	width: 166px;
-	 text-align: center; 
-	height: 30px;
-}*/
 
 .info-overlay-text {
 	background-color: rgba(34, 34, 34, 0.5);
@@ -171,22 +224,16 @@ p {
 	border-bottom-left-radius: 2px;
 	border-bottom-right-radius: 2px;
 	color: #FF9404;
-	font-size: 12px;
-	/* position: absolute; */
-	/* padding: 2px 0 0; */
-	/* top: 34%; */
-	/* left: 50%; */
-	/* transform: translate(-50%, -50%); */
-	/* -webkit-transform: translate(-50%, -50%); */
 	-ms-transform: translate(-50%, -50%);
 	transition: all 0.25s ease-in-out;
 	text-shadow: 2px 2px 2px #000;
-	width: 140px;
-	/* text-align: center; */
-	height: 30px;
-	/* margin: 0 auto; */
-	/* display: block; */
-	line-height: 38px;
+}
+
+.info-overlay-text {
+	font-size: 14px;
+	height: 40px;
+	width: 198px;
+	line-height: 44px;
 }
 
 .info-overlay-text:hover {
@@ -207,14 +254,21 @@ p {
 
 /* The dots/bullets/indicators */
 .dot {
-  cursor: pointer;
-  height: 7.5px;
-  width: 7.5px;
-  margin: 0 2px;
-  background-color: #6E67A2;
-  border-radius: 50%;
-  /*display: inline-block;*/
-  transition: background-color 0.6s ease;
+	cursor: pointer;
+	visibility: hidden;
+	height: 11px;
+	width: 11px;
+	margin: 0 2px;
+	background-color: #6E67A2;
+	border-radius: 50%;
+	transition: background-color 0.6s ease;
+}
+
+/*responsive styles for mobile*/
+@media (min-width: 461px) {
+  .dot {
+	  visibility: visible;
+  }
 }
 
 .dot:hover {
@@ -285,7 +339,9 @@ p {
 .villain-title {
   color: #EF9B3F;
   font-family: 'Chakra', sans-serif;
+	font-size: 24px;
   font-weight: bold;
+  margin-top: 15px;
   text-align: center;
 }
 
@@ -297,10 +353,37 @@ p {
 	text-decoration: none;
 	transition: all 0.25s ease-in-out;
 	margin: 0 auto 4px;
-	padding: 5px;
+	padding: 8px;
 	text-align: center;
-	width: 200px;
+	width: 160px;
 }
+
+@media (min-width: 400px) {
+  .hero-title,
+  .villain-title {
+    font-size: 30px;
+  }  
+
+  .hero-list li,
+  .villain-list li {
+  	width: 200px;
+  }
+}
+
+@media (min-width: 460px) and (max-width: 575px) {
+  .hero-list li,
+  .villain-list li {
+  	width: 220px;
+  }  
+}
+
+
+/*@media (max-width: 400px) {*/
+/*  .hero-title,*/
+/*  .villain-title {*/
+/*    font-size: 24px;*/
+/*  }  */
+/*}*/
 
 .hero-list-inactive,
 .villain-list-inactive {
@@ -355,12 +438,12 @@ p {
 	/* text-align: center; */
 	/*text-decoration: none;*/
 	transition: all 0.25s ease-in-out;
-	width: 200px;
+	width: 230px;
 	height: 55px;
 }
 
 .select-hero {
-	width: 160px;
+	width: 200px;
 }
 
 .select-hero-inactive,
@@ -478,7 +561,7 @@ p {
 /*RESULTS-MODAL*/
 
 .results-modal {
-  position: absolute;
+  position: fixed;
   background-color: rgba(0,0,0,.9);
   top: 0;
   left: 0;
@@ -672,8 +755,8 @@ p {
 /*API-MODAL*/
 
 .marvel-data-bg {
-  position: absolute;
-  background-color: #000;
+  position: fixed;
+  background-color: rgba(0,0,0,.9);
   top: 0;
   left: 0;
   width: 100%;
@@ -807,11 +890,19 @@ p {
   	padding: 6px;
   }
 
-  .hero-img,
-  .villain-img,
-  .overlay {
+  /*Give parent div of image a fixed height to prevent collapse when image is changed*/
+  #heroImg {
+  	height: 197px;
+  }
+
+  #villainImg {
+  	height: 211px;
+  }
+
+  .hero-img, .villain-img {
   	margin: 20px auto 4px;
-  	width: 75%;
+  	width: 174px;
+  	height: 174px;
   }
 
   .villain-img {
@@ -819,13 +910,15 @@ p {
   }
   
   .overlay {
-  	/* background-color: rgba(0, 0, 0, .5); */
-  	border: 4px solid #000;
-  	/* border-radius: 6px; */
-  	/* position: absolute; */
-  	top: 0%;
-  	left: 12.5%;
-  	height: 30.35%;
+  	border: 6px solid #000;
+  	top: 3%;
+  	left: 0%;
+  	height: 177px;
+  	width: 177px;
+  }
+
+  .overlay-text {
+  	font-size: 28px;
   }
 
   .info-overlay {
@@ -835,9 +928,10 @@ p {
   }
 
   .info-overlay-text {
-  	line-height: 34px;
+  	line-height: 33px;
   	height: 32px;
   	width: 144px;
+  	font-size: 11px;
   }
 
   .dot-selector {
@@ -848,13 +942,12 @@ p {
   .dot {
   	height: 8px;
   	width: 8px;
-  	/*margin: 0 2px;*/
+  	margin: 0 1.6px;
   }
 
   .hero-title,
   .villain-title {
   	font-size: 20px;
-  	/*margin-top: 15px;*/
   }
 
   .villain-title {
@@ -887,7 +980,7 @@ p {
  
  .select-hero,
  .select-villain {
-  	font-size: 11px;
+  	font-size: 10px;
   	margin: 0 6px;
   	width: 150px;
   	height: 45px;
@@ -934,35 +1027,41 @@ p {
   	padding: 8px;
   }
 
-  .hero-img,
-  .villain-img,
-  .overlay {
-  	margin: 20px auto 5px;
-  	width: 65%;
-  }
-  
-  .overlay {
-	  left: 17.5%;
+  /*Give parent div of image a fixed height to prevent collapse when image is changed*/
+  #heroImg {
+  	height: 231px;
   }
 
-  /*.info-overlay {
-  	left: 59.5px;
-  	top: 193px;
-  }*/
+  #villainImg {
+  	height: 233px;
+  }
+
+  .hero-img,
+  .villain-img {
+  	margin: 20px auto 5px;
+  	width: 205px;
+  	height: 205px;
+  }
+
+  .overlay {
+  	top: 20px;
+  	left: 0;
+  	height: 207px;
+  	width: 207px;
+  }
+
+  .overlay-text {
+  	font-size: 32px;
+  }
 
   .info-overlay {
   	left: 70px;
   	top: 178px;
   }
 
-  /*.info-overlay-text {
-  	height: 38px;
-  	width: 130px;
-  }*/
-
   .info-overlay-text {
   	height: 36px;
-  	line-height: 40px;
+  	line-height: 37px;
   	width: 179px;
   }
 
@@ -974,7 +1073,7 @@ p {
   .dot {
   	height: 9px;
   	width: 9px;
-  	/*margin: 0 2px;*/
+  	margin: 0 2px;
   }
 
   .hero-title,
@@ -1039,29 +1138,32 @@ p {
   	padding: 10px;
   }
 
+  /*Give parent div of image a fixed height to prevent collapse when image is changed*/
+  #heroImg {
+  	height: 290px;
+  }
+
+  #villainImg {
+  	height: 294px;
+  }
+
   .hero-img,
-  .villain-img,
-  .overlay {
-  	margin: 20px auto;
-  	width: 70%;
+  .villain-img {
+  	margin: 28px auto 10px;
+  	width: 255px;
+  	height: 255px;
   }
 
   .overlay {
-  	/*top: 0%;*/
-  	left: 15%;
-  	height: 33.25%;
+  	top: 25px;
+  	left: 0;
+  	height: 258px;
+  	width: 258px;
   }
-  
-  /*.villain-img.overlay {
-  	top: 0%;
-  	left: 15%;
-  	height: 33.6%;
-  }*/
 
-  /*.info-overlay {
-  	left: 67.5px;
-  	top: 227px;
-  }*/
+  .overlay-text {
+  	font-size: 36px;
+  }
 
   .info-overlay {
   	left: 70px;
@@ -1085,9 +1187,9 @@ p {
   }
   
   .dot {
-  	height: 10px;
-  	width: 10px;
-  	margin: 0px 2.5px;
+  	height: 11px;
+  	width: 11px;
+  	margin: 0px 3px;
   }
 
   .villain-title {
@@ -1146,29 +1248,43 @@ p {
   	padding: 10px;
   }
 
- /* .hero-img,
-  .villain-img,
-  .overlay {
-  	margin: 20px auto;
-  	width: 68%;
-  }*/
+  /*Give parent div of image a fixed height to prevent collapse when image is changed*/
+  #heroImg {
+  	height: 324px;
+  }
+
+  #villainImg {
+  	height: 328px;
+  }
+
+  .hero-img,
+  .villain-img {
+  	margin: 26px auto 10px;
+  	width: 290px;
+  	height: 290px;
+  }
 
   .overlay {
-  	/*top: 0%;*/
-  	left: 16%;
-  	/*height: 33.25%;*/
+  	top: 25px;
+  	left: 0;
+  	height: 292px;
+  	width: 292px;
+  }
+  
+  .overlay-text {
+  	font-size: 40px;
   }
 
   .info-overlay {
-  	top: 262px;
-  	left: 70.25px;
+  	top: 260px;
+  	left: 78px;
   }
 
   .info-overlay-text {
-    font-size: 14px;
-    padding: 10px 0; 
-  height: 40px;
-    width: 280px;
+  	font-size: 14px;
+  	height: 40px;
+  	width: 264px;
+  	line-height: 44px;
   }
 
   .dot-selector {

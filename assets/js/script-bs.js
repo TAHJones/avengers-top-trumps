@@ -366,7 +366,9 @@ function showSuperhero(n) {
         selectHeroButton.style.border = "4px solid #a46e32";
         selectHeroButton.className = "select-hero select-hero-selected";
         heroImg.firstElementChild.style.border = "4px solid #FFA94A";
-        hideDots.style.visibility = "hidden"; // hide scrolling icons when hero has been selected
+        hideDots.style.zIndex = "-1"; // hide scrolling icons when hero has been selected
+        // hideDots.style.display = "none"; // hide scrolling icons when hero has been selected
+        // hideDots.style.visibility = "hidden"; // hide scrolling icons when hero has been selected
         prevSlide.style.visibility = "hidden";
         nextSlide.style.visibility = "hidden";
         selectVillainButton.className = "select-villain select-villain-active";
@@ -627,52 +629,64 @@ function compareCatergoryScore(catergoryScoreObject){
                                   <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
                                 </div>`;*/
     } else if (result === "firstResultLose"){
-      resultsModal.innerHTML = `<div class="results-modal-inner">
-                                  <h2>${villainName} defeats ${heroName}</h2>
-                                  <img class="hero-modal-image" src="assets/img/${supervillainName}.png">
-                                  <div class="results-modal-infinitystone">
+      resultsModal.innerHTML = `<div class="row h-100 justify-content-center results-modal-inner">
+							                    <div class="my-auto col-sm-10 col-md-8 col-lg-6">
+                                    <h2>${villainName} defeats ${heroName}</h2>
+                                    <img class="hero-modal-image" src="assets/img/${supervillainName}.png">
+                                    <div class="results-modal-infinitystone">
                                     <p>You must fight again and win to aquire the <span class="power-stone-color">Power Stone</span></p>
                                     <img class="blinking-border infinitystone-modal-image" src="assets/img/infinitystone2.png">
                                     <p>Collect all six infinity stones to win the game!</p>
+                                    <div class="play-again-button-bg d-flex justify-content-center">
+                                      <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
+                                    </div>
                                   </div>
-                                <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
                                 </div>`;
     } else if (result === "lose"){
-      resultsModal.innerHTML = `<div class="results-modal-inner">
-                                  <h2>${villainName} defeats ${heroName}</h2>
-                                  <img class="hero-modal-image" src="assets/img/${supervillainName}.png">
-                                  <div class="results-modal-infinitystone">
+      resultsModal.innerHTML = `<div class="row h-100 justify-content-center results-modal-inner">
+							                    <div class="my-auto col-sm-10 col-md-8 col-lg-6">
+                                    <h2>${villainName} defeats ${heroName}</h2>
+                                    <img class="hero-modal-image" src="assets/img/${supervillainName}.png">
+                                    <div class="results-modal-infinitystone">
                                     <p>You have lost the <span class="${infinityStoneColor_Lost}">${infinityStoneName_Lost}</span></p>
                                     <img class="blinking-border infinitystone-modal-image" src="assets/img/${infinityStoneId}.png">
                                     <p>To complete your mission you must regain the ${infinityStoneName_Lost}!</p>
+                                    <div class="play-again-button-bg d-flex justify-content-center">
+                                      <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
+                                    </div>
                                   </div>
-                                  <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
                                 </div>`;
     } else if (result == "firstResultDraw"){
-      resultsModal.innerHTML = `<div class="results-modal-inner">
-                                  <h2>${heroName} draws with ${villainName}</h2>
-                                  <img class="hero-modal-image" src="assets/img/${superheroName}.png">
-                                  <div class="results-modal-infinitystone">
+      resultsModal.innerHTML = `<div class="row h-100 justify-content-center results-modal-inner">
+							                    <div class="my-auto col-sm-10 col-md-8 col-lg-6">
+                                    <h2>${heroName} draws with ${villainName}</h2>
+                                    <img class="hero-modal-image" src="assets/img/${superheroName}.png">
+                                    <div class="results-modal-infinitystone">
                                     <p>You must fight again and win to aquire the <span class="power-stone-color">Power Stone</span></p>
                                     <img class="blinking-border infinitystone-modal-image" src="assets/img/infinitystone2.png">
                                     <p>Collect all six infinity stones to win the game!</p>
+                                    <div class="play-again-button-bg d-flex justify-content-center">
+                                      <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
+                                    </div>
                                   </div>
-                                <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
                                 </div>`;
     } else if (result == "draw"){
-      resultsModal.innerHTML = `<div class="card-body results-modal-inner">
-                                  <h2>${heroName} draws with ${villainName}</h2>
-                                  <img class="hero-modal-image" src="assets/img/${superheroName}.png">
-                                  <div class="results-modal-infinitystone">
-                                </div>
-                                <div class="card-body">
-                                  <p>You live to fight another day and still possess the <span class="${infinityStoneColor_Won}">${infinityStoneName_Won}</span></p>
-                                  <img class="blinking-border infinitystone-modal-image" src="assets/img/${infinityStoneId}.png">
-                                  <p>Collect all six infinity stones to win the game!</p>
-                                  <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
+      resultsModal.innerHTML = `<div class="row h-100 justify-content-center results-modal-inner">
+							                    <div class="my-auto col-sm-10 col-md-8 col-lg-6">
+                                    <h2>${heroName} draws with ${villainName}</h2>
+                                    <img class="hero-modal-image" src="assets/img/${superheroName}.png">
+                                    <div class="results-modal-infinitystone">
+                                    <p>You live to fight another day and still possess the <span class="${infinityStoneColor_Won}">${infinityStoneName_Won}</span></p>
+                                    <img class="blinking-border infinitystone-modal-image" src="assets/img/${infinityStoneId}.png">
+                                    <p>Collect all six infinity stones to win the game!</p>
+                                    <div class="play-again-button-bg d-flex justify-content-center">
+                                      <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
+                                    </div>
+                                  </div>
                                 </div>`;
     } else if (result === "complete"){
-      resultsModal.innerHTML = `<div class="results-modal-inner">
+      resultsModal.innerHTML = `<div class="row h-100 justify-content-center results-modal-inner">
+							                   <div class="my-auto col-sm-10 col-md-8 col-lg-6">
                                   <h2>You are a Top Trumps Champion!</h2>
                                   <img class="hero-modal-image" src="assets/img/ironman-infinity-gauntlet2.jpg">
                                   <div class="results-modal-infinitystone">
@@ -688,8 +702,11 @@ function compareCatergoryScore(catergoryScoreObject){
                                     </div>
                                     <p>You have collected all six infinity stones and won the game!</p>
                                   </div>
-                                  <button id="playAgainButton" class="play-again-button" type="button">Start Again</button>
-                                </div>`;
+                                  <div class="play-again-button-bg d-flex justify-content-center">
+                                    <button id="playAgainButton" class="play-again-button" type="button">Start Again</button>
+                                  </div>
+                                </div>
+                              </div>`;
     } else {
       alert("Error! No result was found");
     }
@@ -885,7 +902,7 @@ function resetGame(){
     // var activeDot= document.querySelector("div.active");
     // activeDot.classList.remove("active");
 
-    hideDots.style.visibility = "visible";
+    hideDots.style.zIndex = "0";
     prevSlide.style.visibility = "visible";
     nextSlide.style.visibility = "visible";
 
