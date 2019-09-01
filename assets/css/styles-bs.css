@@ -38,29 +38,11 @@ h1 {
 	background: linear-gradient(to right, #4239B8 , #FFA94A, #4239B8);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: bold;
 	text-align: center;
 	text-transform: uppercase;
 	margin: 10px 0 20px;
-}
-
-@media (min-width: 422px) {
-  h1 {
-    font-size: 22px
-  }
-}
-
-@media (min-width: 461px) {
-  h1 {
-    font-size: 24px
-  }
-}
-
-@media (min-width: 500px) {
-  h1 {
-    font-size: 26px
-  }
 }
 
 /*BANNER-END*/
@@ -131,10 +113,20 @@ p {
 	margin: 0 auto;
 }
 
-.img-container {
-  postion: relative;
+/*.img-container {
+  position: relative;
   width: 100%;
+}*/
+
+/*Give parent div of image a fixed height to prevent collapse when image is changed*/
+#heroImg,
+#villainImg {
+	height: 230px;
 }
+
+/*#villainImg {
+	height: 270px;
+}*/
 
 .hero-img,
 .villain-img {
@@ -143,8 +135,8 @@ p {
 	border-radius: 6px;
 	display: block;
 	margin: 24px auto 10px;
-	/*width: 190px;*/
-	/*height: 190px;*/
+	width: 190px;
+	height: 190px;
 }
 
 /*.overlay {
@@ -246,29 +238,22 @@ p {
 
 /*DOT-SELECTOR*/
 
-/*postion dots inline with slide*/
 .dot-selector {
 	margin: 0 auto;
 	width: 65%;
 }
 
-/* The dots/bullets/indicators */
 .dot {
-	cursor: pointer;
-	visibility: hidden;
-	height: 11px;
-	width: 11px;
-	margin: 0 2px;
 	background-color: #6E67A2;
 	border-radius: 50%;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0;
+	height: 10px;
+	width: 10px;
 	transition: background-color 0.6s ease;
-}
-
-/*responsive styles for mobile*/
-@media (min-width: 461px) {
-  .dot {
-	  visibility: visible;
-  }
+	/*visibility: hidden;*/
+	display: none;
 }
 
 .dot:hover {
@@ -280,54 +265,56 @@ p {
 }
 
 /*make positioning  of tooptip content relative to parent element*/
-.tooltip-selector {
-  /*position: relative;*/
+.tooltip-selector-bg {
+  position: relative;
 }
 
 .tooltip-selector > .tooltiptext {
-  display: none;
-  width: 200px;
-  background-color: rgba(34, 34, 34, 0.5);
-  color: #FF9404;
-  text-align: center;
-  padding: 8px 4px 8px;
-  /*position: absolute;*/
-  z-index: 2;
-  font-size: 16px;
-  font-style: italic;
-  /*top: -47px;*/
-  border: none;
-  border-radius: 2px;
-  transition: all .75s ease-in;
-  -webkit-transition: all .75s ease-in;
-  -moz-transition: all .75s ease-in;
-  -o-transition: all .75s ease-in;
+	display: none;
+	width: 204px;
+	background-color: rgba(34, 34, 34, 0.5);
+	color: #FF9404;
+	text-align: center;
+	padding: 8px 4px 8px;
+	position: absolute;
+	z-index: 2;
+	font-size: 16px;
+	font-style: italic;
+	top: -52px;
+	left: 5px;
+	border: none;
+	border-radius: 2px;
+	transition: all .75s ease-in;
+	-webkit-transition: all .75s ease-in;
+	-moz-transition: all .75s ease-in;
+	-o-transition: all .75s ease-in;
 }
 
 .tooltip-selector > .tooltipimg {
-  display: none;
-  /*position: absolute;*/
-  background-color: #000;
-  border: 4px solid #222;
-  border-radius: 6px;
-  margin: 0 auto 20px;
-  height: 200px;
-  width: 200px;
-  z-index: 3;
-  /*top: -211px;*/
-  transition: all .75s ease-in;
-  -webkit-transition: all .75s ease-in;
-  -moz-transition: all .75s ease-in;
-  -o-transition: all .75s ease-in;
+	display: none;
+	background-color: #000;
+	border: 4px solid #222;
+	border-radius: 6px;
+	margin: 0 auto 20px;
+	position: absolute;
+	top: -230px;
+	left: -8px;
+	height: 230px;
+	width: 230px;
+	z-index: 3;
+	transition: all .75s ease-in;
+	-webkit-transition: all .75s ease-in;
+	-moz-transition: all .75s ease-in;
+	-o-transition: all .75s ease-in;
 }
 
 .tooltip-selector:hover > .tooltiptext {
-  display: none;
+  display: block;
   z-index: 2;
 }
 
 .tooltip-selector:hover > .tooltipimg {
-  display: none;
+  display: block;
   z-index: 1;
 }
 
@@ -341,7 +328,6 @@ p {
   font-family: 'Chakra', sans-serif;
 	font-size: 24px;
   font-weight: bold;
-  margin-top: 15px;
   text-align: center;
 }
 
@@ -357,33 +343,6 @@ p {
 	text-align: center;
 	width: 160px;
 }
-
-@media (min-width: 400px) {
-  .hero-title,
-  .villain-title {
-    font-size: 30px;
-  }  
-
-  .hero-list li,
-  .villain-list li {
-  	width: 200px;
-  }
-}
-
-@media (min-width: 460px) and (max-width: 575px) {
-  .hero-list li,
-  .villain-list li {
-  	width: 220px;
-  }  
-}
-
-
-/*@media (max-width: 400px) {*/
-/*  .hero-title,*/
-/*  .villain-title {*/
-/*    font-size: 24px;*/
-/*  }  */
-/*}*/
 
 .hero-list-inactive,
 .villain-list-inactive {
@@ -432,18 +391,18 @@ p {
 	border: solid 4px #222;
 	border-radius: 6px;
 	/* display: block; */
-	font-size: 16px;
+	font-size: 12px;
 	font-weight: bold;
 	margin: 0 10px;
 	/* text-align: center; */
 	/*text-decoration: none;*/
 	transition: all 0.25s ease-in-out;
-	width: 230px;
+	width: 160px;
 	height: 55px;
 }
 
 .select-hero {
-	width: 200px;
+	font-size: 10px;
 }
 
 .select-hero-inactive,
@@ -506,7 +465,7 @@ p {
 	cursor: pointer;
 	font-weight: bold;
 	font-size: 26px;
-	padding: 5px; 
+	padding: 5px 0;
 	/* padding: 8px 1px 12px 2px; */
 	/* position: absolute; */
 	transition: 0.6s ease;
@@ -869,6 +828,105 @@ p {
 
 /*RESPONSIVE-STYLES*/
 
+/*mobile devices*/
+
+@media (min-width: 360px) {
+  h1 {
+    font-size: 18px
+  }
+
+  .select-hero {
+	  font-size: 12px;
+  }
+
+  .prev, .next {
+  	padding: 5px;
+  }
+}
+
+@media (min-width: 385px) {
+  h1 {
+  	font-size: 20px;
+  }
+}
+
+@media (min-width: 422px) {
+  h1 {
+    font-size: 22px
+  }
+}
+
+@media (min-width: 461px) {
+  h1 {
+    font-size: 24px
+  }
+}
+
+@media (min-width: 500px) {
+  h1 {
+    font-size: 26px
+  }
+}
+
+/*@media (min-width: 400px) and (max-width: 459px) {*/
+@media (min-width: 400px) {
+  #heroImg,
+  #villainImg {
+  	height: 270px;
+  }
+ 
+  .hero-title,
+  .villain-title {
+    font-size: 30px;
+  }  
+
+  .hero-list li,
+  .villain-list li {
+  	width: 200px;
+  }
+
+  .select-hero,
+  .select-villain {
+    font-size: 16px;
+  }
+
+  .select-villain {
+  	width: 200px;
+  }
+}
+
+/*make dots visible for larger mobile devices*/
+@media (min-width: 461px) {
+  #heroImg {
+  	height: 254px;
+  }
+
+  .dot {
+	  /*visibility: visible;*/
+	  display: inline-block;
+  }
+
+  .hero-list li,
+  .villain-list li {
+  	width: 220px;
+  }
+  
+  .select-villain {
+  	width: 220px;
+  }
+}
+
+/*@media (min-width: 460px) and (max-width: 575px) {
+  .hero-list li,
+  .villain-list li {
+  	width: 220px;
+  }
+  
+  .select-villain {
+  	width: 220px;
+  }
+}*/
+
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
 
@@ -892,14 +950,15 @@ p {
 
   /*Give parent div of image a fixed height to prevent collapse when image is changed*/
   #heroImg {
-  	height: 197px;
+  	height: 190px;
   }
 
   #villainImg {
-  	height: 211px;
+  	height: 214px;
   }
 
-  .hero-img, .villain-img {
+  .hero-img,
+  .villain-img {
   	margin: 20px auto 4px;
   	width: 174px;
   	height: 174px;
@@ -940,9 +999,25 @@ p {
   }
   
   .dot {
-  	height: 8px;
-  	width: 8px;
-  	margin: 0 1.6px;
+  	height: 7px;
+  	width: 7px;
+  	margin: 0;
+  }
+
+  .tooltip-selector > .tooltipimg {
+  	top: -170px;
+  	left: -3px;
+  	height: 174px;
+  	width: 174px;
+  }
+
+  .tooltip-selector > .tooltiptext {
+  	font-size: 15px;
+  	line-height: 22px;
+  	top: -45px;
+  	left: 10px;
+  	height: 36px;
+  	width: 147px;
   }
 
   .hero-title,
@@ -950,9 +1025,9 @@ p {
   	font-size: 20px;
   }
 
-  .villain-title {
+  /*.villain-title {
   	margin-top: 9px;
-  }
+  }*/
   
   /*reduce padding around hero and villain title*/
   /*.hero-slider .card-body:nth-of-type(1),
@@ -1029,11 +1104,11 @@ p {
 
   /*Give parent div of image a fixed height to prevent collapse when image is changed*/
   #heroImg {
-  	height: 231px;
+  	height: 224px;
   }
 
   #villainImg {
-  	height: 233px;
+  	height: 248px;
   }
 
   .hero-img,
@@ -1073,24 +1148,35 @@ p {
   .dot {
   	height: 9px;
   	width: 9px;
-  	margin: 0 2px;
+  	margin: 0;
+  	display: inline-block;
+  }
+
+  .tooltip-selector > .tooltipimg {
+  	top: -204px;
+  	/*left: -3px;*/
+  	height: 205px;
+  	width: 205px;
+  }
+
+  .tooltip-selector > .tooltiptext {
+  	font-size: 15px;
+  	line-height: 22px;
+  	top: -48px;
+  	left: 10px;
+  	height: 36px;
+  	width: 179px;
   }
 
   .hero-title,
   .villain-title {
   	font-size: 26px;
-  	margin-top: 15px;
+  	/*margin-top: 15px;*/
   }
 
   .villain-title {
-  	margin-top: 22px;
+  	/*margin-top: 22px;*/
   }
-  
-  /*reduce padding around hero and villain title*/
-  /*.hero-slider > .card-body:nth-of-type(1),
-  .villain-slider > .card-body:nth-of-type(1) {
-  	padding: 0.5rem 0rem 0rem;
-  }*/
 
   .hero-list li,
   .villain-list li {
@@ -1140,11 +1226,11 @@ p {
 
   /*Give parent div of image a fixed height to prevent collapse when image is changed*/
   #heroImg {
-  	height: 290px;
+  	height: 286px;
   }
 
   #villainImg {
-  	height: 294px;
+  	height: 288px;
   }
 
   .hero-img,
@@ -1178,7 +1264,7 @@ p {
   .hero-title,
   .villain-title {
   	font-size: 30px;
-  	margin-top: 15px;
+  	/*margin-top: 15px;*/
   }
 
   .dot-selector {
@@ -1189,22 +1275,31 @@ p {
   .dot {
   	height: 11px;
   	width: 11px;
-  	margin: 0px 3px;
+  	margin: 0px 0.4px;
+  }
+
+  .tooltip-selector > .tooltipimg {
+  	top: -259px;
+  	left: -7px;
+  	height: 255px;
+  	width: 255px;
+  }
+
+  .tooltip-selector > .tooltiptext {
+  	font-size: 16px;
+  	line-height: 24px;
+  	top: -56px;
+  	left: 6px;
+  	height: 38px;
+  	width: 228px;
   }
 
   .villain-title {
   	margin-top: 22px;
   }
-  
-  /*reduce padding around hero and villain title*/
-  /*.hero-slider > .card-body:nth-of-type(1),
-  .villain-slider > .card-body:nth-of-type(1) {
-  	padding: 0.5rem 0rem 0rem;
-  }*/
 
   .hero-list li,
   .villain-list li {
-  	/*font-size: 16px;*/
   	margin: 0 auto 4px;
   	padding: 8px;
   	width: 215px;
@@ -1212,7 +1307,6 @@ p {
  
   .select-hero,
   .select-villain {
-  	/*font-size: 16px;*/
   	margin: 0 10px;
   	width: 215px;
   	height: 55px;
@@ -1250,11 +1344,11 @@ p {
 
   /*Give parent div of image a fixed height to prevent collapse when image is changed*/
   #heroImg {
-  	height: 324px;
+  	height: 318px;
   }
 
   #villainImg {
-  	height: 328px;
+  	height: 320px;
   }
 
   .hero-img,
@@ -1295,18 +1389,34 @@ p {
   .dot {
   	height: 12px;
   	width: 12px;
-  	margin: 0px 3px;
+  	margin: 0px 1px;
   }
-  
+
+  .tooltip-selector > .tooltipimg {
+  	top: -292px;
+  	left: -9px;
+  	height: 290px;
+  	width: 290px;
+  }
+
+  .tooltip-selector > .tooltiptext {
+  	font-size: 16px;
+  	line-height: 24px;
+  	top: -55px;
+  	left: 5px;
+  	height: 38px;
+  	width: 262px;
+  }
+ 
   .hero-title,
   .villain-title {
   	font-size: 32px;
-  	margin-top: 15px;
+  	/*margin-top: 15px;*/
   }
 
-  .villain-title {
+  /*.villain-title {
   	margin-top: 22px;
-  }
+  }*/
   
   /*reduce padding around hero and villain title*/
   /*.hero-slider > .card-body:nth-of-type(1),
