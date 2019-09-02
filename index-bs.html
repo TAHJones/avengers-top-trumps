@@ -14,339 +14,179 @@
 
 	<!--load stylesheets-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-	<!--<link rel="stylesheet" href="assets/css/grid.css" type="text/css" />-->
-	<!--<link rel="stylesheet" href="assets/css/styles.css" type="text/css" />-->
 	<link rel="stylesheet" href="assets/css/styles-bs.css" type="text/css" />
 </head>
 
 <body>
-	<div class="container">
-
-	  <div class="row justify-content-center">
-	    <div class="col-10 col-sm-12">
-				<header>
-					<h1>Avengers Top Trumps</h1>
-				</header>
-		  </div><!--col-->
-		</div><!--row-->
-					
-		<!--<div class="row justify-content-center">
-	    <div class="col-6 col-xs-6">
-				<div id="scoreCounter" class="score-counter">
-					<ul class="score-counter-list">
-						<li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-						<li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-						<li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-						<li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-						<li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-						<li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-					</ul>
-				</div>
-		  </div>col
-		</div>row-->
-
-		<div class="row justify-content-center">
-	    <div class="col-10 col-sm-8">
-				<div class="score-counter" id="scoreCounter">
-					<div class="d-flex justify-content-center score-counter-list">
-						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
-						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
-						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
-						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
-						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
-						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+	<section>
+		<div class="container">
+	
+		  <div class="row justify-content-center">
+		    <div class="col-10 col-sm-12">
+					<header>
+						<h1>Avengers Top Trumps</h1>
+					</header>
+			  </div><!--col-->
+			</div><!--row-->
+	
+			<div class="row justify-content-center">
+		    <div class="col-10 col-sm-8">
+					<div class="score-counter" id="scoreCounter">
+						<div class="d-flex justify-content-center score-counter-list">
+							<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+							<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+							<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+							<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+							<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+							<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+						</div>
 					</div>
-				</div>
-		  </div><!--col-->
-		</div><!--row-->
-
-	<!--</div>--><!--container-->
-
-	<!--<div class="container">-->
-	  <!--<div class="row justify-content-center">
-	    <div class="col-12">-->
-				<!--<div id="heroColumn" class="hero-column">
-					<div class="hero-slider">-->
-						<!--<div class="hero-slider-inner">-->
-		
-						<!--<div id="heroImg" class="overlay-container">
-							<img src="assets/img/questionmarkorange.png">-->
-							<!-- The dots/circles -->
-							<!--<div id="dotSelector" class="dot-selector">
-								<div class="dot tooltip antman">
+			  </div><!--col-->
+			</div><!--row-->
+	
+			<div class="row">
+			  <div class="col-12 col-sm-6 hero-column" id="heroColumn">
+			  	
+					<div class="card hero-slider">
+						<div id="heroImg">
+						  <img src="assets/img/questionmarkorange.png" class="hero-img" alt="question mark">
+						</div>
+	
+					  <!-- The dots/circles -->
+						<div id="dotSelector" class="d-flex justify-content-center dot-selector">
+							<div class="tooltip-selector-bg">
+								<div class="dot tooltip-selector antman">
 									<img class="tooltipimg" src="assets/img/antman.png">
 									<span class="tooltiptext">Antman</span>
 								</div>
-								<div class="dot tooltip blackwidow">
+								<div class="dot tooltip-selector blackwidow">
 									<img class="tooltipimg" src="assets/img/blackwidow.png">
 									<span class="tooltiptext">Black Widow</span>
 								</div>
-								<div class="dot tooltip captainamerica">
+								<div class="dot tooltip-selector captainamerica">
 									<img class="tooltipimg" src="assets/img/captainamerica.png">
 									<span class="tooltiptext">Captain America</span>
 								</div>
-								<div class="dot tooltip captainmarvel">
+								<div class="dot tooltip-selector captainmarvel">
 									<img class="tooltipimg" src="assets/img/captainmarvel.png">
 									<span class="tooltiptext">Captain Marvel</span>
 								</div>
-								<div class="dot tooltip deadpool">
+								<div class="dot tooltip-selector deadpool">
 									<img class="tooltipimg" src="assets/img/deadpool.png">
 									<span class="tooltiptext">Deadpool</span>
 								</div>
-								<div class="dot tooltip drstrange">
+								<div class="dot tooltip-selector drstrange">
 									<img class="tooltipimg" src="assets/img/drstrange.png">
 									<span class="tooltiptext">Dr Strange</span>
 								</div>
-								<div class="dot tooltip falcon">
+								<div class="dot tooltip-selector falcon">
 									<img class="tooltipimg" src="assets/img/falcon.png">
 									<span class="tooltiptext">Falcon</span>
 								</div>
-								<div class="dot tooltip hawkeye">
+								<div class="dot tooltip-selector hawkeye">
 									<img class="tooltipimg" src="assets/img/hawkeye.png">
 									<span class="tooltiptext">Hawkeye</span>
 								</div>
-								<div class="dot tooltip hulk">
+								<div class="dot tooltip-selector hulk">
 									<img class="tooltipimg" src="assets/img/hulk.png">
 									<span class="tooltiptext">Hulk</span>
 								</div>
-								<div class="dot tooltip ironman">
+								<div class="dot tooltip-selector ironman">
 									<img class="tooltipimg" src="assets/img/ironman.png">
 									<span class="tooltiptext">Ironman</span>
 								</div>
-								<div class="dot tooltip scarletwitch">
+								<div class="dot tooltip-selector scarletwitch">
 									<img class="tooltipimg" src="assets/img/scarletwitch.png">
 									<span class="tooltiptext">Scarlet Witch</span>
 								</div>
-								<div class="dot tooltip spiderman">
+								<div class="dot tooltip-selector spiderman">
 									<img class="tooltipimg" src="assets/img/spiderman.png">
 									<span class="tooltiptext">Spiderman</span>
 								</div>
-								<div class="dot tooltip thor">
+								<div class="dot tooltip-selector thor">
 									<img class="tooltipimg" src="assets/img/thor.png">
 									<span class="tooltiptext">Thor</span>
 								</div>
-								<div class="dot tooltip warmachine">
+								<div class="dot tooltip-selector warmachine">
 									<img class="tooltipimg" src="assets/img/warmachine.png">
 									<span class="tooltiptext">War Machine</span>
 								</div>
-								<div class="dot tooltip vision">
+								<div class="dot tooltip-selector vision">
 									<img class="tooltipimg" src="assets/img/vision.png">
 									<span class="tooltiptext">Vision</span>
 								</div>
-							</div>-->
-							<!-- The dots/circles-end -->
-						<!--</div>-->
-
-						<!--<div id="heroInfo">
-							<h2>Superhero</h2>
-							<ul id="heroList" class="hero-list">
-								<li><a class="hero-list-inactive">Agility: ?</a></li>
-								<li><a class="hero-list-inactive" >Intelligence: ?</a></li>
-								<li><a class="hero-list-inactive">Magic: ?</a></li>
-								<li><a class="hero-list-inactive" >Strength: ?</a></li>
-								<li><a class="hero-list-inactive">Speed: ?</a></li>
-								<li><a class="hero-list-inactive">Technology: ?</a></li>
-							</ul>
-						</div>-->
-
-						<div class="row">
-						  <div class="col-sm-6 hero-column" id="heroColumn">
-						  	
-								<div class="card hero-slider">
-									<div id="heroImg">
-									  <img src="assets/img/questionmarkorange.png" class="hero-img" alt="question mark">
-									</div>
-	
-								  <!-- The dots/circles -->
-									<div id="dotSelector" class="d-flex justify-content-center dot-selector">
-										<div class="tooltip-selector-bg">
-											<div class="dot tooltip-selector antman">
-												<img class="tooltipimg" src="assets/img/antman.png">
-												<span class="tooltiptext">Antman</span>
-											</div>
-											<div class="dot tooltip-selector blackwidow">
-												<img class="tooltipimg" src="assets/img/blackwidow.png">
-												<span class="tooltiptext">Black Widow</span>
-											</div>
-											<div class="dot tooltip-selector captainamerica">
-												<img class="tooltipimg" src="assets/img/captainamerica.png">
-												<span class="tooltiptext">Captain America</span>
-											</div>
-											<div class="dot tooltip-selector captainmarvel">
-												<img class="tooltipimg" src="assets/img/captainmarvel.png">
-												<span class="tooltiptext">Captain Marvel</span>
-											</div>
-											<div class="dot tooltip-selector deadpool">
-												<img class="tooltipimg" src="assets/img/deadpool.png">
-												<span class="tooltiptext">Deadpool</span>
-											</div>
-											<div class="dot tooltip-selector drstrange">
-												<img class="tooltipimg" src="assets/img/drstrange.png">
-												<span class="tooltiptext">Dr Strange</span>
-											</div>
-											<div class="dot tooltip-selector falcon">
-												<img class="tooltipimg" src="assets/img/falcon.png">
-												<span class="tooltiptext">Falcon</span>
-											</div>
-											<div class="dot tooltip-selector hawkeye">
-												<img class="tooltipimg" src="assets/img/hawkeye.png">
-												<span class="tooltiptext">Hawkeye</span>
-											</div>
-											<div class="dot tooltip-selector hulk">
-												<img class="tooltipimg" src="assets/img/hulk.png">
-												<span class="tooltiptext">Hulk</span>
-											</div>
-											<div class="dot tooltip-selector ironman">
-												<img class="tooltipimg" src="assets/img/ironman.png">
-												<span class="tooltiptext">Ironman</span>
-											</div>
-											<div class="dot tooltip-selector scarletwitch">
-												<img class="tooltipimg" src="assets/img/scarletwitch.png">
-												<span class="tooltiptext">Scarlet Witch</span>
-											</div>
-											<div class="dot tooltip-selector spiderman">
-												<img class="tooltipimg" src="assets/img/spiderman.png">
-												<span class="tooltiptext">Spiderman</span>
-											</div>
-											<div class="dot tooltip-selector thor">
-												<img class="tooltipimg" src="assets/img/thor.png">
-												<span class="tooltiptext">Thor</span>
-											</div>
-											<div class="dot tooltip-selector warmachine">
-												<img class="tooltipimg" src="assets/img/warmachine.png">
-												<span class="tooltiptext">War Machine</span>
-											</div>
-											<div class="dot tooltip-selector vision">
-												<img class="tooltipimg" src="assets/img/vision.png">
-												<span class="tooltiptext">Vision</span>
-											</div>
-										</div>
-									</div>
-							<!-- The dots/circles-end -->
-
-								  <div class="card-body hero-info" id="heroInfo">
-								    <h2 class="card-title hero-title">Superhero</h2>
-										<ul class="list-group hero-list" id="heroList">
-											<li class="list-group-item hero-list-inactive">Agility: ?</li>
-											<li class="list-group-item hero-list-inactive" >Intelligence: ?</li>
-											<li class="list-group-item hero-list-inactive">Magic: ?</li>
-											<li class="list-group-item hero-list-inactive" >Strength: ?</li>
-											<li class="list-group-item hero-list-inactive">Speed: ?</li>
-											<li class="list-group-item hero-list-inactive">Technology: ?</li>
-										</ul>
-								  </div>
-									<div class="card-body">
-										<div class="d-flex justify-content-center select-hero-bg" id="selectHero">
-											<a id="prev" class="list-group-item prev">&#10094;</a>
-											<button id="selectHeroButton" class="list-group-item select-hero select-hero-inactive" type="button">Select Hero</button>
-											<a id="next" class="list-group-item next">&#10095;</a>
-										</div>
-									</div>
-								</div><!--card-->
-						  </div><!--col-->
-						  <div class="col-sm-6 villain-column" id="villainColumn">
-								<div class="card villain-slider overlay-container">
-									<div id="villainImg">
-									  <img src="assets/img/questionmarkorange.png" class="villain-img" alt="question mark">
-									</div>
-								  <!--<div class="card-body">
-								  </div>-->
-								  <div class="card-body villain-info" id="villainInfo">
-								    <h2 class="card-title villain-title">Supervillain</h2>
-										<ul class="list-group villain-list" id="villainList">
-											<li class="list-group-item villain-list-inactive">Agility: ?</li>
-											<li class="list-group-item villain-list-inactive" >Intelligence: ?</li>
-											<li class="list-group-item villain-list-inactive">Magic: ?</li>
-											<li class="list-group-item villain-list-inactive" >Strength: ?</li>
-											<li class="list-group-item villain-list-inactive">Speed: ?</li>
-											<li class="list-group-item villain-list-inactive">Technology: ?</li>
-										</ul>
-								  </div>
-								  <div class="card-body">
-										<div class="select-villain-bg d-flex justify-content-center" id="selectVillain">
-											<button id="selectVillainButton" class="select-villain select-villain-inactive" type="button">Select Villain</button>
-										</div>
-								  </div>
-								</div><!--card-->
-						  </div><!--col-->
-						</div><!--row-->
-						
-				  <!--</div>--><!--col-->
-				<!--</div>--><!--row-->
-						<!--</div>--><!--hero-slider-inner-->
-					<!--</div>--><!--hero-slider-->
-				<!--</div>--><!--hero-column-->	    	
-	    <!--</div>--><!--column-->
-
-	    <!--<div class="col-12 col-sm-6s">
-				<div id="villainColumn" class="villain-column">
-					<div class="villain-slider">
-		
-						<div id="villainImg" class="overlay-container">
-							<img src="assets/img/questionmarkorange.png">
-						</div>
-		
-						<div id="villainInfo">
-							<h2>Supervillain</h2>
-							<ul id="villainList" class="villain-list">
-								<li><a class="villain-list-inactive">Agility: ?</a></li>
-								<li><a class="villain-list-inactive">Intelligence: ?</a></li>
-								<li><a class="villain-list-inactive">Magic: ?</a></li>
-								<li><a class="villain-list-inactive">Strength: ?</a></li>
-								<li><a class="villain-list-inactive">Speed: ?</a></li>
-								<li><a class="villain-list-inactive">Technology: ?</a></li>
-							</ul>
-						</div>
-		
-						<div id="selectVillain" class="select-villain-bg">
-							<button id="selectVillainButton" class="select-villain select-villain-inactive" type="button">Select Villain</button>
-						</div>-->
-		
-					<!--</div>--><!--villain-slider-->
-				<!--</div>--><!--villain-column-->
-	    <!--</div>--><!--column-->
-	
-	  <!--</div>--><!--column-->
-	<!--</div>--><!--row-->
-			
-
-			
-
-		<!--</div>--><!--page-->
-	</div><!--container-->
-	
-		<section class="row justify-content-center results-modal-bg">
-			<div id="resultsModal" class="col-sm-12 results-modal"></div>
-		</section>
-		
-					<!--<div class="row justify-content-center">
-						<div class="col-sm-10 col-md-8 col-lg-6 col-xl-5">
-							<div class="card">
-								<div class="card-body">
-									<div class="card-title">
-										
-									</div>
-								</div>
 							</div>
 						</div>
-					</div>-->
-
-		<!--<div class="row justify-content-center">
-			<div class="col-sm-10">
-				<div class="card results-modal-bg">
-					<div id="resultsModal" class="results-modal"></div>
-				</div>
-			</div>
-		</div>-->
-
-		<!--<section class="row results-modal-bg">
-			<div id="resultsModal" class="results-modal"></div>
-		</section>-->
+						<!-- The dots/circles-end -->
 	
-		<section id="marvelDataBg" class="row-collapse justify-content-center marvel-data-bg marvel-data-hide">
-			<div id="marvelData" class="col-sm-12 marvel-data"></div>
-		</section>
-	<!--</<div>--><!--page-bg-->
+					  <div class="card-body hero-info" id="heroInfo">
+					    <h2 class="card-title hero-title">Superhero</h2>
+							<ul class="list-group hero-list" id="heroList">
+								<li class="list-group-item hero-list-inactive">Agility: ?</li>
+								<li class="list-group-item hero-list-inactive" >Intelligence: ?</li>
+								<li class="list-group-item hero-list-inactive">Magic: ?</li>
+								<li class="list-group-item hero-list-inactive" >Strength: ?</li>
+								<li class="list-group-item hero-list-inactive">Speed: ?</li>
+								<li class="list-group-item hero-list-inactive">Technology: ?</li>
+							</ul>
+					  </div>
+					  
+						<div class="card-body">
+							<div class="d-flex justify-content-center select-hero-bg" id="selectHero">
+								<a id="prev" class="list-group-item prev">&#10094;</a>
+								<button id="selectHeroButton" class="list-group-item select-hero select-hero-inactive" type="button">Select Hero</button>
+								<a id="next" class="list-group-item next">&#10095;</a>
+							</div>
+						</div>
+						
+					</div><!--card-->
+			  </div><!--col-->
+			  
+			  <div class="col-12 col-sm-6 villain-column" id="villainColumn">
+					<div class="card villain-slider overlay-container">
+						<div id="villainImg">
+						  <img src="assets/img/questionmarkorange.png" class="villain-img" alt="question mark">
+						</div>
+	
+					  <div class="card-body villain-info" id="villainInfo">
+					    <h2 class="card-title villain-title">Supervillain</h2>
+							<ul class="list-group villain-list" id="villainList">
+								<li class="list-group-item villain-list-inactive">Agility: ?</li>
+								<li class="list-group-item villain-list-inactive" >Intelligence: ?</li>
+								<li class="list-group-item villain-list-inactive">Magic: ?</li>
+								<li class="list-group-item villain-list-inactive" >Strength: ?</li>
+								<li class="list-group-item villain-list-inactive">Speed: ?</li>
+								<li class="list-group-item villain-list-inactive">Technology: ?</li>
+							</ul>
+					  </div>
+	
+					  <div class="card-body">
+							<div class="select-villain-bg d-flex justify-content-center" id="selectVillain">
+								<button id="selectVillainButton" class="select-villain select-villain-inactive" type="button">Select Villain</button>
+							</div>
+					  </div>
+	
+					</div><!--card-->
+			  </div><!--col-->
+			</div><!--row-->
+		</div><!--container-->
+	</section>
+
+	<section>
+		<div class="container">
+			<div class="row justify-content-center results-modal-bg">
+				<div id="resultsModal" class="col-sm-12 results-modal"></div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container">
+			<div id="marvelDataBg" class="row-collapse justify-content-center marvel-data-bg marvel-data-hide">
+				<div id="marvelData" class="col-sm-12 marvel-data"></div>
+			</div>
+		</div>
+	</section>		
 
 	<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
 	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->

@@ -160,8 +160,6 @@ function getMarvelData(callBack) {
       if(this.readyState == 4 && this.status == 200) {
           console.log("success!", this.readyState, this.status, this.statusText);
           callBack(JSON.parse(this.responseText));
-          // console.log(apiURL);
-          // console.log(JSON.parse(this.responseText));
       } else {
           console.log("error!", this.readyState, this.status, this.statusText);
       }
@@ -230,24 +228,11 @@ nextSlide.addEventListener('click', function() {
 var dots = document.getElementsByClassName("dot"); // target all elements with 'dot' class name
 var hideDots = document.getElementById("dotSelector");
 
-// get index number of clicked 'dot' div and send to showSuperhero function
-/*(function currentSlide(n) {
-  for(var i=0; i < n.length; i++) {
-    n[i].index = i; // use loop counter to set the index number for each div element
-    n[i].addEventListener('click', function(e) { // add 'click' event listerner to div elements
-      var dotIndex = e.target.index + 1; // get index number of clicked dot & change index base number to 1 to match slideIndex number
-      showSuperhero(slideIndex = dotIndex); // send clicked dot index number to showSuperhero function
-    }, false);
-  }
-})(dots);*/ // run currentSlide IIFE function as with collection of 'dot' divs
-
 function currentSlide(n) {
   for(var i=0; i < n.length; i++) {
     n[i].index = i; // use loop counter to set the index number for each div element
     n[i].addEventListener('click', function(e) { // add 'click' event listener to div elements
       slideIndex = e.target.index + 1; // get index number of clicked dot & change index base number to 1 to match slideIndex number
-      // console.log(slideIndex);
-      // console.log(e.target.index+1);
       showSuperhero(slideIndex); // send clicked dot index number to showSuperhero function
     }, false);
   }
@@ -294,7 +279,6 @@ function showSuperhero(n) {
                         <div id="infoOverlayId" class="info-overlay">
                           <button id="infoOverlayButton" class="info-overlay-text">More Info</button>
                         </div>`;
-    // heroImg.appendChild(dotSelector); // append dotselector with selected hero to heroimg element
     var marvelDataBg = document.getElementById("marvelDataBg");
     var infoOverlayButton = document.getElementById("infoOverlayButton"); // add event listener to infoOverlayButton to reveal marvelData modal
     infoOverlayButton.addEventListener("click", function(){
@@ -323,8 +307,6 @@ function showSuperhero(n) {
     var heroInfoLink = document.getElementById("heroList");
     var heroInfoList = document.querySelectorAll(".hero-list li");
     var selectHeroButton = document.getElementById('selectHeroButton');
-    // var villainColumn = document.getElementById("villainColumn");
-    // var heroColumn = document.getElementById("heroColumn");
 
     // each time a new hero is selected reset css styles to inactive if set to active
     if(selectHeroButton.className === "select-hero select-hero-active"){
@@ -356,17 +338,12 @@ function showSuperhero(n) {
         selectHeroButton.className = "select-hero select-hero-selected";
         heroImg.firstElementChild.style.border = "4px solid #FFA94A";
         hideDots.style.zIndex = "-1"; // hide scrolling icons when hero has been selected
-        // hideDots.style.display = "none"; // hide scrolling icons when hero has been selected
-        // hideDots.style.visibility = "hidden"; // hide scrolling icons when hero has been selected
         prevSlide.style.visibility = "hidden";
         nextSlide.style.visibility = "hidden";
         selectVillainButton.className = "select-villain select-villain-active";
         var infoOverlayId = document.getElementById("infoOverlayId");
         var infoOverlayParent = infoOverlayId.parentNode;
         infoOverlayParent.removeChild(infoOverlayId); // remove info overlay when hero is selected
-        // villainColumn.classList.remove("villain-column-hidden"); // remove class that hides villain before hero is selected on small screen
-        // villainColumn.classList.add("villain-column-visible"); // make hidden villain visible when hero is selected on small screen
-        // heroColumn.classList.add("hero-column-hidden"); // remove hero name when villain name is visible
       }
     }, false);
 }
@@ -564,19 +541,7 @@ function compareCatergoryScore(catergoryScoreObject){
                                       <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
                                     </div>
                                   </div>
-                                 </div>`;    
-    
-/*    if(result === "win"){
-      resultsModal.innerHTML = `<div class="results-modal-inner">
-                                  <h2>${heroName} defeats ${villainName}</h2>
-                                  <img class="hero-modal-image" src="assets/img/${superheroName}.png">
-                                  <div class="results-modal-infinitystone">
-                                    <p>Congratulations you have obtained the <span class="${infinityStoneColor_Won}">${infinityStoneName_Won}</span></p>
-                                    <img class="blinking-border infinitystone-modal-image" src="assets/img/${infinityStoneId}.png">
-                                    <p>Collect all six infinity stones to win the game!</p>
-                                  </div>
-                                  <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
-                                </div>`;*/
+                                 </div>`;
     } else if (result === "firstResultLose"){
       resultsModal.innerHTML = `<div class="row h-100 justify-content-center results-modal-inner">
 							                    <div class="my-auto col-sm-10 col-md-8 col-lg-6">
@@ -663,12 +628,9 @@ function compareCatergoryScore(catergoryScoreObject){
 
   var infinityStoneList = document.querySelectorAll(".score-counter-list > div");
   var infinityStoneArray = Array.from(infinityStoneList);
-  // console.log("hero score is " + heroCatergoryScore);
-  // console.log("villain score is " + villainCatergoryScore);
 
   if(heroCatergoryScore > villainCatergoryScore){
       heroScoreCounter += 1;
-      // console.log("should be incremental " + heroScoreCounter);
       createImgOverlay("Winner", heroImg, "heroOverlayId");
       createImgOverlay("Loser", villainImg, "villainOverlayId");
       infinityStoneId = "infinitystone" + heroScoreCounter.toString();
@@ -731,14 +693,6 @@ function compareCatergoryScore(catergoryScoreObject){
 function resetGame(){
   if(heroScoreCounter === 7){ // if game is complete modify playagain button
     var scoreCounter = document.getElementById("scoreCounter");
-    /*scoreCounter.innerHTML = `<ul class="score-counter-list">
-                              <li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-                              <li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-                              <li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-                              <li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-                              <li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-                              <li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-                            </ul>`;*/
     scoreCounter.innerHTML = `<ul class="d-flex justify-content-center score-counter-list">
                   						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
                   						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
@@ -751,8 +705,6 @@ function resetGame(){
   }
     var heroImg = document.getElementById('heroImg');
     var heroInfo = document.getElementById('heroInfo');
-    // var dotSelector = document.getElementById('dotSelector');
-    // console.log(dotSelector);
     var dotsArray = Array.from(dots); // convert dots nodelist to array
     dotsArray.forEach(function(element, index) { // loop through array of list elements
       if(element.classList.contains("active")) { // select element with active class name
@@ -761,77 +713,7 @@ function resetGame(){
     });
     
     heroImg.innerHTML = `<img src="assets/img/questionmarkorange.png" class="hero-img" alt="question mark">`;
-    /*dotSelector.innerHTML = `<div class="dot tooltip antman">
-        										<img class="tooltipimg" src="assets/img/antman.png">
-        										<span class="tooltiptext">Antman</span>
-        									</div>
-        									<div class="dot tooltip blackwidow">
-        										<img class="tooltipimg" src="assets/img/blackwidow.png">
-        										<span class="tooltiptext">Black Widow</span>
-        									</div>
-        									<div class="dot tooltip captainamerica">
-        										<img class="tooltipimg" src="assets/img/captainamerica.png">
-        										<span class="tooltiptext">Captain America</span>
-        									</div>
-        									<div class="dot tooltip captainmarvel">
-        										<img class="tooltipimg" src="assets/img/captainmarvel.png">
-        										<span class="tooltiptext">Captain Marvel</span>
-        									</div>
-        									<div class="dot tooltip deadpool">
-        										<img class="tooltipimg" src="assets/img/deadpool.png">
-        										<span class="tooltiptext">Deadpool</span>
-        									</div>
-        									<div class="dot tooltip drstrange">
-        										<img class="tooltipimg" src="assets/img/drstrange.png">
-        										<span class="tooltiptext">Dr Strange</span>
-        									</div>
-        									<div class="dot tooltip falcon">
-        										<img class="tooltipimg" src="assets/img/falcon.png">
-        										<span class="tooltiptext">Falcon</span>
-        									</div>
-        									<div class="dot tooltip hawkeye">
-        										<img class="tooltipimg" src="assets/img/hawkeye.png">
-        										<span class="tooltiptext">Hawkeye</span>
-        									</div>
-        									<div class="dot tooltip hulk">
-        										<img class="tooltipimg" src="assets/img/hulk.png">
-        										<span class="tooltiptext">Hulk</span>
-        									</div>
-        									<div class="dot tooltip ironman">
-        										<img class="tooltipimg" src="assets/img/ironman.png">
-        										<span class="tooltiptext">Ironman</span>
-        									</div>
-        									<div class="dot tooltip scarletwitch">
-        										<img class="tooltipimg" src="assets/img/scarletwitch.png">
-        										<span class="tooltiptext">Scarlet Witch</span>
-        									</div>
-        									<div class="dot tooltip spiderman">
-        										<img class="tooltipimg" src="assets/img/spiderman.png">
-        										<span class="tooltiptext">Spiderman</span>
-        									</div>
-        									<div class="dot tooltip thor">
-        										<img class="tooltipimg" src="assets/img/thor.png">
-        										<span class="tooltiptext">Thor</span>
-        									</div>
-        									<div class="dot tooltip warmachine">
-        										<img class="tooltipimg" src="assets/img/warmachine.png">
-        										<span class="tooltiptext">War Machine</span>
-        									</div>
-        									<div class="dot tooltip vision">
-        										<img class="tooltipimg" src="assets/img/vision.png">
-        										<span class="tooltiptext">Vision</span>
-        									</div>`;*/ // reset image path back to question mark image
-        								
-    /*heroInfo.innerHTML = `<h2>Superhero</h2>
-                            <ul id="heroList" class="hero-list">
-                              <li><a class="hero-list-inactive">Agility: ?</a></li>
-                              <li><a class="hero-list-inactive" >Intelligence: ?</a></li>
-                              <li><a class="hero-list-inactive">Magic: ?</a></li>
-                              <li><a class="hero-list-inactive" >Strength: ?</a></li>
-                              <li><a class="hero-list-inactive">Speed: ?</a></li>
-                              <li><a class="hero-list-inactive">Technology: ?</a></li>
-                            </ul>`;*/ // reset property values back to question mark default and insert into heroInfo div
-                            								    
+
     heroInfo.innerHTML = `<h2 class="card-title hero-title">Superhero</h2>
     										<ul class="list-group hero-list" id="heroList">
     											<li class="list-group-item hero-list-inactive">Agility: ?</li>
@@ -842,14 +724,10 @@ function resetGame(){
     											<li class="list-group-item hero-list-inactive">Technology: ?</li>
     									  </ul>`; // reset property values back to question mark default and insert into heroInfo div
   
-  // <button id="selectHeroButton" class="list-group-item select-hero select-hero-inactive" type="button">Select Hero</button>
-  
     var selectHeroButton = document.getElementById("selectHeroButton");
     selectHeroButton.className = "list-group-item select-hero select-hero-inactive";
     selectHeroButton.textContent = "Select Hero";
     selectHeroButton.style.border = "solid 4px #5C5787";
-    // var activeDot= document.querySelector("div.active");
-    // activeDot.classList.remove("active");
 
     hideDots.style.zIndex = "0";
     prevSlide.style.visibility = "visible";
@@ -858,29 +736,18 @@ function resetGame(){
     var villainImg = document.getElementById("villainImg");
     var villainInfo = document.getElementById('villainInfo');
 
-    villainImg.innerHTML = `<img src="assets/img/questionmarkorange.png" class="villain-img" alt="question mark">`;
+  villainImg.innerHTML = `<img src="assets/img/questionmarkorange.png" class="villain-img" alt="question mark">`;
 
-    /*villainInfo.innerHTML = `<h2>Supervillain</h2>
-                            <ul id="villainList" class="villain-list">
-                              <li><a class="villain-list-inactive">Agility: ?</a></li>
-                              <li><a class="villain-list-inactive">Intelligence: ?</a></li>
-                              <li><a class="villain-list-inactive">Magic: ?</a></li>
-                              <li><a class="villain-list-inactive">Strength: ?</a></li>
-                              <li><a class="villain-list-inactive">Speed: ?</a></li>
-                              <li><a class="villain-list-inactive">Technology: ?</a></li>
-                            </ul>`;*/  // add object property values to template literal HTML and insert into slideInfo div
-                            
-     villainInfo.innerHTML = `<h2 class="card-title villain-title">Supervillain</h2>
-        										<ul class="list-group villain-list" id="villainList">
-        											<li class="list-group-item villain-list-inactive">Agility: ?</li>
-        											<li class="list-group-item villain-list-inactive" >Intelligence: ?</li>
-        											<li class="list-group-item villain-list-inactive">Magic: ?</li>
-        											<li class="list-group-item villain-list-inactive" >Strength: ?</li>
-        											<li class="list-group-item villain-list-inactive">Speed: ?</li>
-        											<li class="list-group-item villain-list-inactive">Technology: ?</li>
-        										</ul>`;  // add object property values to template literal HTML and insert into slideInfo div
-                            
-                            
+  villainInfo.innerHTML = `<h2 class="card-title villain-title">Supervillain</h2>
+      										<ul class="list-group villain-list" id="villainList">
+      											<li class="list-group-item villain-list-inactive">Agility: ?</li>
+      											<li class="list-group-item villain-list-inactive" >Intelligence: ?</li>
+      											<li class="list-group-item villain-list-inactive">Magic: ?</li>
+      											<li class="list-group-item villain-list-inactive" >Strength: ?</li>
+      											<li class="list-group-item villain-list-inactive">Speed: ?</li>
+      											<li class="list-group-item villain-list-inactive">Technology: ?</li>
+      										</ul>`;  // add object property values to template literal HTML and insert into slideInfo div
+
     var selectVillainButton = document.getElementById("selectVillainButton");
     selectVillainButton.className = "select-villain select-villain-inactive";
     selectVillainButton.textContent = "Select Villain";

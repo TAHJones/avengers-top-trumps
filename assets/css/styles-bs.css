@@ -8,14 +8,10 @@
 /*DOT-SELECTOR*/
 /*HERO-INFO*/
 /*SLIDER-SCROLLER*/
-
-/*SELECT-HERO-BUTTON*/
-
 /*RESULTS-MODAL*/
 /*API-MODAL*/
-/*JASMINE*/
 /*RESPONSIVE-STYLES*/
-
+/*JASMINE*/
 
 /*FONTS*/
 
@@ -87,17 +83,6 @@ p {
 	margin-bottom: 15px;
 }
 
-/*@media (max-width: 576px) {
-  
-  .score-counter-list {
-  	margin: 0 auto 20px;
-  }
-
-  .hero-column {
-  	margin-bottom: 15px;
-  }
-}*/
-
 .hero-slider,
 .villain-slider {
 	width: 80%;
@@ -115,10 +100,6 @@ p {
   margin: 0 auto;
   position: relative;
 }
-
-/*#villainImg {
-	height: 270px;
-}*/
 
 .hero-img,
 .villain-img {
@@ -220,7 +201,6 @@ p {
   background-color: #FB8606;
 }
 
-/*make positioning  of tooptip content relative to parent element*/
 .tooltip-selector-bg {
   position: relative;
 }
@@ -331,12 +311,9 @@ p {
 .select-villain {
 	border: solid 4px #222;
 	border-radius: 6px;
-	/* display: block; */
 	font-size: 12px;
 	font-weight: bold;
 	margin: 0 10px;
-	/* text-align: center; */
-	/*text-decoration: none;*/
 	transition: all 0.25s ease-in-out;
 	width: 160px;
 	height: 55px;
@@ -383,46 +360,16 @@ p {
 /* Next & previous buttons */
 .prev,
 .next {
-  background-color: rgba(0,0,0,0.6);
-  cursor: pointer;
-  color: #ddd;
-  font-weight: bold;
-  /*font-size: 20px;*/
-  padding: 5px;
-  /*padding: 8px 1px 12px 2px;*/
-  /*position: absolute;*/
-  transition: 0.6s ease;
-  /*top: -316px;*/
-  /*user-select: none;*/
-  border: solid 2px transparent;
-  border-radius: 4px;
-}
-.prev,
-.next {
-	/*background-color: rgba(0,0,0,0.6);*/
   background-color: transparent;
   color: #6E67A2 !important;
-	/*color: #ddd !important;*/
 	cursor: pointer;
 	font-weight: bold;
 	font-size: 26px;
 	padding: 5px 0;
-	/* padding: 8px 1px 12px 2px; */
-	/* position: absolute; */
 	transition: 0.6s ease;
-	/* top: -316px; */
-	/* user-select: none; */
 	border: solid 2px transparent;
 	border-radius: 4px;
 }
-
-/*.prev,
-.next {
-    display: block;
-    font-size: 20px;
-    padding: 5px 1px 6px 2px;
-    top: 11px;
-}*/
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
@@ -448,7 +395,6 @@ p {
   height: 50px;
   width: 160px;
 }
-
 
 /*SLIDER-SCROLLER-END*/
 
@@ -660,13 +606,6 @@ p {
 }
 
 .marvel-data {
-	/* background-color: #392569; */
-	/* border-style: none; */
-	/* margin: 0 auto; */
-	/*padding: 20px;*/
-	/* padding-top: 24px; */
-	/* min-height: 80%; */
-	/* width: 80%; */
 	max-width: 500px;
 	position: absolute;
 	top: 50%;
@@ -723,7 +662,6 @@ p {
   text-align: center;
   text-decoration: none;
   transition: all 0.25s ease-in-out;
-  /*width: 150px;*/
 }
 
 .marvel-data-urls a {
@@ -767,15 +705,6 @@ p {
 
 /*mobile devices*/
 
-
-/*@media (max-width: 399px) {
-  .hero-img,
-  .villain-img {
-  	width: 190px;
-  	height: 190px;
-  }
-}*/
-
 @media (min-width: 360px) {
   h1 {
     font-size: 18px
@@ -796,14 +725,11 @@ p {
   }
 }
 
-/*@media (min-width: 400px) and (max-width: 459px) {*/
 @media (min-width: 400px) {
   #heroImg,
   #villainImg {
   	height: 270px;
   	width: 230px;
-  	/*margin: 0 auto;*/
-  	/*position: relative;*/
   }
 
   .hero-img,
@@ -813,7 +739,6 @@ p {
   }
 
   .info-overlay {
-  	/*position: absolute;*/
   	top: 200px;
   	left: 16px;
   }
@@ -827,7 +752,7 @@ p {
   	font-size: 14px;
   	height: 40px;
   	width: 198px;
-  	line-height: 44px;
+  	line-height: 43px;
   }
 
   .hero-title,
@@ -936,7 +861,7 @@ p {
   
   .overlay {
   	border: 6px solid #000;
-  	top: 3%;
+  	top: 9%;
   	left: 0%;
   	height: 177px;
   	width: 177px;
@@ -991,21 +916,6 @@ p {
   	font-size: 20px;
   }
 
-  /*.villain-title {
-  	margin-top: 9px;
-  }*/
-  
-  /*reduce padding around hero and villain title*/
-  /*.hero-slider .card-body:nth-of-type(1),
-  .villain-slider .card-body:nth-of-type(1) {
-  	padding: 0.5rem 0rem 0rem;
-  }*/
-
-  /*.villain-slider .card-body:nth-of-type(1) {
-  	padding-bottom: 1.8rem;
-  }*/
-
-  /*reduce padding around hero and villain list*/
   .heroInfo,
   .villainInfo {
   	padding: 0rem 1.25rem;
@@ -1027,7 +937,6 @@ p {
   	height: 45px;
   }
 
-  /*reduce padding for select hero button*/
   .card-body-select-hero {
   	padding: 1.25rem 0;
   }
@@ -1036,11 +945,6 @@ p {
 	  width: 130px;
   }
 
-  /*reduce padding around hero select-hero button and navigation arrows*/
-  /*.hero-slider > .card-body:nth-of-type(3) {
-    padding: 1.25rem 0;
-  }*/
- 
   .prev,
   .next {
   	font-size: 18px;
@@ -1096,7 +1000,7 @@ p {
   }
 
   .info-overlay {
-  	left: 70px;
+  	left: 26px;
   	top: 178px;
   }
 
@@ -1120,7 +1024,6 @@ p {
 
   .tooltip-selector > .tooltipimg {
   	top: -204px;
-  	/*left: -3px;*/
   	height: 205px;
   	width: 205px;
   }
@@ -1137,11 +1040,6 @@ p {
   .hero-title,
   .villain-title {
   	font-size: 26px;
-  	/*margin-top: 15px;*/
-  }
-
-  .villain-title {
-  	/*margin-top: 22px;*/
   }
 
   .hero-list li,
@@ -1207,8 +1105,8 @@ p {
   }
 
   .overlay {
-  	top: 25px;
-  	left: 0;
+  	top: 26px;
+  	left: -1px;
   	height: 258px;
   	width: 258px;
   }
@@ -1218,7 +1116,7 @@ p {
   }
 
   .info-overlay {
-  	left: 70px;
+  	left: 13px;
   	top: 230px;
   	line-height: 40px;
   }
@@ -1227,10 +1125,10 @@ p {
     width: 230px;
   }
 
+
   .hero-title,
   .villain-title {
   	font-size: 30px;
-  	/*margin-top: 15px;*/
   }
 
   .dot-selector {
@@ -1336,8 +1234,8 @@ p {
   }
 
   .info-overlay {
-  	top: 260px;
-  	left: 78px;
+  	top: 264px;
+  	left: 13px;
   }
 
   .info-overlay-text {
@@ -1377,18 +1275,7 @@ p {
   .hero-title,
   .villain-title {
   	font-size: 32px;
-  	/*margin-top: 15px;*/
   }
-
-  /*.villain-title {
-  	margin-top: 22px;
-  }*/
-  
-  /*reduce padding around hero and villain title*/
-  /*.hero-slider > .card-body:nth-of-type(1),
-  .villain-slider > .card-body:nth-of-type(1) {
-  	padding: 0.3rem 0rem 0rem;
-  }*/
 
   .hero-list li,
   .villain-list li {
@@ -1401,7 +1288,6 @@ p {
  .select-hero,
  .select-villain {
   	font-size: 18px;
-  	/*margin: 0 10px;*/
   	width: 250px;
   	height: 60px;
   }
@@ -1413,8 +1299,23 @@ p {
   .prev,
   .next {
   	font-size: 26px;
-  	/*padding: 5px;*/
   }
 }
 
 /*RESPONSIVE-STYLES-END*/
+
+/*JASMINE*/
+
+/*overlay and hide hero and villain list used for jasmine testing*/
+#jasmineHeroInfo,
+#jasmineVillainInfo {
+  position: absolute;
+  top: 224px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  visibility: hidden;
+}
+
+/*JASMINE-END*/
