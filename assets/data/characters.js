@@ -19,7 +19,7 @@ var marvelCharacters = {
       technology: 6
     },
     captainamerica: {
-      name: "Captain America",
+      name: "Capt America",
       agility: 8,
       intelligence: 7,
       magic: 1,
@@ -28,7 +28,7 @@ var marvelCharacters = {
       technology: 4
     },
     captainmarvel: {
-      name: "Captain Marvel",
+      name: "Capt Marvel",
       agility: 7,
       intelligence: 5,
       magic: 8,

@@ -307,17 +307,6 @@ function showSuperhero(n) {
       }, false);
     }, false);
 
-    // add object property values to template literal HTML and insert into heroInfo div
-    /*heroInfo.innerHTML = `<h2>${heroName}</h2>
-                            <ul id="heroList" class="hero-list">
-                              <li><a class="hero-list-active">Agility: ${agility}</a></li>
-                              <li><a class="hero-list-active">Intelligence: ${intelligence}</a></li>
-                              <li><a class="hero-list-active">Magic: ${magic}</a></li>
-                              <li><a class="hero-list-active">Strength: ${strength}</a></li>
-                              <li><a class="hero-list-active">Speed: ${speed}</a></li>
-                              <li><a class="hero-list-active">Technology: ${technology}</a></li>
-                            </ul>`;*/
-
     heroInfo.innerHTML =  `<h2 class="card-title hero-title">${heroName}</h2>
         										<ul class="list-group hero-list" id="heroList">
         											<li class="list-group-item hero-list-active">Agility: ${agility}</li>
@@ -409,17 +398,6 @@ function showSupervillain() {
     // add supervillain property name into template literal HTML image path and insert into villainImg div
     villainImg.innerHTML = `<img src="assets/img/${supervillainName}.png" class="villain-img" alt="${supervillainName}">`;
 
-    // add object property values to template literal HTML and insert into slideInfo div
-    /*villainInfo.innerHTML = `<h2>${villainName}</h2>
-                            <ul id="villainList" class="villain-list">
-                              <li><a class="villain-list-inactive">Agility: ${agility}</a></li>
-                              <li><a class="villain-list-inactive">Intelligence: ${intelligence}</a></li>
-                              <li><a class="villain-list-inactive">Magic: ${magic}</a></li>
-                              <li><a class="villain-list-inactive">Strength: ${strength}</a></li>
-                              <li><a class="villain-list-inactive">Speed: ${speed}</a></li>
-                              <li><a class="villain-list-inactive">Technology: ${technology}</a></li>
-                            </ul>`;*/
-
     villainInfo.innerHTML = `<h2 class="card-title villain-title">${villainName}</h2>
           										<ul class="list-group villain-list" id="villainList">
           											<li class="list-group-item villain-list-active">Agility: ${agility}</li>
@@ -435,16 +413,6 @@ function showSupervillain() {
     selectVillainButton.style.border = "4px solid #a46e32";
     selectVillainButton.className = "select-villain select-villain-selected";
     villainImg.firstElementChild.style.border = "4px solid #FFA94A";
-
-    // var villainColumn = document.getElementById("villainColumn");
-    // var heroColumn = document.getElementById("heroColumn");
-    /*setTimeout(function(){
-      villainColumn.classList.remove("villain-column-visible"); // remove class that hides villain before hero is selected on small screen
-      villainColumn.classList.add("villain-column-hidden"); // make hidden villain visible when hero is selected on small screen
-      heroColumn.classList.remove("hero-column-hidden"); // remove hero name when villain name is visible
-      heroColumn.classList.add("hero-column-visible"); // remove hero name when villain name is visible
-
-    },2000);*/
   }
 }
 
@@ -519,8 +487,6 @@ function compareCatergoryScore(catergoryScoreObject){
     var infinityStoneColor_Won;
     var infinityStoneName_Lost;
     var infinityStoneColor_Lost;
-    // console.log("heroScoreCounter2 = " + heroScoreCounter);
-    // console.log(typeof(heroScoreCounter));
     switch(heroScoreCounter) { // match infinity stone name with counter score number
       case "":
       case 0:
@@ -539,47 +505,40 @@ function compareCatergoryScore(catergoryScoreObject){
       case 1:
         infinityStoneName_Lost = "Power Stone";
         infinityStoneColor_Lost = "power-stone-color";
-        // console.log(heroScoreCounter);
         break;
       case 2:
         infinityStoneName_Won = "Power Stone";
         infinityStoneColor_Won = "power-stone-color";
         infinityStoneName_Lost = "Space Stone";
         infinityStoneColor_Lost = "space-stone-color";
-        // console.log(heroScoreCounter);
         break;
       case 3:
         infinityStoneName_Won = "Space Stone";
         infinityStoneColor_Won = "space-stone-color";
         infinityStoneName_Lost = "Reality Stone";
         infinityStoneColor_Lost = "reality-stone-color";
-        // console.log(heroScoreCounter);
         break;
       case 4:
         infinityStoneName_Won = "Reality Stone";
         infinityStoneColor_Won = "reality-stone-color";
         infinityStoneName_Lost = "Soul Stone";
         infinityStoneColor_Lost = "soul-stone-color";
-        // console.log(heroScoreCounter);
         break;
       case 5:
         infinityStoneName_Won = "Soul Stone";
         infinityStoneColor_Won = "soul-stone-color";
         infinityStoneName_Lost = "Time Stone";
         infinityStoneColor_Lost = "time-stone-color";
-        // console.log(heroScoreCounter);
         break;
       case 6:
         infinityStoneName_Won = "Time Stone";
         infinityStoneColor_Won = "time-stone-color";
         infinityStoneName_Lost = "Mind Stone";
         infinityStoneColor_Lost = "mind-stone-color";
-        // console.log(heroScoreCounter);
         break;
       case 7:
         infinityStoneName_Won = "Mind Stone";
         infinityStoneColor_Won = "mind-stone-color";
-        // console.log(heroScoreCounter);
         break;
         default:
           switch(true){
@@ -590,16 +549,6 @@ function compareCatergoryScore(catergoryScoreObject){
               alert("Error! heroScoreCounter variable is not an integer"); // return an error if heroScoreCounter is not an integer
         }
     }
-    
-    				/*<div class="col-sm-10">
-							<div class="card">
-								<div class="card-body">
-									<div class="card-title">
-										
-									</div>
-								</div>
-							</div>
-						</div>*/
     
     if(result === "win"){
       resultsModal.innerHTML = `<div class="row h-100 justify-content-center results-modal-inner">
