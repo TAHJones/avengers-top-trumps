@@ -160,8 +160,6 @@ function getMarvelData(callBack) {
       if(this.readyState == 4 && this.status == 200) {
           console.log("success!", this.readyState, this.status, this.statusText);
           callBack(JSON.parse(this.responseText));
-          // console.log(apiURL);
-          // console.log(JSON.parse(this.responseText));
       } else {
           console.log("error!", this.readyState, this.status, this.statusText);
       }
@@ -198,13 +196,14 @@ function marvelData(data) {
 
     var fullThumbnailPath = thumbnailPath + "." + thumbnailExtension;
 
-        marvelData.innerHTML = `<div class="marvel-data-img"><img src="${fullThumbnailPath}" alt="${marvelName}"></img>
-                                <div class="marvel-data-name"><h2>${heroName}</h2></div>
-                                <div class="marvel-data-description"><p>${marvelDescription}</p></div>
-                                <div class="marvel-data-urls"><ul>${marvelResourceList}</ul></div>
-                                <button id="marvelDataButton" class="marvel-data-button" type="button">Return</button>`;
+    marvelData.innerHTML = `<div class="results-modal-inner">
+                              <div class="marvel-data-img"><img src="${fullThumbnailPath}" alt="${marvelName}"></img>
+                              <div class="marvel-data-name"><h2>${heroName}</h2></div>
+                              <div class="marvel-data-description"><p>${marvelDescription}</p></div>
+                              <div class="marvel-data-urls"><ul>${marvelResourceList}</ul></div>
+                              <button id="marvelDataButton" class="marvel-data-button" type="button">Return</button>
+                            </div>`;
 }
-
 
 var slideIndex = 0; // set default value to show first slide
 
@@ -229,26 +228,15 @@ nextSlide.addEventListener('click', function() {
 var dots = document.getElementsByClassName("dot"); // target all elements with 'dot' class name
 var hideDots = document.getElementById("dotSelector");
 
-// get index number of clicked 'dot' div and send to showSuperhero function
-/*(function currentSlide(n) {
-  for(var i=0; i < n.length; i++) {
-    n[i].index = i; // use loop counter to set the index number for each div element
-    n[i].addEventListener('click', function(e) { // add 'click' event listerner to div elements
-      var dotIndex = e.target.index + 1; // get index number of clicked dot & change index base number to 1 to match  slideIndex number
-      showSuperhero(slideIndex = dotIndex); // send clicked dot index number to showSuperhero function
-    }, false);
-  }
-})(dots);*/ // run currentSlide IIFE function as with collection of 'dot' divs
-
 function currentSlide(n) {
   for(var i=0; i < n.length; i++) {
     n[i].index = i; // use loop counter to set the index number for each div element
-    n[i].addEventListener('click', function(e) { // add 'click' event listerner to div elements
-      var dotIndex = e.target.index + 1; // get index number of clicked dot & change index base number to 1 to match  slideIndex number
-      showSuperhero(slideIndex = dotIndex); // send clicked dot index number to showSuperhero function
+    n[i].addEventListener('click', function(e) { // add 'click' event listener to div elements
+      slideIndex = e.target.index + 1; // get index number of clicked dot & change index base number to 1 to match slideIndex number
+      showSuperhero(slideIndex); // send clicked dot index number to showSuperhero function
     }, false);
   }
-};
+}
 
 currentSlide(dots);
 
@@ -269,12 +257,13 @@ function showSuperhero(n) {
     var heroImg = document.getElementById('heroImg');
     var heroInfo = document.getElementById('heroInfo');
     var dotSelector = document.getElementById("dotSelector"); // get dot selector with active class added so can be reinseted as dynamic content
-    console.log(typeof(dotSelector));
     // use slideIndex number -1 as index no. of return array from getSuperheroList function to select individual superhero property name
     superheroName = getSuperheroList()[slideIndex-1];
 
     // use getSuperhero constructer function with superheroName variable as parameter to get superhero object data
     var superhero = new getSuperhero(superheroName); // add object data to superhero variable
+
+    console.log(superhero);
 
     // use object dot notation on superhero variable to access object properties and add to corresponding variable
     heroName = superhero.name;
@@ -286,11 +275,10 @@ function showSuperhero(n) {
     var technology = superhero.technology;
 
     // add superhero property name into template literal HTML image path and insert into heroImg div
-    heroImg.innerHTML = `<img src="assets/img/${superheroName}.png">
+    heroImg.innerHTML = `<img src="assets/img/${superheroName}.png" class="hero-img" alt="${superheroName}">
                         <div id="infoOverlayId" class="info-overlay">
                           <button id="infoOverlayButton" class="info-overlay-text">More Info</button>
                         </div>`;
-    heroImg.appendChild(dotSelector); // append dotselector with selected hero to heroimg element
     var marvelDataBg = document.getElementById("marvelDataBg");
     var infoOverlayButton = document.getElementById("infoOverlayButton"); // add event listener to infoOverlayButton to reveal marvelData modal
     infoOverlayButton.addEventListener("click", function(){
@@ -303,24 +291,22 @@ function showSuperhero(n) {
       }, false);
     }, false);
 
-    // add object property values to template literal HTML and insert into heroInfo div
-    heroInfo.innerHTML = `<h2>${heroName}</h2>
-                            <ul id="heroList" class="hero-list">
-                              <li><a class="hero-list-active">Agility: ${agility}</a></li>
-                              <li><a class="hero-list-active">Intelligence: ${intelligence}</a></li>
-                              <li><a class="hero-list-active">Magic: ${magic}</a></li>
-                              <li><a class="hero-list-active">Strength: ${strength}</a></li>
-                              <li><a class="hero-list-active">Speed: ${speed}</a></li>
-                              <li><a class="hero-list-active">Technology: ${technology}</a></li>
-                            </ul>`;
+    heroInfo.innerHTML =  `<h2 class="card-title hero-title">${heroName}</h2>
+        										<ul class="list-group hero-list" id="heroList">
+        											<li class="list-group-item hero-list-active">Agility: ${agility}</li>
+        											<li class="list-group-item hero-list-active">Intelligence: ${intelligence}</li>
+        											<li class="list-group-item hero-list-active">Magic: ${magic}</li>
+        											<li class="list-group-item hero-list-active">Strength: ${strength}</li>
+        											<li class="list-group-item hero-list-active">Speed: ${speed}</li>
+        											<li class="list-group-item hero-list-active">Technology: ${technology}</li>
+        										</ul>
+        								  </div>`;
 
     getMarvelData(marvelData); // get marvel api data when hero is displayed but not yet selected
 
     var heroInfoLink = document.getElementById("heroList");
-    var heroInfoList = document.querySelectorAll(".hero-list a");
+    var heroInfoList = document.querySelectorAll(".hero-list li");
     var selectHeroButton = document.getElementById('selectHeroButton');
-    // var villainColumn = document.getElementById("villainColumn");
-    // var heroColumn = document.getElementById("heroColumn");
 
     // each time a new hero is selected reset css styles to inactive if set to active
     if(selectHeroButton.className === "select-hero select-hero-active"){
@@ -329,13 +315,13 @@ function showSuperhero(n) {
 
     // add selected styles to selected catergory
     heroInfoLink.addEventListener('click', function(e){
-      if(e.target.className === "hero-list-active"){
-        e.target.className = "selected-catergory";
+      if(e.target.className === "list-group-item hero-list-active"){
+        e.target.className = "list-group-item selected-catergory";
       }
       // add inactive styles to unselected catergories
       for(var i=0; i<heroInfoList.length; i++){
-        if(heroInfoList[i].className === "hero-list-active"){
-          heroInfoList[i].className = "hero-list-inactive";
+        if(heroInfoList[i].className === "list-group-item hero-list-active"){
+          heroInfoList[i].className = "list-group-item hero-list-inactive";
         }
       }
       // replace inactive styles with active styles when superhero catergory is selected
@@ -351,16 +337,13 @@ function showSuperhero(n) {
         selectHeroButton.style.border = "4px solid #a46e32";
         selectHeroButton.className = "select-hero select-hero-selected";
         heroImg.firstElementChild.style.border = "4px solid #FFA94A";
-        hideDots.style.visibility = "hidden"; // hide scrolling icons when hero has been selected
+        hideDots.style.zIndex = "-1"; // hide scrolling icons when hero has been selected
         prevSlide.style.visibility = "hidden";
         nextSlide.style.visibility = "hidden";
         selectVillainButton.className = "select-villain select-villain-active";
         var infoOverlayId = document.getElementById("infoOverlayId");
         var infoOverlayParent = infoOverlayId.parentNode;
         infoOverlayParent.removeChild(infoOverlayId); // remove info overlay when hero is selected
-        // villainColumn.classList.remove("villain-column-hidden"); // remove class that hides villain before hero is selected on small screen
-        // villainColumn.classList.add("villain-column-visible"); // make hidden villain visible when hero is selected on small screen
-        // heroColumn.classList.add("hero-column-hidden"); // remove hero name when villain name is visible
       }
     }, false);
 }
@@ -390,34 +373,23 @@ function showSupervillain() {
     var technology = supervillain.technology;
 
     // add supervillain property name into template literal HTML image path and insert into villainImg div
-    villainImg.innerHTML = `<img src="assets/img/${supervillainName}.png">`;
+    villainImg.innerHTML = `<img src="assets/img/${supervillainName}.png" class="villain-img" alt="${supervillainName}">`;
 
-    // add object property values to template literal HTML and insert into slideInfo div
-    villainInfo.innerHTML = `<h2>${villainName}</h2>
-                            <ul id="villainList" class="villain-list">
-                              <li><a class="villain-list-inactive">Agility: ${agility}</a></li>
-                              <li><a class="villain-list-inactive">Intelligence: ${intelligence}</a></li>
-                              <li><a class="villain-list-inactive">Magic: ${magic}</a></li>
-                              <li><a class="villain-list-inactive">Strength: ${strength}</a></li>
-                              <li><a class="villain-list-inactive">Speed: ${speed}</a></li>
-                              <li><a class="villain-list-inactive">Technology: ${technology}</a></li>
-                            </ul>`;
+    villainInfo.innerHTML = `<h2 class="card-title villain-title">${villainName}</h2>
+          										<ul class="list-group villain-list" id="villainList">
+          											<li class="list-group-item villain-list-active">Agility: ${agility}</li>
+          											<li class="list-group-item villain-list-active" >Intelligence: ${intelligence}</li>
+          											<li class="list-group-item villain-list-active">Magic: ${magic}</li>
+          											<li class="list-group-item villain-list-active" >Strength: ${strength}</li>
+          											<li class="list-group-item villain-list-active">Speed: ${speed}</li>
+          											<li class="list-group-item villain-list-active">Technology: ${technology}</li>
+          										</ul>`;
 
     // change villain button and images styles when villain is selected
     selectVillainButton.textContent = `${villainName}`;
     selectVillainButton.style.border = "4px solid #a46e32";
     selectVillainButton.className = "select-villain select-villain-selected";
     villainImg.firstElementChild.style.border = "4px solid #FFA94A";
-
-    // var villainColumn = document.getElementById("villainColumn");
-    // var heroColumn = document.getElementById("heroColumn");
-    /*setTimeout(function(){
-      villainColumn.classList.remove("villain-column-visible"); // remove class that hides villain before hero is selected on small screen
-      villainColumn.classList.add("villain-column-hidden"); // make hidden villain visible when hero is selected on small screen
-      heroColumn.classList.remove("hero-column-hidden"); // remove hero name when villain name is visible
-      heroColumn.classList.add("hero-column-visible"); // remove hero name when villain name is visible
-
-    },2000);*/
   }
 }
 
@@ -429,12 +401,14 @@ if(heroScoreCounter > 1){ // check if variable already has recorded score, if it
   heroScoreCounter = 1; // if variable does exist i.e is > 0 declare variable in global scope with value of 1
 }
 
+console.log("heroScoreCounter = " + heroScoreCounter);
+
 function getHeroCatergoryScore(){ // function that returns index number and score of selected catergory
   var heroCatergoryScoreObject = {}; // create object to hold hero catergory score and selected catergory index no.
-  var heroList = document.querySelectorAll("#heroList > li > a"); // get list of anchor elements containing hero catergory scores
+  var heroList = document.querySelectorAll("#heroList > li"); // get list of anchor elements containing hero catergory scores
   var heroListArray = Array.from(heroList); // convert heroList nodelist to array
   heroListArray.forEach(function(element, index){ // loop through array of anchor elements and select element with selected-catergory class name
-    if(element.className === "selected-catergory"){
+    if(element.classList.contains("selected-catergory")) {
       heroCatergoryScoreObject.selectedCatergoryIndex = index; // add selected catergory index no. to catergoryScoreObject
       var heroCatergoryScoreText = element.textContent;
       var heroCatergoryScore = parseInt(heroCatergoryScoreText.charAt(heroCatergoryScoreText.length-1)); // select last character of string and convert to number
@@ -442,12 +416,13 @@ function getHeroCatergoryScore(){ // function that returns index number and scor
       heroCatergoryScoreObject.heroCatergoryScore = heroCatergoryScore;
     }
   });
+  console.log(heroCatergoryScoreObject);
   return heroCatergoryScoreObject; // return catergoryScoreObject
 } // getHeroCatergoryScore function end
 
 function getVillainCatergoryScore(heroCatergoryScoreObject){  // function that recieves heroCatergoryScoreObject, renames it as catergoryScoreObject and adds villain catergory score to object then returns object
   var catergoryScoreObject = heroCatergoryScoreObject;
-  var villainList = document.querySelectorAll("#villainList > li > a"); // get list of anchor elements containing villain catergory scores
+  var villainList = document.querySelectorAll("#villainList > li"); // get list of anchor elements containing villain catergory scores
   var villainListArray = Array.from(villainList); // convert villainList nodelist to array
   villainListArray.forEach(function(element, index){ // loop through array of anchor elements and select element with selected-catergory class name
     if(index === catergoryScoreObject.selectedCatergoryIndex){ // if index no. of list item equals index no. of selected hero catergory list item store in catergoryScoreElement variable
@@ -457,14 +432,18 @@ function getVillainCatergoryScore(heroCatergoryScoreObject){  // function that r
       var villainCatergoryScore = parseInt(catergoryScoreText.charAt(catergoryScoreText.length-1)); // select last character of string and convert to number
       villainCatergoryScore === 0 ? villainCatergoryScore = 10 : villainCatergoryScore;  // if villainCatergoryScore = 0 convert to 10
       catergoryScoreObject.villainCatergoryScore = villainCatergoryScore; // add/create villainCatergoryScore key to catergoryScoreObject and add villainCatergoryScore variable as value
+    } else if (element.classList.contains("villain-list-active")) { // select list items with villain-list-active classname
+      element.classList.remove("villain-list-active");
+      element.classList.add("villain-list-inactive");
     }
   });
+  console.log(catergoryScoreObject);
   return catergoryScoreObject;
 } // getVillainCatergoryScore function end
 
 function compareCatergoryScore(catergoryScoreObject){
   var heroCatergoryScore = catergoryScoreObject.heroCatergoryScore;
-  // console.log(catergoryScoreObject.heroCatergoryScore);
+  console.log(catergoryScoreObject.heroCatergoryScore);
   var villainCatergoryScore = catergoryScoreObject.villainCatergoryScore;
 
   var villainImg = document.getElementById("villainImg");
@@ -503,47 +482,40 @@ function compareCatergoryScore(catergoryScoreObject){
       case 1:
         infinityStoneName_Lost = "Power Stone";
         infinityStoneColor_Lost = "power-stone-color";
-        // console.log(heroScoreCounter);
         break;
       case 2:
         infinityStoneName_Won = "Power Stone";
         infinityStoneColor_Won = "power-stone-color";
         infinityStoneName_Lost = "Space Stone";
         infinityStoneColor_Lost = "space-stone-color";
-        // console.log(heroScoreCounter);
         break;
       case 3:
         infinityStoneName_Won = "Space Stone";
         infinityStoneColor_Won = "space-stone-color";
         infinityStoneName_Lost = "Reality Stone";
         infinityStoneColor_Lost = "reality-stone-color";
-        // console.log(heroScoreCounter);
         break;
       case 4:
         infinityStoneName_Won = "Reality Stone";
         infinityStoneColor_Won = "reality-stone-color";
         infinityStoneName_Lost = "Soul Stone";
         infinityStoneColor_Lost = "soul-stone-color";
-        // console.log(heroScoreCounter);
         break;
       case 5:
         infinityStoneName_Won = "Soul Stone";
         infinityStoneColor_Won = "soul-stone-color";
         infinityStoneName_Lost = "Time Stone";
         infinityStoneColor_Lost = "time-stone-color";
-        // console.log(heroScoreCounter);
         break;
       case 6:
         infinityStoneName_Won = "Time Stone";
         infinityStoneColor_Won = "time-stone-color";
         infinityStoneName_Lost = "Mind Stone";
         infinityStoneColor_Lost = "mind-stone-color";
-        // console.log(heroScoreCounter);
         break;
       case 7:
         infinityStoneName_Won = "Mind Stone";
         infinityStoneColor_Won = "mind-stone-color";
-        // console.log(heroScoreCounter);
         break;
         default:
           switch(true){
@@ -554,63 +526,81 @@ function compareCatergoryScore(catergoryScoreObject){
               alert("Error! heroScoreCounter variable is not an integer"); // return an error if heroScoreCounter is not an integer
         }
     }
+    
     if(result === "win"){
-      resultsModal.innerHTML = `<div class="results-modal-inner">
-                                  <h2>${heroName} defeats ${villainName}</h2>
-                                  <img class="hero-modal-image" src="assets/img/${superheroName}.png">
-                                  <div class="results-modal-infinitystone">
-                                    <p>Congratulations you have obtained the <span class="${infinityStoneColor_Won}">${infinityStoneName_Won}</span></p>
-                                    <img class="blinking-border infinitystone-modal-image" src="assets/img/${infinityStoneId}.png">
-                                    <p>Collect all six infinity stones to win the game!</p>
+      resultsModal.innerHTML = `<div class="row h-100 justify-content-center results-modal-inner">
+							                    <div class="my-auto col-sm-10 col-md-8 col-lg-6">
+                                    <h2 class="">${heroName} defeats ${villainName}</h2>
+                                    <img class="hero-modal-image" src="assets/img/${superheroName}.png">
+                                    <div class="results-modal-infinitystone">
+                                      <p>Congratulations you have obtained the <span class="${infinityStoneColor_Won}">${infinityStoneName_Won}</span></p>
+                                      <img class="blinking-border infinitystone-modal-image" src="assets/img/${infinityStoneId}.png">
+                                      <p>Collect all six infinity stones to win the game!</p>
+                                    </div>
+                                    <div class="play-again-button-bg d-flex justify-content-center">
+                                      <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
+                                    </div>
                                   </div>
-                                  <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
-                                </div>`;
+                                 </div>`;
     } else if (result === "firstResultLose"){
-      resultsModal.innerHTML = `<div class="results-modal-inner">
-                                  <h2>${villainName} defeats ${heroName}</h2>
-                                  <img class="hero-modal-image" src="assets/img/${supervillainName}.png">
-                                  <div class="results-modal-infinitystone">
+      resultsModal.innerHTML = `<div class="row h-100 justify-content-center results-modal-inner">
+							                    <div class="my-auto col-sm-10 col-md-8 col-lg-6">
+                                    <h2>${villainName} defeats ${heroName}</h2>
+                                    <img class="hero-modal-image" src="assets/img/${supervillainName}.png">
+                                    <div class="results-modal-infinitystone">
                                     <p>You must fight again and win to aquire the <span class="power-stone-color">Power Stone</span></p>
                                     <img class="blinking-border infinitystone-modal-image" src="assets/img/infinitystone2.png">
                                     <p>Collect all six infinity stones to win the game!</p>
+                                    <div class="play-again-button-bg d-flex justify-content-center">
+                                      <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
+                                    </div>
                                   </div>
-                                <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
                                 </div>`;
     } else if (result === "lose"){
-      resultsModal.innerHTML = `<div class="results-modal-inner">
-                                  <h2>${villainName} defeats ${heroName}</h2>
-                                  <img class="hero-modal-image" src="assets/img/${supervillainName}.png">
-                                  <div class="results-modal-infinitystone">
+      resultsModal.innerHTML = `<div class="row h-100 justify-content-center results-modal-inner">
+							                    <div class="my-auto col-sm-10 col-md-8 col-lg-6">
+                                    <h2>${villainName} defeats ${heroName}</h2>
+                                    <img class="hero-modal-image" src="assets/img/${supervillainName}.png">
+                                    <div class="results-modal-infinitystone">
                                     <p>You have lost the <span class="${infinityStoneColor_Lost}">${infinityStoneName_Lost}</span></p>
                                     <img class="blinking-border infinitystone-modal-image" src="assets/img/${infinityStoneId}.png">
                                     <p>To complete your mission you must regain the ${infinityStoneName_Lost}!</p>
+                                    <div class="play-again-button-bg d-flex justify-content-center">
+                                      <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
+                                    </div>
                                   </div>
-                                  <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
                                 </div>`;
     } else if (result == "firstResultDraw"){
-      resultsModal.innerHTML = `<div class="results-modal-inner">
-                                  <h2>${heroName} draws with ${villainName}</h2>
-                                  <img class="hero-modal-image" src="assets/img/${superheroName}.png">
-                                  <div class="results-modal-infinitystone">
+      resultsModal.innerHTML = `<div class="row h-100 justify-content-center results-modal-inner">
+							                    <div class="my-auto col-sm-10 col-md-8 col-lg-6">
+                                    <h2>${heroName} draws with ${villainName}</h2>
+                                    <img class="hero-modal-image" src="assets/img/${superheroName}.png">
+                                    <div class="results-modal-infinitystone">
                                     <p>You must fight again and win to aquire the <span class="power-stone-color">Power Stone</span></p>
                                     <img class="blinking-border infinitystone-modal-image" src="assets/img/infinitystone2.png">
                                     <p>Collect all six infinity stones to win the game!</p>
+                                    <div class="play-again-button-bg d-flex justify-content-center">
+                                      <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
+                                    </div>
                                   </div>
-                                <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
                                 </div>`;
     } else if (result == "draw"){
-      resultsModal.innerHTML = `<div class="results-modal-inner">
-                                  <h2>${heroName} draws with ${villainName}</h2>
-                                  <img class="hero-modal-image" src="assets/img/${superheroName}.png">
-                                  <div class="results-modal-infinitystone">
+      resultsModal.innerHTML = `<div class="row h-100 justify-content-center results-modal-inner">
+							                    <div class="my-auto col-sm-10 col-md-8 col-lg-6">
+                                    <h2>${heroName} draws with ${villainName}</h2>
+                                    <img class="hero-modal-image" src="assets/img/${superheroName}.png">
+                                    <div class="results-modal-infinitystone">
                                     <p>You live to fight another day and still possess the <span class="${infinityStoneColor_Won}">${infinityStoneName_Won}</span></p>
                                     <img class="blinking-border infinitystone-modal-image" src="assets/img/${infinityStoneId}.png">
                                     <p>Collect all six infinity stones to win the game!</p>
+                                    <div class="play-again-button-bg d-flex justify-content-center">
+                                      <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
+                                    </div>
                                   </div>
-                                <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
                                 </div>`;
     } else if (result === "complete"){
-      resultsModal.innerHTML = `<div class="results-modal-inner">
+      resultsModal.innerHTML = `<div class="row h-100 justify-content-center results-modal-inner">
+							                   <div class="my-auto col-sm-10 col-md-8 col-lg-6">
                                   <h2>You are a Top Trumps Champion!</h2>
                                   <img class="hero-modal-image" src="assets/img/ironman-infinity-gauntlet2.jpg">
                                   <div class="results-modal-infinitystone">
@@ -626,21 +616,21 @@ function compareCatergoryScore(catergoryScoreObject){
                                     </div>
                                     <p>You have collected all six infinity stones and won the game!</p>
                                   </div>
-                                  <button id="playAgainButton" class="play-again-button" type="button">Start Again</button>
-                                </div>`;
+                                  <div class="play-again-button-bg d-flex justify-content-center">
+                                    <button id="playAgainButton" class="play-again-button" type="button">Start Again</button>
+                                  </div>
+                                </div>
+                              </div>`;
     } else {
       alert("Error! No result was found");
     }
   } // showResultsModal function end
 
-  var infinityStoneList = document.querySelectorAll(".score-counter-list > li");
+  var infinityStoneList = document.querySelectorAll(".score-counter-list > div");
   var infinityStoneArray = Array.from(infinityStoneList);
-  // console.log("hero score is " + heroCatergoryScore);
-  // console.log("villain score is " + villainCatergoryScore);
 
   if(heroCatergoryScore > villainCatergoryScore){
       heroScoreCounter += 1;
-      // console.log("should be incremental " + heroScoreCounter);
       createImgOverlay("Winner", heroImg, "heroOverlayId");
       createImgOverlay("Loser", villainImg, "villainOverlayId");
       infinityStoneId = "infinitystone" + heroScoreCounter.toString();
@@ -683,7 +673,7 @@ function compareCatergoryScore(catergoryScoreObject){
     }
     resultsModal.classList.add("modal-fadein");
 } else if(heroCatergoryScore === villainCatergoryScore) {
-  createImgOverlay("Draw", heroImg, "heroOverlayId");
+    createImgOverlay("Draw", heroImg, "heroOverlayId");
     createImgOverlay("Draw", villainImg, "villainOverlayId");
     heroScoreCounter += 0; // keep heroScoreCounter value the same
     infinityStoneId = "infinitystone" + heroScoreCounter.toString(); // add updated result counter to infinityStoneId variable
@@ -703,127 +693,71 @@ function compareCatergoryScore(catergoryScoreObject){
 function resetGame(){
   if(heroScoreCounter === 7){ // if game is complete modify playagain button
     var scoreCounter = document.getElementById("scoreCounter");
-    scoreCounter.innerHTML = `<ul class="score-counter-list">
-                              <li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-                              <li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-                              <li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-                              <li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-                              <li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-                              <li><img src="assets/img/placeholderinfinitystone.png"></img></li>
-                            </ul>`;
+    scoreCounter.innerHTML = `<ul class="d-flex justify-content-center score-counter-list">
+                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+                  					</ul>`;
     heroScoreCounter = 1; // reset score counter back to default value
   }
     var heroImg = document.getElementById('heroImg');
     var heroInfo = document.getElementById('heroInfo');
-    heroImg.innerHTML = `<img src="assets/img/questionmarkorange.png">
-                        <!-- The dots/circles -->
-        								<div id="dotSelector" class="dot-selector">
-        									<div class="dot tooltip antman">
-        										<img class="tooltipimg" src="assets/img/antman.png">
-        										<span class="tooltiptext">Antman</span>
-        									</div>
-        									<div class="dot tooltip blackwidow">
-        										<img class="tooltipimg" src="assets/img/blackwidow.png">
-        										<span class="tooltiptext">Black Widow</span>
-        									</div>
-        									<div class="dot tooltip captainamerica">
-        										<img class="tooltipimg" src="assets/img/captainamerica.png">
-        										<span class="tooltiptext">Captain America</span>
-        									</div>
-        									<div class="dot tooltip captainmarvel">
-        										<img class="tooltipimg" src="assets/img/captainmarvel.png">
-        										<span class="tooltiptext">Captain Marvel</span>
-        									</div>
-        									<div class="dot tooltip deadpool">
-        										<img class="tooltipimg" src="assets/img/deadpool.png">
-        										<span class="tooltiptext">Deadpool</span>
-        									</div>
-        									<div class="dot tooltip drstrange">
-        										<img class="tooltipimg" src="assets/img/drstrange.png">
-        										<span class="tooltiptext">Dr Strange</span>
-        									</div>
-        									<div class="dot tooltip falcon">
-        										<img class="tooltipimg" src="assets/img/falcon.png">
-        										<span class="tooltiptext">Falcon</span>
-        									</div>
-        									<div class="dot tooltip hawkeye">
-        										<img class="tooltipimg" src="assets/img/hawkeye.png">
-        										<span class="tooltiptext">Hawkeye</span>
-        									</div>
-        									<div class="dot tooltip hulk">
-        										<img class="tooltipimg" src="assets/img/hulk.png">
-        										<span class="tooltiptext">Hulk</span>
-        									</div>
-        									<div class="dot tooltip ironman">
-        										<img class="tooltipimg" src="assets/img/ironman.png">
-        										<span class="tooltiptext">Ironman</span>
-        									</div>
-        									<div class="dot tooltip scarletwitch">
-        										<img class="tooltipimg" src="assets/img/scarletwitch.png">
-        										<span class="tooltiptext">Scarlet Witch</span>
-        									</div>
-        									<div class="dot tooltip spiderman">
-        										<img class="tooltipimg" src="assets/img/spiderman.png">
-        										<span class="tooltiptext">Spiderman</span>
-        									</div>
-        									<div class="dot tooltip thor">
-        										<img class="tooltipimg" src="assets/img/thor.png">
-        										<span class="tooltiptext">Thor</span>
-        									</div>
-        									<div class="dot tooltip warmachine">
-        										<img class="tooltipimg" src="assets/img/warmachine.png">
-        										<span class="tooltiptext">War Machine</span>
-        									</div>
-        									<div class="dot tooltip vision">
-        										<img class="tooltipimg" src="assets/img/vision.png">
-        										<span class="tooltiptext">Vision</span>
-        									</div>
-        								</div>
-        								<!-- The dots/circles-end -->`; // reset image path back to question mark image
-        								
-    heroInfo.innerHTML = `<h2>Superhero</h2>
-                            <ul id="heroList" class="hero-list">
-                              <li><a class="hero-list-inactive">Agility: ?</a></li>
-                              <li><a class="hero-list-inactive" >Intelligence: ?</a></li>
-                              <li><a class="hero-list-inactive">Magic: ?</a></li>
-                              <li><a class="hero-list-inactive" >Strength: ?</a></li>
-                              <li><a class="hero-list-inactive">Speed: ?</a></li>
-                              <li><a class="hero-list-inactive">Technology: ?</a></li>
-                            </ul>`; // reset property values back to question mark default and insert into heroInfo div
+    var dotsArray = Array.from(dots); // convert dots nodelist to array
+    dotsArray.forEach(function(element, index) { // loop through array of list elements
+      if(element.classList.contains("active")) { // select element with active class name
+        element.classList.remove("active"); // remove active class name if present
+      }
+    });
+    
+    heroImg.innerHTML = `<img src="assets/img/questionmarkorange.png" class="hero-img" alt="question mark">`;
+
+    heroInfo.innerHTML = `<h2 class="card-title hero-title">Superhero</h2>
+    										<ul class="list-group hero-list" id="heroList">
+    											<li class="list-group-item hero-list-inactive">Agility: ?</li>
+    											<li class="list-group-item hero-list-inactive" >Intelligence: ?</li>
+    											<li class="list-group-item hero-list-inactive">Magic: ?</li>
+    											<li class="list-group-item hero-list-inactive" >Strength: ?</li>
+    											<li class="list-group-item hero-list-inactive">Speed: ?</li>
+    											<li class="list-group-item hero-list-inactive">Technology: ?</li>
+    									  </ul>`; // reset property values back to question mark default and insert into heroInfo div
+  
     var selectHeroButton = document.getElementById("selectHeroButton");
-    selectHeroButton.className = "select-hero select-hero-inactive";
+    selectHeroButton.className = "list-group-item select-hero select-hero-inactive";
     selectHeroButton.textContent = "Select Hero";
     selectHeroButton.style.border = "solid 4px #5C5787";
-    // var activeDot= document.querySelector("div.active");
-    // activeDot.classList.remove("active");
 
-    hideDots.style.visibility = "visible";
+    hideDots.style.zIndex = "0";
     prevSlide.style.visibility = "visible";
     nextSlide.style.visibility = "visible";
 
     var villainImg = document.getElementById("villainImg");
     var villainInfo = document.getElementById('villainInfo');
 
-    villainImg.innerHTML = `<img src="assets/img/questionmarkorange.png">`;  // add supervillain property name into template literal HTML image path and insert into villainImg div
+  villainImg.innerHTML = `<img src="assets/img/questionmarkorange.png" class="villain-img" alt="question mark">`;
 
-    villainInfo.innerHTML = `<h2>Supervillain</h2>
-                            <ul id="villainList" class="villain-list">
-                              <li><a class="villain-list-inactive">Agility: ?</a></li>
-                              <li><a class="villain-list-inactive">Intelligence: ?</a></li>
-                              <li><a class="villain-list-inactive">Magic: ?</a></li>
-                              <li><a class="villain-list-inactive">Strength: ?</a></li>
-                              <li><a class="villain-list-inactive">Speed: ?</a></li>
-                              <li><a class="villain-list-inactive">Technology: ?</a></li>
-                            </ul>`;  // add object property values to template literal HTML and insert into slideInfo div
+  villainInfo.innerHTML = `<h2 class="card-title villain-title">Supervillain</h2>
+      										<ul class="list-group villain-list" id="villainList">
+      											<li class="list-group-item villain-list-inactive">Agility: ?</li>
+      											<li class="list-group-item villain-list-inactive" >Intelligence: ?</li>
+      											<li class="list-group-item villain-list-inactive">Magic: ?</li>
+      											<li class="list-group-item villain-list-inactive" >Strength: ?</li>
+      											<li class="list-group-item villain-list-inactive">Speed: ?</li>
+      											<li class="list-group-item villain-list-inactive">Technology: ?</li>
+      										</ul>`;  // add object property values to template literal HTML and insert into slideInfo div
+
     var selectVillainButton = document.getElementById("selectVillainButton");
     selectVillainButton.className = "select-villain select-villain-inactive";
     selectVillainButton.textContent = "Select Villain";
     selectVillainButton.style.border = "solid 4px #5C5787";
-    if(resultsModal.className === "results-modal modal-fadein modal-fadeout"){
+    if(resultsModal.className === "col-sm-12 results-modal modal-fadein modal-fadeout"){
       setTimeout(function(){
-        resultsModal.className = "results-modal";
+        resultsModal.className = "col-sm-12 results-modal";
       },2500); // delay rest of class names until fadeout effect is complete
     }
+    slideIndex = 0; // reset slideIndex value to show first slide
     currentSlide(dots); // bind event listener to dot selector when reset happens
 } // resetGame function end
 
@@ -845,45 +779,4 @@ resultsModal.addEventListener('click', function(e){
     resultsModal.classList.add("modal-fadeout");
     resetGame(); // reset all elements to 'inactive' state when results modal has been removed
   }
-},false);
-
-// var heroColumn = document.getElementById("heroColumn");
-// var villainColumn = document.getElementById("villainColumn");
-
-/*function myFunction(x) {
-  if (x.matches) { // If media query matches x variable
-    heroColumn.className = "hero-column";
-    villainColumn.className = "villain-column";
-  } else {
-    heroColumn.className = "col col-xs-4 col-xs-offset-1"
-    villainColumn.className = "col col-xs-4";
-  }
-}*/
-
-// var x = window.matchMedia("(max-width: 409px)")
-// myFunction(x) // Call listener function at run time
-// x.addListener(myFunction) // Attach listener function on state changes
-
-
-
-var pageBg = document.getElementById("pageBg");
-
-// console.log(pageBg);
-// console.log(pageBg.style.width);
-
-function getPageHeight(){
-  // var pageHeight;
-  var h = window.innerHeight;
-  var pageHeight = h.toString() + "px";
-  // console.log(pageHeight);
-  // console.log(typeof(h));
-  pageBg.style.height = pageHeight;
-}
-  // console.log(pageBg.style.width);
-
-
-window.addEventListener("load", function() {
-  getPageHeight();
-  window.addEventListener("resize", getPageHeight); 
-  // console.log('All assets are loaded');
-});
+},false)
