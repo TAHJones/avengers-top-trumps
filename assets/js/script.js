@@ -256,7 +256,7 @@ function showSuperhero(n) {
 
     var heroImg = document.getElementById('heroImg');
     var heroInfo = document.getElementById('heroInfo');
-    var dotSelector = document.getElementById("dotSelector"); // get dot selector with active class added so can be reinseted as dynamic content
+    
     // use slideIndex number -1 as index no. of return array from getSuperheroList function to select individual superhero property name
     superheroName = getSuperheroList()[slideIndex-1];
 
@@ -628,6 +628,8 @@ function compareCatergoryScore(catergoryScoreObject){
 
   var infinityStoneList = document.querySelectorAll(".score-counter-list > div");
   var infinityStoneArray = Array.from(infinityStoneList);
+  var heroOverlayId = document.getElementById("heroOverlayId"); // target overlay id for hero image
+  var villainOverlayId = document.getElementById("villainOverlayId"); // target overlay id for villain image
 
   if(heroCatergoryScore > villainCatergoryScore){
       heroScoreCounter += 1;
@@ -640,8 +642,6 @@ function compareCatergoryScore(catergoryScoreObject){
           element.innerHTML = `<img class="glowing-border" src="assets/img/${infinityStoneId}.png">`;
         }
       });
-      var heroOverlayId = document.getElementById("heroOverlayId"); // target overlay id for hero image
-      var villainOverlayId = document.getElementById("villainOverlayId"); // target overlay id for villain image
       heroOverlayId.classList.add("overlay-fadein");
       villainOverlayId.classList.add("overlay-fadein");
       if(heroCatergoryScore > villainCatergoryScore && heroScoreCounter === 7){
@@ -661,8 +661,6 @@ function compareCatergoryScore(catergoryScoreObject){
         element.innerHTML = `<img src="assets/img/placeholderinfinitystone.png">`; // reset lost infinity stone to placeholder image
       }
     });
-    var heroOverlayId = document.getElementById("heroOverlayId"); // target overlay id for hero image
-    var villainOverlayId = document.getElementById("villainOverlayId"); // target overlay id for villain image
     heroOverlayId.classList.add("overlay-fadein");
     villainOverlayId.classList.add("overlay-fadein");
     if(heroCatergoryScore < villainCatergoryScore && heroScoreCounter < 1){
@@ -677,8 +675,6 @@ function compareCatergoryScore(catergoryScoreObject){
     createImgOverlay("Draw", villainImg, "villainOverlayId");
     heroScoreCounter += 0; // keep heroScoreCounter value the same
     infinityStoneId = "infinitystone" + heroScoreCounter.toString(); // add updated result counter to infinityStoneId variable
-    var heroOverlayId = document.getElementById("heroOverlayId"); // target overlay id for hero image
-    var villainOverlayId = document.getElementById("villainOverlayId"); // target overlay id for villain image
     heroOverlayId.classList.add("overlay-fadein");
     villainOverlayId.classList.add("overlay-fadein");
     if(heroCatergoryScore === villainCatergoryScore && heroScoreCounter === 1){
@@ -688,7 +684,7 @@ function compareCatergoryScore(catergoryScoreObject){
     }
     resultsModal.classList.add("modal-fadein");
   }
-}; // compareCatergoryScore function end
+} // compareCatergoryScore function end
 
 function resetGame(){
   if(heroScoreCounter === 7){ // if game is complete modify playagain button
@@ -779,4 +775,4 @@ resultsModal.addEventListener('click', function(e){
     resultsModal.classList.add("modal-fadeout");
     resetGame(); // reset all elements to 'inactive' state when results modal has been removed
   }
-},false)
+},false);

@@ -975,10 +975,12 @@ p {
   /*Give parent div of image a fixed height to prevent collapse when image is changed*/
   #heroImg {
   	height: 224px;
+  	width: 205px;
   }
 
   #villainImg {
   	height: 248px;
+  	width: 205px;
   }
 
   .hero-img,
@@ -1000,7 +1002,7 @@ p {
   }
 
   .info-overlay {
-  	left: 26px;
+  	left: 13px;
   	top: 178px;
   }
 
@@ -1016,8 +1018,8 @@ p {
   }
 
   .dot {
-  	height: 9px;
-  	width: 9px;
+  	height: 8.5px;
+  	width: 8.5px;
   	margin: 0;
   	display: inline-block;
   }
@@ -1091,10 +1093,12 @@ p {
   /*Give parent div of image a fixed height to prevent collapse when image is changed*/
   #heroImg {
   	height: 286px;
+  	width: 255px;
   }
 
   #villainImg {
   	height: 288px;
+  	width: 255px;
   }
 
   .hero-img,
@@ -1209,10 +1213,12 @@ p {
   /*Give parent div of image a fixed height to prevent collapse when image is changed*/
   #heroImg {
   	height: 318px;
+  	width: 290px;
   }
 
   #villainImg {
   	height: 320px;
+  	width: 290px;
   }
 
   .hero-img,
