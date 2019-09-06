@@ -776,3 +776,20 @@ resultsModal.addEventListener('click', function(e){
     resetGame(); // reset all elements to 'inactive' state when results modal has been removed
   }
 },false);
+
+// script for adding year to footer
+
+// select copyRight div
+var copyRight = document.getElementById("copyRight");
+
+// Return today's date and time
+var currentTime = new Date()
+
+// returns the year (four digits)
+var year = currentTime.getFullYear()
+
+// insert current year variable into copyright statement
+var copyRightText = "2018 - " + year + " © Thomas Jones - All Rights Reserved";
+
+// insert copyright statement into copyRight div
+copyRight.innerHTML = copyRightText;
