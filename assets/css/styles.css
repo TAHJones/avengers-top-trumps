@@ -706,7 +706,7 @@ p {
 
 #copyRight {
 	color: #777;
-	font-size: 12px;
+	font-size: 10px;
 	text-align: center;
 	margin-top: 20px;
 }
@@ -784,6 +784,10 @@ p {
 
   .select-villain {
   	width: 200px;
+  }
+
+  #copyRight {
+  	font-size: 12px;
   }
 }
 
@@ -1080,6 +1084,10 @@ p {
   .next {
   	font-size: 26px;
   	padding: 4px;
+  }
+
+    #copyRight {
+  	  font-size: 14px;
   }
 }
 
