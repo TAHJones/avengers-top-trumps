@@ -803,13 +803,9 @@ p {
     font-size: 23px
   }
 
-  #heroImg {
+  /*#heroImg {
   	height: 254px;
-  }
-
-  .dot {
-	  display: inline-block;
-  }
+  }*/
 
   .hero-list li,
   .villain-list li {
@@ -855,13 +851,10 @@ p {
   	padding: 6px;
   }
 
-  /*Give parent div of image a fixed height to prevent collapse when image is changed*/
-  #heroImg {
-  	height: 190px;
-  }
-
+  #heroImg,
   #villainImg {
-  	height: 214px;
+  	height: 205px;
+  	/*width: 230px;*/
   }
 
   .hero-img,
@@ -903,12 +896,6 @@ p {
   .dot-selector {
   	margin: 0 auto;
   	width: 75%;
-  }
-  
-  .dot {
-  	height: 6.7px;
-  	width: 6.7px;
-  	margin: 0;
   }
 
   .tooltip-selector > .tooltipimg {
