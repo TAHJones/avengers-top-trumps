@@ -48,12 +48,11 @@ h1 {
 
 body {
 	background-color: #0a1926;
-	font-family: 'Chakra', sans-serif;
+	font-family: sans-serif;
 }
 
 p {
   color: #818786;
-  font-family: 'Chakra', sans-serif;
   font-size: 14px;
   line-height: 25px;
   text-align: justify;
@@ -261,7 +260,6 @@ p {
 .hero-title,
 .villain-title {
   color: #EF9B3F;
-  font-family: 'Chakra', sans-serif;
 	font-size: 22px;
   font-weight: bold;
   text-align: center;
@@ -640,7 +638,6 @@ p {
 
 .marvel-data p {
 	color: #818786;
-	font-family: 'Chakra', sans-serif;
 	font-size: 12px;
 	margin: 0 15px 15px;
 	text-align: justify;
