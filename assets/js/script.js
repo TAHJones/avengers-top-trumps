@@ -751,7 +751,7 @@ function resetGame(){
     if(resultsModal.className === "col-sm-12 results-modal modal-fadein modal-fadeout"){
       setTimeout(function(){
         resultsModal.className = "col-sm-12 results-modal";
-      },2500); // delay rest of class names until fadeout effect is complete
+      },1500); // delay rest of class names until fadeout effect is complete
     }
     slideIndex = 0; // reset slideIndex value to show first slide
     currentSlide(dots); // bind event listener to dot selector when reset happens
