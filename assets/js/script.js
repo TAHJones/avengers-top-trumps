@@ -628,13 +628,19 @@ function compareCatergoryScore(catergoryScoreObject){
 
   var infinityStoneList = document.querySelectorAll(".score-counter-list > div");
   var infinityStoneArray = Array.from(infinityStoneList);
-  var heroOverlayId = document.getElementById("heroOverlayId"); // target overlay id for hero image
-  var villainOverlayId = document.getElementById("villainOverlayId"); // target overlay id for villain image
+  // var heroOverlayId = document.getElementById("heroOverlayId"); // target overlay id for hero image
+  // console.log(heroOverlayId);
+  // var villainOverlayId = document.getElementById("villainOverlayId"); // target overlay id for villain image
+  // console.log(villainOverlayId);
 
   if(heroCatergoryScore > villainCatergoryScore){
       heroScoreCounter += 1;
       createImgOverlay("Winner", heroImg, "heroOverlayId");
+      var heroOverlayId = document.getElementById("heroOverlayId");
+      console.log(heroOverlayId);
       createImgOverlay("Loser", villainImg, "villainOverlayId");
+      var villainOverlayId = document.getElementById("villainOverlayId");
+      console.log(villainOverlayId);
       infinityStoneId = "infinitystone" + heroScoreCounter.toString();
       infinityStoneArray.forEach(function(element, index){
         if(heroScoreCounter === index + 2){
@@ -751,7 +757,7 @@ function resetGame(){
     if(resultsModal.className === "col-sm-12 results-modal modal-fadein modal-fadeout"){
       setTimeout(function(){
         resultsModal.className = "col-sm-12 results-modal";
-      },1500); // delay rest of class names until fadeout effect is complete
+      },3500); // delay rest of class names until fadeout effect is complete
     }
     slideIndex = 0; // reset slideIndex value to show first slide
     currentSlide(dots); // bind event listener to dot selector when reset happens
@@ -763,7 +769,9 @@ selectVillainButton.addEventListener('click', function(){ // when selectVillainB
    if(selectVillainButton.classList.contains("select-villain-active")){ // only make changes if villain button is active
     showSupervillain();
     var heroCatergoryScoreObject = getHeroCatergoryScore(); // store returned object in heroCatergoryScoreObject variable
+    console.log(heroCatergoryScoreObject);
     var catergoryScoreObject = getVillainCatergoryScore(heroCatergoryScoreObject); // pass heroCatergoryScoreObject to getVillainCatergoryScore function and store returned object in catergoryScoreObject variable
+    console.log(catergoryScoreObject);
     compareCatergoryScore(catergoryScoreObject); // pass catergoryScoreObject to compareCatergoryScore function which compares catergory scores and calculates result
    }
 }, false);
