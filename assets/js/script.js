@@ -1,3 +1,28 @@
+/*NEW JS*/
+
+/*Fetch Requests*/
+
+function getMarvelData(n) {
+  let superheroList;
+  let supervillainList;
+
+  fetch('assets/data/characters.json')
+  .then((res) => res.json())
+  .then((data) => {
+    let superheroList = Object.entries(data.superheros);
+    let superhero = showSuperhero(superheroList, n);
+    // console.log(superhero);
+  })
+  .catch(err => {
+    console.log(err);
+  })
+}
+
+
+/*NEW JS END*/
+
+
+
 function getSuperheroes(data) {
   switch(data) { // return an error for function called with an 'empty' parameter value
     case "":
@@ -32,12 +57,24 @@ function getSuperheroes(data) {
   }
 }
 
-// getSuperheroList function converts superhero object data into array of superhero property names
 function getSuperheroList() {
   var superHeroes = getSuperheroes(marvelCharacters);
   var superheroList = Object.keys(superHeroes);
   return superheroList; // return array of superhero names
 }
+
+// function getSuperhero(name) { // enter superhero name as function parameter
+//   var superHero = gettMarvelData("heros").name; /*global marvelCharacters*/ // get list of superheroes
+//   var superHeroes = gettMarvelData("heros"); /*global marvelCharacters*/ // get list of superheroes
+//   var superHero = superHeroes.name; // select superhero from superHeroes object with bracket notation using function parameter
+//   this.name = superHero.name; // add marvelCharacters object properties to getSuperhero constructor function
+//   this.agility = superHero.agility;
+//   this.intelligence = superHero.intelligence;
+//   this.magic = superHero.magic;
+//   this.speed = superHero.speed;
+//   this.strength = superHero.strength;
+//   this.technology = superHero.technology;
+// }
 
 function getSuperhero(name) { // enter superhero name as function parameter
   var superHeroes = getSuperheroes(marvelCharacters); /*global marvelCharacters*/ // get list of superheroes
@@ -244,7 +281,7 @@ var heroName; // declare superheroName variable in global scope so it can be use
 var superheroName; // declare superheroName variable in global scope so it can be used by multiple functions
 
 function showSuperhero(n) {
-    var superheroList = getSuperheroList();
+    var superheroList = gettMarvelData("heros"); /*getSuperheroList();*/
     if (n > superheroList.length) {slideIndex = 1} // if slideIndex is > no. of slides reset to value of 1st slide
     if (n < 1) {slideIndex = superheroList.length} // if slideIndex is < 1 reset value to value of last slide
 
