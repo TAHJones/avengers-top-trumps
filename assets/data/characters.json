@@ -1,7 +1,6 @@
 {
-  "superheros": [
-    {
-      "id": "antman",
+  "superheros": {
+    "antman": {
       "name": "Antman",
       "agility": 10,
       "intelligence": 6,
@@ -10,8 +9,7 @@
       "speed": 6,
       "technology": 9
     },
-    {
-      "id": "blackwidow",
+    "blackwidow": {
       "name": "Black Widow",
       "agility": 9,
       "intelligence": 8,
@@ -20,9 +18,8 @@
       "speed": 7,
       "technology": 6
     },
-    {
-      "id": "captainamerica",
-      "name": "Captain America",
+    "captainamerica": {
+      "name": "Capt America",
       "agility": 8,
       "intelligence": 7,
       "magic": 0,
@@ -30,9 +27,8 @@
       "speed": 8,
       "technology": 4
     },
-    {
-      "id": "captainmarvel",
-      "name": "Captain Marvel",
+    "captainmarvel": {
+      "name": "Capt Marvel",
       "agility": 7,
       "intelligence": 6,
       "magic": 8,
@@ -40,8 +36,7 @@
       "speed": 10,
       "technology": 8
     },
-    {
-      "id": "deadpool",
+    "deadpool": {
       "name": "Deadpool",
       "agility": 9,
       "intelligence": 7,
@@ -50,8 +45,7 @@
       "speed": 10,
       "technology": 0
     },
-    {
-      "id": "drstrange",
+    "drstrange": {
       "name": "Dr Strange",
       "agility": 3,
       "intelligence": 10,
@@ -60,8 +54,7 @@
       "speed": 4,
       "technology": 0
     },
-    {
-      "id": "falcon",
+    "falcon": {
       "name": "Falcon",
       "agility": 5,
       "intelligence": 7,
@@ -70,8 +63,7 @@
       "speed": 8,
       "technology": 8
     },
-    {
-      "id": "hawkeye",
+    "hawkeye": {
       "name": "Hawkeye",
       "agility": 8,
       "intelligence": 7,
@@ -80,8 +72,7 @@
       "speed": 8,
       "technology": 4
     },
-    {
-      "id": "hulk",
+    "hulk": {
       "name": "Hulk",
       "agility": 4,
       "intelligence": 2,
@@ -90,8 +81,7 @@
       "speed": 8,
       "technology": 0
     },
-    {
-      "id": "ironman",
+    "ironman": {
       "name": "Ironman",
       "agility": 7,
       "intelligence": 10,
@@ -100,8 +90,7 @@
       "speed": 9,
       "technology": 10
     },
-    {
-      "id": "scarletwitch",
+    "scarletwitch": {
       "name": "Scarlet Witch",
       "agility": 5,
       "intelligence": 7,
@@ -110,8 +99,7 @@
       "speed": 7,
       "technology": 0
     },
-    {
-      "id": "spiderman",
+    "spiderman": {
       "name": "Spiderman",
       "agility": 10,
       "intelligence": 7,
@@ -120,8 +108,7 @@
       "speed": 10,
       "technology": 7
     },
-    {
-      "id": "thor",
+    "thor": {
       "name": "Thor",
       "agility": 7,
       "intelligence": 7,
@@ -130,8 +117,7 @@
       "speed": 9,
       "technology": 8
     },
-    {
-      "id": "warmachine",
+    "warmachine": {
       "name": "War Machine",
       "agility": 5,
       "intelligence": 7,
@@ -140,8 +126,7 @@
       "speed": 8,
       "technology": 9
     },
-    {
-      "id": "vision",
+    "vision": {
       "name": "Vision",
       "agility": 8,
       "intelligence": 8,
@@ -150,10 +135,9 @@
       "speed": 9,
       "technology": 0
     }
-  ],
-  "supervillains": [
-    {
-      "id": "blackdwarf",
+  },
+  "supervillains": {
+    "blackdwarf": {
       "name": "Black Dwarf",
       "agility": 2,
       "intelligence": 4,
@@ -162,8 +146,7 @@
       "speed": 4,
       "technology": 9
     },
-    {
-      "id": "drdoom",
+    "drdoom": {
       "name": "Dr Doom",
       "agility": 7,
       "intelligence": 10,
@@ -172,8 +155,7 @@
       "speed": 7,
       "technology": 10
     },
-    {
-      "id": "dormannu",
+    "dormannu": {
       "name": "Dormannu",
       "agility": 6,
       "intelligence": 9,
@@ -182,8 +164,7 @@
       "speed": 7,
       "technology": 0
     },
-    {
-      "id": "ebonymaw",
+    "ebonymaw": {
       "name": "Ebony Maw",
       "agility": 4,
       "intelligence": 9,
@@ -192,8 +173,7 @@
       "speed": 2,
       "technology": 8
     },
-    {
-      "id": "loki",
+    "loki": {
       "name": "Loki",
       "agility": 8,
       "intelligence": 10,
@@ -202,8 +182,7 @@
       "speed": 7,
       "technology": 9
     },
-    {
-      "id": "magneto",
+    "magneto": {
       "name": "Magneto",
       "agility": 7,
       "intelligence": 6,
@@ -212,8 +191,7 @@
       "speed": 10,
       "technology": 9
     },
-    {
-      "id": "mandarin",
+    "mandarin": {
       "name": "Mandarin",
       "agility": 7,
       "intelligence": 8,
@@ -222,8 +200,7 @@
       "speed": 7,
       "technology": 7
     },
-    {
-      "id": "modok",
+    "modok": {
       "name": "M.O.D.O.K",
       "agility": 5,
       "intelligence": 9,
@@ -232,8 +209,7 @@
       "speed": 6,
       "technology": 10
     },
-    {
-      "id": "redskull",
+    "redskull": {
       "name": "Red Skull",
       "agility": 7,
       "intelligence": 8,
@@ -242,8 +218,7 @@
       "speed": 8,
       "technology": 7
     },
-    {
-      "id": "thanos",
+    "thanos": {
       "name": "Thanos",
       "agility": 9,
       "intelligence": 10,
@@ -252,8 +227,7 @@
       "speed": 9,
       "technology": 10
     },
-    {
-      "id": "ultron",
+    "ultron": {
       "name": "Ultron",
       "agility": 8,
       "intelligence": 9,
@@ -262,8 +236,7 @@
       "speed": 9,
       "technology": 9
     },
-    {
-      "id": "venom",
+    "venom": {
       "name": "Venom",
       "agility": 8,
       "intelligence": 6,
@@ -272,8 +245,7 @@
       "speed": 8,
       "technology": 0
     },
-    {
-      "id": "vulture",
+    "vulture": {
       "name": "Vulture",
       "agility": 7,
       "intelligence": 7,
@@ -282,8 +254,7 @@
       "speed": 8,
       "technology": 8
     },
-    {
-      "id": "whiplash",
+    "whiplash": {
       "name": "Whiplash",
       "agility": 6,
       "intelligence": 8,
@@ -292,8 +263,7 @@
       "speed": 6,
       "technology": 8
     },
-    {
-      "id": "yondu",
+    "yondu": {
       "name": "Yondu",
       "agility": 6,
       "intelligence": 7,
@@ -302,5 +272,5 @@
       "speed": 6,
       "technology": 9
     }
-  ]
+  }
 }
