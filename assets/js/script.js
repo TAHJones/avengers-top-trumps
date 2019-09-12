@@ -1,5 +1,45 @@
 /*NEW JS*/
 
+function showSuperhero(data, n) {
+  let heroImg = document.getElementById('heroImg');
+  let heroInfo = document.getElementById('heroInfo');
+  let superHero = data[slideIndex-1]; // select superhero from superHeroes object with bracket notation using function parameter
+  let filePathName = superHero[0];
+  let superheroName = superHero[1].name;
+  let agility = superHero[1].agility;
+  let intelligence = superHero[1].intelligence;
+  let magic = superHero[1].magic;
+  let strength = superHero[1].strength;
+  let speed = superHero[1].speed;
+  let technology = superHero[1].technology;
+  
+  if (n > data.length) {slideIndex = 1} // if slideIndex is > no. of slides reset to value of 1st slide
+  if (n < 1) {slideIndex = data.length} // if slideIndex is < 1 reset value to value of last slide
+
+	for (let i = 0; i < dots.length; i++) {
+  	dots[i].className = dots[i].className.replace(" active", ""); // loop through all dot divs and remove 'active' class name
+	}
+
+  dots[slideIndex-1].className += " active"; // add 'active' class name to dots div that matches modifed slidesIndex no.
+
+  // add superhero property name into template literal HTML image path and insert into heroImg div
+  heroImg.innerHTML = `<img src="assets/img/${filePathName}.png" class="hero-img" alt="${filePathName}">
+                      <div id="infoOverlayId" class="info-overlay">
+                        <button id="infoOverlayButton" class="info-overlay-text">More Info</button>
+                      </div>`;
+
+  heroInfo.innerHTML =  `<h2 class="card-title hero-title">${superheroName}</h2>
+      										<ul class="list-group hero-list" id="heroList">
+      											<li class="list-group-item hero-list-active">Agility: ${agility}</li>
+      											<li class="list-group-item hero-list-active">Intelligence: ${intelligence}</li>
+      											<li class="list-group-item hero-list-active">Magic: ${magic}</li>
+      											<li class="list-group-item hero-list-active">Strength: ${strength}</li>
+      											<li class="list-group-item hero-list-active">Speed: ${speed}</li>
+      											<li class="list-group-item hero-list-active">Technology: ${technology}</li>
+      										</ul>
+      								  </div>`;
+}
+
 /*Fetch Requests*/
 
 function getMarvelData(n) {
