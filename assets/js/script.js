@@ -314,41 +314,6 @@ function marvelData(data) {
                             </div>`;
 }
 
-var slideIndex = 0; // set default value to show first slide
-
-// target anchor element with 'prev' id
-var prevSlide = document.getElementById('prev');
-
-// add click eventlistener to target div with 'prev' id
-prevSlide.addEventListener('click', function() {
-  slideIndex = slideIndex - 1; // decrease slideIndex value by 1 so previous slide is made visible by showSuperhero function
-  showSuperhero(slideIndex); // decrease slideIndex value by 1 so previous slide is made visible by showSuperhero function
-}, false);
-
-// target anchor element with 'next' id
-var nextSlide = document.getElementById('next');
-
-// add click eventlistener to target div with 'prev' id
-nextSlide.addEventListener('click', function() {
-  slideIndex = slideIndex + 1; // increase slideIndex value by 1 so next slide is made visible by showSuperhero function
-  showSuperhero(slideIndex);
-}, false);
-
-var dots = document.getElementsByClassName("dot"); // target all elements with 'dot' class name
-var hideDots = document.getElementById("dotSelector");
-
-function currentSlide(n) {
-  for(var i=0; i < n.length; i++) {
-    n[i].index = i; // use loop counter to set the index number for each div element
-    n[i].addEventListener('click', function(e) { // add 'click' event listener to div elements
-      slideIndex = e.target.index + 1; // get index number of clicked dot & change index base number to 1 to match slideIndex number
-      showSuperhero(slideIndex); // send clicked dot index number to showSuperhero function
-    }, false);
-  }
-}
-
-currentSlide(dots);
-
 var heroName; // declare superheroName variable in global scope so it can be used by multiple functions
 var superheroName; // declare superheroName variable in global scope so it can be used by multiple functions
 
