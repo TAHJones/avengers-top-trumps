@@ -98,13 +98,17 @@ function resetSelectSuperheroButton() {
 
 function getMarvelData(n) {
   let superheroList;
-  let supervillainList;
+  // let supervillainList;
 
   fetch('assets/data/characters.json')
   .then((res) => res.json())
   .then((data) => {
-    let superheroList = Object.entries(data.superheros);
-    let superhero = showSuperhero(superheroList, n);
+    superheroList = Object.entries(data.superheros);
+    showSuperhero(superheroList, n);
+    resetSelectSuperheroButton();
+    showMarvelAPIModal();
+    selectSuperheroCatergory();
+    // selectSuperhero();
     // console.log(superhero);
   })
   .catch(err => {
