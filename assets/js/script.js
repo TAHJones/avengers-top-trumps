@@ -86,6 +86,14 @@ function selectSuperheroCatergory() {
 	}, false);
 }
 
+function resetSelectSuperheroButton() {
+  // let selectHeroButton = document.getElementById('selectHeroButton');
+  if(selectHeroButton.className === "select-hero select-hero-active"){
+	  // each time a new hero is selected reset css styles to inactive if set to active
+    selectHeroButton.className = "select-hero select-hero-inactive";
+  }
+}
+
 /*Fetch Requests*/
 
 function getMarvelData(n) {
