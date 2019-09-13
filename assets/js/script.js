@@ -5,7 +5,8 @@ let slideIndex = 0; // set default value to show first slide
 let prevSlide = document.getElementById('prev');
 let nextSlide = document.getElementById('next');
 let dots = document.getElementsByClassName("dot");
-let hideDots = document.getElementById("dotSelector");
+// let hideDots = document.getElementById("dotSelector");
+let selectHeroButton = document.getElementById('selectHeroButton');
 
 function showSuperhero(data, n) {
   let heroImg = document.getElementById('heroImg');
