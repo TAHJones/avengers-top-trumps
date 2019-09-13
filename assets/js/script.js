@@ -64,6 +64,28 @@ function showMarvelAPIModal() {
   }, false);
 }
 
+function selectSuperheroCatergory() {
+	let heroInfoLink = document.getElementById("heroList");
+	let heroInfoList = document.querySelectorAll(".hero-list li");
+	// add selected styles to selected catergory
+	heroInfoLink.addEventListener('click', function(e){
+		console.log(heroInfoList);
+	  if(e.target.className === "list-group-item hero-list-active"){
+	    e.target.className = "list-group-item selected-catergory";
+	  }
+	  // add inactive styles to unselected catergories
+	  for(let i=0; i<heroInfoList.length; i++){
+	    if(heroInfoList[i].className === "list-group-item hero-list-active"){
+	      heroInfoList[i].className = "list-group-item hero-list-inactive";
+	    }
+	  }
+	  if(selectHeroButton.classList.contains("select-hero-inactive")){
+		  // replace inactive styles with active styles when superhero catergory is selected
+	    selectHeroButton.className = "select-hero select-hero-active";
+	  }
+	}, false);
+}
+
 /*Fetch Requests*/
 
 function getMarvelData(n) {
