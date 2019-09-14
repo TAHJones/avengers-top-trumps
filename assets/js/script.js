@@ -196,13 +196,6 @@ currentSlide(dots);
 
 /*NEW JS END*/
 
-
-function getSuperheroList() {
-  var superHeroes = getSuperheroes(marvelCharacters);
-  var superheroList = Object.keys(superHeroes);
-  return superheroList; // return array of superhero names
-}
-
 // function getSuperhero(name) { // enter superhero name as function parameter
 //   var superHero = gettMarvelData("heros").name; /*global marvelCharacters*/ // get list of superheroes
 //   var superHeroes = gettMarvelData("heros"); /*global marvelCharacters*/ // get list of superheroes
