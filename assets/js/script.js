@@ -17,7 +17,7 @@ function showSuperhero(data, n) {
   let heroInfo = document.getElementById('heroInfo');
   let superHero = data[slideIndex-1]; // select superhero from superHeroes object with bracket notation using function parameter
   let filePathName = superHero[0];
-  let superheroName = superHero[1].name;
+  superheroName = superHero[1].name;
   let agility = superHero[1].agility;
   let intelligence = superHero[1].intelligence;
   let magic = superHero[1].magic;
