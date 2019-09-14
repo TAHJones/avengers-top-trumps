@@ -114,22 +114,17 @@ function selectSuperheroButton() {
 }
 
 function showSupervillain(data, n) {
-	console.log(data)
 	let superVillain = data[n];
-	console.log(superVillain);
   let villainInfo = document.getElementById('villainInfo');
-  // let superHero = data[slideIndex-1]; // select superhero from superVillaines object with bracket notation using function parameter
   let filePathName = superVillain[0];
-  console.log(filePathName);
   let supervillainName = superVillain[1].name;
-  console.log(supervillainName);
   let agility = superVillain[1].agility;
   let intelligence = superVillain[1].intelligence;
   let magic = superVillain[1].magic;
   let strength = superVillain[1].strength;
   let speed = superVillain[1].speed;
   let technology = superVillain[1].technology;
-
+  
   // add superhero property name into template literal HTML image path and insert into heroImg div
   villainImg.innerHTML = `<img src="assets/img/${filePathName}.png" class="villain-img" alt="${filePathName}">`;
 
