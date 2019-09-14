@@ -1,6 +1,6 @@
 /*NEW JS*/
 
-/*NAVIGATION VARIABLES*/
+/*GLOBAL VARIABLES*/
 let heroImg = document.getElementById('heroImg');
 let slideIndex = 0; // set default value to show first slide
 let prevSlide = document.getElementById('prev');
