@@ -94,6 +94,24 @@ function resetSuperheroButton() {
   }
 }
 
+function selectSuperheroButton() {
+  selectHeroButton.addEventListener('click', function(){
+    if(selectHeroButton.classList.contains("select-hero-active")){ // check that button is active before adding changes
+      // selectHeroButton.textContent = `${heroName}`; // add superhero name to 'selectHero' button
+      selectHeroButton.style.border = "4px solid #a46e32";
+      selectHeroButton.className = "select-hero select-hero-selected";
+      heroImg.firstElementChild.style.border = "4px solid #FFA94A";
+      hideDots.style.zIndex = "-1"; // hide scrolling icons when hero has been selected
+      prevSlide.style.visibility = "hidden";
+      nextSlide.style.visibility = "hidden";
+      selectVillainButton.className = "select-villain select-villain-active";
+      var infoOverlayId = document.getElementById("infoOverlayId");
+      var infoOverlayParent = infoOverlayId.parentNode;
+      infoOverlayParent.removeChild(infoOverlayId); // remove info overlay when hero is selected
+    }
+  }, false);	
+}
+
 /*Fetch Requests*/
 
 function getMarvelData(n) {
