@@ -196,19 +196,6 @@ currentSlide(dots);
 
 /*NEW JS END*/
 
-// function getSuperhero(name) { // enter superhero name as function parameter
-//   var superHero = gettMarvelData("heros").name; /*global marvelCharacters*/ // get list of superheroes
-//   var superHeroes = gettMarvelData("heros"); /*global marvelCharacters*/ // get list of superheroes
-//   var superHero = superHeroes.name; // select superhero from superHeroes object with bracket notation using function parameter
-//   this.name = superHero.name; // add marvelCharacters object properties to getSuperhero constructor function
-//   this.agility = superHero.agility;
-//   this.intelligence = superHero.intelligence;
-//   this.magic = superHero.magic;
-//   this.speed = superHero.speed;
-//   this.strength = superHero.strength;
-//   this.technology = superHero.technology;
-// }
-
 function getSuperhero(name) { // enter superhero name as function parameter
   var superHeroes = getSuperheroes(marvelCharacters); /*global marvelCharacters*/ // get list of superheroes
   var superHero = superHeroes[name]; // select superhero from superHeroes object with bracket notation using function parameter
@@ -763,10 +750,6 @@ function compareCatergoryScore(catergoryScoreObject){
 
   var infinityStoneList = document.querySelectorAll(".score-counter-list > div");
   var infinityStoneArray = Array.from(infinityStoneList);
-  // var heroOverlayId = document.getElementById("heroOverlayId"); // target overlay id for hero image
-  // console.log(heroOverlayId);
-  // var villainOverlayId = document.getElementById("villainOverlayId"); // target overlay id for villain image
-  // console.log(villainOverlayId);
 
   if(heroCatergoryScore > villainCatergoryScore){
       heroScoreCounter += 1;
