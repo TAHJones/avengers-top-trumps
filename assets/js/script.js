@@ -10,6 +10,8 @@ let dots = document.getElementsByClassName("dot");
 let hideDots = document.getElementById("dotSelector");
 let selectHeroButton = document.getElementById('selectHeroButton');
 let selectVillainButton = document.getElementById('selectVillainButton');
+let superheroName;
+let supervillainName;
 
 function showSuperhero(data, n) {
   let heroInfo = document.getElementById('heroInfo');
