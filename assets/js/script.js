@@ -196,18 +196,6 @@ currentSlide(dots);
 
 /*NEW JS END*/
 
-function getSupervillain(name) { // enter supervillain name as function parameter
-  var superVillains = getSupervillains(marvelCharacters); // get list of supervillains
-  var superVillain = superVillains[name]; // select supervillain from superVillains object with bracket notation using function parameter
-  this.name = superVillain.name; // add marvelCharacters object properties to getSupervillain constructor function
-  this.agility = superVillain.agility;
-  this.intelligence = superVillain.intelligence;
-  this.magic = superVillain.magic;
-  this.speed = superVillain.speed;
-  this.strength = superVillain.strength;
-  this.technology = superVillain.technology;
-}
-
 // get comic character data from the Marvel API using XMLHttpRequest object
 function getMarvelData(callBack) {
   var marvelHero = function(){
