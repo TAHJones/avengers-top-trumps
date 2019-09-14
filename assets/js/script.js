@@ -196,13 +196,6 @@ currentSlide(dots);
 
 /*NEW JS END*/
 
-// getSupervillainList function converts supervillain object data into array of supervillain property names
-function getSupervillainList() {
-  var superVillains = getSupervillains(marvelCharacters);
-  var supervillainList = Object.keys(superVillains);
-  return supervillainList; // return array of supervillain names
-}
-
 function getSupervillain(name) { // enter supervillain name as function parameter
   var superVillains = getSupervillains(marvelCharacters); // get list of supervillains
   var superVillain = superVillains[name]; // select supervillain from superVillains object with bracket notation using function parameter
