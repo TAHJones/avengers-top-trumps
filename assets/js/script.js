@@ -1,15 +1,15 @@
 /*NEW JS*/
 
 /*NAVIGATION VARIABLES*/
+let heroImg = document.getElementById('heroImg');
 let slideIndex = 0; // set default value to show first slide
 let prevSlide = document.getElementById('prev');
 let nextSlide = document.getElementById('next');
 let dots = document.getElementsByClassName("dot");
-// let hideDots = document.getElementById("dotSelector");
+let hideDots = document.getElementById("dotSelector");
 let selectHeroButton = document.getElementById('selectHeroButton');
 
 function showSuperhero(data, n) {
-  let heroImg = document.getElementById('heroImg');
   let heroInfo = document.getElementById('heroInfo');
   let superHero = data[slideIndex-1]; // select superhero from superHeroes object with bracket notation using function parameter
   let filePathName = superHero[0];
