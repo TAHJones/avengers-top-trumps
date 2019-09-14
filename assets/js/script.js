@@ -177,16 +177,12 @@ function getMarvelData(charactertype, n) {
 	  .then((res) => res.json())
 	  .then((data) => {
 	    supervillainList = Object.entries(data.supervillains);
-	    selectVillainButton.addEventListener('click', function(){ // when selectVillainButton is clicked select/show villain & calculate winner
-		   if(selectVillainButton.classList.contains("select-villain-active")){ // only make changes if villain button is active
 		    showSupervillain(supervillainList, n);
 		    // let heroCatergoryScoreObject = getHeroCatergoryScore(); // store returned object in heroCatergoryScoreObject variable
 		    // console.log(heroCatergoryScoreObject);
 		    // let catergoryScoreObject = getVillainCatergoryScore(heroCatergoryScoreObject); // pass heroCatergoryScoreObject to getVillainCatergoryScore function and store returned object in catergoryScoreObject variable
 		    // console.log(catergoryScoreObject);
 		    // compareCatergoryScore(catergoryScoreObject); // pass catergoryScoreObject to compareCatergoryScore function which compares catergory scores and calculates result
-		   }
-			}, false);
   	})
 	  .catch(err => {
 	    console.log(err);
