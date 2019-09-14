@@ -148,28 +148,17 @@ function selectSuperheroButton() {
 function showSupervillain(data, n) {
 	let superVillain = data[n];
   let villainInfo = document.getElementById('villainInfo');
-  let filePathName = superVillain[0];
+  filePathName = superVillain[0];
   supervillainName = superVillain[1].name;
-  let agility = superVillain[1].agility;
-  let intelligence = superVillain[1].intelligence;
-  let magic = superVillain[1].magic;
-  let strength = superVillain[1].strength;
-  let speed = superVillain[1].speed;
-  let technology = superVillain[1].technology;
+  agility = superVillain[1].agility;
+  intelligence = superVillain[1].intelligence;
+  magic = superVillain[1].magic;
+  strength = superVillain[1].strength;
+  speed = superVillain[1].speed;
+  technology = superVillain[1].technology;
   
-  // add superhero property name into template literal HTML image path and insert into heroImg div
-  villainImg.innerHTML = `<img src="assets/img/${filePathName}.png" class="villain-img" alt="${filePathName}">`;
-
-  villainInfo.innerHTML =  `<h2 class="card-title villain-title">${supervillainName}</h2>
-      										<ul class="list-group villain-list" id="heroList">
-      											<li class="list-group-item villain-list-active">Agility: ${agility}</li>
-      											<li class="list-group-item villain-list-active">Intelligence: ${intelligence}</li>
-      											<li class="list-group-item villain-list-active">Magic: ${magic}</li>
-      											<li class="list-group-item villain-list-active">Strength: ${strength}</li>
-      											<li class="list-group-item villain-list-active">Speed: ${speed}</li>
-      											<li class="list-group-item villain-list-active">Technology: ${technology}</li>
-      										</ul>
-      								  </div>`;
+  villainImg.innerHTML = characterImgTemplate("villain");
+  villainInfo.innerHTML = characterInfoTemplate("villain");
 }
 
 function selectedSupervillainStyles() {
