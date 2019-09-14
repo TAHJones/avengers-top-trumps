@@ -197,13 +197,13 @@ function getMarvelData(charactertype, n) {
 // add click eventlistener to target div with 'prev' id
 prevSlide.addEventListener('click', function() {
   slideIndex -= 1; // decrease slideIndex value by 1 so previous slide is made visible by showSuperhero function
-	getMarvelData(slideIndex);
+	getMarvelData("hero", slideIndex);
 }, false);
 
 // add click eventlistener to target div with 'prev' id
 nextSlide.addEventListener('click', function() {
   slideIndex += 1; // increase slideIndex value by 1 so next slide is made visible by showSuperhero function
-  getMarvelData(slideIndex);
+	getMarvelData("hero", slideIndex);
 }, false);
 
 function currentSlide(n) {
@@ -211,7 +211,7 @@ function currentSlide(n) {
     n[i].index = i; // use loop counter to set the index number for each div element
     n[i].addEventListener('click', function(e) { // add 'click' event listener to div elements
       slideIndex = e.target.index + 1; // get index number of clicked dot & change index base number to 1 to match slideIndex number
-      getMarvelData(slideIndex);
+	      getMarvelData("hero", slideIndex);
     }, false);
   }
 }
