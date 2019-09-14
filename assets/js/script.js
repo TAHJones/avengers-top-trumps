@@ -12,6 +12,7 @@ let selectHeroButton = document.getElementById('selectHeroButton');
 let selectVillainButton = document.getElementById('selectVillainButton');
 let superheroName;
 let supervillainName;
+let characterName;
 
 /*TEMPLATE VARIABLES*/
 let filePathName;
@@ -23,7 +24,6 @@ let speed;
 let technology;
 
 /*TEMPLATE FUNCTIONS*/
-
 function characterImgTemplate(charactertype) {
 let characterImg;
 	if(charactertype === "hero") {
@@ -38,7 +38,7 @@ let characterImg;
 }
 
 function characterInfoTemplate(charactertype) {
-  let characterInfo = `<h2 class="card-title villain-title">${supervillainName}</h2>
+  let characterInfo = `<h2 class="card-title villain-title">${characterName}</h2>
 												<ul class="list-group villain-list" id="heroList">
 													<li class="list-group-item ${charactertype}-list-active">Agility: ${agility}</li>
 													<li class="list-group-item ${charactertype}-list-active">Intelligence: ${intelligence}</li>
