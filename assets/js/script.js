@@ -22,6 +22,26 @@ let strength;
 let speed;
 let technology;
 
+/*TEMPLATE FUNCTIONS*/
+
+function characterImgTemplate(charactertype) {
+  let characterImg = `<img src="assets/img/${filePathName}.png" class="${charactertype}-img" alt="${filePathName}">`;
+	return characterImg;
+}
+
+function characterInfoTemplate(charactertype) {
+  let characterInfo = `<h2 class="card-title villain-title">${supervillainName}</h2>
+												<ul class="list-group villain-list" id="heroList">
+													<li class="list-group-item ${charactertype}-list-active">Agility: ${agility}</li>
+													<li class="list-group-item ${charactertype}-list-active">Intelligence: ${intelligence}</li>
+    											<li class="list-group-item ${charactertype}-list-active">Magic: ${magic}</li>
+													<li class="list-group-item ${charactertype}-list-active">Strength: ${strength}</li>
+													<li class="list-group-item ${charactertype}-list-active">Speed: ${speed}</li>
+													<li class="list-group-item ${charactertype}-list-active">Technology: ${technology}</li>
+												</ul>
+											</div>`;
+	return characterInfo;
+}
 
 function showSuperhero(data, n) {
   let heroInfo = document.getElementById('heroInfo');
