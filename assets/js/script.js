@@ -2,13 +2,14 @@
 
 /*GLOBAL VARIABLES*/
 let heroImg = document.getElementById('heroImg');
+let villainImg = document.getElementById('villainImg');
 let slideIndex = 0; // set default value to show first slide
 let prevSlide = document.getElementById('prev');
 let nextSlide = document.getElementById('next');
 let dots = document.getElementsByClassName("dot");
 let hideDots = document.getElementById("dotSelector");
 let selectHeroButton = document.getElementById('selectHeroButton');
-let selectVillainButton = document.getElementById('selectVillainButton'); // target select villain button
+let selectVillainButton = document.getElementById('selectVillainButton');
 
 function showSuperhero(data, n) {
   let heroInfo = document.getElementById('heroInfo');
@@ -116,7 +117,6 @@ function showSupervillain(data, n) {
 	console.log(data)
 	let superVillain = data[n];
 	console.log(superVillain);
-  let villainImg = document.getElementById('villainImg');
   let villainInfo = document.getElementById('villainInfo');
   // let superHero = data[slideIndex-1]; // select superhero from superVillaines object with bracket notation using function parameter
   let filePathName = superVillain[0];
