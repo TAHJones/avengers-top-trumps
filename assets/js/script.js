@@ -119,7 +119,7 @@ function showSupervillain(data, n) {
 	let superVillain = data[n];
   let villainInfo = document.getElementById('villainInfo');
   let filePathName = superVillain[0];
-  let supervillainName = superVillain[1].name;
+  supervillainName = superVillain[1].name;
   let agility = superVillain[1].agility;
   let intelligence = superVillain[1].intelligence;
   let magic = superVillain[1].magic;
@@ -143,7 +143,7 @@ function showSupervillain(data, n) {
 }
 
 function selectedSupervillainStyles() {
-  selectVillainButton.textContent = `${villainName}`;
+  selectVillainButton.textContent = `${supervillainName}`;
   selectVillainButton.style.border = "4px solid #a46e32";
   selectVillainButton.className = "select-villain select-villain-selected";
   villainImg.firstElementChild.style.border = "4px solid #FFA94A";
