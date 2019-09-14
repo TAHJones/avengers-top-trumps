@@ -145,6 +145,12 @@ function showSupervillain(data, n) {
       								  </div>`;
 }
 
+function selectedSupervillainStyles() {
+  selectVillainButton.textContent = `${villainName}`;
+  selectVillainButton.style.border = "4px solid #a46e32";
+  selectVillainButton.className = "select-villain select-villain-selected";
+  villainImg.firstElementChild.style.border = "4px solid #FFA94A";
+}
 
 
 /*Fetch Requests*/
