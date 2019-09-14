@@ -13,6 +13,16 @@ let selectVillainButton = document.getElementById('selectVillainButton');
 let superheroName;
 let supervillainName;
 
+/*TEMPLATE VARIABLES*/
+let filePathName;
+let agility;
+let intelligence;
+let magic;
+let strength;
+let speed;
+let technology;
+
+
 function showSuperhero(data, n) {
   let heroInfo = document.getElementById('heroInfo');
   let superHero = data[slideIndex-1]; // select superhero from superHeroes object with bracket notation using function parameter
