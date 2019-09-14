@@ -70,7 +70,6 @@ function selectSuperheroCatergory() {
 	let heroInfoList = document.querySelectorAll(".hero-list li");
 	// add selected styles to selected catergory
 	heroInfoLink.addEventListener('click', function(e){
-		console.log(heroInfoList);
 	  if(e.target.className === "list-group-item hero-list-active"){
 	    e.target.className = "list-group-item selected-catergory";
 	  }
