@@ -220,6 +220,13 @@ function currentSlide(n) {
 
 currentSlide(dots);
 
+
+selectVillainButton.addEventListener('click', function(){
+	if(selectVillainButton.classList.contains("select-villain-active")){ // check that button is active before adding data & changing styles
+		getMarvelData("villain");
+	}
+}, false);
+
 /*NEW JS END*/
 
 // get comic character data from the Marvel API using XMLHttpRequest object
