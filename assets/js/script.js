@@ -86,7 +86,7 @@ function selectSuperheroCatergory() {
 	}, false);
 }
 
-function resetSelectSuperheroButton() {
+function resetSuperheroButton() {
   // let selectHeroButton = document.getElementById('selectHeroButton');
   if(selectHeroButton.className === "select-hero select-hero-active"){
 	  // each time a new hero is selected reset css styles to inactive if set to active
@@ -105,7 +105,7 @@ function getMarvelData(n) {
   .then((data) => {
     superheroList = Object.entries(data.superheros);
     showSuperhero(superheroList, n);
-    resetSelectSuperheroButton();
+    resetSuperheroButton();
     showMarvelAPIModal();
     selectSuperheroCatergory();
     // selectSuperhero();
