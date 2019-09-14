@@ -183,7 +183,8 @@ function getMarvelData(charactertype, n) {
 	  .then((res) => res.json())
 	  .then((data) => {
 	    supervillainList = Object.entries(data.supervillains);
-		    showSupervillain(supervillainList, n);
+		  showSupervillain(supervillainList, n);
+		  selectedSupervillainStyles();
 		    // let heroCatergoryScoreObject = getHeroCatergoryScore(); // store returned object in heroCatergoryScoreObject variable
 		    // console.log(heroCatergoryScoreObject);
 		    // let catergoryScoreObject = getVillainCatergoryScore(heroCatergoryScoreObject); // pass heroCatergoryScoreObject to getVillainCatergoryScore function and store returned object in catergoryScoreObject variable
