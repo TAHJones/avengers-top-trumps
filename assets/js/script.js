@@ -25,7 +25,15 @@ let technology;
 /*TEMPLATE FUNCTIONS*/
 
 function characterImgTemplate(charactertype) {
-  let characterImg = `<img src="assets/img/${filePathName}.png" class="${charactertype}-img" alt="${filePathName}">`;
+let characterImg;
+	if(charactertype === "hero") {
+	  characterImg = `<img src="assets/img/${filePathName}.png" class="${charactertype}-img" alt="${filePathName}">
+										<div id="infoOverlayId" class="info-overlay">
+                      <button id="infoOverlayButton" class="info-overlay-text">More Info</button>
+                    </div>`;
+	} else {
+	  characterImg = `<img src="assets/img/${filePathName}.png" class="${charactertype}-img" alt="${filePathName}">`;
+	}
 	return characterImg;
 }
 
