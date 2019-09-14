@@ -8,6 +8,7 @@ let nextSlide = document.getElementById('next');
 let dots = document.getElementsByClassName("dot");
 let hideDots = document.getElementById("dotSelector");
 let selectHeroButton = document.getElementById('selectHeroButton');
+let selectVillainButton = document.getElementById('selectVillainButton');
 
 function showSuperhero(data, n) {
   let heroInfo = document.getElementById('heroInfo');
