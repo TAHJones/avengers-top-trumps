@@ -197,41 +197,6 @@ currentSlide(dots);
 /*NEW JS END*/
 
 
-
-function getSuperheroes(data) {
-  switch(data) { // return an error for function called with an 'empty' parameter value
-    case "":
-    case 0:
-    case "0":
-      alert("Error! Function parameter is empty");
-      return data;
-    case null:
-      alert("Error! Function parameter is null");
-      return data;
-    case false:
-      alert("Error! Function parameter is false");
-      return data;
-    default:
-      switch(typeof(data)) { // return an error for all data types other than object
-        case "undefined":
-          alert("Error! Function parameter is undefined");
-          break;
-        case "function":
-          alert("Error! Function parameter is a function");
-          break;
-        case "number":
-          alert("Error! Function parameter is a number");
-          break;
-        case "string":
-          alert("Error! Function parameter is a string");
-          return data;
-        case "object":
-          // console.log("Success! Function parameter is an object");
-          return data.superheroes; // return object of superhero names and abilities
-      }
-  }
-}
-
 function getSuperheroList() {
   var superHeroes = getSuperheroes(marvelCharacters);
   var superheroList = Object.keys(superHeroes);
