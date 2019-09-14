@@ -126,6 +126,7 @@ function getMarvelData(n) {
     resetSuperheroButton();
     showMarvelAPIModal();
     selectSuperheroCatergory();
+    selectSuperheroButton();
     // selectSuperhero();
     // console.log(superhero);
   })
