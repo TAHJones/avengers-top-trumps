@@ -8,7 +8,7 @@ let nextSlide = document.getElementById('next');
 let dots = document.getElementsByClassName("dot");
 let hideDots = document.getElementById("dotSelector");
 let selectHeroButton = document.getElementById('selectHeroButton');
-let selectVillainButton = document.getElementById('selectVillainButton');
+let selectVillainButton = document.getElementById('selectVillainButton'); // target select villain button
 
 function showSuperhero(data, n) {
   let heroInfo = document.getElementById('heroInfo');
@@ -100,8 +100,8 @@ function selectSuperheroButton() {
     if(selectHeroButton.classList.contains("select-hero-active")){ // check that button is active before adding changes
       // selectHeroButton.textContent = `${heroName}`; // add superhero name to 'selectHero' button
       selectHeroButton.style.border = "4px solid #a46e32";
-      selectHeroButton.className = "select-hero select-hero-selected";
       heroImg.firstElementChild.style.border = "4px solid #FFA94A";
+      selectHeroButton.className = "select-hero select-hero-selected";
       hideDots.style.zIndex = "-1"; // hide scrolling icons when hero has been selected
       prevSlide.style.visibility = "hidden";
       nextSlide.style.visibility = "hidden";
@@ -145,6 +145,8 @@ function showSupervillain(data, n) {
       										</ul>
       								  </div>`;
 }
+
+
 
 /*Fetch Requests*/
 
@@ -204,7 +206,7 @@ prevSlide.addEventListener('click', function() {
 // add click eventlistener to target div with 'prev' id
 nextSlide.addEventListener('click', function() {
   slideIndex += 1; // increase slideIndex value by 1 so next slide is made visible by showSuperhero function
-	getMarvelData("hero", slideIndex);
+  getMarvelData("hero", slideIndex);
 }, false);
 
 function currentSlide(n) {
@@ -212,7 +214,7 @@ function currentSlide(n) {
     n[i].index = i; // use loop counter to set the index number for each div element
     n[i].addEventListener('click', function(e) { // add 'click' event listener to div elements
       slideIndex = e.target.index + 1; // get index number of clicked dot & change index base number to 1 to match slideIndex number
-	      getMarvelData("hero", slideIndex);
+      getMarvelData("hero", slideIndex);
     }, false);
   }
 }
