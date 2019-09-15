@@ -38,8 +38,8 @@ let characterImg;
 }
 
 function characterInfoTemplate(charactertype) {
-  let characterInfo = `<h2 class="card-title villain-title">${characterName}</h2>
-												<ul class="list-group villain-list" id="heroList">
+  let characterInfo = `<h2 class="card-title ${charactertype}-title">${characterName}</h2>
+												<ul class="list-group ${charactertype}-list" id="heroList">
 													<li class="list-group-item ${charactertype}-list-active">Agility: ${agility}</li>
 													<li class="list-group-item ${charactertype}-list-active">Intelligence: ${intelligence}</li>
     											<li class="list-group-item ${charactertype}-list-active">Magic: ${magic}</li>
