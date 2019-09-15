@@ -122,14 +122,6 @@ function resetSuperheroButton() {
   }
 }
 
-function resetSuperheroButton() {
-  // let selectHeroButton = document.getElementById('selectHeroButton');
-  if(selectHeroButton.className === "select-hero select-hero-active"){
-	  // each time a new hero is selected reset css styles to inactive if set to active
-    selectHeroButton.className = "select-hero select-hero-inactive";
-  }
-}
-
 function selectSuperheroButton() {
   selectHeroButton.addEventListener('click', function(){
     if(selectHeroButton.classList.contains("select-hero-active")){ // check that button is active before adding changes
