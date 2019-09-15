@@ -95,22 +95,24 @@ function showMarvelAPIModal() {
 function selectSuperheroCatergory() {
 	let heroInfoLink = document.getElementById("heroList");
 	let heroInfoList = document.querySelectorAll(".hero-list li");
+	let heroInfoArray = Array.from(heroInfoList); // convert heroList nodelist to array
 	// add selected styles to selected catergory
 	heroInfoLink.addEventListener('click', function(e){
 	  if(e.target.className === "list-group-item hero-list-active"){
 	    e.target.className = "list-group-item selected-catergory";
-	  }
-	  // add inactive styles to unselected catergories
-	  for(let i=0; i<heroInfoList.length; i++){
-	    if(heroInfoList[i].className === "list-group-item hero-list-active"){
-	      heroInfoList[i].className = "list-group-item hero-list-inactive";
-	    }
-	  }
-	  if(selectHeroButton.classList.contains("select-hero-inactive")){
-		  // replace inactive styles with active styles when superhero catergory is selected
-	    selectHeroButton.className = "select-hero select-hero-active";
+		  // add inactive styles to unselected catergories
+			heroInfoArray.forEach(function(element, index){ // loop through array of anchor elements and select element with selected-catergory class name
+		    if(element.className === "list-group-item hero-list-active"){
+		      element.className = "list-group-item hero-list-inactive";
+		  	}
+		  });
 	  }
 	}, false);
+
+  if(selectHeroButton.classList.contains("select-hero-inactive")){
+	  // replace inactive styles with active styles when superhero catergory is selected
+    selectHeroButton.className = "select-hero select-hero-active";
+  }
 }
 
 function resetSuperheroButton() {
