@@ -107,11 +107,18 @@ function selectSuperheroCatergory() {
 		  	}
 		  });
 	  }
+	  if(selectHeroButton.classList.contains("select-hero-inactive")){
+		  // replace inactive styles with active styles when superhero catergory is selected
+	    selectHeroButton.className = "select-hero select-hero-active";
+	  }
 	}, false);
+}
 
-  if(selectHeroButton.classList.contains("select-hero-inactive")){
-	  // replace inactive styles with active styles when superhero catergory is selected
-    selectHeroButton.className = "select-hero select-hero-active";
+function resetSuperheroButton() {
+  // let selectHeroButton = document.getElementById('selectHeroButton');
+  if(selectHeroButton.className === "select-hero select-hero-active"){
+	  // each time a new hero is selected reset css styles to inactive if set to active
+    selectHeroButton.className = "select-hero select-hero-inactive";
   }
 }
 
