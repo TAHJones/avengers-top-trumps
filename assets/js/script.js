@@ -163,6 +163,21 @@ function selectedSupervillainStyles() {
   villainImg.firstElementChild.style.border = "4px solid #FFA94A";
 }
 
+function getHeroCatergoryScore(){ // function that returns index number and score of selected catergory
+  let heroCatergoryScoreObject = {}; // create object to hold hero catergory score and selected catergory index no.
+  let heroList = document.querySelectorAll(".hero-list > li"); // get list of anchor elements containing hero catergory scores
+  let heroListArray = Array.from(heroList); // convert heroList nodelist to array
+  heroListArray.forEach(function(element, index){ // loop through array of anchor elements and select element with selected-catergory class name
+    if(element.classList.contains("selected-catergory")) {
+      heroCatergoryScoreObject.selectedCatergoryIndex = index; // add selected catergory index no. to catergoryScoreObject
+      let heroCatergoryScoreText = element.textContent;
+      let heroCatergoryScore = parseInt(heroCatergoryScoreText.charAt(heroCatergoryScoreText.length-1)); // select last character of string and convert to number
+      heroCatergoryScore === 0 ? heroCatergoryScore = 10 : heroCatergoryScore; // if heroCatergoryScore = 0 convert to 10 and add to catergoryScoreObject
+      heroCatergoryScoreObject.heroCatergoryScore = heroCatergoryScore;
+    }
+  });
+  return heroCatergoryScoreObject; // return catergoryScoreObject
+} // getHeroCatergoryScore function end
 
 /*Fetch Requests*/
 
