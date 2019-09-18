@@ -179,6 +179,25 @@ function getHeroCatergoryScore(){ // function that returns index number and scor
   return heroCatergoryScoreObject; // return catergoryScoreObject
 } // getHeroCatergoryScore function end
 
+function getVillainCatergoryScore(heroCatergoryScoreObject){  // function that recieves heroCatergoryScoreObject, renames it as catergoryScoreObject and adds villain catergory score to object then returns object
+  let catergoryScoreObject = heroCatergoryScoreObject;
+  let villainList = document.querySelectorAll(".villain-list > li"); // get list of anchor elements containing villain catergory scores
+  let villainListArray = Array.from(villainList); // convert villainList nodelist to array
+  villainListArray.forEach(function(element, index){ // loop through array of anchor elements and select element with selected-catergory class name
+    if(index === catergoryScoreObject.selectedCatergoryIndex){ // if index no. of list item equals index no. of selected hero catergory list item store in catergoryScoreElement letiable
+      let catergoryScoreElement = element;
+      catergoryScoreElement.className = "selected-catergory"; // if index number matches index for hero selected catergory get anchor element with selected-catergory class
+      let catergoryScoreText = element.textContent;
+      let villainCatergoryScore = parseInt(catergoryScoreText.charAt(catergoryScoreText.length-1)); // select last character of string and convert to number
+      villainCatergoryScore === 0 ? villainCatergoryScore = 10 : villainCatergoryScore;  // if villainCatergoryScore = 0 convert to 10
+      catergoryScoreObject.villainCatergoryScore = villainCatergoryScore; // add/create villainCatergoryScore key to catergoryScoreObject and add villainCatergoryScore variable as value
+    } else if (element.classList.contains("villain-list-active")) { // select list items with villain-list-active classname
+      element.classList.replace("villain-list-active", "villain-list-inactive");
+    }
+  });
+  return catergoryScoreObject;
+} // getVillainCatergoryScore function end
+
 /*Fetch Requests*/
 
 function getMarvelData(charactertype, n) {
