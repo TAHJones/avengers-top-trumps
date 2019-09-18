@@ -379,6 +379,79 @@ function showResultsModal(result){ // insert HTML content into resultsModal div 
   }
 } // showResultsModal function end
 
+function compareCatergoryScore(){
+	let heroCatergoryScoreObject = getHeroCatergoryScore();
+	let catergoryScoreObject = getVillainCatergoryScore(heroCatergoryScoreObject);
+  let heroCatergoryScore = catergoryScoreObject.heroCatergoryScore;
+  console.log(heroCatergoryScore);
+  let villainCatergoryScore = catergoryScoreObject.villainCatergoryScore;
+  console.log(villainCatergoryScore);
+
+  let infinityStoneId; // declare infinityStoneId variable in compareCatergoryScore scope so is also avaliable to showResultsModal function
+
+  let infinityStoneList = document.querySelectorAll(".score-counter-list > div");
+  let infinityStoneArray = Array.from(infinityStoneList);
+
+  
+  if(heroCatergoryScore > villainCatergoryScore){
+    heroScoreCounter += 1;
+    imgOverlayTemplate("Winner", heroImg, "heroOverlayId");
+    imgOverlayTemplate("Loser", villainImg, "villainOverlayId");
+  	console.log("hello");
+	  let heroOverlayId = document.getElementById("heroOverlayId");
+    console.log(heroOverlayId);
+	  let villainOverlayId = document.getElementById("villainOverlayId");
+    console.log(villainOverlayId);
+    infinityStoneId = "infinitystone" + heroScoreCounter.toString();
+    infinityStoneArray.forEach(function(element, index){
+      if(heroScoreCounter === index + 2){
+        element.setAttribute("id", infinityStoneId);
+        element.innerHTML = `<img class="glowing-border" src="assets/img/${infinityStoneId}.png">`;
+      }
+    });
+    heroOverlayId.classList.add("overlay-fadein");
+    villainOverlayId.classList.add("overlay-fadein");
+    if(heroCatergoryScore > villainCatergoryScore && heroScoreCounter === 7){
+      showResultsModal("complete");
+    } else if(heroCatergoryScore > villainCatergoryScore && heroScoreCounter < 7){
+      showResultsModal("win");
+    }
+    resultsModal.classList.add("modal-fadein");
+  } else if(heroCatergoryScore < villainCatergoryScore){
+    imgOverlayTemplate("Loser", heroImg, "heroOverlayId");
+    imgOverlayTemplate("Winner", villainImg, "villainOverlayId");
+    heroScoreCounter -= 1;
+    let lostinfinityStone = heroScoreCounter + 1;
+    infinityStoneId = "infinitystone" + lostinfinityStone.toString(); // updated infinityStoneId variable to display current infinity stone
+    infinityStoneArray.forEach(function(element, index){
+      if(heroScoreCounter === index + 1){
+        element.innerHTML = `<img src="assets/img/placeholderinfinitystone.png">`; // reset lost infinity stone to placeholder image
+      }
+    });
+    heroOverlayId.classList.add("overlay-fadein");
+    villainOverlayId.classList.add("overlay-fadein");
+    if(heroCatergoryScore < villainCatergoryScore && heroScoreCounter < 1){
+      heroScoreCounter = 1;
+      showResultsModal("firstResultLose");
+    } else if(heroCatergoryScore < villainCatergoryScore && heroScoreCounter >= 1){
+      showResultsModal("lose");
+    }
+    resultsModal.classList.add("modal-fadein");
+} else if(heroCatergoryScore === villainCatergoryScore) {
+    imgOverlayTemplate("Draw", heroImg, "heroOverlayId");
+    imgOverlayTemplate("Draw", villainImg, "villainOverlayId");
+    heroScoreCounter += 0; // keep heroScoreCounter value the same
+    infinityStoneId = "infinitystone" + heroScoreCounter.toString(); // add updated result counter to infinityStoneId variable
+    heroOverlayId.classList.add("overlay-fadein");
+    villainOverlayId.classList.add("overlay-fadein");
+    if(heroCatergoryScore === villainCatergoryScore && heroScoreCounter === 1){
+      showResultsModal("firstResultDraw");
+    } else if(heroCatergoryScore === villainCatergoryScore && heroScoreCounter > 1){
+      showResultsModal("draw");
+    }
+    resultsModal.classList.add("modal-fadein");
+  }
+
 /*Fetch Requests*/
 
 function getMarvelData(charactertype, n) {
