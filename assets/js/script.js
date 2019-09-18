@@ -14,6 +14,13 @@ let superheroName;
 let supervillainName;
 let characterName;
 
+let heroScoreCounter;
+let infinityStoneName_Won;
+let infinityStoneColor_Won;
+let infinityStoneName_Lost;
+let infinityStoneColor_Lost;
+let infinityStoneId;
+
 /*TEMPLATE VARIABLES*/
 let filePathName;
 let agility;
