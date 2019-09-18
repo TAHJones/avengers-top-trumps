@@ -205,6 +205,80 @@ function getVillainCatergoryScore(heroCatergoryScoreObject){  // function that r
   return catergoryScoreObject;
 } // getVillainCatergoryScore function end
 
+function infinityStoneCounter(){
+	if(heroScoreCounter > 1){ // check if variable already has recorded score, if it does don't declare variable again as this will reset value
+	  heroScoreCounter;
+	  console.log(heroScoreCounter);
+	} else {
+	  heroScoreCounter = 1; // if variable does exist i.e is > 0 declare variable in global scope with value of 1
+	}
+
+	switch(heroScoreCounter) { // match infinity stone name with counter score number
+	  case "":
+	  case 0:
+	  case "0":
+	    alert("Error! heroScoreCounter variable is empty");  // return an error for function called with an 'empty' parameter value
+	    return heroScoreCounter;
+	  case null:
+	    alert("Error! heroScoreCounter variable is null");
+	    return heroScoreCounter;
+	  case false:
+	    alert("Error! heroScoreCounter variable is false");
+	    return heroScoreCounter;
+	  case undefined:
+	    alert("Error! heroScoreCounter variable is undefined");
+	    return heroScoreCounter;
+	  case 1:
+	    infinityStoneName_Lost = "Power Stone";
+	    infinityStoneColor_Lost = "power-stone-color";
+	    break;
+	  case 2:
+	    infinityStoneName_Won = "Power Stone";
+	    infinityStoneColor_Won = "power-stone-color";
+	    infinityStoneName_Lost = "Space Stone";
+	    infinityStoneColor_Lost = "space-stone-color";
+	    break;
+	  case 3:
+	    infinityStoneName_Won = "Space Stone";
+	    infinityStoneColor_Won = "space-stone-color";
+	    infinityStoneName_Lost = "Reality Stone";
+	    infinityStoneColor_Lost = "reality-stone-color";
+	    break;
+	  case 4:
+	    infinityStoneName_Won = "Reality Stone";
+	    infinityStoneColor_Won = "reality-stone-color";
+	    infinityStoneName_Lost = "Soul Stone";
+	    infinityStoneColor_Lost = "soul-stone-color";
+	    break;
+	  case 5:
+	    infinityStoneName_Won = "Soul Stone";
+	    infinityStoneColor_Won = "soul-stone-color";
+	    infinityStoneName_Lost = "Time Stone";
+	    infinityStoneColor_Lost = "time-stone-color";
+	    break;
+	  case 6:
+	    infinityStoneName_Won = "Time Stone";
+	    infinityStoneColor_Won = "time-stone-color";
+	    infinityStoneName_Lost = "Mind Stone";
+	    infinityStoneColor_Lost = "mind-stone-color";
+	    break;
+	  case 7:
+	    infinityStoneName_Won = "Mind Stone";
+	    infinityStoneColor_Won = "mind-stone-color";
+	    break;
+	    default:
+	     switch(true){
+	      case (heroScoreCounter >= 8):
+	       alert("Error! heroScoreCounter variable is greater than 7");  // return an error if heroScoreCounter is  greater than 7
+	       return heroScoreCounter;
+	      default:
+	       alert("Error! heroScoreCounter variable is not an integer"); // return an error if heroScoreCounter is not an integer
+	    }
+	}
+}
+
+
+
 /*Fetch Requests*/
 
 function getMarvelData(charactertype, n) {
