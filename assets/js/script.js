@@ -205,14 +205,14 @@ function getVillainCatergoryScore(heroCatergoryScoreObject){  // function that r
   return catergoryScoreObject;
 } // getVillainCatergoryScore function end
 
-function infinityStoneCounter(){
-	if(heroScoreCounter > 1){ // check if variable already has recorded score, if it does don't declare variable again as this will reset value
-	  heroScoreCounter;
-	  console.log(heroScoreCounter);
-	} else {
-	  heroScoreCounter = 1; // if variable does exist i.e is > 0 declare variable in global scope with value of 1
-	}
+if(heroScoreCounter > 1){ // check if variable already has recorded score, if it does don't declare variable again as this will reset value
+  heroScoreCounter;
+  console.log(heroScoreCounter);
+} else {
+  heroScoreCounter = 1; // if variable does exist i.e is > 0 declare variable in global scope with value of 1
+}
 
+function infinityStoneCounter(){
 	switch(heroScoreCounter) { // match infinity stone name with counter score number
 	  case "":
 	  case 0:
@@ -451,6 +451,10 @@ function compareCatergoryScore(){
     }
     resultsModal.classList.add("modal-fadein");
   }
+} // compareCatergoryScore function end
+
+
+
 
 /*Fetch Requests*/
 
