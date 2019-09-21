@@ -291,7 +291,7 @@ function getHeroCatergoryScore(){ // function that returns index number and scor
       heroCatergoryScoreObject.heroCatergoryScore = heroCatergoryScore;
     }
   });
-  return heroCatergoryScoreObject; // return catergoryScoreObject
+  return heroCatergoryScoreObject;
 } // getHeroCatergoryScore function end
 
 function getVillainCatergoryScore(heroCatergoryScoreObject){  // function that recieves heroCatergoryScoreObject, renames it as catergoryScoreObject and adds villain catergory score to object then returns object
