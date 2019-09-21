@@ -65,6 +65,14 @@ function characterInfoTemplate(charactertype) {
 	return characterInfo;
 }
 
+function imgOverlayTemplate(result, parentElement, overlayId){
+  let ImgOverlay = document.createElement("div"); // create new div element
+  ImgOverlay = ImgOverlay.innerHTML = `<div id="${overlayId}" class="overlay">
+                                              <div class="overlay-text">${result}</div>
+                                            </div>`; // insert div element with result variable
+  parentElement.innerHTML += ImgOverlay; // add new overlay element to parent element of img element
+}
+
 function showSuperhero(data, n) {
   let heroInfo = document.getElementById('heroInfo');
   let superHero = data[slideIndex-1]; // select superhero from superHeroes object with bracket notation using function parameter
