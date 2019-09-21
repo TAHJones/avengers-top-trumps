@@ -240,7 +240,7 @@ function resetSuperheroButton() {
 function selectSuperheroButton() {
   selectHeroButton.addEventListener('click', function(){
     if(selectHeroButton.classList.contains("select-hero-active")){ // check that button is active before adding changes
-      // selectHeroButton.textContent = `${heroName}`; // add superhero name to 'selectHero' button
+      selectHeroButton.textContent = `${superheroName}`;
       selectHeroButton.style.border = "4px solid #a46e32";
       heroImg.firstElementChild.style.border = "4px solid #FFA94A";
       selectHeroButton.className = "select-hero select-hero-selected";
