@@ -479,7 +479,70 @@ function compareCatergoryScore(){
   }
 } // compareCatergoryScore function end
 
+function resetGame(){
+  let scoreCounter = document.getElementById("scoreCounter");
+  let heroInfo = document.getElementById('heroInfo');
+  let villainInfo = document.getElementById('villainInfo');
+  let dotsArray = Array.from(dots); // convert dots nodelist to array
+  
+  if(heroScoreCounter === 7){ // if game is complete modify playagain button
+    scoreCounter.innerHTML = `<ul class="d-flex justify-content-center score-counter-list">
+                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
+                  					</ul>`;
+    heroScoreCounter = 1; // reset score counter back to default value
+  }
+  dotsArray.forEach(function(element, index) { // loop through array of list elements
+    if(element.classList.contains("active")) { // select element with active class name
+      element.classList.remove("active"); // remove active class name if present
+    }
+  });
+    
+  heroImg.innerHTML = `<img src="assets/img/questionmarkorange.png" class="hero-img" alt="question mark">`;
 
+  heroInfo.innerHTML = `<h2 class="card-title hero-title">Superhero</h2>
+  										<ul class="list-group hero-list" id="heroList">
+  											<li class="list-group-item hero-list-inactive">Agility: ?</li>
+  											<li class="list-group-item hero-list-inactive" >Intelligence: ?</li>
+  											<li class="list-group-item hero-list-inactive">Magic: ?</li>
+  											<li class="list-group-item hero-list-inactive" >Strength: ?</li>
+  											<li class="list-group-item hero-list-inactive">Speed: ?</li>
+  											<li class="list-group-item hero-list-inactive">Technology: ?</li>
+  									  </ul>`; // reset property values back to question mark default and insert into heroInfo div
+  
+  selectHeroButton.className = "list-group-item select-hero select-hero-inactive";
+  selectHeroButton.textContent = "Select Hero";
+  selectHeroButton.style.border = "solid 4px #5C5787";
+  hideDots.style.zIndex = "0";
+  prevSlide.style.visibility = "visible";
+  nextSlide.style.visibility = "visible";
+  villainImg.innerHTML = `<img src="assets/img/questionmarkorange.png" class="villain-img" alt="question mark">`;
+
+  villainInfo.innerHTML = `<h2 class="card-title villain-title">Supervillain</h2>
+      										<ul class="list-group villain-list" id="villainList">
+      											<li class="list-group-item villain-list-inactive">Agility: ?</li>
+      											<li class="list-group-item villain-list-inactive" >Intelligence: ?</li>
+      											<li class="list-group-item villain-list-inactive">Magic: ?</li>
+      											<li class="list-group-item villain-list-inactive" >Strength: ?</li>
+      											<li class="list-group-item villain-list-inactive">Speed: ?</li>
+      											<li class="list-group-item villain-list-inactive">Technology: ?</li>
+      										</ul>`;  // add object property values to template literal HTML and insert into slideInfo div
+
+  selectVillainButton.className = "select-villain select-villain-inactive";
+  selectVillainButton.textContent = "Select Villain";
+  selectVillainButton.style.border = "solid 4px #5C5787";
+  if(resultsModal.className === "col-sm-12 results-modal modal-fadein modal-fadeout"){
+    setTimeout(function(){
+      resultsModal.className = "col-sm-12 results-modal";
+    },3500); // delay reset of class names until fadeout effect is complete
+  }
+  slideIndex = 0; // reset slideIndex value to show first slide
+  currentSlide(dots); // bind event listener to dot selector when reset happens
+} // resetGame function end
 
 
 /*Fetch Requests*/
