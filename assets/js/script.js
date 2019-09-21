@@ -73,6 +73,25 @@ function imgOverlayTemplate(result, parentElement, overlayId){
   parentElement.innerHTML += ImgOverlay; // add new overlay element to parent element of img element
 }
 
+function displayImgOverlay(result) {
+	let heroOverlayId;
+	let villainOverlayId;
+	if (result === "win") {
+    imgOverlayTemplate("Winner", heroImg, "heroOverlayId");
+    imgOverlayTemplate("Loser", villainImg, "villainOverlayId");
+	} else if (result === "lose") {
+    imgOverlayTemplate("Loser", heroImg, "heroOverlayId");
+    imgOverlayTemplate("Winner", villainImg, "villainOverlayId");
+	} else if (result === "draw") {
+    imgOverlayTemplate("Draw", heroImg, "heroOverlayId");
+    imgOverlayTemplate("Draw", villainImg, "villainOverlayId");
+	}
+  heroOverlayId = document.getElementById("heroOverlayId");
+  villainOverlayId = document.getElementById("villainOverlayId");
+  heroOverlayId.classList.add("overlay-fadein");
+  villainOverlayId.classList.add("overlay-fadein");
+}
+
 function showSuperhero(data, n) {
   let heroInfo = document.getElementById('heroInfo');
   let superHero = data[slideIndex-1]; // select superhero from superHeroes object with bracket notation using function parameter
