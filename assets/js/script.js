@@ -577,6 +577,7 @@ function getMarvelData(charactertype, n) {
 	    supervillainList = Object.entries(data.supervillains);
 		  showSupervillain(supervillainList, n);
 		  selectedSupervillainStyles();
+		  compareCatergoryScore();
 		    // let heroCatergoryScoreObject = getHeroCatergoryScore(); // store returned object in heroCatergoryScoreObject variable
 		    // console.log(heroCatergoryScoreObject);
 		    // let catergoryScoreObject = getVillainCatergoryScore(heroCatergoryScoreObject); // pass heroCatergoryScoreObject to getVillainCatergoryScore function and store returned object in catergoryScoreObject variable
