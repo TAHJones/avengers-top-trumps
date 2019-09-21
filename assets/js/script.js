@@ -167,10 +167,13 @@ function resultsInfoTemplate(result) {
 }
 
 function showSuperhero(data, n) {
+  if (n > data.length) {slideIndex = 1} // if slideIndex is > no. of slides reset to value of 1st slide
+  if (n < 1) {slideIndex = data.length} // if slideIndex is < 1 reset value to value of last slide
+
   let heroInfo = document.getElementById('heroInfo');
   let superHero = data[slideIndex-1]; // select superhero from superHeroes object with bracket notation using function parameter
-  filePathName = superHero[0];
-  superheroName = superHero[1].name;
+  heroFilePathName = superHero[0];
+  superheroName = superHero[1].name; // assign hero name to global variable which is used by selectSuperheroButton function
   agility = superHero[1].agility;
   intelligence = superHero[1].intelligence;
   magic = superHero[1].magic;
@@ -178,9 +181,6 @@ function showSuperhero(data, n) {
   speed = superHero[1].speed;
   technology = superHero[1].technology;
   
-  if (n > data.length) {slideIndex = 1} // if slideIndex is > no. of slides reset to value of 1st slide
-  if (n < 1) {slideIndex = data.length} // if slideIndex is < 1 reset value to value of last slide
-
 	for (let i = 0; i < dots.length; i++) {
   	dots[i].className = dots[i].className.replace(" active", ""); // loop through all dot divs and remove 'active' class name
 	}
