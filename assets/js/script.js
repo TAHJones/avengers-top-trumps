@@ -22,7 +22,8 @@ let infinityStoneColor_Lost;
 let infinityStoneId;
 
 /*TEMPLATE VARIABLES*/
-let filePathName;
+let heroFilePathName;
+let villainFilePathName;
 let agility;
 let intelligence;
 let magic;
