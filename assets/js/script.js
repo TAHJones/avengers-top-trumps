@@ -92,6 +92,80 @@ function displayImgOverlay(result) {
   villainOverlayId.classList.add("overlay-fadein");
 }
 
+function resultsInfoTemplate(result) {
+	let winner;
+	let loser;
+	let title;
+	let modalImg;
+	let firstParagraph;
+	let secondParagraph;
+	let congratulationsYouHaveObtained = `Congratulations you have obtained the <span class="${infinityStoneColor_Won}">${infinityStoneName_Won}</span>`;
+	let youMustFightAgain = `You must fight again and win to aquire the <span class="power-stone-color">Power Stone</span>`;
+	let collectAllSixStones = `Collect all six infinity stones to win the game!`;
+	let youHaveLostThe = `You have lost the <span class="${infinityStoneColor_Lost}">${infinityStoneName_Lost}</span>`;
+	let toCompleteYourMission = `To complete your mission you must regain the ${infinityStoneName_Lost}!`;
+	let aquireThePowerStone = `You must fight again and win to aquire the <span class="power-stone-color">Power Stone</span>`;
+	let youLiveToFight = `You live to fight another day and still possess the <span class="${infinityStoneColor_Won}">${infinityStoneName_Won}</span>`;
+
+  if(result === "win") {
+  	winner = superheroName;
+  	loser = supervillainName;
+  	title = `${winner} defeats ${loser}`;
+  	modalImg = heroFilePathName;
+  	firstParagraph = congratulationsYouHaveObtained;
+  	secondParagraph = collectAllSixStones;
+  } else if(result === "firstResultLose") {
+  	winner = supervillainName;
+  	loser = superheroName;
+  	title = `${winner} defeats ${loser}`;
+  	modalImg = villainFilePathName;
+  	firstParagraph = youMustFightAgain;
+  	infinityStoneId = "infinitystone2";
+  	secondParagraph = collectAllSixStones;
+  } else if (result === "lose") {
+  	winner = supervillainName;
+  	loser = superheroName;
+  	title = `${winner} defeats ${loser}`;
+  	modalImg = villainFilePathName;
+  	firstParagraph = youHaveLostThe;
+  	secondParagraph = toCompleteYourMission;
+	} else if (result === "firstResultDraw") {
+  	winner = superheroName;
+  	loser = supervillainName;
+  	title = `${winner} draws with ${loser}`;
+  	modalImg = heroFilePathName;
+  	firstParagraph = aquireThePowerStone;
+  	infinityStoneId = "infinitystone2";
+  	secondParagraph = collectAllSixStones;	
+  } else if (result === "draw") {
+  	winner = superheroName;
+  	loser = supervillainName;
+  	title = `${winner} draws with ${loser}`;
+  	modalImg = heroFilePathName;
+  	firstParagraph = youLiveToFight;
+  	secondParagraph = collectAllSixStones;
+  } else {
+  	alert("Error! Something went wrong, there is no result");
+  }
+	
+	let resultsInfo = `<div class="row h-100 justify-content-center results-modal-inner">
+    <div class="my-auto col-sm-10 col-md-8 col-lg-6">
+      <h2 class="">${title}</h2>
+      <img class="hero-modal-image" src="assets/img/${modalImg}.png">
+      <div class="results-modal-infinitystone">
+        <p>${firstParagraph}</p>
+        <img class="blinking-border infinitystone-modal-image" src="assets/img/${infinityStoneId}.png">
+        <p>${secondParagraph}</p>
+      </div>
+      <div class="play-again-button-bg d-flex justify-content-center">
+        <button id="playAgainButton" class="play-again-button" type="button">Play Again</button>
+      </div>
+    </div>
+  </div>`;
+  
+ resultsModal.innerHTML = resultsInfo;
+}
+
 function showSuperhero(data, n) {
   let heroInfo = document.getElementById('heroInfo');
   let superHero = data[slideIndex-1]; // select superhero from superHeroes object with bracket notation using function parameter
