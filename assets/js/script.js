@@ -258,7 +258,7 @@ function selectSuperheroButton() {
 function showSupervillain(data, n) {
 	let superVillain = data[n];
   let villainInfo = document.getElementById('villainInfo');
-  filePathName = superVillain[0];
+  villainFilePathName = superVillain[0];
   supervillainName = superVillain[1].name;
   agility = superVillain[1].agility;
   intelligence = superVillain[1].intelligence;
