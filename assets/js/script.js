@@ -615,12 +615,18 @@ function currentSlide(n) {
 
 currentSlide(dots);
 
-
 selectVillainButton.addEventListener('click', function(){
 	if(selectVillainButton.classList.contains("select-villain-active")){ // check that button is active before adding data & changing styles
 		getMarvelData("villain");
 	}
 }, false);
+
+resultsModal.addEventListener('click', function(e){
+  if(e.target.id === "playAgainButton"){ // when playAgainButton is clicked add modal-fadeout class to remove modal
+    resultsModal.classList.add("modal-fadeout");
+    resetGame(); // reset all elements to 'inactive' state when results modal has been removed
+  }
+},false);
 
 /*NEW JS END*/
 
