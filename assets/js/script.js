@@ -209,7 +209,7 @@ function showMarvelAPIModal() {
 
 function selectSuperheroCatergory() {
 	let heroInfoLink = document.getElementById("heroList");
-	let heroInfoList = document.querySelectorAll(".hero-list li");
+	let heroInfoList = document.querySelectorAll(".hero-list > li");
 	let heroInfoArray = Array.from(heroInfoList); // convert heroList nodelist to array
 	// add selected styles to selected catergory
 	heroInfoLink.addEventListener('click', function(e){
