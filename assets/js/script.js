@@ -237,6 +237,15 @@ function marvelHero(superheroName){
   }
 }
 
+function getMarvelApiUrl() {
+  let marvelHeroName = marvelHero(heroFilePathName);
+  let apiEndpoint = 'https://gateway.marvel.com/v1/public/';
+  let resourceType = 'characters';
+  let apiKey = 'e8e6c4f6d9f4f13655a0a25d4649f754';
+  let apiURL = apiEndpoint + resourceType + '?name=' + marvelHeroName + '&apikey=' + apiKey;
+  return apiURL;
+}
+
 function showMarvelAPIModal() {
   let marvelDataBg = document.getElementById("marvelDataBg");
   let infoOverlayButton = document.getElementById("infoOverlayButton"); // add event listener to infoOverlayButton to reveal marvelData modal
