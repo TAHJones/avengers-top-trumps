@@ -262,6 +262,41 @@ function showMarvelAPIModal() {
   }, false);
 }
 
+function showMarvelAPIData(data) {
+    let marvelData = document.getElementById('marvelData');
+    let marvelName = data.data.results[0].name;
+    let marvelDescription = data.data.results[0].description;
+    let marvelResources = data.data.results[0].urls;
+    // console.log(marvelResources);
+
+    // loop through array of objects containing external urls and generate list of page links
+    let marvelResourceList;
+    for (let item in marvelResources) {
+        let type = marvelResources[item].type;
+        let url = marvelResources[item].url;
+        marvelResourceList += `<li><a href="${url}" target="_blank">${type}</a></li>`;
+    }
+
+    // removed 'undefined from the beginning of the list'
+    marvelResourceList = marvelResourceList.replace('undefined','');
+
+    let thumbnailPath = data.data.results[0].thumbnail.path;
+    // modifiy path name to https to avoid getting blocked mixed content
+    thumbnailPath = thumbnailPath.replace('http','https');
+    // console.log(thumbnailPath);
+    let thumbnailExtension = data.data.results[0].thumbnail.extension;
+
+    let fullThumbnailPath = thumbnailPath + "." + thumbnailExtension;
+
+    marvelData.innerHTML = `<div class="results-modal-inner">
+                              <div class="marvel-data-img"><img src="${fullThumbnailPath}" alt="${marvelName}"></img>
+                              <div class="marvel-data-name"><h2>${superheroName}</h2></div>
+                              <div class="marvel-data-description"><p>${marvelDescription}</p></div>
+                              <div class="marvel-data-urls"><ul>${marvelResourceList}</ul></div>
+                              <button id="marvelDataButton" class="marvel-data-button" type="button">Return</button>
+                            </div>`;
+}
+
 function selectSuperheroCatergory() {
 	let heroInfoLink = document.getElementById("heroList");
 	let heroInfoList = document.querySelectorAll(".hero-list > li");
