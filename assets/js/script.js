@@ -297,6 +297,18 @@ function showMarvelAPIData(data) {
                             </div>`;
 }
 
+function showMarvelAPIModal() {
+  let marvelDataBg = document.getElementById("marvelDataBg");
+  let infoOverlayButton = document.getElementById("infoOverlayButton"); // add event listener to infoOverlayButton to reveal marvelData modal
+  infoOverlayButton.addEventListener("click", function(){
+    marvelDataBg.classList.replace("marvel-data-hide", "marvel-data-reveal");
+	  let marvelDataButton = document.getElementById("marvelDataButton");
+    marvelDataButton.addEventListener("click", function() { // when modal is visible add event listener to marvelData button which closes modal when clicked
+      marvelDataBg.classList.replace("marvel-data-reveal", "marvel-data-hide");
+    }, false);
+  }, false);
+}
+
 function selectSuperheroCatergory() {
 	let heroInfoLink = document.getElementById("heroList");
 	let heroInfoList = document.querySelectorAll(".hero-list > li");
