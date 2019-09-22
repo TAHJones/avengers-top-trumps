@@ -191,6 +191,52 @@ function showSuperhero(data, n) {
   heroInfo.innerHTML = characterInfoTemplate("hero");
 }
 
+/**
+ * Function is called within getMarvelApiUrl function. It takes selected superhero name from heroFilePathName variable and returns corresponding name for that character used by Marvel API
+ */
+function marvelHero(superheroName){
+  switch(superheroName) { // match superhero name to marvel api name identifier and add to marvelHero variable
+    case "":
+    case 0:
+    case "0":
+    case null:
+    case false:
+    case "undefined":
+      alert("Error! superheroName variable is empty");
+      break;
+    case "antman":
+      return 'Ant-Man (Scott Lang)';
+    case "blackwidow":
+      return "Black Widow/Natasha Romanoff (MAA)";
+    case "captainamerica":
+      return "Captain America";
+    case "captainmarvel":
+      return "Captain Marvel (Carol Danvers)";
+    case "deadpool":
+      return "Deadpool";
+    case "drstrange":
+      return "Doctor Strange";
+    case "falcon":
+      return "Falcon";
+    case "hawkeye":
+      return "Hawkeye/Clint Barton (MAA)";
+    case "hulk":
+      return "Hulk";
+    case "ironman":
+      return "Iron Man";
+    case "scarletwitch":
+      return "Scarlet Witch (Ultimate)";
+    case "spiderman":
+      return "Spider-Man";
+    case "thor":
+      return "Thor";
+    case "warmachine":
+      return "War Machine (Ultimate)";
+    case "vision":
+      return "Vision";
+  }
+}
+
 function showMarvelAPIModal() {
   let marvelDataBg = document.getElementById("marvelDataBg");
   let infoOverlayButton = document.getElementById("infoOverlayButton"); // add event listener to infoOverlayButton to reveal marvelData modal
