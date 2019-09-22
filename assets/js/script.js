@@ -246,22 +246,6 @@ function getMarvelApiUrl() {
   return apiURL;
 }
 
-function showMarvelAPIModal() {
-  let marvelDataBg = document.getElementById("marvelDataBg");
-  let infoOverlayButton = document.getElementById("infoOverlayButton"); // add event listener to infoOverlayButton to reveal marvelData modal
-
-  infoOverlayButton.addEventListener("click", function(){
-    let marvelDataButton = document.getElementById("marvelDataButton");
-    // marvelDataBg.classList.remove("marvel-data-hide").add("marvel-data-reveal");
-    marvelDataBg.classList.replace("marvel-data-hide", "marvel-data-reveal");
-    
-    marvelDataButton.addEventListener("click", function() { // when modal is visible add event listener to marvelData button which closes modal when clicked
-      // marvelDataBg.classList.add("marvel-data-hide").remove("marvel-data-reveal");
-      marvelDataBg.classList.replace("marvel-data-hide", "marvel-data-reveal");
-    }, false);
-  }, false);
-}
-
 function showMarvelAPIData(data) {
     let marvelData = document.getElementById('marvelData');
     let marvelName = data.data.results[0].name;
