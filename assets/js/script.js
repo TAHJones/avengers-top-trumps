@@ -663,6 +663,7 @@ function getMarvelData(charactertype, n) {
 	  .then((data) => {
 	    superheroList = Object.entries(data.superheros);
 	    showSuperhero(superheroList, n);
+	    getMarvelApiData();
 	    resetSuperheroButton();
 	    showMarvelAPIModal();
 	    selectSuperheroCatergory();
