@@ -12,7 +12,7 @@ let selectHeroButton = document.getElementById('selectHeroButton');
 let selectVillainButton = document.getElementById('selectVillainButton');
 let superheroName;
 let supervillainName;
-let characterName;
+let resultsModal = document.getElementById("resultsModal"); // declare resultsModal in global scope so is available to showResultsModal and playAgain.addEventListener
 
 let heroScoreCounter;
 let infinityStoneName_Won;
