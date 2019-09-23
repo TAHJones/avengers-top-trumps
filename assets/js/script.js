@@ -38,12 +38,12 @@ let characterImg;
 	  characterImg = `<img src="assets/img/${heroFilePathName}.png" class="${charactertype}-img" alt="${heroFilePathName}">
 										<div id="infoOverlayId" class="info-overlay">
                       <button id="infoOverlayButton" class="info-overlay-text">More Info</button>
-                    </div>`;
-	} else {
+                    </div>`; // hero template also contains overlay which links to marvel api modal
+	} else if (charactertype === "villain") {
 	  characterImg = `<img src="assets/img/${villainFilePathName}.png" class="${charactertype}-img" alt="${villainFilePathName}">`;
 	}
 	return characterImg;
-}
+} // characterImgTemplate function end
 
 function characterInfoTemplate(charactertype) {
 	let characterInfoTitle;
