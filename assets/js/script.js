@@ -29,6 +29,7 @@ let strength;
 let speed;
 let technology;
 
+
 /*TEMPLATE FUNCTIONS*/
 
 /**
@@ -799,3 +800,15 @@ resultsModal.addEventListener('click', function(e){
     resetGame(); // reset all elements to 'inactive' state when results modal has been removed
   }
 },false);
+
+/**
+ * IIFE function that uses js date method to get current year and add it to copyright statement then insert it into copyRight element located in footer.
+ */
+(function getCurrentYear(){
+  let copyRight = document.getElementById("copyRight");
+  let currentTime = new Date()
+  let year = currentTime.getFullYear()
+  let copyRightText = "2018 - " + year + " © Thomas Jones - All Rights Reserved";
+  copyRight.innerHTML = copyRightText;
+})();
+
