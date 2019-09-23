@@ -1,4 +1,3 @@
-/*NEW JS*/
 
 /*GLOBAL VARIABLES*/
 let heroImg = document.getElementById('heroImg');
@@ -13,7 +12,6 @@ let selectVillainButton = document.getElementById('selectVillainButton');
 let superheroName;
 let supervillainName;
 let resultsModal = document.getElementById("resultsModal"); // declare resultsModal in global scope so is available to showResultsModal and playAgain.addEventListener
-
 let heroScoreCounter;
 let infinityStoneName_Won;
 let infinityStoneColor_Won;
@@ -32,6 +30,11 @@ let speed;
 let technology;
 
 /*TEMPLATE FUNCTIONS*/
+
+/**
+ * Function is called within showSuperhero function. It inserts either hero or villain name into a template literal that displays character image and returns it.
+ * @param {string} charactertype - can be "hero" or "villain"
+ */
 function characterImgTemplate(charactertype) {
 let characterImg;
 	if(charactertype === "hero") {
@@ -45,6 +48,10 @@ let characterImg;
 	return characterImg;
 } // characterImgTemplate function end
 
+/**
+ * Function is called within showSuperhero function. It inserts either hero or villain data into a template literal that displays character information and returns it.
+ * @param {string} charactertype - can be "hero" or "villain"
+ */
 function characterInfoTemplate(charactertype) {
 	let characterInfoTitle;
 	if(charactertype === "hero") {
@@ -63,16 +70,26 @@ function characterInfoTemplate(charactertype) {
 												</ul>
 											</div>`;
 	return characterInfo;
-}
+} // characterInfoTemplate function end
 
+/**
+ * Function is called within imgOverlayTemplate function. It creates img overlay for hero and villain img elements that displays the results of the match.
+ * @param {string} result - can be "Winner", "Loser" or "Draw".
+ * @param {object} parentElement - can be heroImg or villainImg variable.
+ * @param {string} overlayId - can be "heroOverlayId" or "villainOverlayId".
+ */
 function imgOverlayTemplate(result, parentElement, overlayId){
   let ImgOverlay = document.createElement("div"); // create new div element
   ImgOverlay = ImgOverlay.innerHTML = `<div id="${overlayId}" class="overlay">
                                               <div class="overlay-text">${result}</div>
                                             </div>`; // insert div element with result variable
   parentElement.innerHTML += ImgOverlay; // add new overlay element to parent element of img element
-}
+} // imgOverlayTemplate function end
 
+/**
+ * Function called from compareCatergoryScore function. It calls the imgOverlayTemplate twice function with three different parameter configurations depending on whether the user has won, lost or drawn the match.  
+ * @param {string} result - can be either "win", "Lose" or "draw".
+ */
 function displayImgOverlay(result) {
 	let heroOverlayId;
 	let villainOverlayId;
@@ -90,8 +107,12 @@ function displayImgOverlay(result) {
   villainOverlayId = document.getElementById("villainOverlayId");
   heroOverlayId.classList.add("overlay-fadein");
   villainOverlayId.classList.add("overlay-fadein");
-}
+} // displayImgOverlay function end
 
+/**
+ * It inserts hero and villain data into template literal to display match result. Template literal is then inserted into resultsModal element.
+ * @param {string} result - can be "win", "firstResultLose", "lose", "firstResultDraw", "draw" or "complete".
+ */
 function resultsInfoTemplate(result) {
 	let winner;
 	let loser;
@@ -164,11 +185,18 @@ function resultsInfoTemplate(result) {
   </div>`;
   
  resultsModal.innerHTML = resultsInfo;
-}
+} // resultsInfoTemplate function end
 
+/*GENERAL FUNCTIONS*/
+
+/**
+ * Function is called within getMarvelData function using "hero" and n parameter. It takes the data for the hero selected by the user from the list of heros and inserts the data for that hero into template literals created by the characterImgTemplate and characterInfoTemplate functions and then inserts them in the HTML document. 
+ * @param {array} data - array of object data for each hero.
+ * @param {number} n -  number associated with hero selected by the user using arrow and dot nav elements and passed by getMarvelData function which is used by function to select hero.
+ */
 function showSuperhero(data, n) {
-  if (n > data.length) {slideIndex = 1} // if slideIndex is > no. of slides reset to value of 1st slide
-  if (n < 1) {slideIndex = data.length} // if slideIndex is < 1 reset value to value of last slide
+  if (n > data.length) {slideIndex = 1;} // if slideIndex is > no. of slides reset to value of 1st slide
+  if (n < 1) {slideIndex = data.length;} // if slideIndex is < 1 reset value to value of last slide
 
   let heroInfo = document.getElementById('heroInfo');
   let superHero = data[slideIndex-1]; // select superhero from superHeroes object with bracket notation using function parameter
@@ -237,15 +265,22 @@ function marvelHero(superheroName){
   }
 }
 
+/**
+ * Function called from getMarvelApiData function. It constructs Marvel API url with select hero name and assigns to apiURL variable which it returns. getMarvelApiData function uses this url to fetch data from the Marvel API for the select hero.
+ */
 function getMarvelApiUrl() {
   let marvelHeroName = marvelHero(heroFilePathName);
   let apiEndpoint = 'https://gateway.marvel.com/v1/public/';
   let resourceType = 'characters';
   let apiKey = 'e8e6c4f6d9f4f13655a0a25d4649f754';
   let apiURL = apiEndpoint + resourceType + '?name=' + marvelHeroName + '&apikey=' + apiKey;
+  console.log(apiURL);
   return apiURL;
-}
+} // getMarvelApiUrl function end
 
+/**
+ * Function is called within getMarvelApiData function. It takes the json data from getMarvelApiData and filters it for marvelData characters name, image, description and urls for further character information on the Marvel website. The data is assigned to variables and inserted into a template literal then inserted into marvelData element.
+ */
 function showMarvelAPIData(data) {
     let marvelData = document.getElementById('marvelData');
     let marvelName = data.data.results[0].name;
@@ -256,7 +291,8 @@ function showMarvelAPIData(data) {
     let marvelResourceList;
     let fullThumbnailPath;
 
-    for (let item in marvelResources) { // loop through array of objects containing external urls and generate list of page links
+    // loop through array of objects containing external urls and generate list of page links
+    for (let item in marvelResources) {
         let type = marvelResources[item].type;
         let url = marvelResources[item].url;
         marvelResourceList += `<li><a href="${url}" target="_blank">${type}</a></li>`;
@@ -274,68 +310,80 @@ function showMarvelAPIData(data) {
                               <div class="marvel-data-urls"><ul>${marvelResourceList}</ul></div>
                               <button id="marvelDataButton" class="marvel-data-button" type="button">Return</button>
                             </div>`;
-}
+} // showMarvelAPIData function end
 
+/**
+ * Function is called within getMarvelData function using "hero" and n parameter. It reveals Marvel API modal when infoOverlayButton is clicked and hides the modal when marvelDataButton is clicked.
+ */
 function showMarvelAPIModal() {
   let marvelDataBg = document.getElementById("marvelDataBg");
-  let infoOverlayButton = document.getElementById("infoOverlayButton"); // add event listener to infoOverlayButton to reveal marvelData modal
+  let infoOverlayButton = document.getElementById("infoOverlayButton");
   infoOverlayButton.addEventListener("click", function(){
     marvelDataBg.classList.replace("marvel-data-hide", "marvel-data-reveal");
 	  let marvelDataButton = document.getElementById("marvelDataButton");
-    marvelDataButton.addEventListener("click", function() { // when modal is visible add event listener to marvelData button which closes modal when clicked
+    marvelDataButton.addEventListener("click", function() {
       marvelDataBg.classList.replace("marvel-data-reveal", "marvel-data-hide");
     }, false);
   }, false);
 }
 
+/**
+ * Function is called within getMarvelData function using "hero" and n parameter. It adds 'selected' styles to 'active' hero list item when clicked, adds 'inactive' styles to all other list items and adds 'active' styles to selectHeroButton.
+ */
 function selectSuperheroCatergory() {
 	let heroInfoLink = document.getElementById("heroList");
 	let heroInfoList = document.querySelectorAll(".hero-list > li");
-	let heroInfoArray = Array.from(heroInfoList); // convert heroList nodelist to array
-	// add selected styles to selected catergory
+	let heroInfoArray = Array.from(heroInfoList);
 	heroInfoLink.addEventListener('click', function(e){
 	  if(e.target.className === "list-group-item hero-list-active"){
 	    e.target.className = "list-group-item selected-catergory";
-		  // add inactive styles to unselected catergories
-			heroInfoArray.forEach(function(element, index){ // loop through array of anchor elements and select element with selected-catergory class name
+			heroInfoArray.forEach(function(element, index){
 		    if(element.className === "list-group-item hero-list-active"){
 		      element.className = "list-group-item hero-list-inactive";
 		  	}
 		  });
 	  }
 	  if(selectHeroButton.classList.contains("select-hero-inactive")){
-		  // replace inactive styles with active styles when superhero catergory is selected
 	    selectHeroButton.className = "select-hero select-hero-active";
 	  }
 	}, false);
 }
 
+/**
+ * Function is called within getMarvelData function using "hero" and n parameter. It resets 'active' styles to 'inactive' if nav elements are used to select another hero.
+ */
 function resetSuperheroButton() {
-  // let selectHeroButton = document.getElementById('selectHeroButton');
   if(selectHeroButton.className === "select-hero select-hero-active"){
-	  // each time a new hero is selected reset css styles to inactive if set to active
     selectHeroButton.className = "select-hero select-hero-inactive";
   }
 }
 
+/**
+ * Function is called within getMarvelData function using "hero" and n parameter. When 'active' selectHeroButton is clicked adds 'selected' styles to heroImg and selectHeroButton elements, removes nav and infoOverlayId elements and adds 'active' styles to selectVillainButton.
+ */
 function selectSuperheroButton() {
   selectHeroButton.addEventListener('click', function(){
-    if(selectHeroButton.classList.contains("select-hero-active")){ // check that button is active before adding changes
+    if(selectHeroButton.classList.contains("select-hero-active")){
       selectHeroButton.textContent = `${superheroName}`;
       selectHeroButton.style.border = "4px solid #a46e32";
       heroImg.firstElementChild.style.border = "4px solid #FFA94A";
       selectHeroButton.className = "select-hero select-hero-selected";
-      hideDots.style.zIndex = "-1"; // hide scrolling icons when hero has been selected
+      hideDots.style.zIndex = "-1";
       prevSlide.style.visibility = "hidden";
       nextSlide.style.visibility = "hidden";
       selectVillainButton.className = "select-villain select-villain-active";
-      var infoOverlayId = document.getElementById("infoOverlayId");
-      var infoOverlayParent = infoOverlayId.parentNode;
-      infoOverlayParent.removeChild(infoOverlayId); // remove info overlay when hero is selected
+      let infoOverlayId = document.getElementById("infoOverlayId");
+      let infoOverlayParent = infoOverlayId.parentNode;
+      infoOverlayParent.removeChild(infoOverlayId);
     }
   }, false);	
 }
 
+/**
+ * Function is called within getMarvelData function using "villain" parameter. It randomly selects an individual villain from a list of villains and inserts the data for that villain into template literals created by the characterImgTemplate and characterInfoTemplate functions and then inserts them in the HTML document. 
+ * @param {array} data - array of object data for each villain.
+ * @param {number} n - randomly generated number passed by getMarvelData function which is used to select villain.
+ */
 function showSupervillain(data, n) {
 	let superVillain = data[n];
   let villainInfo = document.getElementById('villainInfo');
@@ -350,8 +398,11 @@ function showSupervillain(data, n) {
   
   villainImg.innerHTML = characterImgTemplate("villain");
   villainInfo.innerHTML = characterInfoTemplate("villain");
-}
+} // showSupervillain function end
 
+/**
+ * Function is called within getMarvelData function using "villain" parameter. It changes selectVillainButton and villainImg elements CSS styles when villain is selected.
+ */
 function selectedSupervillainStyles() {
   selectVillainButton.textContent = `${supervillainName}`;
   selectVillainButton.style.border = "4px solid #a46e32";
@@ -359,48 +410,60 @@ function selectedSupervillainStyles() {
   villainImg.firstElementChild.style.border = "4px solid #FFA94A";
 }
 
-function getHeroCatergoryScore(){ // function that returns index number and score of selected catergory
-  let heroCatergoryScoreObject = {}; // create object to hold hero catergory score and selected catergory index no.
-  let heroList = document.querySelectorAll(".hero-list > li"); // get list of anchor elements containing hero catergory scores
-  let heroListArray = Array.from(heroList); // convert heroList nodelist to array
-  heroListArray.forEach(function(element, index){ // loop through array of anchor elements and select element with selected-catergory class name
+/**
+ * Function is called within compareCatergoryScore function. It takes the score from the selected hero catergory and returns it and it's index value as an object
+ */
+function getHeroCatergoryScore(){
+  let heroCatergoryScoreObject = {};
+  let heroList = document.querySelectorAll(".hero-list > li");
+  let heroListArray = Array.from(heroList);
+  heroListArray.forEach(function(element, index){
     if(element.classList.contains("selected-catergory")) {
-      heroCatergoryScoreObject.selectedCatergoryIndex = index; // add selected catergory index no. to catergoryScoreObject
+      heroCatergoryScoreObject.selectedCatergoryIndex = index;
       let heroCatergoryScoreText = element.textContent;
-      let heroCatergoryScore = parseInt(heroCatergoryScoreText.charAt(heroCatergoryScoreText.length-1)); // select last character of string and convert to number
-      heroCatergoryScore === 0 ? heroCatergoryScore = 10 : heroCatergoryScore; // if heroCatergoryScore = 0 convert to 10 and add to catergoryScoreObject
+      let heroCatergoryScore = parseInt(heroCatergoryScoreText.charAt(heroCatergoryScoreText.length-1));
+      heroCatergoryScore === 0 ? heroCatergoryScore = 10 : heroCatergoryScore;
       heroCatergoryScoreObject.heroCatergoryScore = heroCatergoryScore;
     }
   });
   return heroCatergoryScoreObject;
 } // getHeroCatergoryScore function end
 
-function getVillainCatergoryScore(heroCatergoryScoreObject){  // function that recieves heroCatergoryScoreObject, renames it as catergoryScoreObject and adds villain catergory score to object then returns object
+/**
+ * Function is called within compareCatergoryScore function. It takes the object data from the getHeroCatergoryScore function and adds the corresponding catergory villain score then returns the updated object.
+ * @param {object} heroCatergoryScoreObject - takes the returned object data from the getHeroCatergoryScore function
+ */
+function getVillainCatergoryScore(heroCatergoryScoreObject){
   let catergoryScoreObject = heroCatergoryScoreObject;
-  let villainList = document.querySelectorAll(".villain-list > li"); // get list of anchor elements containing villain catergory scores
-  let villainListArray = Array.from(villainList); // convert villainList nodelist to array
-  villainListArray.forEach(function(element, index){ // loop through array of anchor elements and select element with selected-catergory class name
-    if(index === catergoryScoreObject.selectedCatergoryIndex){ // if index no. of list item equals index no. of selected hero catergory list item store in catergoryScoreElement letiable
-      let catergoryScoreElement = element;
-      catergoryScoreElement.className = "selected-catergory"; // if index number matches index for hero selected catergory get anchor element with selected-catergory class
+  let villainList = document.querySelectorAll(".villain-list > li");
+  let villainListArray = Array.from(villainList);
+  villainListArray.forEach(function(element, index){
+    if(index === catergoryScoreObject.selectedCatergoryIndex){
+    	let catergoryScoreElement = element;
+      catergoryScoreElement.className = "selected-catergory";
       let catergoryScoreText = element.textContent;
-      let villainCatergoryScore = parseInt(catergoryScoreText.charAt(catergoryScoreText.length-1)); // select last character of string and convert to number
-      villainCatergoryScore === 0 ? villainCatergoryScore = 10 : villainCatergoryScore;  // if villainCatergoryScore = 0 convert to 10
-      catergoryScoreObject.villainCatergoryScore = villainCatergoryScore; // add/create villainCatergoryScore key to catergoryScoreObject and add villainCatergoryScore variable as value
-    } else if (element.classList.contains("villain-list-active")) { // select list items with villain-list-active classname
+      let villainCatergoryScore = parseInt(catergoryScoreText.charAt(catergoryScoreText.length-1));
+      villainCatergoryScore === 0 ? villainCatergoryScore = 10 : villainCatergoryScore;
+      catergoryScoreObject.villainCatergoryScore = villainCatergoryScore;
+    } else if (element.classList.contains("villain-list-active")) {
       element.classList.replace("villain-list-active", "villain-list-inactive");
     }
   });
   return catergoryScoreObject;
 } // getVillainCatergoryScore function end
 
-if(heroScoreCounter > 1){ // check if variable already has recorded score, if it does don't declare variable again as this will reset value
+
+// conditional statement that checks value of heroScoreCounter and resets to 1 is value is <= 1
+if(heroScoreCounter > 1){
   heroScoreCounter;
   console.log(heroScoreCounter);
 } else {
-  heroScoreCounter = 1; // if variable does exist i.e is > 0 declare variable in global scope with value of 1
+  heroScoreCounter = 1;
 }
 
+/**
+ * Function is called within showResultsModal function and uses the heroScoreCounter variable to display the correct infinity stone image in the results modal 
+ */
 function infinityStoneCounter(){
 	switch(heroScoreCounter) { // match infinity stone name with counter score number
 	  case "":
@@ -458,15 +521,19 @@ function infinityStoneCounter(){
 	    default:
 	     switch(true){
 	      case (heroScoreCounter >= 8):
-	       alert("Error! heroScoreCounter variable is greater than 7");  // return an error if heroScoreCounter is  greater than 7
+	       alert("Error! heroScoreCounter variable is greater than 7");
 	       return heroScoreCounter;
 	      default:
-	       alert("Error! heroScoreCounter variable is not an integer"); // return an error if heroScoreCounter is not an integer
+	       alert("Error! heroScoreCounter variable is not an integer");
 	    }
 	}
-}
+} // infinityStoneCounter function end
 
-function showResultsModal(result){ // insert HTML content into resultsModal div according to result
+/**
+ * Function is called within compareCatergoryScore function. It generates template literal with results of match by calling resultsInfoTemplate function with appropriate results parameter then inserts it into resultModal element.
+ * @param {string} result - can be "win", "firstResultLose", "lose", "firstResultDraw", "draw" or "complete".
+ */
+function showResultsModal(result){
 	infinityStoneCounter();
   if(result === "win"){
   	resultsInfoTemplate("win");
@@ -506,6 +573,9 @@ function showResultsModal(result){ // insert HTML content into resultsModal div 
   }
 } // showResultsModal function end
 
+/**
+ * Function is called within getMarvelData function using "villain" parameter. It takes hero and villain score from selected catergory score and determines result of match i.e. win, lose or draw. It then calls displayImgOverlay and showResultsModal function with appropriate parameters to display the results of the match.
+ */
 function compareCatergoryScore(){
 	let heroCatergoryScoreObject = getHeroCatergoryScore();
 	let catergoryScoreObject = getVillainCatergoryScore(heroCatergoryScoreObject);
@@ -534,10 +604,10 @@ function compareCatergoryScore(){
     heroScoreCounter -= 1;
     displayImgOverlay("lose");
     let lostinfinityStone = heroScoreCounter + 1;
-    infinityStoneId = "infinitystone" + lostinfinityStone.toString(); // updated infinityStoneId variable to display current infinity stone
+    infinityStoneId = "infinitystone" + lostinfinityStone.toString();
     infinityStoneArray.forEach(function(element, index){
       if(heroScoreCounter === index + 1){
-        element.innerHTML = `<img src="assets/img/placeholderinfinitystone.png">`; // reset lost infinity stone to placeholder image
+        element.innerHTML = `<img src="assets/img/placeholderinfinitystone.png">`;
       }
     });
     if(heroCatergoryScore < villainCatergoryScore && heroScoreCounter < 1){
@@ -550,7 +620,7 @@ function compareCatergoryScore(){
 } else if(heroCatergoryScore === villainCatergoryScore) {
     heroScoreCounter += 0; // keep heroScoreCounter value the same
     displayImgOverlay("draw");
-    infinityStoneId = "infinitystone" + heroScoreCounter.toString(); // add updated result counter to infinityStoneId variable
+    infinityStoneId = "infinitystone" + heroScoreCounter.toString();
     if(heroCatergoryScore === villainCatergoryScore && heroScoreCounter === 1){
       showResultsModal("firstResultDraw");
     } else if(heroCatergoryScore === villainCatergoryScore && heroScoreCounter > 1){
@@ -560,13 +630,16 @@ function compareCatergoryScore(){
   }
 } // compareCatergoryScore function end
 
+/**
+ * Function is called by resultsModal event listener when playAgainButton button is clicked. It resets modified HTML elements and CSS styles after each match except the score counter which is only reset when game is complete.
+ */
 function resetGame(){
   let scoreCounter = document.getElementById("scoreCounter");
   let heroInfo = document.getElementById('heroInfo');
   let villainInfo = document.getElementById('villainInfo');
-  let dotsArray = Array.from(dots); // convert dots nodelist to array
+  let dotsArray = Array.from(dots);
   
-  if(heroScoreCounter === 7){ // if game is complete modify playagain button
+  if(heroScoreCounter === 7){ // if game is complete reset infinity stone score counter
     scoreCounter.innerHTML = `<ul class="d-flex justify-content-center score-counter-list">
                   						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
                   						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
@@ -577,9 +650,9 @@ function resetGame(){
                   					</ul>`;
     heroScoreCounter = 1; // reset score counter back to default value
   }
-  dotsArray.forEach(function(element, index) { // loop through array of list elements
-    if(element.classList.contains("active")) { // select element with active class name
-      element.classList.remove("active"); // remove active class name if present
+  dotsArray.forEach(function(element, index) {
+    if(element.classList.contains("active")) {
+      element.classList.remove("active");
     }
   });
     
@@ -593,7 +666,7 @@ function resetGame(){
   											<li class="list-group-item hero-list-inactive" >Strength: ?</li>
   											<li class="list-group-item hero-list-inactive">Speed: ?</li>
   											<li class="list-group-item hero-list-inactive">Technology: ?</li>
-  									  </ul>`; // reset property values back to question mark default and insert into heroInfo div
+  									  </ul>`;
   
   selectHeroButton.className = "list-group-item select-hero select-hero-inactive";
   selectHeroButton.textContent = "Select Hero";
@@ -611,7 +684,7 @@ function resetGame(){
       											<li class="list-group-item villain-list-inactive" >Strength: ?</li>
       											<li class="list-group-item villain-list-inactive">Speed: ?</li>
       											<li class="list-group-item villain-list-inactive">Technology: ?</li>
-      										</ul>`;  // add object property values to template literal HTML and insert into slideInfo div
+      										</ul>`;
 
   selectVillainButton.className = "select-villain select-villain-inactive";
   selectVillainButton.textContent = "Select Villain";
@@ -626,7 +699,7 @@ function resetGame(){
 } // resetGame function end
 
 
-/*FETCH REQUESTS */
+/*FETCH REQUESTS*/
 
 /**
  * Function is called within getMarvelData function using "hero" and n parameter. It fetches comic book character data from Marvel API using url generated by getMarvelApiUrl function and returns json data which is passed to showMarvelAPIData function.
@@ -643,6 +716,11 @@ function getMarvelApiData() {
 	  });
 }
 
+/**
+ * Function is called by arrow and dot nav event or selectVillainButtonlisteners and fetches json data from character.json file. It sends an array of hero or villain info to showSuperhero or showSupervillain functions depending on parameter settings. It then calls other functions to further process the character info once it has been displayed. 
+ * @param {string} charactertype - "hero" or "villain" which determines whether an array of hero or villain info is selected from json data.
+ * @param {number} n - optional parameter only needed when "hero" parameter is selected. The number in n is determined by arrow and dot nav event listeners and records which hero has been selected by the user.
+ */
 function getMarvelData(charactertype, n) {
   let superheroList;
   let supervillainList;
@@ -666,21 +744,22 @@ function getMarvelData(charactertype, n) {
   	})
 	  .catch(err => {
 	    console.log(err);
-	  })
+	  });
 	} else if(charactertype === "villain") {
 	  fetch('assets/data/characters.json')
 	  .then((res) => res.json())
 	  .then((data) => {
 	    supervillainList = Object.entries(data.supervillains);
-		  showSupervillain(supervillainList, n);
-		  selectedSupervillainStyles();
-		  compareCatergoryScore();
+	    showSupervillain(supervillainList, n);
+	    selectedSupervillainStyles();
+			compareCatergoryScore();
   	})
 	  .catch(err => {
 	    console.log(err);
 	  })		
 	}
-}
+} // getMarvelData function end
+
 
 /*EVENT lISTENERS*/
 
@@ -720,5 +799,3 @@ resultsModal.addEventListener('click', function(e){
     resetGame(); // reset all elements to 'inactive' state when results modal has been removed
   }
 },false);
-
-/*NEW JS END*/
