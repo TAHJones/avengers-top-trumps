@@ -315,6 +315,7 @@ function showMarvelAPIData(data) {
     let thumbnailExtension;
     let marvelResourceList;
     let fullThumbnailPath;
+    let marvelCopyright;
 
     // loop through array of objects containing external urls and generate list of page links
     for (let item in marvelResources) {
@@ -328,14 +329,19 @@ function showMarvelAPIData(data) {
     thumbnailPath = thumbnailPath.replace('http','https'); // modifiy path name to https to avoid getting blocked mixed content
     thumbnailExtension = data.data.results[0].thumbnail.extension;
     fullThumbnailPath = thumbnailPath + "." + thumbnailExtension;
+    // marvelCopyright = getCurrentYear("marvelApiModal");
+    // console.log(marvelCopyright);
     marvelData.innerHTML = `<div class="results-modal-inner">
                               <div class="marvel-data-img"><img src="${fullThumbnailPath}" alt="${marvelName}"></img>
                               <div class="marvel-data-name"><h2>${superheroName}</h2></div>
                               <div class="marvel-data-description"><p>${marvelDescription}</p></div>
                               <div class="marvel-data-urls"><ul>${marvelResourceList}</ul></div>
                               <button id="marvelDataButton" class="marvel-data-button" type="button">Return</button>
+                              <div id="marvelCopyRight"></div>  
                             </div>`;
-} // showMarvelAPIData function end 
+    let marvelCopyRight = document.getElementById("marvelCopyRight");
+    marvelCopyRight.innerHTML = getCurrentYear("marvelApiModal");
+} // showMarvelAPIData function end
 
 /**
  * Function is called within getMarvelData function using "hero" and n parameter. It reveals Marvel API modal when infoOverlayButton is clicked and hides the modal when marvelDataButton is clicked.
