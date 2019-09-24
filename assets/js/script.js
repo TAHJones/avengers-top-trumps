@@ -330,8 +330,6 @@ function showMarvelAPIData(data) {
     thumbnailPath = thumbnailPath.replace('http','https'); // modifiy path name to https to avoid getting blocked mixed content
     thumbnailExtension = data.data.results[0].thumbnail.extension;
     fullThumbnailPath = thumbnailPath + "." + thumbnailExtension;
-    // marvelCopyright = getCurrentYear("marvelApiModal");
-    // console.log(marvelCopyright);
     marvelData.innerHTML = `<div class="results-modal-inner">
                               <div class="marvel-data-img"><img src="${fullThumbnailPath}" alt="${marvelName}"></img>
                               <div class="marvel-data-name"><h2>${superheroName}</h2></div>
