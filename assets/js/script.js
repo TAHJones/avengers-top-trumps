@@ -210,8 +210,9 @@ function getCurrentYear(location){
   }
 }
 
-// let copyRight = document.getElementById("copyRight");
-// copyRight.innerHTML = copyRightText;
+// call getCurrentYear("footer") and insert copyright statement into footer
+let copyRight = document.getElementById("copyRight");
+copyRight.innerHTML = getCurrentYear("footer");
 
 
 /**
