@@ -188,7 +188,31 @@ function resultsInfoTemplate(result) {
  resultsModal.innerHTML = resultsInfo;
 } // resultsInfoTemplate function end
 
+
 /*GENERAL FUNCTIONS*/
+
+/**
+ * Function that uses js date method to get current year and add it to copyright statements then inserts them into page footer and marvel api modal.
+ * @param {string} location - either "footer" or "marvelApiModal"
+ */
+function getCurrentYear(location){
+  let copyRightText;;
+  let marvelCopyRightText
+  // let marvelCopyRight = document.getElementById("marvelCopyRight");
+  let currentTime = new Date();
+  let year = currentTime.getFullYear();
+  if(location === "footer") {
+    copyRightText = "2018 - " + year + " © Thomas Jones - All Rights Reserved";
+    return copyRightText;
+  } else if(location === "marvelApiModal") {
+    marvelCopyRightText = year + " © Marvel - All Rights Reserved";
+    return marvelCopyRightText;
+  }
+}
+
+// let copyRight = document.getElementById("copyRight");
+// copyRight.innerHTML = copyRightText;
+
 
 /**
  * Function is called within getMarvelData function using "hero" and n parameter. It takes the data for the hero selected by the user from the list of heros and inserts the data for that hero into template literals created by the characterImgTemplate and characterInfoTemplate functions and then inserts them in the HTML document. 
@@ -311,7 +335,7 @@ function showMarvelAPIData(data) {
                               <div class="marvel-data-urls"><ul>${marvelResourceList}</ul></div>
                               <button id="marvelDataButton" class="marvel-data-button" type="button">Return</button>
                             </div>`;
-} // showMarvelAPIData function end
+} // showMarvelAPIData function end 
 
 /**
  * Function is called within getMarvelData function using "hero" and n parameter. It reveals Marvel API modal when infoOverlayButton is clicked and hides the modal when marvelDataButton is clicked.
@@ -800,15 +824,4 @@ resultsModal.addEventListener('click', function(e){
     resetGame(); // reset all elements to 'inactive' state when results modal has been removed
   }
 },false);
-
-/**
- * IIFE function that uses js date method to get current year and add it to copyright statement then insert it into copyRight element located in footer.
- */
-(function getCurrentYear(){
-  let copyRight = document.getElementById("copyRight");
-  let currentTime = new Date()
-  let year = currentTime.getFullYear()
-  let copyRightText = "2018 - " + year + " © Thomas Jones - All Rights Reserved";
-  copyRight.innerHTML = copyRightText;
-})();
 
