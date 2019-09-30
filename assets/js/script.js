@@ -570,9 +570,9 @@ function showResultsModal(result){
   	resultsInfoTemplate("firstResultLose");
   } else if (result === "lose"){
   	resultsInfoTemplate("lose");
-  } else if (result == "firstResultDraw"){
+  } else if (result === "firstResultDraw"){
   	resultsInfoTemplate("firstResultDraw");
-  } else if (result == "draw"){
+  } else if (result === "draw"){
   	resultsInfoTemplate("draw");
   } else if (result === "complete"){
     resultsModal.innerHTML = `<div class="row h-100 justify-content-center results-modal-inner">
@@ -646,7 +646,7 @@ function compareCatergoryScore(){
       showResultsModal("lose");
     }
     resultsModal.classList.add("modal-fadein");
-} else if(heroCatergoryScore === villainCatergoryScore) {
+  } else if(heroCatergoryScore === villainCatergoryScore) {
     heroScoreCounter += 0; // keep heroScoreCounter value the same
     displayImgOverlay("draw");
     infinityStoneId = "infinitystone" + heroScoreCounter.toString();
@@ -779,6 +779,7 @@ function getMarvelData(charactertype, n) {
 	  .then((res) => res.json())
 	  .then((data) => {
 	    supervillainList = Object.entries(data.supervillains);
+	    console.log(supervillainList);
 	    showSupervillain(supervillainList, n);
 	    selectedSupervillainStyles();
 			compareCatergoryScore();
@@ -829,3 +830,9 @@ resultsModal.addEventListener('click', function(e){
   }
 },false);
 
+
+let startGuide = document.getElementById("startGuide");
+startGuide.addEventListener('click', function(){
+  // Initialize and start the site guide
+  introJs().start();
+}, false);
