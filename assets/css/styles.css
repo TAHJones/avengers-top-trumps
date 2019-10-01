@@ -1347,3 +1347,19 @@ p {
 	color: #1D0B46;
 	border-color: #1D0B46;
 }
+
+.start-guide-show {
+  display: block;
+}
+
+.start-guide-hide {
+  display: none;
+}
+
+.score-counter-hide {
+  display: none;
+}
+
+.score-counter-show {
+  display: block;
+}
