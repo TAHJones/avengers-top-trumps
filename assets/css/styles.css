@@ -1330,16 +1330,20 @@ p {
 
 
 #startGuide {
-	background-color: #4A3CC9;
-	border: solid 4px #bbb;
+	background: #1D0B46;
+	border: solid 4px #FFA94A;
 	border-radius: 6px;
-	color: #fff;
+	color: #FFA94A;
 	font-size: 18px;
 	font-weight: bold;
-	margin: 0 auto;
-	width: 200px; 
-	height: 60px;
+	position: absolute;
+	width: 110px;
+	height: 50px;
 	transition: all 0.25s ease-in-out;
+	transform: translateX(-50%);
+	top: 170px;
+	left: 50%;
+	z-index: 9999999;
 }
 
 #startGuide:hover {
@@ -1354,12 +1358,4 @@ p {
 
 .start-guide-hide {
   display: none;
-}
-
-.score-counter-hide {
-  display: none;
-}
-
-.score-counter-show {
-  display: block;
 }
