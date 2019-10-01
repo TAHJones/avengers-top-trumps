@@ -831,8 +831,16 @@ resultsModal.addEventListener('click', function(e){
 },false);
 
 
+function showScoreCounter() {
+  let startGuideBg = document.getElementById("startGuideBg");
+  let scoreCounterBg = document.getElementById("scoreCounterBg");
+  startGuideBg.classList.replace("start-guide-show","start-guide-hide");
+  scoreCounterBg.classList.replace("score-counter-hide","score-counter-show");
+}
+
 let startGuide = document.getElementById("startGuide");
 startGuide.addEventListener('click', function(){
   // Initialize and start the site guide
   introJs().start();
+  showScoreCounter();
 }, false);
