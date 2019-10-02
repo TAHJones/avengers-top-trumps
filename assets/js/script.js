@@ -214,6 +214,14 @@ function getCurrentYear(location){
 let copyRight = document.getElementById("copyRight");
 copyRight.innerHTML = getCurrentYear("footer");
 
+/**
+ * Function is called by called when dot or arrow nav elements are clicked. It hides the startGuide button when the user starts playing the game.
+ * 
+ */
+function hideStartGuide() {
+  let startGuideBg = document.getElementById("startGuideBg");
+  startGuideBg.classList.replace("start-guide-show","start-guide-hide");
+}
 
 /**
  * Function is called within getMarvelData function using "hero" and n parameter. It takes the data for the hero selected by the user from the list of heros and inserts the data for that hero into template literals created by the characterImgTemplate and characterInfoTemplate functions and then inserts them in the HTML document. 
