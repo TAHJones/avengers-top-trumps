@@ -1347,9 +1347,9 @@ p {
 }
 
 #startGuide:hover {
-	background-color: #fff;
-	color: #1D0B46;
-	border-color: #1D0B46;
+	background-color: #000;
+	color: #ff3b01;
+	border-color: #222;
 }
 
 .start-guide-show {
