@@ -717,7 +717,7 @@ p {
 
 /*FOOTER-END*/
 
-/*INTROJS GUIDE*/
+/*INTROJS-GUIDE*/
 
 #startGuide {
 	background: #212529;
@@ -750,7 +750,16 @@ p {
   display: none;
 }
 
-/*INTROJS GUIDE-END*/
+.introjs-tooltip {
+	background-color: rgba(000, 0, 0, .8);
+	color: #e66b28;
+	padding: 20px;
+	margin: 0 auto;
+	text-align: center;
+	border: solid 6px #7269C2;
+}
+
+/*INTROJS-GUIDE-END*/
 
 /*RESPONSIVE-STYLES*/
 
