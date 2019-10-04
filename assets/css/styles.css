@@ -759,6 +759,12 @@ p {
 	border: solid 6px #7269C2;
 }
 
+.introjs-helperLayer {
+	background-color: #000;
+	border: 1px solid #e66b28;
+	border-radius: 4px;
+}
+
 /*INTROJS-GUIDE-END*/
 
 /*RESPONSIVE-STYLES*/
