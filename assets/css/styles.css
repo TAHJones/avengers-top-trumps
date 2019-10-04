@@ -765,6 +765,19 @@ p {
 	border-radius: 4px;
 }
 
+.introjs-bullets ul li a {
+	background: #444;
+}
+
+.introjs-bullets ul li a.active {
+	background: #e66b28;
+}
+
+.introjs-bullets ul li a:hover {
+	background: #e66b28;
+}
+
+
 /*INTROJS-GUIDE-END*/
 
 /*RESPONSIVE-STYLES*/
