@@ -927,7 +927,7 @@ resultsModal.addEventListener('click', function(e){
 /**
  * event listener for #startGuide element that calls getIntroGuide function
  */
-let startGuide = document.getElementById("startGuide");
 startGuide.addEventListener('click', function(){
+let startGuide = document.getElementById("startGuide");
   getIntroGuide();
 }, false);
