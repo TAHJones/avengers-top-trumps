@@ -884,14 +884,18 @@ function getMarvelData(charactertype, n) {
 
 /*EVENT lISTENERS*/
 
-// add click eventlistener to target div with 'prev' id
+/**
+ * add click eventlistener to element with 'prev' id. When it's clicked hides start guide and decreases slideIndex variable by 1 before calling getMarvelData function with slideIndex variable to get superhero data
+ */
 prevSlide.addEventListener('click', function() {
   hideStartGuide();
   slideIndex -= 1; // decrease slideIndex value by 1 so previous slide is made visible by showSuperhero function
 	getMarvelData("hero", slideIndex);
 }, false);
 
-// add click eventlistener to target div with 'prev' id
+/**
+ * add click eventlistener to element with 'next' id. When it's clicked hides start guide and increments slideIndex variable by 1 before calling getMarvelData function with slideIndex variable to get superhero data
+ */
 nextSlide.addEventListener('click', function() {
   hideStartGuide();
   slideIndex += 1; // increase slideIndex value by 1 so next slide is made visible by showSuperhero function
