@@ -923,7 +923,7 @@ currentSlide(dots);
  * eventlistener that checks if selectVillainButton is active and if it is calls the getMarvelData function with the 'villain' parameter
  */
 selectVillainButton.addEventListener('click', function(){
-	if(selectVillainButton.classList.contains("select-villain-active")){ // check that button is active before adding data & changing styles
+	if(selectVillainButton.classList.contains("select-villain-active")){
 		getMarvelData("villain");
 	}
 }, false);
