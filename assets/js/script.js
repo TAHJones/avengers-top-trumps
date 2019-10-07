@@ -12,6 +12,7 @@ let selectVillainButton = document.getElementById('selectVillainButton');
 let superheroName;
 let supervillainName;
 let resultsModal = document.getElementById("resultsModal"); // declare resultsModal in global scope so is available to showResultsModal and playAgain.addEventListener
+let startGuide = document.getElementById("startGuide");
 let heroScoreCounter;
 let infinityStoneName_Won;
 let infinityStoneColor_Won;
@@ -916,18 +917,19 @@ selectVillainButton.addEventListener('click', function(){
 	}
 }, false);
 
+/**
+ * eventlistener that fades out results modal by adding modal-fadeout class then calls resetGame function to reset game when playAgainButton is clicked.
+ */
 resultsModal.addEventListener('click', function(e){
-  if(e.target.id === "playAgainButton"){ // when playAgainButton is clicked add modal-fadeout class to remove modal
+  if(e.target.id === "playAgainButton"){
     resultsModal.classList.add("modal-fadeout");
-    resetGame(); // reset all elements to 'inactive' state when results modal has been removed
+    resetGame();
   }
 },false);
-
 
 /**
  * event listener for #startGuide element that calls getIntroGuide function
  */
 startGuide.addEventListener('click', function(){
-let startGuide = document.getElementById("startGuide");
   getIntroGuide();
 }, false);
