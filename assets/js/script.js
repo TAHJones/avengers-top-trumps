@@ -923,8 +923,11 @@ resultsModal.addEventListener('click', function(e){
   }
 },false);
 
+
+/**
+ * event listener for #startGuide element that calls getIntroGuide function
+ */
 let startGuide = document.getElementById("startGuide");
 startGuide.addEventListener('click', function(){
-  // Initialize and start the site guide
   getIntroGuide();
 }, false);
