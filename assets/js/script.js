@@ -898,6 +898,10 @@ nextSlide.addEventListener('click', function() {
   getMarvelData("hero", slideIndex);
 }, false);
 
+/**
+ * loops through nodelist parameter 'n' to add index number and eventlistener to each item. If nodelist item is clicked then index number is used as parameter to call getMarvelData function to get superhero data.
+ * @param {nodelist} n - variable 'dots'contains nodelist of list items with classname 'dot.'
+ */
 function currentSlide(n) {
   for(let i=0; i < n.length; i++) {
     n[i].index = i; // use loop counter to set the index number for each div element
