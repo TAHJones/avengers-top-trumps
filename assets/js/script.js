@@ -908,10 +908,10 @@ nextSlide.addEventListener('click', function() {
  */
 function currentSlide(n) {
   for(let i=0; i < n.length; i++) {
-    n[i].index = i; // use loop counter to set the index number for each div element
-    n[i].addEventListener('click', function(e) { // add 'click' event listener to div elements
+    n[i].index = i;
+    n[i].addEventListener('click', function(e) {
       hideStartGuide();
-      slideIndex = e.target.index + 1; // get index number of clicked dot & change index base number to 1 to match slideIndex number
+      slideIndex = e.target.index + 1; // change index base number to 1 to match slideIndex number
       getMarvelData("hero", slideIndex);
     }, false);
   }
