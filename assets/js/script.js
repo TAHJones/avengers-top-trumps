@@ -224,6 +224,88 @@ function hideStartGuide() {
 }
 
 /**
+ * Function is called by startGuide event listener. Calls introJs function for introjs plugin. Adds different settings depending on whether screen width is > or < 768px. Then function is initalised.
+ */
+function getIntroGuide() {
+  let introguide = introJs();
+  let introguideOptions;
+  if(window.innerWidth < 768) {
+    introguideOptions = [
+      {
+        element: 'h1',
+        intro: 'Follow this guide to learn how to play Avengers Top Trumps.',
+        position: 'bottom'
+      },
+      {
+        element: '#next',
+        intro: 'Click on the arrows to scroll through the list of superheroes.',
+        position: 'right'
+      },
+      {
+        element: '.agility',
+        intro: 'Next select a superpower from the following list of abilities.',
+        position: 'top'
+      },
+      {
+        element: '#selectHeroButton',
+        intro: 'Click button to confirm superhero and superpower selection.',
+        position: 'bottom'
+      },
+      {
+        element: '#selectVillainButton',
+        intro: 'Click button to randomly select supervillain opponent.',
+        position: 'bottom'
+      }
+    ]; 
+  } else if(window.innerWidth >= 768) {
+    introguideOptions = [
+      {
+        element: 'h1',
+        intro: 'Follow this guide to learn how to play Avengers Top Trumps.',
+        position: 'bottom'
+      },
+      {
+        element: '.vision',
+        intro: 'Click on the dots to select a superhero (hover over the dots for preview).',
+        position: 'right'
+      },
+      {
+        element: '#next',
+        intro: 'Or click on the arrows to scroll through the list of superheroes.',
+        position: 'right'
+      },
+      {
+        element: '.agility',
+        intro: 'Next select a superpower from the following list of abilities.',
+        position: 'top'
+      },
+      {
+        element: '#selectHeroButton',
+        intro: 'Click button to confirm superhero and superpower selection.',
+        position: 'bottom'
+      },
+      {
+        element: '#selectVillainButton',
+        intro: 'Click button to randomly select supervillain opponent.',
+        position: 'bottom'
+      }
+    ]; 
+  }
+  
+  introguide.setOptions({
+    showStepNumbers: false,
+    showBullets: true,
+    showButtons: true,
+    scrollToElement: true,
+    exitOnEsc: true,
+    exitOnOverlayClick: false,
+    steps: introguideOptions 
+  }); 
+  
+  introguide.start();
+}
+
+/**
  * Function is called within getMarvelData function using "hero" and n parameter. It takes the data for the hero selected by the user from the list of heros and inserts the data for that hero into template literals created by the characterImgTemplate and characterInfoTemplate functions and then inserts them in the HTML document. 
  * @param {array} data - array of object data for each hero.
  * @param {number} n -  number associated with hero selected by the user using arrow and dot nav elements and passed by getMarvelData function which is used by function to select hero.
@@ -840,85 +922,6 @@ resultsModal.addEventListener('click', function(e){
     resetGame(); // reset all elements to 'inactive' state when results modal has been removed
   }
 },false);
-
-function getIntroGuide() {
-  let introguide = introJs();
-  let introguideOptions;
-  if(window.innerWidth < 768) {
-    introguideOptions = [
-      {
-        element: 'h1',
-        intro: 'Follow this guide to learn how to play Avengers Top Trumps.',
-        position: 'bottom'
-      },
-      {
-        element: '#next',
-        intro: 'Click on the arrows to scroll through the list of superheroes.',
-        position: 'right'
-      },
-      {
-        element: '.agility',
-        intro: 'Next select a superpower from the following list of abilities.',
-        position: 'top'
-      },
-      {
-        element: '#selectHeroButton',
-        intro: 'Click button to confirm superhero and superpower selection.',
-        position: 'bottom'
-      },
-      {
-        element: '#selectVillainButton',
-        intro: 'Click button to randomly select supervillain opponent.',
-        position: 'bottom'
-      }
-    ]; 
-  } else if(window.innerWidth >= 768) {
-    introguideOptions = [
-      {
-        element: 'h1',
-        intro: 'Follow this guide to learn how to play Avengers Top Trumps.',
-        position: 'bottom'
-      },
-      {
-        element: '.vision',
-        intro: 'Click on the dots to select a superhero (hover over the dots for preview).',
-        position: 'right'
-      },
-      {
-        element: '#next',
-        intro: 'Or click on the arrows to scroll through the list of superheroes.',
-        position: 'right'
-      },
-      {
-        element: '.agility',
-        intro: 'Next select a superpower from the following list of abilities.',
-        position: 'top'
-      },
-      {
-        element: '#selectHeroButton',
-        intro: 'Click button to confirm superhero and superpower selection.',
-        position: 'bottom'
-      },
-      {
-        element: '#selectVillainButton',
-        intro: 'Click button to randomly select supervillain opponent.',
-        position: 'bottom'
-      }
-    ]; 
-  }
-  
-  introguide.setOptions({
-    showStepNumbers: false,
-    showBullets: true,
-    showButtons: true,
-    scrollToElement: true,
-    exitOnEsc: true,
-    exitOnOverlayClick: false,
-    steps: introguideOptions 
-  }); 
-  
-  introguide.start();
-}
 
 let startGuide = document.getElementById("startGuide");
 startGuide.addEventListener('click', function(){
