@@ -200,6 +200,9 @@ function getVillainCatergoryScore(heroCatergoryScoreObject, villainName){
   return catergoryScoreObject;
 } // getVillainCatergoryScore function end
 
+/**
+ * Function is called within getMarvelData function using "villain" parameter. It takes hero and villain score from selected catergory score and determines result of match i.e. win, lose or draw. It then calls displayImgOverlay and showResultsModal function with appropriate parameters to display the results of the match.
+ */
 function compareCatergoryScore(catergoryScoreObject, heroScoreCounter){
   let resultsModal;
   let heroCatergoryScore = catergoryScoreObject.heroCatergoryScore;
