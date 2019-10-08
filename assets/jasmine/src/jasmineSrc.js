@@ -112,7 +112,51 @@ function showSupervillain(data, n, catergory) {
   return selectedCatergory;
 } // showSupervillain function end
 
-
+/**
+ * Function is called within showResultsModal function and uses the heroScoreCounter variable to display the correct infinity stone image in the results modal.
+ * @param {string} heroScoreCounter - value between 1 and 7 that keeps track of the users score.
+ */
+function infinityStoneCounter(heroScoreCounter) {
+  let infinityStoneName;
+	switch(heroScoreCounter) { // match infinity stone name with counter score number
+	  case "":
+	  case 0:
+	  case "0":
+	    alert("Error! heroScoreCounter variable is empty");
+	    return heroScoreCounter;
+	  case null:
+	    alert("Error! heroScoreCounter variable is null");
+	    return heroScoreCounter;
+	  case false:
+	    alert("Error! heroScoreCounter variable is false");
+	    return heroScoreCounter;
+	  case undefined:
+	    alert("Error! heroScoreCounter variable is undefined");
+	    return heroScoreCounter;
+    case 1:
+      return infinityStoneName = "No Stone";
+    case 2:
+      return infinityStoneName = "Power Stone";
+    case 3:
+      return infinityStoneName = "Space Stone";
+    case 4:
+      return infinityStoneName = "Reality Stone";
+    case 5:
+      return infinityStoneName = "Soul Stone";
+    case 6:
+      return infinityStoneName = "Time Stone";
+    case 7:
+      return infinityStoneName = "Mind Stone";
+	    default:
+	     switch(true){
+	      case (heroScoreCounter >= 8):
+	       alert("Error! heroScoreCounter variable is greater than 7");
+	       return heroScoreCounter;
+	      default:
+	       alert("Error! heroScoreCounter variable is not an integer");
+	    }
+	}
+} // infinityStoneCounter function end
 
 
 
