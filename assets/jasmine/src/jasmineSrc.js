@@ -178,26 +178,30 @@ function getHeroCatergoryScore(heroName){
   return heroCatergoryScoreObject;
 } // getHeroCatergoryScore function end
 
-
-
-
+/**
+ * Function is called within compareCatergoryScore function. It takes the object data from the getHeroCatergoryScore function and adds the corresponding catergory villain score then returns the updated object.
+ * @param {object} heroCatergoryScoreObject - takes the returned object data from the getHeroCatergoryScore function
+ */
 function getVillainCatergoryScore(heroCatergoryScoreObject, villainName){
-  var catergoryScoreObject = heroCatergoryScoreObject;
-  var villainListElement = `#${villainName} > li > a`;
-  var villainList = document.querySelectorAll(villainListElement); // get list of anchor elements containing villain catergory scores
-  var villainListArray = Array.from(villainList); // convert villainList nodelist to array
-  villainListArray.forEach(function(element, index){ // loop through array of anchor elements and select element with selected-catergory class name
-    if(index === catergoryScoreObject.selectedCatergoryIndex){ // if index no. of list item equals index no. of selected hero catergory list item store in catergoryScoreElement variable
-      var catergoryScoreElement = element;
-      catergoryScoreElement.className = "selected-catergory"; // if index number matches index for hero selected catergory get anchor element with selected-catergory class
-      var catergoryScoreText = element.textContent;
-      var villainCatergoryScore = parseInt(catergoryScoreText.charAt(catergoryScoreText.length-1)); // select last character of string and convert to number
-      villainCatergoryScore === 0 ? villainCatergoryScore = 10 : villainCatergoryScore;  // if villainCatergoryScore = 0 convert to 10
-      catergoryScoreObject.villainCatergoryScore = villainCatergoryScore; // add/create villainCatergoryScore key to catergoryScoreObject and add villainCatergoryScore variable as value
+  let catergoryScoreObject = heroCatergoryScoreObject;
+  let villainListElement = `#${villainName} > li > a`;
+  let villainList = document.querySelectorAll(villainListElement);
+  let villainListArray = Array.from(villainList);
+  villainListArray.forEach(function(element, index){
+    if(index === catergoryScoreObject.selectedCatergoryIndex){
+    	let catergoryScoreElement = element;
+      catergoryScoreElement.className = "selected-catergory";
+      let catergoryScoreText = element.textContent;
+      let villainCatergoryScore = parseInt(catergoryScoreText.charAt(catergoryScoreText.length-1));
+      villainCatergoryScore === 0 ? villainCatergoryScore = 10 : villainCatergoryScore;
+      catergoryScoreObject.villainCatergoryScore = villainCatergoryScore;
     }
   });
   return catergoryScoreObject;
-}; // getVillainCatergoryScore function end
+} // getVillainCatergoryScore function end
+
+
+
 
 function compareCatergoryScore(catergoryScoreObject, heroScoreCounter){
   var resultsModal; // create variable to record result
