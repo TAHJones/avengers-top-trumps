@@ -158,25 +158,28 @@ function infinityStoneCounter(heroScoreCounter) {
 	}
 } // infinityStoneCounter function end
 
-
-
-
-function getHeroCatergoryScore(heroName){ // function that returns index number and score of selected catergory
-  var heroCatergoryScoreObject = {}; // create object to hold hero catergory score and selected catergory index no.
-  var heroListElement = `#${heroName} > li > a`;
-  var heroList = document.querySelectorAll(heroListElement); // get list of anchor elements containing hero catergory scores
-  var heroListArray = Array.from(heroList); // convert heroList nodelist to array
-  heroListArray.forEach(function(element, index){ // loop through array of anchor elements and select element with selected-catergory class name
-    if(element.className === "selected-catergory"){
-      heroCatergoryScoreObject.selectedCatergoryIndex = index; // add selected catergory index no. to catergoryScoreObject
-      var heroCatergoryScoreText = element.textContent;
-      var heroCatergoryScore = parseInt(heroCatergoryScoreText.charAt(heroCatergoryScoreText.length-1)); // select last character of string and convert to number
-      heroCatergoryScore === 0 ? heroCatergoryScore = 10 : heroCatergoryScore; // if heroCatergoryScore = 0 convert to 10 and add to catergoryScoreObject
+/**
+ * Function is called within compareCatergoryScore function. It takes the score from the selected hero catergory and returns it and it's index value as an object
+ */
+function getHeroCatergoryScore(heroName){
+  let heroCatergoryScoreObject = {};
+  let heroListElement = `#${heroName} > li > a`;
+  let heroList = document.querySelectorAll(heroListElement); // get list of anchor elements containing hero catergory scores
+  let heroListArray = Array.from(heroList);
+  heroListArray.forEach(function(element, index){
+    if(element.classList.contains("selected-catergory")) {
+      heroCatergoryScoreObject.selectedCatergoryIndex = index;
+      let heroCatergoryScoreText = element.textContent;
+      let heroCatergoryScore = parseInt(heroCatergoryScoreText.charAt(heroCatergoryScoreText.length-1));
+      heroCatergoryScore === 0 ? heroCatergoryScore = 10 : heroCatergoryScore;
       heroCatergoryScoreObject.heroCatergoryScore = heroCatergoryScore;
     }
   });
-  return heroCatergoryScoreObject; // return catergoryScoreObject
-}; // getHeroCatergoryScore function end
+  return heroCatergoryScoreObject;
+} // getHeroCatergoryScore function end
+
+
+
 
 function getVillainCatergoryScore(heroCatergoryScoreObject, villainName){
   var catergoryScoreObject = heroCatergoryScoreObject;
