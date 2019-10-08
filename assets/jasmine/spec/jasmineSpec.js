@@ -467,6 +467,219 @@ describe("JASMINE TESTING FOR AVENGERS TOP TRUMPS", function() {
       expect(showMarvelAPIData(myData, "Thor", 10)).toBe(marvelApiModal);
     });
   });
+  describe("Array of objects containing superhero catergory scores", function() {
+    let superheroList = [
+        [
+          "antman",
+          {
+            "name": "Antman",
+            "agility": 10,
+            "intelligence": 6,
+            "magic": 1,
+            "strength": 8,
+            "speed": 6,
+            "technology": 9
+          }
+        ],
+        [
+          "blackwidow",
+          {
+            "name": "Black Widow",
+            "agility": 9,
+            "intelligence": 8,
+            "magic": 1,
+            "strength": 4,
+            "speed": 7,
+            "technology": 6
+          }
+        ],
+        [
+          "captainamerica",
+          {
+            "name": "Capt America",
+            "agility": 8,
+            "intelligence": 7,
+            "magic": 1,
+            "strength": 8,
+            "speed": 8,
+            "technology": 4
+          }
+        ],
+        [
+          "captainmarvel",
+          {
+            "name": "Capt Marvel",
+            "agility": 7,
+            "intelligence": 6,
+            "magic": 8,
+            "strength": 9,
+            "speed": 10,
+            "technology": 8
+          }
+        ],
+        [
+          "deadpool",
+          {
+            "name": "Deadpool",
+            "agility": 9,
+            "intelligence": 7,
+            "magic": 1,
+            "strength": 7,
+            "speed": 10,
+            "technology": 1
+          }
+        ],
+        [
+          "drstrange",
+          {
+            "name": "Dr Strange",
+            "agility": 3,
+            "intelligence": 10,
+            "magic": 10,
+            "strength": 4,
+            "speed": 4,
+            "technology": 1
+          }
+        ],
+        [
+          "falcon",
+          {
+            "name": "Falcon",
+            "agility": 5,
+            "intelligence": 7,
+            "magic": 1,
+            "strength": 6,
+            "speed": 8,
+            "technology": 8
+          }
+        ],
+        [
+          "hawkeye",
+          {
+            "name": "Hawkeye",
+            "agility": 8,
+            "intelligence": 7,
+            "magic": 1,
+            "strength": 6,
+            "speed": 8,
+            "technology": 4
+          }
+        ],
+        [
+          "hulk",
+          {
+            "name": "Hulk",
+            "agility": 4,
+            "intelligence": 2,
+            "magic": 1,
+            "strength": 10,
+            "speed": 8,
+            "technology": 1
+          }
+        ],
+        [
+          "ironman",
+          {
+            "name": "Ironman",
+            "agility": 7,
+            "intelligence": 10,
+            "magic": 1,
+            "strength": 9,
+            "speed": 9,
+            "technology": 10
+          }
+        ],
+        [
+          "scarletwitch",
+          {
+            "name": "Scarlet Witch",
+            "agility": 5,
+            "intelligence": 7,
+            "magic": 10,
+            "strength": 4,
+            "speed": 7,
+            "technology": 1
+          }
+        ],
+        [
+          "spiderman",
+          {
+            "name": "Spiderman",
+            "agility": 10,
+            "intelligence": 7,
+            "magic": 1,
+            "strength": 8,
+            "speed": 10,
+            "technology": 7
+          }
+        ],
+        [
+          "thor",
+          {
+            "name": "Thor",
+            "agility": 7,
+            "intelligence": 7,
+            "magic": 9,
+            "strength": 10,
+            "speed": 9,
+            "technology": 8
+          }
+        ],
+        [
+          "warmachine",
+          {
+            "name": "War Machine",
+            "agility": 5,
+            "intelligence": 7,
+            "magic": 1,
+            "strength": 8,
+            "speed": 8,
+            "technology": 9
+          }
+        ],
+        [
+          "vision",
+          {
+            "name": "Vision",
+            "agility": 8,
+            "intelligence": 8,
+            "magic": 9,
+            "strength": 9,
+            "speed": 9,
+            "technology": 1
+          }
+        ]
+      ];
+    it("Hawkeyes name should be 'Hawkeye'", function() {
+      let superhero = showSuperhero(superheroList, 8, "name");
+      expect(superhero).toEqual("Hawkeye");
+    });
+    it("Ironmans intelligence score should be 10", function() {
+      let superhero = showSuperhero(superheroList, 10, "intelligence");
+      expect(superhero).toEqual(10);
+    });
+    it("Thors magic score should be 9", function() {
+      let superhero = showSuperhero(superheroList, 13, "magic");
+      expect(superhero).toEqual(9);
+    });
+    it("Captain Americas strength score should be 8", function() {
+      let superhero = showSuperhero(superheroList, 3, "strength");
+      expect(superhero).toEqual(8);
+    });
+    it("Visions technology score should be 1", function() {
+      let superhero = showSuperhero(superheroList, 15, "technology");
+      expect(superhero).toEqual(1);
+    });
+    it("If 'n' is greater than 15 then selected hero should be 'Antman'" , function() {
+      let superhero = showSuperhero(superheroList, 16, "name");
+      expect(superhero).toEqual("Antman");
+    });
+    it("If 'n' is less than 0 then selected hero should be 'Vision'" , function() {
+      let superhero = showSuperhero(superheroList, 0, "name");
+      expect(superhero).toEqual("Vision");
+    });
+  });
+
 
 
 
