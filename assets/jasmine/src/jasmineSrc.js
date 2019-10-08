@@ -80,7 +80,27 @@ function showMarvelAPIData(apiData, heroName, returnValue) {
   }
 } // showMarvelAPIData function end
 
+/**
+ * Function takes the data for the hero selected by the user from the list of heros and inserts the data for that hero into template literals created by the characterImgTemplate and characterInfoTemplate functions and then inserts them in the HTML document. 
+ * @param {array} data - array of object data for each hero.
+ * @param {number} n -number associated with hero selected by the user, should be a number from 1 to 15.
+ * @param {string} catergory - the object key name for the catergory score selected for testing. Can be "name", "agility", "intelligence", "magic", "strength", "speed", "technology".
+ */
+function showSuperhero(data, n, catergory) {
+  let slideIndex;
+  if (n > data.length) {
+    slideIndex = 1;
+  } else if (n < 1) {
+    slideIndex = data.length; // if slideIndex is < 1 reset value to value of last slide
+  } else {
+    slideIndex = n;
+  }
 
+  let superHero = data[slideIndex-1];
+  // heroFilePathName = superHero[0];
+  let selectedCatergory = superHero[1][catergory];
+  return selectedCatergory;
+}
 
 
 
