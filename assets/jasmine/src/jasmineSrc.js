@@ -201,10 +201,10 @@ function getVillainCatergoryScore(heroCatergoryScoreObject, villainName){
 } // getVillainCatergoryScore function end
 
 function compareCatergoryScore(catergoryScoreObject, heroScoreCounter){
-  let resultsModal; // create variable to record result
+  let resultsModal;
   let heroCatergoryScore = catergoryScoreObject.heroCatergoryScore;
   let villainCatergoryScore = catergoryScoreObject.villainCatergoryScore;
-  function showResultsModal(result){ // add result to resultsModal variable to match function parameter
+  function showResultsModal(result){
     if(result === "win"){
       resultsModal = `WIN`;
     } else if (result === "firstResultLose"){
