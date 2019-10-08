@@ -889,7 +889,7 @@ function getMarvelData(charactertype, n) {
  */
 prevSlide.addEventListener('click', function() {
   hideStartGuide();
-  slideIndex -= 1; // decrease slideIndex value by 1 so previous slide is made visible by showSuperhero function
+  slideIndex -= 1;
 	getMarvelData("hero", slideIndex);
 }, false);
 
@@ -898,7 +898,7 @@ prevSlide.addEventListener('click', function() {
  */
 nextSlide.addEventListener('click', function() {
   hideStartGuide();
-  slideIndex += 1; // increase slideIndex value by 1 so next slide is made visible by showSuperhero function
+  slideIndex += 1;
   getMarvelData("hero", slideIndex);
 }, false);
 
