@@ -887,7 +887,95 @@ describe("JASMINE TESTING FOR AVENGERS TOP TRUMPS", function() {
       expect(supervillain).toEqual(8);
     });
   });
-
+  describe("function that uses score counter variable to return infinity stone name ", function() {
+    it("should return string containing name of infinity stone when result is calculated ", function() {
+      let infinityStone;
+      infinityStone = infinityStoneCounter(1);
+      expect(infinityStone).toEqual("No Stone");
+      infinityStone = infinityStoneCounter(2);
+      expect(infinityStone).toEqual("Power Stone");
+      infinityStone = infinityStoneCounter(4);
+      expect(infinityStone).toEqual("Reality Stone");
+      infinityStone = infinityStoneCounter(6);
+      expect(infinityStone).toEqual("Time Stone");
+    });
+  });
+  describe("alert message if heroScoreCounter parameter is empty, false, greater than 7 or not an integer", function() {
+    beforeEach(function(){
+      spyOn(window, "alert");
+    });
+    it('should return an alert message if function parameter is ""', function() {
+      infinityStoneCounter("");
+      expect(infinityStoneCounter("")).toBe("");
+      expect(infinityStoneCounter("")).toBeFalsy();
+      expect(window.alert).toHaveBeenCalled();
+      expect(window.alert).toHaveBeenCalledWith("Error! heroScoreCounter variable is empty");
+    });
+    it('should return an alert message if function parameter is 0', function() {
+      infinityStoneCounter(0);
+      expect(infinityStoneCounter(0)).toBe(0);
+      expect(infinityStoneCounter(0)).toBeFalsy();
+      expect(window.alert).toHaveBeenCalled();
+      expect(window.alert).toHaveBeenCalledWith("Error! heroScoreCounter variable is empty");
+    });
+    it('should return an alert message if function parameter is "0"', function() {
+      infinityStoneCounter("0");
+      expect(infinityStoneCounter("0")).toBe("0");
+      expect(infinityStoneCounter("0")).not.toBeFalsy();
+      expect(window.alert).toHaveBeenCalled();
+      expect(window.alert).toHaveBeenCalledWith("Error! heroScoreCounter variable is empty");
+    });
+    it('should return an alert message if function parameter is null', function() {
+      infinityStoneCounter(null);
+      expect(infinityStoneCounter(null)).toBe(null);
+      expect(infinityStoneCounter(null)).toBeFalsy();
+      expect(window.alert).toHaveBeenCalled();
+      expect(window.alert).toHaveBeenCalledWith("Error! heroScoreCounter variable is null");
+    });
+    it('should return an alert message if function parameter is false', function() {
+      infinityStoneCounter(false);
+      expect(infinityStoneCounter(false)).toBe(false);
+      expect(infinityStoneCounter(false)).toBeFalsy();
+      expect(window.alert).toHaveBeenCalled();
+      expect(window.alert).toHaveBeenCalledWith("Error! heroScoreCounter variable is false");
+    });
+    it('should return an alert message if function parameter is undefined', function() {
+      infinityStoneCounter(undefined);
+      expect(infinityStoneCounter(undefined)).toBe(undefined);
+      expect(infinityStoneCounter(undefined)).toBeFalsy();
+      expect(window.alert).toHaveBeenCalled();
+      expect(window.alert).toHaveBeenCalledWith("Error! heroScoreCounter variable is undefined");
+    });
+    it('should return an alert message if function parameter is > 7', function() {
+      infinityStoneCounter(8);
+      expect(window.alert).toHaveBeenCalled();
+      expect(window.alert).toHaveBeenCalledWith("Error! heroScoreCounter variable is greater than 7");
+    });
+    it('should return an alert message if function parameter is an object rather than an integer', function() {
+      var myObject = {superheroes: "Tom"};
+      infinityStoneCounter(myObject);
+      expect(window.alert).toHaveBeenCalled();
+      expect(window.alert).toHaveBeenCalledWith("Error! heroScoreCounter variable is not an integer");
+    });
+    it('should return an alert message if function parameter is a function rather than an integer', function() {
+      var myFunction = function(){return "this is a function"};
+      infinityStoneCounter(myFunction);
+      expect(window.alert).toHaveBeenCalled();
+      expect(window.alert).toHaveBeenCalledWith("Error! heroScoreCounter variable is not an integer");
+    });
+    it('should return an alert message if function parameter is a string rather than an integer', function() {
+      var myString = "fhdk65sksxl4lskasjiw9wsaZ";
+      infinityStoneCounter(myString);
+      expect(window.alert).toHaveBeenCalled();
+      expect(window.alert).toHaveBeenCalledWith("Error! heroScoreCounter variable is not an integer");
+    });
+    it('should return an alert message if function parameter is a decimal rather than an integer', function() {
+      var myDecimal = 3.333;
+      infinityStoneCounter(myDecimal);
+      expect(window.alert).toHaveBeenCalled();
+      expect(window.alert).toHaveBeenCalledWith("Error! heroScoreCounter variable is not an integer");
+    });
+  });
 
 
 
