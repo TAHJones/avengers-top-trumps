@@ -687,40 +687,7 @@ describe("JASMINE TESTING FOR AVENGERS TOP TRUMPS", function() {
 
 
 
-  describe("Supervillain Names and Catergory Scores", function() {
-    it("Ultron's name should be 'Ultron'", function() {
-      var ultron = new getSupervillain("ultron");
-      expect(ultron.name).toBe("Ultron");
-    });
-    it("Red Skull's name should be 'Red Skull'", function() {
-      var redskull= new getSupervillain("redskull");
-      expect(redskull.name).toBe("Red Skull");
-    });
-    it("Loki's agility score should be 8", function() {
-      var loki = new getSupervillain("loki");
-      expect(loki.agility).toBe(8);
-    });
-    it("Ebony Maw's intelligence score should be 9", function() {
-      var ebonymaw = new getSupervillain("ebonymaw");
-      expect(ebonymaw.intelligence).toBe(9);
-    });
-    it("Dormannu's magic score should be 9", function(){
-      var dormannu = new getSupervillain("dormannu");
-      expect(dormannu.magic).toBe(9);
-    });
-    it("Mandarin's strength score should be 8", function() {
-      var mandarin = new getSupervillain("mandarin");
-      expect(mandarin.strength).toBe(8);
-    });
-    it("Thanos's speed score should be 9", function() {
-      var thanos = new getSupervillain("thanos");
-      expect(thanos.speed).toBe(9);
-    });
-    it("Vulture's technology score should be 8", function() {
-      var vulture = new getSupervillain("vulture");
-      expect(vulture.technology).toBe(8);
-    });
-  });
+
 
   describe("function that uses score counter variable to return infinity stone name ", function() {
     it("should return string containing name of infinity stone aquired/lost/retained when result is calculated ", function() {
