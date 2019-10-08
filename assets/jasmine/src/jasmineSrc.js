@@ -200,13 +200,10 @@ function getVillainCatergoryScore(heroCatergoryScoreObject, villainName){
   return catergoryScoreObject;
 } // getVillainCatergoryScore function end
 
-
-
-
 function compareCatergoryScore(catergoryScoreObject, heroScoreCounter){
-  var resultsModal; // create variable to record result
-  var heroCatergoryScore = catergoryScoreObject.heroCatergoryScore;
-  var villainCatergoryScore = catergoryScoreObject.villainCatergoryScore;
+  let resultsModal; // create variable to record result
+  let heroCatergoryScore = catergoryScoreObject.heroCatergoryScore;
+  let villainCatergoryScore = catergoryScoreObject.villainCatergoryScore;
   function showResultsModal(result){ // add result to resultsModal variable to match function parameter
     if(result === "win"){
       resultsModal = `WIN`;
@@ -246,13 +243,3 @@ function compareCatergoryScore(catergoryScoreObject, heroScoreCounter){
   }
   return resultsModal;
 }; // compareCatergoryScore function end
-
-
-
-
-
-
-
-
-
-
