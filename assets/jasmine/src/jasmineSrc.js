@@ -84,17 +84,6 @@ function showMarvelAPIData(apiData, heroName, returnValue) {
 
 
 
-function getSuperhero(name) { // enter superhero name as function parameter
-  var superHeroes = getSuperheroes(marvelCharacters); /*global marvelCharacters*/ // get list of superheroes
-  var superHero = superHeroes[name]; // select superhero from superHeroes object with bracket notation using function parameter
-  this.name = superHero.name; // add marvelCharacters object properties to getSuperhero constructor function
-  this.agility = superHero.agility;
-  this.intelligence = superHero.intelligence;
-  this.magic = superHero.magic;
-  this.speed = superHero.speed;
-  this.strength = superHero.strength;
-  this.technology = superHero.technology;
-} // getSuperhero function end
 
 function getSupervillains(data) {
   switch(data) { // return an error for function called with an 'empty' parameter value
