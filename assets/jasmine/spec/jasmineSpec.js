@@ -679,7 +679,214 @@ describe("JASMINE TESTING FOR AVENGERS TOP TRUMPS", function() {
       expect(superhero).toEqual("Vision");
     });
   });
-
+  describe("Array of objects containing supervillain catergory scores", function() {
+    let supervillainList = [
+  [
+    "blackdwarf",
+    {
+      "name": "Black Dwarf",
+      "agility": 2,
+      "intelligence": 4,
+      "magic": 1,
+      "strength": 9,
+      "speed": 4,
+      "technology": 9
+    }
+  ],
+  [
+    "drdoom",
+    {
+      "name": "Dr Doom",
+      "agility": 7,
+      "intelligence": 10,
+      "magic": 1,
+      "strength": 9,
+      "speed": 7,
+      "technology": 10
+    }
+  ],
+  [
+    "dormannu",
+    {
+      "name": "Dormannu",
+      "agility": 6,
+      "intelligence": 9,
+      "magic": 9,
+      "strength": 9,
+      "speed": 7,
+      "technology": 1
+    }
+  ],
+  [
+    "ebonymaw",
+    {
+      "name": "Ebony Maw",
+      "agility": 4,
+      "intelligence": 9,
+      "magic": 10,
+      "strength": 2,
+      "speed": 2,
+      "technology": 8
+    }
+  ],
+  [
+    "loki",
+    {
+      "name": "Loki",
+      "agility": 8,
+      "intelligence": 10,
+      "magic": 9,
+      "strength": 7,
+      "speed": 7,
+      "technology": 9
+    }
+  ],
+  [
+    "magneto",
+    {
+      "name": "Magneto",
+      "agility": 7,
+      "intelligence": 6,
+      "magic": 9,
+      "strength": 9,
+      "speed": 10,
+      "technology": 9
+    }
+  ],
+  [
+    "mandarin",
+    {
+      "name": "Mandarin",
+      "agility": 7,
+      "intelligence": 8,
+      "magic": 1,
+      "strength": 8,
+      "speed": 7,
+      "technology": 7
+    }
+  ],
+  [
+    "modok",
+    {
+      "name": "M.O.D.O.K",
+      "agility": 5,
+      "intelligence": 9,
+      "magic": 1,
+      "strength": 2,
+      "speed": 6,
+      "technology": 10
+    }
+  ],
+  [
+    "redskull",
+    {
+      "name": "Red Skull",
+      "agility": 7,
+      "intelligence": 8,
+      "magic": 1,
+      "strength": 8,
+      "speed": 8,
+      "technology": 7
+    }
+  ],
+  [
+    "thanos",
+    {
+      "name": "Thanos",
+      "agility": 9,
+      "intelligence": 10,
+      "magic": 1,
+      "strength": 10,
+      "speed": 9,
+      "technology": 10
+    }
+  ],
+  [
+    "ultron",
+    {
+      "name": "Ultron",
+      "agility": 8,
+      "intelligence": 9,
+      "magic": 1,
+      "strength": 9,
+      "speed": 9,
+      "technology": 9
+    }
+  ],
+  [
+    "venom",
+    {
+      "name": "Venom",
+      "agility": 8,
+      "intelligence": 6,
+      "magic": 1,
+      "strength": 9,
+      "speed": 8,
+      "technology": 1
+    }
+  ],
+  [
+    "vulture",
+    {
+      "name": "Vulture",
+      "agility": 7,
+      "intelligence": 7,
+      "magic": 1,
+      "strength": 7,
+      "speed": 8,
+      "technology": 8
+    }
+  ],
+  [
+    "whiplash",
+    {
+      "name": "Whiplash",
+      "agility": 6,
+      "intelligence": 8,
+      "magic": 1,
+      "strength": 7,
+      "speed": 6,
+      "technology": 8
+    }
+  ],
+  [
+    "yondu",
+    {
+      "name": "Yondu",
+      "agility": 6,
+      "intelligence": 7,
+      "magic": 1,
+      "strength": 6,
+      "speed": 6,
+      "technology": 9
+    }
+  ]
+];
+    it("Ultron's name should be 'Ultron'", function() {
+      let supervillain = showSupervillain(supervillainList, 10, "name");
+      expect(supervillain).toEqual("Ultron");
+    });
+    it("Ebony Maw's intelligence score should be 9", function() {
+      let supervillain = showSupervillain(supervillainList, 3, "intelligence");
+      expect(supervillain).toEqual(9);
+    });
+    it("Dormannu's magic score should be 9", function() {
+      let supervillain = showSupervillain(supervillainList, 2, "magic");
+      expect(supervillain).toEqual(9);
+    });
+    it("Mandarin's strength score should be 8", function() {
+      let supervillain = showSupervillain(supervillainList, 6, "strength");
+      expect(supervillain).toEqual(8);
+    });
+    it("Thanos's speed score should be 9", function() {
+      let supervillain = showSupervillain(supervillainList, 9, "speed");
+      expect(supervillain).toEqual(9);
+    });
+    it("Vulture's technology score should be 8", function() {
+      let supervillain = showSupervillain(supervillainList, 12, "technology");
+      expect(supervillain).toEqual(8);
+    });
+  });
 
 
 
