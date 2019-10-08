@@ -1002,52 +1002,52 @@ describe("JASMINE TESTING FOR AVENGERS TOP TRUMPS", function() {
       expect(getHeroCatergoryScore("antman").selectedCatergoryIndex).toEqual(4);
     });
   });
-
-
-
-
-
-
-
-
   describe("getVillainCatergoryScore function returns hero and villain catergory score and index no. from selected catergory", function() {
     it("should return Dr Stranges magic score of 10, index number of 2 and Ultrons magic score of 1", function(){
       var drstrange = getHeroCatergoryScore("drstrange");
-      expect(getVillainCatergoryScore(drstrange, "ultron").heroCatergoryScore).toEqual(10); // magic catergory score for Dr Strange extracted from nodelist
-      expect(getVillainCatergoryScore(drstrange, "ultron").selectedCatergoryIndex).toEqual(2); // index number of magic catergory in Dr Strange nodelist
-      expect(getVillainCatergoryScore(drstrange, "ultron").villainCatergoryScore).toEqual(1); // magic catergory score for Ultron extracted from nodelist
+      expect(getVillainCatergoryScore(drstrange, "ultron").heroCatergoryScore).toEqual(10);
+      expect(getVillainCatergoryScore(drstrange, "ultron").selectedCatergoryIndex).toEqual(2);
+      expect(getVillainCatergoryScore(drstrange, "ultron").villainCatergoryScore).toEqual(1);
     });
     it("should return Ironmans technology score of 10, index number of 5 and Ebony Maws technology score of 8", function(){
       var ironman = getHeroCatergoryScore("ironman");
-      expect(getVillainCatergoryScore(ironman, "ebonymaw").heroCatergoryScore).toEqual(10); // technology catergory score for Ironman extracted from nodelist
-      expect(getVillainCatergoryScore(ironman, "ebonymaw").selectedCatergoryIndex).toEqual(5); // index number of technology catergory in Ironman nodelist
-      expect(getVillainCatergoryScore(ironman, "ebonymaw").villainCatergoryScore).toEqual(8); // technology catergory score for Ebony Maw extracted from nodelist
+      expect(getVillainCatergoryScore(ironman, "ebonymaw").heroCatergoryScore).toEqual(10);
+      expect(getVillainCatergoryScore(ironman, "ebonymaw").selectedCatergoryIndex).toEqual(5);
+      expect(getVillainCatergoryScore(ironman, "ebonymaw").villainCatergoryScore).toEqual(8);
     });
     it("should return Hulks intelligence score of 2, index number of 1 and Mandarins intelligence score of 8", function(){
       var hulk = getHeroCatergoryScore("hulk");
-      expect(getVillainCatergoryScore(hulk, "mandarin").heroCatergoryScore).toEqual(2); // intelligence catergory score for Hulk extracted from nodelist
-      expect(getVillainCatergoryScore(hulk, "mandarin").selectedCatergoryIndex).toEqual(1); // index number of intelligence catergory in Hulk nodelist
-      expect(getVillainCatergoryScore(hulk, "mandarin").villainCatergoryScore).toEqual(8); // intelligence catergory score for Mandarin extracted from nodelist
+      expect(getVillainCatergoryScore(hulk, "mandarin").heroCatergoryScore).toEqual(2);
+      expect(getVillainCatergoryScore(hulk, "mandarin").selectedCatergoryIndex).toEqual(1);
+      expect(getVillainCatergoryScore(hulk, "mandarin").villainCatergoryScore).toEqual(8);
     });
     it("should return Captain Marvels agility score of 7, index number of 0 and Lokis agility score of 8", function(){
       var captainmarvel = getHeroCatergoryScore("captainmarvel");
-      expect(getVillainCatergoryScore(captainmarvel, "loki").heroCatergoryScore).toEqual(7); // agility catergory score for Captain Marvel extracted from nodelist
-      expect(getVillainCatergoryScore(captainmarvel, "loki").selectedCatergoryIndex).toEqual(0); // index number of agility catergory in Captain Marvel nodelist
-      expect(getVillainCatergoryScore(captainmarvel, "loki").villainCatergoryScore).toEqual(8); // agility catergory score for Loki extracted from nodelist
+      expect(getVillainCatergoryScore(captainmarvel, "loki").heroCatergoryScore).toEqual(7);
+      expect(getVillainCatergoryScore(captainmarvel, "loki").selectedCatergoryIndex).toEqual(0);
+      expect(getVillainCatergoryScore(captainmarvel, "loki").villainCatergoryScore).toEqual(8);
     });
     it("should return Hawkeyes magic score of 1, index number of 2 and Thanos magic score of 1", function(){
       var hawkeye = getHeroCatergoryScore("hawkeye");
-      expect(getVillainCatergoryScore(hawkeye, "thanos").heroCatergoryScore).toEqual(1); // magic catergory score for Hawkeye extracted from nodelist
-      expect(getVillainCatergoryScore(hawkeye, "thanos").selectedCatergoryIndex).toEqual(2); // index number of magic catergory in Hawkeye nodelist
-      expect(getVillainCatergoryScore(hawkeye, "thanos").villainCatergoryScore).toEqual(1); // magic catergory score for Thanos extracted from nodelist
+      expect(getVillainCatergoryScore(hawkeye, "thanos").heroCatergoryScore).toEqual(1);
+      expect(getVillainCatergoryScore(hawkeye, "thanos").selectedCatergoryIndex).toEqual(2);
+      expect(getVillainCatergoryScore(hawkeye, "thanos").villainCatergoryScore).toEqual(1);
     });
     it("should return Antmans speed score of 6, index number of 4 and Magnetos speed score of 6", function(){
       var antman = getHeroCatergoryScore("antman");
-      expect(getVillainCatergoryScore(antman, "magneto").heroCatergoryScore).toEqual(6); // speed catergory score for Antman extracted from nodelist
-      expect(getVillainCatergoryScore(antman, "magneto").selectedCatergoryIndex).toEqual(4); // index number of speed catergory in Antman nodelist
-      expect(getVillainCatergoryScore(antman, "magneto").villainCatergoryScore).toEqual(6); // speed catergory score for Magneto extracted from nodelist
+      expect(getVillainCatergoryScore(antman, "magneto").heroCatergoryScore).toEqual(6);
+      expect(getVillainCatergoryScore(antman, "magneto").selectedCatergoryIndex).toEqual(4);
+      expect(getVillainCatergoryScore(antman, "magneto").villainCatergoryScore).toEqual(6);
     });
   });
+
+
+
+
+
+
+
+
 
   describe("compareCatergoryScore function that compares selected hero and villain catergory score then returns result", function() {
     it("Dr Stranges magic score of 10 beats Ultrons magic score of 1", function(){
