@@ -97,7 +97,6 @@ function showSuperhero(data, n, catergory) {
   }
 
   let superHero = data[slideIndex-1];
-  // heroFilePathName = superHero[0];
   let selectedCatergory = superHero[1][catergory];
   return selectedCatergory;
 }
