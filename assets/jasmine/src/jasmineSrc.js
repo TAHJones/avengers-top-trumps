@@ -115,47 +115,7 @@ function showSupervillain(data, n, catergory) {
 
 
 
-function getInfinityStone(heroScoreCounter){
-  var infinityStoneName;
-  switch(heroScoreCounter) { // match infinity stone name with counter score number
-    case "":
-    case 0:
-    case "0":
-      alert("Error! heroScoreCounter variable is empty");  // return an error for function called with an 'empty' parameter value
-      return heroScoreCounter;
-    case null:
-      alert("Error! heroScoreCounter variable is null");
-      return heroScoreCounter;
-    case false:
-      alert("Error! heroScoreCounter variable is false");
-      return heroScoreCounter;
-    case undefined:
-      alert("Error! heroScoreCounter variable is undefined");
-      return heroScoreCounter;
-    case 1:
-      return infinityStoneName = "No Stone";
-    case 2:
-      return infinityStoneName = "Power Stone";
-    case 3:
-      return infinityStoneName = "Space Stone";
-    case 4:
-      return infinityStoneName = "Reality Stone";
-    case 5:
-      return infinityStoneName = "Soul Stone";
-    case 6:
-      return infinityStoneName = "Time Stone";
-    case 7:
-      return infinityStoneName = "Mind Stone";
-    default:
-      switch(true){
-        case (heroScoreCounter >= 8):
-          alert("Error! heroScoreCounter variable is greater than 7");  // return an error if heroScoreCounter is  greater than 7
-          return heroScoreCounter;
-        default:
-          alert("Error! heroScoreCounter variable is not an integer"); // return an error if heroScoreCounter is not an integer
-      }
-  }
-} // getInfinityStone function end
+
 
 function getHeroCatergoryScore(heroName){ // function that returns index number and score of selected catergory
   var heroCatergoryScoreObject = {}; // create object to hold hero catergory score and selected catergory index no.
