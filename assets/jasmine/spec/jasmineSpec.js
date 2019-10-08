@@ -683,40 +683,7 @@ describe("JASMINE TESTING FOR AVENGERS TOP TRUMPS", function() {
 
 
 
-  describe("Superhero Names and Catergory Scores", function() {
-    it("Captain America's name should be 'Captain America'", function() {
-      var captainamerica = new getSuperhero("captainamerica");
-      expect(captainamerica.name).toBe("Captain America");
-    });
-    it("Scarlet Witch's name should be 'Scarlet Witch'", function() {
-      var scarletwitch = new getSuperhero("scarletwitch");
-      expect(scarletwitch.name).toBe("Scarlet Witch");
-    });
-    it("Spiderman's agility score should be 10", function() {
-      var spiderman = new getSuperhero("spiderman");
-      expect(spiderman.agility).toBe(10);
-    });
-    it("Thor's intelligence score should be 7", function() {
-      var thor = new getSuperhero("thor");
-      expect(thor.intelligence).toBe(7);
-    });
-    it("Vision's magic score should be 9", function(){
-      var vision = new getSuperhero("vision");
-      expect(vision.magic).toBe(9);
-    });
-    it("Antman's strength score should be 8", function() {
-      var antman = new getSuperhero("antman");
-      expect(antman.strength).toBe(8);
-    });
-    it("Black Widow's speed score should be 7", function() {
-      var blackwidow = new getSuperhero("blackwidow");
-      expect(blackwidow.speed).toBe(7);
-    });
-    it("Ironman's technology score should be 10", function() {
-      var ironman = new getSuperhero("ironman");
-      expect(ironman.intelligence).toBe(10);
-    });
-  });
+
 
   describe("object containing list of supervillains", function() {
     it("should retrieve object containing list of supervillains and their catergory scores", function() {
