@@ -976,39 +976,39 @@ describe("JASMINE TESTING FOR AVENGERS TOP TRUMPS", function() {
       expect(window.alert).toHaveBeenCalledWith("Error! heroScoreCounter variable is not an integer");
     });
   });
-
-
-
-
-
-
-
   describe("getHeroCatergoryScore function returns hero catergory score and index no. from selected catergory", function() {
     it("should return Dr Stranges magic score of 10 and index number of 2", function(){
-      expect(getHeroCatergoryScore("drstrange").heroCatergoryScore).toEqual(10); // index number of magic catergory in Dr Strange nodelist
-      expect(getHeroCatergoryScore("drstrange").selectedCatergoryIndex).toEqual(2); // index number of magic catergory in Dr Strange nodelist
+      expect(getHeroCatergoryScore("drstrange").heroCatergoryScore).toEqual(10);
+      expect(getHeroCatergoryScore("drstrange").selectedCatergoryIndex).toEqual(2);
     });
     it("should return Ironmans technology score of 10 and index number of 5", function(){
-      expect(getHeroCatergoryScore("ironman").heroCatergoryScore).toEqual(10); // technology catergory score for Ironman extracted from nodelist
-      expect(getHeroCatergoryScore("ironman").selectedCatergoryIndex).toEqual(5); // index number of technology catergory in Ironman nodelist
+      expect(getHeroCatergoryScore("ironman").heroCatergoryScore).toEqual(10);
+      expect(getHeroCatergoryScore("ironman").selectedCatergoryIndex).toEqual(5);
     });
     it("should return Hulks intelligence score of 2 and index number of 1", function(){
-      expect(getHeroCatergoryScore("hulk").heroCatergoryScore).toEqual(2); // intelligence catergory score for Hulk extracted from nodelist
-      expect(getHeroCatergoryScore("hulk").selectedCatergoryIndex).toEqual(1); // index number of intelligence catergory in Hulk nodelist
+      expect(getHeroCatergoryScore("hulk").heroCatergoryScore).toEqual(2);
+      expect(getHeroCatergoryScore("hulk").selectedCatergoryIndex).toEqual(1);
     });
     it("should return Captain Marvels agility score of 7 and index number of 0", function(){
-      expect(getHeroCatergoryScore("captainmarvel").heroCatergoryScore).toEqual(7); // agility catergory score for Captain Marvel extracted from nodelist
-      expect(getHeroCatergoryScore("captainmarvel").selectedCatergoryIndex).toEqual(0); // index number of agility catergory in Captain Marvel nodelist
+      expect(getHeroCatergoryScore("captainmarvel").heroCatergoryScore).toEqual(7);
+      expect(getHeroCatergoryScore("captainmarvel").selectedCatergoryIndex).toEqual(0);
     });
     it("should return Hawkeyes magic score of 1 and index number of 2", function(){
-      expect(getHeroCatergoryScore("hawkeye").heroCatergoryScore).toEqual(1); // magic catergory score for Hawkeye extracted from nodelist
-      expect(getHeroCatergoryScore("hawkeye").selectedCatergoryIndex).toEqual(2); // index number of magic catergory in Hawkeye nodelist
+      expect(getHeroCatergoryScore("hawkeye").heroCatergoryScore).toEqual(1);
+      expect(getHeroCatergoryScore("hawkeye").selectedCatergoryIndex).toEqual(2);
     });
     it("should return Antmans speed score of 6 and index number of 4", function(){
-      expect(getHeroCatergoryScore("antman").heroCatergoryScore).toEqual(6); // speed catergory score for Antman extracted from nodelist
-      expect(getHeroCatergoryScore("antman").selectedCatergoryIndex).toEqual(4);  // index number of speed catergory in Antman nodelist
+      expect(getHeroCatergoryScore("antman").heroCatergoryScore).toEqual(6);
+      expect(getHeroCatergoryScore("antman").selectedCatergoryIndex).toEqual(4);
     });
   });
+
+
+
+
+
+
+
 
   describe("getVillainCatergoryScore function returns hero and villain catergory score and index no. from selected catergory", function() {
     it("should return Dr Stranges magic score of 10, index number of 2 and Ultrons magic score of 1", function(){
