@@ -1040,51 +1040,42 @@ describe("JASMINE TESTING FOR AVENGERS TOP TRUMPS", function() {
       expect(getVillainCatergoryScore(antman, "magneto").villainCatergoryScore).toEqual(6);
     });
   });
-
-
-
-
-
-
-
-
-
   describe("compareCatergoryScore function that compares selected hero and villain catergory score then returns result", function() {
     it("Dr Stranges magic score of 10 beats Ultrons magic score of 1", function(){
       var drstrange = getHeroCatergoryScore("drstrange");
       var ultron = getVillainCatergoryScore(drstrange, "ultron");
-      expect(compareCatergoryScore(ultron, 1)).toEqual("WIN"); // Dr Stranges magic catergory beats Ultrons so result is "WIN"
-      expect(compareCatergoryScore(ultron, 7)).toEqual("COMPLETE"); // 7th win in a row so result is "COMPLETE"
+      expect(compareCatergoryScore(ultron, 1)).toEqual("WIN");
+      expect(compareCatergoryScore(ultron, 7)).toEqual("COMPLETE");
     });
     it("Ironmans technology score of 10 beats Ebony Maws technology score of 8", function(){
       var ironman = getHeroCatergoryScore("ironman");
       var ebonymaw = getVillainCatergoryScore(ironman, "ebonymaw");
-      expect(compareCatergoryScore(ebonymaw, 5)).toEqual("WIN"); // Ironman technology catergory beats Ebony Maw so result is "WIN"
-      expect(compareCatergoryScore(ebonymaw, 7)).toEqual("COMPLETE"); // 7th win in a row so result is "COMPLETE"
+      expect(compareCatergoryScore(ebonymaw, 5)).toEqual("WIN");
+      expect(compareCatergoryScore(ebonymaw, 7)).toEqual("COMPLETE");
     });
     it("Hulks intelligence score of 2 loses to Mandarins intelligence score of 8", function(){
       var hulk = getHeroCatergoryScore("hulk");
       var mandarin = getVillainCatergoryScore(hulk, "mandarin");
-      expect(compareCatergoryScore(mandarin, 3)).toEqual("LOSE"); // Hulk intelligence catergory is less than Mandarin so result is "LOSE"
-      expect(compareCatergoryScore(mandarin, 0)).toEqual("FIRST-RESULT-LOSE"); // 1st result is a loss so result is "FIRST-RESULT-LOSE"
+      expect(compareCatergoryScore(mandarin, 3)).toEqual("LOSE");
+      expect(compareCatergoryScore(mandarin, 0)).toEqual("FIRST-RESULT-LOSE");
     });
     it("Captain Marvels agility score of 7 loses to Lokis agility score of 8", function(){
       var captainmarvel = getHeroCatergoryScore("captainmarvel");
       var loki = getVillainCatergoryScore(captainmarvel, "loki");
-      expect(compareCatergoryScore(loki, 2)).toEqual("LOSE"); // Captain Marvel agility catergory is less than Loki so result is "LOSE"
-      expect(compareCatergoryScore(loki, 0)).toEqual("FIRST-RESULT-LOSE"); // 1st result is a loss so result is "FIRST-RESULT-LOSE"
+      expect(compareCatergoryScore(loki, 2)).toEqual("LOSE");
+      expect(compareCatergoryScore(loki, 0)).toEqual("FIRST-RESULT-LOSE");
     });
     it("Hawkeyes magic score of 1 draws with Thanos magic score of 1", function(){
       var hawkeye = getHeroCatergoryScore("hawkeye");
       var thanos = getVillainCatergoryScore(hawkeye, "thanos");
-      expect(compareCatergoryScore(thanos, 4)).toEqual("DRAW"); // Hawkeye magic catergory draws with Thanos so result is "DRAW"
-      expect(compareCatergoryScore(thanos, 1)).toEqual("FIRST-RESULT-DRAW"); // 1st result is a draw so result is "FIRST-RESULT-DRAW"
+      expect(compareCatergoryScore(thanos, 4)).toEqual("DRAW");
+      expect(compareCatergoryScore(thanos, 1)).toEqual("FIRST-RESULT-DRAW");
     });
     it("Antmans speed score of 6 draws with Magnetos speed score of 6", function(){
       var antman = getHeroCatergoryScore("antman");
       var magneto = getVillainCatergoryScore(antman, "magneto");
-      expect(compareCatergoryScore(magneto, 6)).toEqual("DRAW"); // Antman speed catergory is a draw with Magneto so result is "DRAW"
-      expect(compareCatergoryScore(magneto, 1)).toEqual("FIRST-RESULT-DRAW"); // 1st result is a draw so result is "FIRST-RESULT-DRAW"
+      expect(compareCatergoryScore(magneto, 6)).toEqual("DRAW");
+      expect(compareCatergoryScore(magneto, 1)).toEqual("FIRST-RESULT-DRAW");
     });
   });
 });
