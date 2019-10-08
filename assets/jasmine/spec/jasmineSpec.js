@@ -1,7 +1,7 @@
 /*global jasmine expect spyOn marvelCharacters getSuperheroes getSuperhero getSupervillains getSupervillain getInfinityStone getHeroCatergoryScore getVillainCatergoryScore compareCatergoryScore  marvelData*/
 describe("JASMINE TESTING FOR AVENGERS TOP TRUMPS", function() {
   describe("mock ajax request to marvel api for character data", function() {
-    var myData = {"code": 200,
+    let myData = {"code": 200,
                         "status": "Ok",
                         "copyright": "© 2019 MARVEL",
                         "attributionText": "Data provided by Marvel. © 2019 MARVEL",
@@ -416,14 +416,14 @@ describe("JASMINE TESTING FOR AVENGERS TOP TRUMPS", function() {
       jasmine.Ajax.uninstall();
     });
     it("should return object data for marvel character Thor", function () {
-      var successfulAjaxRequest = jasmine.createSpy("success");
-      var myURL = "https://gateway.marvel.com/v1/public/characters?name=Thor&apikey=e8e6c4f6d9f4f13655a0a25d4649f754";
+      let successfulAjaxRequest = jasmine.createSpy("success");
+      let myURL = "https://gateway.marvel.com/v1/public/characters?name=Thor&apikey=e8e6c4f6d9f4f13655a0a25d4649f754";
 
       jasmine.Ajax.stubRequest(myURL).andReturn({
         "responseText": myData
       });
 
-      var xhr = new XMLHttpRequest();
+      let xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
           successfulAjaxRequest(this.responseText);
@@ -435,40 +435,36 @@ describe("JASMINE TESTING FOR AVENGERS TOP TRUMPS", function() {
       expect(successfulAjaxRequest).toHaveBeenCalledWith(myData);
     });
     it("should return superhero name 'Thor' from marvel api data object", function() {
-      expect(marvelData(myData, "Thor", 1)).toBe("Thor");
+      expect(showMarvelAPIData(myData, "Thor", 1)).toBe("Thor");
     });
     it("should return superhero description for 'Thor' from marvel api data object", function() {
-      var descriptionOfThor = "As the Norse God of thunder and lightning, Thor wields one of the greatest weapons ever made, the enchanted hammer Mjolnir. While others have described Thor as an over-muscled, oafish imbecile, he's quite smart and compassionate.  He's self-assured, and he would never, ever stop fighting for a worthwhile cause.";
-      expect(marvelData(myData, "Thor", 2)).toBe(descriptionOfThor);
+      let descriptionOfThor = "As the Norse God of thunder and lightning, Thor wields one of the greatest weapons ever made, the enchanted hammer Mjolnir. While others have described Thor as an over-muscled, oafish imbecile, he's quite smart and compassionate.  He's self-assured, and he would never, ever stop fighting for a worthwhile cause.";
+      expect(showMarvelAPIData(myData, "Thor", 2)).toBe(descriptionOfThor);
     });
     it("should return link name 'detail' from marvel api data object", function() {
-      expect(marvelData(myData, "Thor", 3)).toBe("detail");
+      expect(showMarvelAPIData(myData, "Thor", 3)).toBe("detail");
     });
     it("should return url address for link named 'detail' from marvel api data object", function() {
-      expect(marvelData(myData, "Thor", 4)).toBe("http://marvel.com/characters/1009664/thor/featured?utm_campaign=apiRef&utm_source=e8e6c4f6d9f4f13655a0a25d4649f754");
+      expect(showMarvelAPIData(myData, "Thor", 4)).toBe("http://marvel.com/characters/1009664/thor/featured?utm_campaign=apiRef&utm_source=e8e6c4f6d9f4f13655a0a25d4649f754");
     });
     it("should return link name 'wiki' from marvel api data object", function() {
-      expect(marvelData(myData, "Thor", 5)).toBe("wiki");
+      expect(showMarvelAPIData(myData, "Thor", 5)).toBe("wiki");
     });
     it("should return url address for link named 'wiki' from marvel api data object", function() {
-      expect(marvelData(myData, "Thor", 6)).toBe("http://marvel.com/universe/Thor_(Thor_Odinson)?utm_campaign=apiRef&utm_source=e8e6c4f6d9f4f13655a0a25d4649f754");
+      expect(showMarvelAPIData(myData, "Thor", 6)).toBe("http://marvel.com/universe/Thor_(Thor_Odinson)?utm_campaign=apiRef&utm_source=e8e6c4f6d9f4f13655a0a25d4649f754");
     });
     it("should return link name 'comiclink' from marvel api data object", function() {
-      expect(marvelData(myData, "Thor", 7)).toBe("comiclink");
+      expect(showMarvelAPIData(myData, "Thor", 7)).toBe("comiclink");
     });
     it("should return url address for link named 'comiclink' from marvel api data object", function() {
-      expect(marvelData(myData, "Thor", 8)).toBe("http://marvel.com/comics/characters/1009664/thor?utm_campaign=apiRef&utm_source=e8e6c4f6d9f4f13655a0a25d4649f754");
+      expect(showMarvelAPIData(myData, "Thor", 8)).toBe("http://marvel.com/comics/characters/1009664/thor?utm_campaign=apiRef&utm_source=e8e6c4f6d9f4f13655a0a25d4649f754");
     });
     it("should return url address for image of 'Thor' from marvel api data object", function() {
-      expect(marvelData(myData, "Thor", 9)).toBe("https://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350.jpg");
+      expect(showMarvelAPIData(myData, "Thor", 9)).toBe("https://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350.jpg");
     });
     it("should return HTML content for results modal containing data from marvel api data object", function() {
-    var resultsModal = `<div><img src="https://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350.jpg" alt="Thor"></img>
-                                <div><h2>Thor</h2></div>
-                                <div><p>As the Norse God of thunder and lightning, Thor wields one of the greatest weapons ever made, the enchanted hammer Mjolnir. While others have described Thor as an over-muscled, oafish imbecile, he's quite smart and compassionate.  He's self-assured, and he would never, ever stop fighting for a worthwhile cause.</p></div>
-                                <div><ul><li><a href="http://marvel.com/characters/1009664/thor/featured?utm_campaign=apiRef&utm_source=e8e6c4f6d9f4f13655a0a25d4649f754" target="_blank">detail</a></li><li><a href="http://marvel.com/universe/Thor_(Thor_Odinson)?utm_campaign=apiRef&utm_source=e8e6c4f6d9f4f13655a0a25d4649f754" target="_blank">wiki</a></li><li><a href="http://marvel.com/comics/characters/1009664/thor?utm_campaign=apiRef&utm_source=e8e6c4f6d9f4f13655a0a25d4649f754" target="_blank">comiclink</a></li></ul></div>
-                                <button id="marvelDataButton" class="marvel-data-button" type="button">Return</button>`;
-      expect(marvelData(myData, "Thor", 10)).toBe(resultsModal);
+    let marvelApiModal = `<div><img src="https://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350.jpg" alt="Thor"></img><div><h2>Thor</h2></div><div><p>As the Norse God of thunder and lightning, Thor wields one of the greatest weapons ever made, the enchanted hammer Mjolnir. While others have described Thor as an over-muscled, oafish imbecile, he's quite smart and compassionate.  He's self-assured, and he would never, ever stop fighting for a worthwhile cause.</p></div><div><ul><li><a href="http://marvel.com/characters/1009664/thor/featured?utm_campaign=apiRef&utm_source=e8e6c4f6d9f4f13655a0a25d4649f754" target="_blank">detail</a></li><li><a href="http://marvel.com/universe/Thor_(Thor_Odinson)?utm_campaign=apiRef&utm_source=e8e6c4f6d9f4f13655a0a25d4649f754" target="_blank">wiki</a></li><li><a href="http://marvel.com/comics/characters/1009664/thor?utm_campaign=apiRef&utm_source=e8e6c4f6d9f4f13655a0a25d4649f754" target="_blank">comiclink</a></li></ul></div><button id="marvelDataButton" class="marvel-data-button" type="button">Return</button>`;
+      expect(showMarvelAPIData(myData, "Thor", 10)).toBe(marvelApiModal);
     });
   });
 
