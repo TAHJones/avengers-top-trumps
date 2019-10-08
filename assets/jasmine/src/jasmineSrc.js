@@ -101,7 +101,16 @@ function showSuperhero(data, n, catergory) {
   return selectedCatergory;
 }
 
-
+/**
+ * Function is called within getMarvelData function using "villain" parameter. It randomly selects an individual villain from a list of villains and inserts the data for that villain into template literals created by the characterImgTemplate and characterInfoTemplate functions and then inserts them in the HTML document. 
+ * @param {array} data - array of object data for each villain.
+ * @param {number} n - randomly generated number passed by getMarvelData function which is used to select villain.
+ */
+function showSupervillain(data, n, catergory) {
+	let superVillain = data[n];
+  let selectedCatergory = superVillain[1][catergory];
+  return selectedCatergory;
+} // showSupervillain function end
 
 
 
