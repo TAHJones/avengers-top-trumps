@@ -1,3 +1,92 @@
+/*GLOBAL VARIABLES*/
+let heroImg = document.getElementById('heroImg');
+let villainImg = document.getElementById('villainImg');
+let prevSlide = document.getElementById('prev');
+let nextSlide = document.getElementById('next');
+let dots = document.getElementsByClassName("dot");
+let hideDots = document.getElementById("dotSelector");
+let selectHeroButton = document.getElementById('selectHeroButton');
+let selectVillainButton = document.getElementById('selectVillainButton');
+let superheroName;
+let supervillainName;
+let resultsModal = document.getElementById("resultsModal"); // declare resultsModal in global scope so is available to showResultsModal and playAgain.addEventListener
+let heroScoreCounter;
+let infinityStoneName_Won;
+let infinityStoneColor_Won;
+let infinityStoneName_Lost;
+let infinityStoneColor_Lost;
+let infinityStoneId;
+
+/*TEMPLATE VARIABLES*/
+let heroFilePathName;
+let villainFilePathName;
+let agility;
+let intelligence;
+let magic;
+let strength;
+let speed;
+let technology;
+
+/**
+ * Function is called within getMarvelApiData function. It takes the json data from getMarvelApiData and filters it for marvelData characters name, image, description and urls for further character information on the Marvel website. The data is assigned to variables and inserted into a template literal then inserted into marvelData element.
+ */
+function showMarvelAPIData(apiData, heroName, returnValue) {
+    let marvelDataObject = apiData;
+    // let marvelData = document.getElementById('marvelData');
+    let marvelName = marvelDataObject.data.results[0].name;
+    let marvelDescription = marvelDataObject.data.results[0].description;
+    let marvelResources = marvelDataObject.data.results[0].urls;
+    let thumbnailPath;
+    let thumbnailExtension;
+    let marvelResourceList;
+    let fullThumbnailPath;
+    // let marvelCopyright;
+
+    // loop through array of objects containing external urls and generate list of page links
+    for (let item in marvelResources) {
+      let type = marvelResources[item].type;
+      let url = marvelResources[item].url;
+      marvelResourceList += `<li><a href="${url}" target="_blank">${type}</a></li>`;
+    }
+
+    marvelResourceList = marvelResourceList.replace('undefined',''); // removed 'undefined from the beginning of the list
+    thumbnailPath = marvelDataObject.data.results[0].thumbnail.path;
+    thumbnailPath = thumbnailPath.replace('http','https'); // modifiy path name to https to avoid getting blocked mixed content
+    thumbnailExtension = marvelDataObject.data.results[0].thumbnail.extension;
+    fullThumbnailPath = thumbnailPath + "." + thumbnailExtension;
+    marvelData.innerHTML = `<div class="results-modal-inner">
+                              <div class="marvel-data-img"><img src="${fullThumbnailPath}" alt="${marvelName}"></img>
+                              <div class="marvel-data-name"><h2>${heroName}</h2></div>
+                              <div class="marvel-data-description"><p>${marvelDescription}</p></div>
+                              <div class="marvel-data-urls"><ul>${marvelResourceList}</ul></div>
+                              <button id="marvelDataButton" class="marvel-data-button" type="button">Return</button>
+                              <div id="marvelCopyRight"></div>  
+                            </div>`;
+    // let marvelCopyRight = document.getElementById("marvelCopyRight");
+    // marvelCopyRight.innerHTML = getCurrentYear("marvelApiModal");
+  if(returnValue === 1){ // conditional statement which uses function parameters to select which values to return
+    return marvelName;
+  } else if(returnValue === 2) {
+    return marvelDescription;
+  } else if(returnValue === 3) {
+    return marvelResources[0].type;
+  } else if(returnValue === 4) {
+    return marvelResources[0].url;
+  } else if(returnValue === 5) {
+    return marvelResources[1].type;
+  } else if(returnValue === 6) {
+    return marvelResources[1].url;
+  } else if(returnValue === 7) {
+    return marvelResources[2].type;
+  } else if(returnValue === 8) {
+    return marvelResources[2].url;
+  } else if(returnValue === 9) {
+    return fullThumbnailPath;
+  } else if(returnValue === 10) {
+    return marvelData;
+  }
+} // showMarvelAPIData function end
+
 
 function marvelData(apiData, heroName, returnValue) { // callcack function that receives marvel api data after successful AJAX request
     var marvelDataObject = apiData;
@@ -57,7 +146,7 @@ function marvelData(apiData, heroName, returnValue) { // callcack function that 
 function getSuperheroes(data) {
   switch(data) { // return an error for function called with an 'empty' parameter value
     case "":
-    case 0:``
+    case 0:
     case "0":
       alert("Error! Function parameter is empty");
       return data;
