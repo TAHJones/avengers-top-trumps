@@ -2,7 +2,6 @@
  * Function is called within getMarvelApiData function. It takes the json data from getMarvelApiData and filters it for marvelData characters name, image, description and urls for further character information on the Marvel website. The data is assigned to variables and inserted into a template literal then inserted into marvelData element.
  */
 function showMarvelAPIData(apiData, heroName, returnValue) {
-// function marvelData(apiData, heroName, returnValue) {
   let marvelDataObject = apiData;
   let marvelName = marvelDataObject.data.results[0].name;
   let marvelDescription = marvelDataObject.data.results[0].description;
@@ -12,9 +11,7 @@ function showMarvelAPIData(apiData, heroName, returnValue) {
   let marvelResourceList;
   let fullThumbnailPath;
   let marvelApiModal;
-  // let marvelCopyright;
 
-  // loop through array of objects containing external urls and generate list of page links
   for (let item in marvelResources) {
     let type = marvelResources[item].type;
     let url = marvelResources[item].url;
