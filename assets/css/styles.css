@@ -725,13 +725,13 @@ p {
 	border-radius: 4px;
 	color: #EF9B3F;
 	font-size: 14px;
-	 font-weight: normal; 
+	font-weight: normal;
 	position: absolute;
-	width: 90px;
-	height: 30px;
+	width: 195px;
+	height: 35px;
 	transition: all 0.25s ease-in-out;
 	transform: translateX(-50%);
-	top: 280px;
+	top: 270px;
 	left: 50%;
 	z-index: 1;
 }
