@@ -1217,6 +1217,23 @@ p {
   	padding: 10px;
   }
 
+  #startGuide {
+  	/* background: #212529; */
+  	/* border: solid 4px #7269C2; */
+  	/* border-radius: 6px; */
+  	/* color: #EF9B3F; */
+  	font-size: 22px;
+  	/* font-weight: bold; */
+  	/* position: absolute; */
+  	width: 150px;
+  	height: 70px;
+  	/* transition: all 0.25s ease-in-out; */
+  	/* transform: translateX(-50%); */
+  	top: 200px;
+  	left: 50%;
+  	/* z-index: 1; */
+  }
+
   #heroImg {
   	height: 286px;
   	width: 255px;
