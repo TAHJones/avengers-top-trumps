@@ -1,32 +1,3 @@
-/*GLOBAL VARIABLES*/
-let heroImg = document.getElementById('heroImg');
-let villainImg = document.getElementById('villainImg');
-let prevSlide = document.getElementById('prev');
-let nextSlide = document.getElementById('next');
-let dots = document.getElementsByClassName("dot");
-let hideDots = document.getElementById("dotSelector");
-let selectHeroButton = document.getElementById('selectHeroButton');
-let selectVillainButton = document.getElementById('selectVillainButton');
-let superheroName;
-let supervillainName;
-let resultsModal = document.getElementById("resultsModal"); // declare resultsModal in global scope so is available to showResultsModal and playAgain.addEventListener
-let heroScoreCounter;
-let infinityStoneName_Won;
-let infinityStoneColor_Won;
-let infinityStoneName_Lost;
-let infinityStoneColor_Lost;
-let infinityStoneId;
-
-/*TEMPLATE VARIABLES*/
-let heroFilePathName;
-let villainFilePathName;
-let agility;
-let intelligence;
-let magic;
-let strength;
-let speed;
-let technology;
-
 /**
  * Function is called within getMarvelApiData function. It takes the json data from getMarvelApiData and filters it for marvelData characters name, image, description and urls for further character information on the Marvel website. The data is assigned to variables and inserted into a template literal then inserted into marvelData element.
  */
