@@ -1079,6 +1079,23 @@ p {
   	padding: 8px;
   }
 
+  #startGuide {
+  	/*background: #212529;*/
+  	/*border: solid 4px #7269C2;*/
+  	/*border-radius: 6px;*/
+  	/*color: #EF9B3F;*/
+  	font-size: 18px;
+  	/*font-weight: bold;*/
+  	/*position: absolute;*/
+  	width: 120px;
+  	height: 60px;
+  	/*transition: all 0.25s ease-in-out;*/
+  	/*transform: translateX(-50%);*/
+  	top: 165px;
+  	left: 50%;
+  	/*z-index: 1;*/
+  }
+
   #heroImg {
   	height: 224px;
   	width: 205px;
