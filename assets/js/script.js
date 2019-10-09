@@ -300,6 +300,7 @@ function getIntroGuide() {
     scrollToElement: true,
     exitOnEsc: true,
     exitOnOverlayClick: false,
+    disableInteraction: true,
     steps: introguideOptions 
   }); 
   
