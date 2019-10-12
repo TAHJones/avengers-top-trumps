@@ -578,7 +578,6 @@ function getVillainCatergoryScore(heroCatergoryScoreObject){
 // conditional statement that checks value of heroScoreCounter and resets to 1 is value is <= 1
 if(heroScoreCounter > 1){
   heroScoreCounter;
-  console.log(heroScoreCounter);
 } else {
   heroScoreCounter = 1;
 }
@@ -872,7 +871,6 @@ function getMarvelData(charactertype, n) {
 	  .then((res) => res.json())
 	  .then((data) => {
 	    supervillainList = Object.entries(data.supervillains);
-	    console.log(supervillainList);
 	    showSupervillain(supervillainList, n);
 	    selectedSupervillainStyles();
 			compareCatergoryScore();
