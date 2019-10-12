@@ -761,14 +761,14 @@ function resetGame(){
   let dotsArray = Array.from(dots);
   
   if(heroScoreCounter === 7){
-    scoreCounter.innerHTML = `<ul class="d-flex justify-content-center score-counter-list">
-                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
-                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
-                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
-                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
-                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
-                  						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
-                  					</ul>`;
+    scoreCounter.innerHTML = `<div class="d-flex justify-content-center score-counter-list">
+                  						<img src="assets/img/placeholderinfinitystone.png"></img>
+                  						<img src="assets/img/placeholderinfinitystone.png"></img>
+                  						<img src="assets/img/placeholderinfinitystone.png"></img>
+                  						<img src="assets/img/placeholderinfinitystone.png"></img>
+                  						<img src="assets/img/placeholderinfinitystone.png"></img>
+                  						<img src="assets/img/placeholderinfinitystone.png"></img>
+                  					</div>`;
     heroScoreCounter = 1;
   }
   dotsArray.forEach(function(element, index) {
