@@ -313,8 +313,12 @@ function getIntroGuide() {
  * @param {number} n -  number associated with hero selected by the user using arrow and dot nav elements and passed by getMarvelData function which is used by function to select hero.
  */
 function showSuperhero(data, n) {
-  if (n > data.length) {slideIndex = 1;}
-  if (n < 1) {slideIndex = data.length;}
+  if (n > data.length) {
+    slideIndex = 1;
+  } else if (n < 1)
+  {
+    slideIndex = data.length;
+  }
 
   let heroInfo = document.getElementById('heroInfo');
   let superHero = data[slideIndex-1];
