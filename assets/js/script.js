@@ -12,6 +12,7 @@ let selectVillainButton = document.getElementById('selectVillainButton');
 let superheroName;
 let supervillainName;
 let resultsModal = document.getElementById("resultsModal"); // declare resultsModal in global scope so is available to showResultsModal and playAgain.addEventListener
+let copyRight = document.getElementById("copyRight");
 let startGuide = document.getElementById("startGuide");
 let heroScoreCounter;
 let infinityStoneName_Won;
@@ -211,7 +212,6 @@ function getCurrentYear(location){
 }
 
 // call getCurrentYear function and insert copyright statement into footer
-let copyRight = document.getElementById("copyRight");
 copyRight.innerHTML = getCurrentYear("footer");
 
 /**
