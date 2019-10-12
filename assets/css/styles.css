@@ -519,8 +519,8 @@ p {
 }
 
 .modal-fadein{
-  animation:6s ease 0s normal forwards 1 fadein;
-  -webkit-animation:6s ease 0s normal forwards 1 fadein;
+  animation:3s ease 0s normal forwards 1 fadein;
+  -webkit-animation:3s ease 0s normal forwards 1 fadein;
   opacity:1;
   display: block;
   z-index: 4;
