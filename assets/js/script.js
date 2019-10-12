@@ -48,7 +48,7 @@ let characterImg;
 	  characterImg = `<img src="assets/img/${villainFilePathName}.png" class="${charactertype}-img" alt="${villainFilePathName}">`;
 	}
 	return characterImg;
-} // characterImgTemplate function end
+}
 
 /**
  * Function is called within showSuperhero function. It inserts either hero or villain data into a template literal that displays character information and returns it.
@@ -72,7 +72,7 @@ function characterInfoTemplate(charactertype) {
 												</ul>
 											</div>`;
 	return characterInfo;
-} // characterInfoTemplate function end
+}
 
 /**
  * Function is called within imgOverlayTemplate function. It creates img overlay for hero and villain img elements that displays the results of the match.
@@ -86,7 +86,7 @@ function imgOverlayTemplate(result, parentElement, overlayId){
                                               <div class="overlay-text">${result}</div>
                                             </div>`; // insert div element with result variable
   parentElement.innerHTML += ImgOverlay; // add new overlay element to parent element of img element
-} // imgOverlayTemplate function end
+}
 
 /**
  * Function called from compareCatergoryScore function. It calls the imgOverlayTemplate twice function with three different parameter configurations depending on whether the user has won, lost or drawn the match.  
@@ -109,7 +109,7 @@ function displayImgOverlay(result) {
   villainOverlayId = document.getElementById("villainOverlayId");
   heroOverlayId.classList.add("overlay-fadein");
   villainOverlayId.classList.add("overlay-fadein");
-} // displayImgOverlay function end
+}
 
 /**
  * It inserts hero and villain data into template literal to display match result. Template literal is then inserted into resultsModal element.
@@ -187,7 +187,7 @@ function resultsInfoTemplate(result) {
   </div>`;
   
  resultsModal.innerHTML = resultsInfo;
-} // resultsInfoTemplate function end
+}
 
 
 /*GENERAL FUNCTIONS*/
@@ -397,7 +397,7 @@ function getMarvelApiUrl() {
   let apiKey = 'e8e6c4f6d9f4f13655a0a25d4649f754';
   let apiURL = apiEndpoint + resourceType + '?name=' + marvelHeroName + '&apikey=' + apiKey;
   return apiURL;
-} // getMarvelApiUrl function end
+}
 
 /**
  * Function is called within getMarvelApiData function. It takes the json data from getMarvelApiData and filters it for marvelData characters name, image, description and urls for further character information on the Marvel website. The data is assigned to variables and inserted into a template literal then inserted into marvelData element.
@@ -435,7 +435,7 @@ function showMarvelAPIData(data) {
                             </div>`;
     let marvelCopyRight = document.getElementById("marvelCopyRight");
     marvelCopyRight.innerHTML = getCurrentYear("marvelApiModal");
-} // showMarvelAPIData function end
+}
 
 /**
  * Function is called within getMarvelData function using "hero" and n parameter. It reveals Marvel API modal when infoOverlayButton is clicked and hides the modal when marvelDataButton is clicked.
@@ -523,7 +523,7 @@ function showSupervillain(data, n) {
   
   villainImg.innerHTML = characterImgTemplate("villain");
   villainInfo.innerHTML = characterInfoTemplate("villain");
-} // showSupervillain function end
+}
 
 /**
  * Function is called within getMarvelData function using "villain" parameter. It changes selectVillainButton and villainImg elements CSS styles when villain is selected.
@@ -552,7 +552,7 @@ function getHeroCatergoryScore(){
     }
   });
   return heroCatergoryScoreObject;
-} // getHeroCatergoryScore function end
+}
 
 /**
  * Function is called within compareCatergoryScore function. It takes the object data from the getHeroCatergoryScore function and adds the corresponding catergory villain score then returns the updated object.
@@ -575,7 +575,7 @@ function getVillainCatergoryScore(heroCatergoryScoreObject){
     }
   });
   return catergoryScoreObject;
-} // getVillainCatergoryScore function end
+}
 
 
 // conditional statement that checks value of heroScoreCounter and resets to 1 is value is <= 1
@@ -652,7 +652,7 @@ function infinityStoneCounter(){
 	       alert("Error! heroScoreCounter variable is not an integer");
 	    }
 	}
-} // infinityStoneCounter function end
+}
 
 /**
  * Function is called within compareCatergoryScore function. It generates template literal with results of match by calling resultsInfoTemplate function with appropriate results parameter then inserts it into resultModal element.
@@ -696,7 +696,7 @@ function showResultsModal(result){
   } else {
     alert("Error! No result was found");
   }
-} // showResultsModal function end
+}
 
 /**
  * Function is called within getMarvelData function using "villain" parameter. It takes hero and villain score from selected catergory score and determines result of match i.e. win, lose or draw. It then calls displayImgOverlay and showResultsModal function with appropriate parameters to display the results of the match.
@@ -753,7 +753,7 @@ function compareCatergoryScore(){
     }
     resultsModal.classList.add("modal-fadein");
   }
-} // compareCatergoryScore function end
+}
 
 /**
  * Function is called by resultsModal event listener when playAgainButton button is clicked. It resets modified HTML elements and CSS styles after each match except the score counter which is only reset when game is complete.
@@ -821,7 +821,7 @@ function resetGame(){
   }
   slideIndex = 0; // reset slideIndex value to show first slide
   currentSlide(dots); // bind event listener to dot selector when reset happens
-} // resetGame function end
+}
 
 
 /*FETCH REQUESTS*/
@@ -884,7 +884,7 @@ function getMarvelData(charactertype, n) {
 	    console.log(err);
 	  })		
 	}
-} // getMarvelData function end
+}
 
 
 /*EVENT lISTENERS*/
