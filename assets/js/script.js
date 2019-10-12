@@ -43,7 +43,7 @@ let characterImg;
 	  characterImg = `<img src="assets/img/${heroFilePathName}.png" class="${charactertype}-img" alt="${heroFilePathName}">
 										<div id="infoOverlayId" class="info-overlay">
                       <button id="infoOverlayButton" class="info-overlay-text">More Info</button>
-                    </div>`; // hero template also contains overlay which links to marvel api modal
+                    </div>`;
 	} else if (charactertype === "villain") {
 	  characterImg = `<img src="assets/img/${villainFilePathName}.png" class="${charactertype}-img" alt="${villainFilePathName}">`;
 	}
@@ -81,11 +81,11 @@ function characterInfoTemplate(charactertype) {
  * @param {string} overlayId - can be "heroOverlayId" or "villainOverlayId".
  */
 function imgOverlayTemplate(result, parentElement, overlayId){
-  let ImgOverlay = document.createElement("div"); // create new div element
+  let ImgOverlay = document.createElement("div");
   ImgOverlay = ImgOverlay.innerHTML = `<div id="${overlayId}" class="overlay">
                                               <div class="overlay-text">${result}</div>
-                                            </div>`; // insert div element with result variable
-  parentElement.innerHTML += ImgOverlay; // add new overlay element to parent element of img element
+                                            </div>`;
+  parentElement.innerHTML += ImgOverlay;
 }
 
 /**
@@ -199,7 +199,6 @@ function resultsInfoTemplate(result) {
 function getCurrentYear(location){
   let copyRightText;;
   let marvelCopyRightText
-  // let marvelCopyRight = document.getElementById("marvelCopyRight");
   let currentTime = new Date();
   let year = currentTime.getFullYear();
   if(location === "footer") {
@@ -332,11 +331,10 @@ function showSuperhero(data, n) {
   technology = superHero[1].technology;
   
 	for (let i = 0; i < dots.length; i++) {
-  	dots[i].className = dots[i].className.replace(" active", ""); // loop through all dot divs and remove 'active' class name
+  	dots[i].className = dots[i].className.replace(" active", "");
 	}
 
-  dots[slideIndex-1].className += " active"; // add 'active' class name to dots div that matches modifed slidesIndex no.
-
+  dots[slideIndex-1].className += " active";
   heroImg.innerHTML = characterImgTemplate("hero");
   heroInfo.innerHTML = characterInfoTemplate("hero");
 }
@@ -345,7 +343,7 @@ function showSuperhero(data, n) {
  * Function is called within getMarvelApiUrl function. It takes selected superhero name from heroFilePathName variable and returns corresponding name for that character used by Marvel API
  */
 function marvelHero(superheroName){
-  switch(superheroName) { // match superhero name to marvel api name identifier and add to marvelHero variable
+  switch(superheroName) {
     case "":
     case 0:
     case "0":
@@ -413,14 +411,13 @@ function showMarvelAPIData(data) {
     let fullThumbnailPath;
     let marvelCopyright;
 
-    // loop through array of objects containing external urls and generate list of page links
     for (let item in marvelResources) {
         let type = marvelResources[item].type;
         let url = marvelResources[item].url;
         marvelResourceList += `<li><a href="${url}" target="_blank">${type}</a></li>`;
     }
 
-    marvelResourceList = marvelResourceList.replace('undefined',''); // removed 'undefined from the beginning of the list
+    marvelResourceList = marvelResourceList.replace('undefined','');
     thumbnailPath = data.data.results[0].thumbnail.path;
     thumbnailPath = thumbnailPath.replace('http','https'); // modifiy path name to https to avoid getting blocked mixed content
     thumbnailExtension = data.data.results[0].thumbnail.extension;
@@ -590,11 +587,11 @@ if(heroScoreCounter > 1){
  * Function is called within showResultsModal function and uses the heroScoreCounter variable to display the correct infinity stone image in the results modal 
  */
 function infinityStoneCounter(){
-	switch(heroScoreCounter) { // match infinity stone name with counter score number
+	switch(heroScoreCounter) {
 	  case "":
 	  case 0:
 	  case "0":
-	    alert("Error! heroScoreCounter variable is empty");  // return an error for function called with an 'empty' parameter value
+	    alert("Error! heroScoreCounter variable is empty");
 	    return heroScoreCounter;
 	  case null:
 	    alert("Error! heroScoreCounter variable is null");
@@ -743,7 +740,7 @@ function compareCatergoryScore(){
     }
     resultsModal.classList.add("modal-fadein");
   } else if(heroCatergoryScore === villainCatergoryScore) {
-    heroScoreCounter += 0; // keep heroScoreCounter value the same
+    heroScoreCounter += 0;
     displayImgOverlay("draw");
     infinityStoneId = "infinitystone" + heroScoreCounter.toString();
     if(heroCatergoryScore === villainCatergoryScore && heroScoreCounter === 1){
@@ -764,7 +761,7 @@ function resetGame(){
   let villainInfo = document.getElementById('villainInfo');
   let dotsArray = Array.from(dots);
   
-  if(heroScoreCounter === 7){ // if game is complete reset infinity stone score counter
+  if(heroScoreCounter === 7){
     scoreCounter.innerHTML = `<ul class="d-flex justify-content-center score-counter-list">
                   						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
                   						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
@@ -773,7 +770,7 @@ function resetGame(){
                   						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
                   						<div><img src="assets/img/placeholderinfinitystone.png"></img></div>
                   					</ul>`;
-    heroScoreCounter = 1; // reset score counter back to default value
+    heroScoreCounter = 1;
   }
   dotsArray.forEach(function(element, index) {
     if(element.classList.contains("active")) {
@@ -817,9 +814,9 @@ function resetGame(){
   if(resultsModal.className === "col-sm-12 results-modal modal-fadein modal-fadeout"){
     setTimeout(function(){
       resultsModal.className = "col-sm-12 results-modal";
-    },2500); // delay reset of class names until fadeout effect is complete
+    },2500);
   }
-  slideIndex = 0; // reset slideIndex value to show first slide
+  slideIndex = 0;
   currentSlide(dots); // bind event listener to dot selector when reset happens
 }
 
@@ -849,7 +846,7 @@ function getMarvelApiData() {
 function getMarvelData(charactertype, n) {
   let superheroList;
   let supervillainList;
-  let randomNumber =  Math.floor(Math.random() * 15); // generate a random number between 0 and 14 to match index of slides
+  let randomNumber =  Math.floor(Math.random() * 15);
 
   if (charactertype === "villain" && typeof(n) === "undefined") {
   	n = randomNumber;
@@ -916,7 +913,7 @@ function currentSlide(n) {
     n[i].index = i;
     n[i].addEventListener('click', function(e) {
       hideStartGuide();
-      slideIndex = e.target.index + 1; // change index base number to 1 to match slideIndex number
+      slideIndex = e.target.index + 1;
       getMarvelData("hero", slideIndex);
     }, false);
   }
