@@ -313,13 +313,13 @@ function getIntroGuide() {
  * @param {number} n -  number associated with hero selected by the user using arrow and dot nav elements and passed by getMarvelData function which is used by function to select hero.
  */
 function showSuperhero(data, n) {
-  if (n > data.length) {slideIndex = 1;} // if slideIndex is > no. of slides reset to value of 1st slide
-  if (n < 1) {slideIndex = data.length;} // if slideIndex is < 1 reset value to value of last slide
+  if (n > data.length) {slideIndex = 1;}
+  if (n < 1) {slideIndex = data.length;}
 
   let heroInfo = document.getElementById('heroInfo');
-  let superHero = data[slideIndex-1]; // select superhero from superHeroes object with bracket notation using function parameter
+  let superHero = data[slideIndex-1];
   heroFilePathName = superHero[0];
-  superheroName = superHero[1].name; // assign hero name to global variable which is used by selectSuperheroButton function
+  superheroName = superHero[1].name;
   agility = superHero[1].agility;
   intelligence = superHero[1].intelligence;
   magic = superHero[1].magic;
