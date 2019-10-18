@@ -702,7 +702,7 @@ function compareCatergoryScore(){
 	let catergoryScoreObject = getVillainCatergoryScore(heroCatergoryScoreObject);
   let heroCatergoryScore = catergoryScoreObject.heroCatergoryScore;
   let villainCatergoryScore = catergoryScoreObject.villainCatergoryScore;
-  let infinityStoneList = document.querySelectorAll(".score-counter-list > div");
+  let infinityStoneList = document.querySelectorAll(".score-counter-list > img");
   let infinityStoneArray = Array.from(infinityStoneList);
   
   if(heroCatergoryScore > villainCatergoryScore){
@@ -712,7 +712,10 @@ function compareCatergoryScore(){
     infinityStoneArray.forEach(function(element, index){
       if(heroScoreCounter === index + 2){
         element.setAttribute("id", infinityStoneId);
-        element.innerHTML = `<img class="glowing-border" src="assets/img/${infinityStoneId}.png">`;
+        let addStone = document.createElement("img");
+        addStone.setAttribute("src", `assets/img/${infinityStoneId}.png`);
+        addStone.classList.add("glowing-border");
+        element.replaceWith(addStone);
       }
     });
     if(heroCatergoryScore > villainCatergoryScore && heroScoreCounter === 7){
