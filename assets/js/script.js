@@ -670,7 +670,7 @@ function showResultsModal(result){
     resultsModal.innerHTML = `<div class="row h-100 justify-content-center results-modal-inner">
 						                   <div class="my-auto col-sm-10 col-md-8 col-lg-6">
                                 <h2>You are a Top Trumps Champion!</h2>
-                                <img class="hero-modal-image" src="assets/img/ironman-infinity-gauntlet2.jpg">
+                                <img class="hero-modal-image" src="assets/img/gamecomplete.jpg">
                                 <div class="results-modal-infinitystone">
                                   <div class="score-counter">
                                     <ul class="game-complete-list">
