@@ -721,18 +721,18 @@ p {
 /*INTROJS-GUIDE*/
 
 #startGuide {
-	background: rgba(34, 34, 34,.8);
+	background: rgba(34, 34, 34,.7);
 	border: solid 1px #2D1B08;
 	border-radius: 4px;
 	color: #EF9B3F;
 	font-size: 14px;
 	font-weight: normal;
 	position: absolute;
-	width: 195px;
-	height: 35px;
+	width: 160px;
+	height: 30px;
 	transition: all 0.25s ease-in-out;
 	transform: translateX(-50%);
-	top: 270px;
+	top: 238px;
 	left: 50%;
 	z-index: 1;
 }
@@ -881,6 +881,13 @@ p {
 
   #copyRight {
   	font-size: 12px;
+  }
+
+  #startGuide {
+  	background: rgba(34, 34, 34,.8);
+  	width: 195px;
+  	height: 35px;
+  	top: 270px;
   }
 }
 
