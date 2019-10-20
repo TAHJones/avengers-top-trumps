@@ -732,7 +732,7 @@ p {
 	height: 30px;
 	transition: all 0.25s ease-in-out;
 	transform: translateX(-50%);
-	top: 238px;
+	top: 221px;
 	left: 50%;
 	z-index: 1;
 }
@@ -887,7 +887,7 @@ p {
   	background: rgba(34, 34, 34,.8);
   	width: 195px;
   	height: 35px;
-  	top: 270px;
+  	top: 254px;
   }
 }
 
