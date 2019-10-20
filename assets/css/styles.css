@@ -1052,6 +1052,13 @@ p {
   }
 }
 
+@media (max-width: 768px) {
+  .card-body.hero-info,
+  .card-body.villain-info {
+  	padding: 5px;
+  }
+}
+
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
 
