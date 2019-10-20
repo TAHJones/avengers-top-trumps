@@ -40,7 +40,7 @@ h1 {
 	font-weight: bold;
 	text-align: center;
 	text-transform: uppercase;
-	margin: 10px 0 20px;
+	margin: 10px 0 8px;
 }
 
 /*BANNER-END*/
@@ -915,7 +915,7 @@ p {
 
 @media (min-width: 500px) {
   h1 {
-    font-size: 26px
+    font-size: 26px;
   }
 }
 
@@ -944,9 +944,6 @@ p {
   }
   
   .score-counter-list > img {
-    /*background-color: #000;*/
-    /*border-radius: 4px;*/
-    /*margin: 0px 2px 4px;*/
     padding: 6px;
     height: 34px;
     width: 30px;
