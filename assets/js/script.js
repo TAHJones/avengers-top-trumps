@@ -731,7 +731,10 @@ function compareCatergoryScore(){
     infinityStoneId = "infinitystone" + lostinfinityStone.toString();
     infinityStoneArray.forEach(function(element, index){
       if(heroScoreCounter === index + 1){
-        element.innerHTML = `<img src="assets/img/placeholderinfinitystone.png">`;
+        element.setAttribute("id", infinityStoneId);
+        let addStone = document.createElement("img");
+        addStone.setAttribute("src", `assets/img/placeholderinfinitystone.png`);
+        element.replaceWith(addStone);
       }
     });
     if(heroCatergoryScore < villainCatergoryScore && heroScoreCounter < 1){
