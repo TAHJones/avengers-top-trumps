@@ -1,5 +1,6 @@
 
 /*GLOBAL VARIABLES*/
+let villainColumn = document.getElementById("villainColumn");
 let heroImg = document.getElementById('heroImg');
 let villainImg = document.getElementById('villainImg');
 let slideIndex = 0; // set default value to show first slide
@@ -483,7 +484,6 @@ function resetSuperheroButton() {
 /**
  * Function is called by selectSuperheroButton function and automatically scrolls down to villain slider when selectSuperheroButton is clicked and screen width is less than 768px
  */
-let villainColumn = document.getElementById("villainColumn");
 function scrollToVillainSlider(){
   if(window.innerWidth < 768){
     setTimeout(function(){
