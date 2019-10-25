@@ -36,7 +36,7 @@ h1 {
 	background: linear-gradient(to right, #4239B8 , #FFA94A, #4239B8);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	font-size: 16px;
+	font-size: 15px;
 	font-weight: bold;
 	text-align: center;
 	text-transform: uppercase;
@@ -822,7 +822,7 @@ p {
 
 @media (min-width: 360px) {
   h1 {
-    font-size: 18px
+    font-size: 17px
   }
 
   .select-hero {
@@ -836,7 +836,7 @@ p {
 
 @media (min-width: 385px) {
   h1 {
-  	font-size: 20px;
+  	font-size: 19px;
   }
 }
 
@@ -903,7 +903,7 @@ p {
 
 @media (min-width: 422px) {
   h1 {
-    font-size: 22px
+    font-size: 20px
   }
 }
 
@@ -930,7 +930,7 @@ p {
   }
 
   h1 {
-    font-size: 26px;
+    font-size: 25px;
   }
 }
 
