@@ -924,6 +924,11 @@ p {
 }
 
 @media (min-width: 500px) {
+  .hero-slider,
+  .villain-slider {
+  	width: 75%;
+  }
+
   h1 {
     font-size: 26px;
   }
