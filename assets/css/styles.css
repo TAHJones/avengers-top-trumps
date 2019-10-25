@@ -1220,6 +1220,14 @@ p {
   	padding: 4px;
   }
 
+  .results-modal-inner > div {
+  	width: 100%;
+  }
+  
+  .results-modal-inner h2 {
+    font-size: 20px;
+  }
+
     #copyRight {
   	  font-size: 14px;
   }
