@@ -486,7 +486,8 @@ function resetSuperheroButton() {
 function scrollToVillainSlider(){
   if(window.innerWidth < 768){
     setTimeout(function(){
-     selectVillainButton.scrollIntoView();
+      let villainColumn = document.getElementById("villainColumn");
+      villainColumn.scrollIntoView();
     },1500);
   }
 }
@@ -495,9 +496,10 @@ function scrollToVillainSlider(){
  * Function is called by selectVillainButton function and automatically scrolls back up to the hero slider when the selectVillainButton is clicked and screen width is less than 768px
  */
 function scrollToHeroSlider(){
+  let heroColumn = document.getElementById("heroColumn");
   if(window.innerWidth < 768){
     setTimeout(function(){
-     heroImg.scrollIntoView();
+     heroColumn.scrollIntoView();
     },3000);
   }
 }
