@@ -85,6 +85,14 @@ p {
 	margin-bottom: 15px;
 }
 
+.villain-column-hide {
+  display: none;
+}
+
+.villain-column-show {
+  display: block;
+}
+
 .hero-slider,
 .villain-slider {
 	width: 80%;
