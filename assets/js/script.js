@@ -481,13 +481,24 @@ function resetSuperheroButton() {
 }
 
 /**
- * Function is called by selectSuperheroButton function and automatically scrolls down to selectVillainButton when selectSuperheroButton is clicked and screen width is less than 768px
+ * Function is called by selectSuperheroButton function and automatically scrolls down to villain slider when selectSuperheroButton is clicked and screen width is less than 768px
  */
 function scrollToVillainSlider(){
   if(window.innerWidth < 768){
     setTimeout(function(){
      selectVillainButton.scrollIntoView();
     },1500);
+  }
+}
+
+/**
+ * Function is called by selectVillainButton function and automatically scrolls back up to the hero slider when the selectVillainButton is clicked and screen width is less than 768px
+ */
+function scrollToHeroSlider(){
+  if(window.innerWidth < 768){
+    setTimeout(function(){
+     heroImg.scrollIntoView();
+    },3000);
   }
 }
 
@@ -899,16 +910,6 @@ function getMarvelData(charactertype, n) {
 	}
 }
 
-/*function scrollToVillainSlider(){
-  if(window.innerWidth < 768){
-    setTimeout(function(){
-     selectVillainButton.scrollIntoView();
-    },1000);
-  }
-}*/
-
-
-
 /*EVENT lISTENERS*/
 
 /**
@@ -953,6 +954,7 @@ selectVillainButton.addEventListener('click', function(){
 	if(selectVillainButton.classList.contains("select-villain-active")){
 		getMarvelData("villain");
 	}
+	scrollToHeroSlider();
 }, false);
 
 /**
