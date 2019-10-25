@@ -481,6 +481,17 @@ function resetSuperheroButton() {
 }
 
 /**
+ * Function is called by selectSuperheroButton function and automatically scrolls down to selectVillainButton when selectSuperheroButton is clicked and screen width is less than 768px
+ */
+function scrollToVillainSlider(){
+  if(window.innerWidth < 768){
+    setTimeout(function(){
+     selectVillainButton.scrollIntoView();
+    },1500);
+  }
+}
+
+/**
  * Function is called within getMarvelData function using "hero" and n parameter. When 'active' selectHeroButton is clicked adds 'selected' styles to heroImg and selectHeroButton elements, removes nav and infoOverlayId elements and adds 'active' styles to selectVillainButton.
  */
 function selectSuperheroButton() {
@@ -498,6 +509,7 @@ function selectSuperheroButton() {
       let infoOverlayParent = infoOverlayId.parentNode;
       infoOverlayParent.removeChild(infoOverlayId);
     }
+	 scrollToVillainSlider();
   }, false);	
 }
 
@@ -886,6 +898,15 @@ function getMarvelData(charactertype, n) {
 	  })		
 	}
 }
+
+/*function scrollToVillainSlider(){
+  if(window.innerWidth < 768){
+    setTimeout(function(){
+     selectVillainButton.scrollIntoView();
+    },1000);
+  }
+}*/
+
 
 
 /*EVENT lISTENERS*/
