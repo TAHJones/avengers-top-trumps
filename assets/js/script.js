@@ -483,10 +483,11 @@ function resetSuperheroButton() {
 /**
  * Function is called by selectSuperheroButton function and automatically scrolls down to villain slider when selectSuperheroButton is clicked and screen width is less than 768px
  */
+let villainColumn = document.getElementById("villainColumn");
 function scrollToVillainSlider(){
   if(window.innerWidth < 768){
     setTimeout(function(){
-      let villainColumn = document.getElementById("villainColumn");
+      villainColumn.classList.replace("villain-column-hide","villain-column-show");
       villainColumn.scrollIntoView();
     },1500);
   }
@@ -499,7 +500,8 @@ function scrollToHeroSlider(){
   let heroColumn = document.getElementById("heroColumn");
   if(window.innerWidth < 768){
     setTimeout(function(){
-     heroColumn.scrollIntoView();
+      heroColumn.scrollIntoView();
+      villainColumn.classList.replace("villain-column-show","villain-column-hide");
     },3000);
   }
 }
