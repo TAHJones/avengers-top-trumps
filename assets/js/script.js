@@ -488,7 +488,7 @@ function scrollToVillainSlider(){
   if(window.innerWidth < 768){
     setTimeout(function(){
       villainColumn.classList.replace("villain-column-hide","villain-column-show");
-      villainColumn.scrollIntoView({behavior: "smooth");
+      villainColumn.scrollIntoView({behavior: "smooth"});
     },1500);
   }
 }
