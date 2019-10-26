@@ -1244,7 +1244,6 @@ p {
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-
   .hero-slider,
   .villain-slider {
   	width: 85%;
