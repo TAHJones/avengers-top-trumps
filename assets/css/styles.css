@@ -488,9 +488,9 @@ p {
 }
 
 .game-complete-list > li > img {
-	width: 31px;
-	padding: 2px;
-	border: 2px solid #1D0B46;
+	width: 20px;
+	padding: 0px;
+	border: 1px solid #1D0B46;
 	border-radius: 24px;
 }
 
@@ -1235,6 +1235,12 @@ p {
   .hero-modal-image,
   .game-complete-image {
   	width: 40%;
+  }
+
+  .game-complete-list > li > img {
+  	width: 31px;
+  	padding: 2px;
+  	border: 2px solid #1D0B46;
   }
 
   #copyRight {
