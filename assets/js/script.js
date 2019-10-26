@@ -240,7 +240,7 @@ function getIntroGuide() {
       {
         element: '#next',
         intro: 'Click on the arrows to scroll through the list of superheroes.',
-        position: 'right'
+        position: 'top'
       },
       {
         element: '.agility',
@@ -249,13 +249,8 @@ function getIntroGuide() {
       },
       {
         element: '#selectHeroButton',
-        intro: 'Click button to confirm superhero and superpower selection.',
-        position: 'bottom'
-      },
-      {
-        element: '#selectVillainButton',
-        intro: 'Click button to randomly select supervillain opponent.',
-        position: 'bottom'
+        intro:"Click 'Select Hero' button to confirm superhero selection then 'Select Villain' button to select supervillain.",
+        position: 'top'
       }
     ]; 
   } else if(window.innerWidth >= 768) {
