@@ -448,6 +448,10 @@ p {
 	width: 40%;
 }
 
+.game-complete-image {
+	width: 25%;
+}
+
 .results-modal-infinitystone {
 	width: 100%;
 }
@@ -1228,8 +1232,13 @@ p {
     font-size: 20px;
   }
 
-    #copyRight {
-  	  font-size: 14px;
+  .hero-modal-image,
+  .game-complete-image {
+  	width: 40%;
+  }
+
+  #copyRight {
+  	font-size: 14px;
   }
 }
 
