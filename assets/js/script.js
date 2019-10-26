@@ -485,7 +485,7 @@ function resetSuperheroButton() {
  * Function is called by selectSuperheroButton function and automatically scrolls down to villain slider when selectSuperheroButton is clicked and screen width is less than 768px
  */
 function scrollToVillainSlider(){
-  if(window.innerWidth < 768){
+  if(window.innerWidth < 576){
     setTimeout(function(){
       villainColumn.classList.replace("villain-column-hide","villain-column-show");
       villainColumn.scrollIntoView({behavior: "smooth"});
@@ -498,7 +498,7 @@ function scrollToVillainSlider(){
  */
 function scrollToHeroSlider(){
   let heroColumn = document.getElementById("heroColumn");
-  if(window.innerWidth < 768){
+  if(villainColumn.classList.contains("villain-column-show")){
     setTimeout(function(){
       heroColumn.scrollIntoView();
       villainColumn.classList.replace("villain-column-show","villain-column-hide");
