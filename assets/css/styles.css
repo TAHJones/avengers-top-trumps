@@ -393,17 +393,17 @@ p {
 }
 
 .play-again-button {
-  background-color: #4A3CC9;
-  border: solid 4px #bbb;
-  border-radius: 6px;
-  color: #fff;
-	font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.25s ease-in-out;
-  height: 50px;
-  width: 160px;
+	background-color: #4A3CC9;
+	border: solid 4px #bbb;
+	border-radius: 6px;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	transition: all 0.25s ease-in-out;
+	height: 40px;
+	width: 140px;
 }
 
 /*SLIDER-SCROLLER-END*/
@@ -1241,6 +1241,12 @@ p {
   	width: 31px;
   	padding: 2px;
   	border: 2px solid #1D0B46;
+  }
+
+  .play-again-button {
+  	font-size: 14px;
+    height: 50px;
+    width: 160px;
   }
 
   #copyRight {
