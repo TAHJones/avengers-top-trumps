@@ -801,7 +801,7 @@ p {
 .introjs-arrow.bottom, .introjs-arrow.bottom-middle, .introjs-arrow.bottom-right {
   border-color: #7269C2 transparent transparent;
   bottom: -23px;
-  left: 20px;
+  left: 5px;
 }
 .introjs-arrow.left, .introjs-arrow.right {
     top: -4px;
