@@ -323,6 +323,7 @@ p {
 	font-size: 12px;
 	font-weight: bold;
 	margin: 0 10px;
+	padding: 0;
 	transition: all 0.25s ease-in-out;
 	width: 160px;
 	height: 55px;
