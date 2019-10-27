@@ -1035,21 +1035,20 @@ p {
   	width: 75%;
   }
 
-  .tooltip-selector > .tooltipimg {
+  /*.tooltip-selector > .tooltipimg {
   	top: -170px;
   	left: -3px;
   	height: 174px;
   	width: 174px;
-  }
+  }*/
 
-  .tooltip-selector > .tooltiptext {
+  /*.tooltip-selector > .tooltiptext {
   	font-size: 15px;
-  	line-height: 22px;
   	top: -45px;
   	left: 10px;
   	height: 36px;
   	width: 147px;
-  }
+  }*/
 
   .hero-title,
   .villain-title {
@@ -1177,14 +1176,14 @@ p {
 
   .tooltip-selector > .tooltipimg {
   	top: -204px;
+  	left: -3px;
   	height: 205px;
   	width: 205px;
   }
 
   .tooltip-selector > .tooltiptext {
   	font-size: 15px;
-  	line-height: 22px;
-  	top: -48px;
+  	top: -46px;
   	left: 10px;
   	height: 36px;
   	width: 179px;
@@ -1342,11 +1341,10 @@ p {
 
   .tooltip-selector > .tooltiptext {
   	font-size: 16px;
-  	line-height: 24px;
-  	top: -56px;
+  	top: -53px;
   	left: 6px;
-  	height: 38px;
-  	width: 228px;
+  	height: 36px;
+  	width: 230px;
   }
 
   .villain-title {
@@ -1465,11 +1463,10 @@ p {
 
   .tooltip-selector > .tooltiptext {
   	font-size: 16px;
-  	line-height: 24px;
-  	top: -55px;
-  	left: 9px;
-  	height: 38px;
-  	width: 262px;
+  	top: -54px;
+  	left: 8px;
+  	height: 40px;
+  	width: 264px;
   }
  
   .hero-title,
