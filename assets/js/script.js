@@ -238,7 +238,7 @@ function getIntroGuide() {
         position: 'bottom'
       },
       {
-        element: '#next',
+        element: '#prev',
         intro: 'Click on the arrows to scroll through the list of superheroes.',
         position: 'top'
       },
