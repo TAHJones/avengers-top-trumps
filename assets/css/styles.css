@@ -558,34 +558,10 @@ p {
   animation-iteration-count: 1;
 }
 
-@keyframes fadeout {
-  0%{opacity:1; display:block;}
-  66%{opacity:1}
-  100%{opacity:0; display: none;}
-}
-
-@-webkit-keyframes fadeout {
-  0%{opacity:1; display:block;}
-  66%{opacity:1}
-  100%{opacity:0; display: none;}
-}
-
 .overlay-fadein {
   animation: 1.5s ease 0s normal forwards 1 fadein;
   -webkit-animation: 1.5s ease 0s normal forwards 1 fadein;
   opacity:1
-}
-
-@keyframes fadein{
-  0%{opacity:0; display: none;}
-  66%{opacity:0}
-  100%{opacity:1; display: block;}
-}
-
-@-webkit-keyframes fadein{
-  0%{opacity:0; display: none;}
-  66%{opacity:0}
-  100%{opacity:1; display: block;}
 }
 
 .modal-fadein{
@@ -594,18 +570,6 @@ p {
   opacity:1;
   display: block;
   z-index: 4;
-}
-
-@keyframes fadein{
-  0%{opacity:0; display: none;}
-  66%{opacity:0}
-  100%{opacity:1; display: block;}
-}
-
-@-webkit-keyframes fadein{
-  0%{opacity:0; display: none;}
-  66%{opacity:0}
-  100%{opacity:1; display: block;}
 }
 
 /*match color of infinity stone name with image*/
