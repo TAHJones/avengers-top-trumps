@@ -103,6 +103,27 @@ p {
   100%{opacity:0; display: none;}
 }
 
+.villain-column-fadein {
+  animation-name: fadein;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadein{
+  0%{opacity:0; display: none;}
+  66%{opacity:0}
+  100%{opacity:1; display: block;}
+}
+
+@-webkit-keyframes fadein{
+  0%{opacity:0; display: none;}
+  66%{opacity:0}
+  100%{opacity:1; display: block;}
+}
 
 .hero-column-hide {
   display: none;
