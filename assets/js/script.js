@@ -488,7 +488,7 @@ function switchToVillainSlider(){
         heroColumn.classList.replace("hero-column-fadeout","hero-column-hide");
         villainColumn.classList.replace("villain-column-hide","villain-column-fadein");
       }
-    },1500);
+    },1000);
   }
 }
 
