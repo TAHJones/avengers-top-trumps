@@ -1,6 +1,7 @@
 
 /*GLOBAL VARIABLES*/
 let villainColumn = document.getElementById("villainColumn");
+let heroColumn = document.getElementById("heroColumn");
 let heroImg = document.getElementById('heroImg');
 let villainImg = document.getElementById('villainImg');
 let slideIndex = 0; // set default value to show first slide
@@ -479,11 +480,14 @@ function resetSuperheroButton() {
 /**
  * Function is called by selectSuperheroButton function and automatically scrolls down to villain slider when selectSuperheroButton is clicked and screen width is less than 768px
  */
-function scrollToVillainSlider(){
+function switchToVillainSlider(){
   if(window.innerWidth < 576){
+    heroColumn.classList.replace("hero-column-show","hero-column-fadeout");
     setTimeout(function(){
-      villainColumn.classList.replace("villain-column-hide","villain-column-show");
-      villainColumn.scrollIntoView({behavior: "smooth"});
+      if(heroColumn.classList.contains("hero-column-fadeout")){
+        heroColumn.classList.replace("hero-column-fadeout","hero-column-hide");
+        villainColumn.classList.replace("villain-column-hide","villain-column-show");
+      }
     },1500);
   }
 }
@@ -491,12 +495,11 @@ function scrollToVillainSlider(){
 /**
  * Function is called by selectVillainButton function and automatically scrolls back up to the hero slider when the selectVillainButton is clicked and screen width is less than 768px
  */
-function scrollToHeroSlider(){
-  let heroColumn = document.getElementById("heroColumn");
+function switchToHeroSlider(){
   if(villainColumn.classList.contains("villain-column-show")){
     setTimeout(function(){
-      heroColumn.scrollIntoView();
       villainColumn.classList.replace("villain-column-show","villain-column-hide");
+      heroColumn.classList.replace("hero-column-hide","hero-column-show");
     },3000);
   }
 }
@@ -519,7 +522,7 @@ function selectSuperheroButton() {
       let infoOverlayParent = infoOverlayId.parentNode;
       infoOverlayParent.removeChild(infoOverlayId);
     }
-	 scrollToVillainSlider();
+	 switchToVillainSlider();
   }, false);	
 }
 
@@ -953,7 +956,7 @@ selectVillainButton.addEventListener('click', function(){
 	if(selectVillainButton.classList.contains("select-villain-active")){
 		getMarvelData("villain");
 	}
-	scrollToHeroSlider();
+	switchToHeroSlider();
 }, false);
 
 /**
