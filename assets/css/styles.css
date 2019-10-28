@@ -82,8 +82,40 @@ p {
 /*IMAGE-SLIDER*/
 
 .hero-column {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
+
+.hero-column-fadeout {
+  animation-name: fadeout;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeout {
+  0%{opacity:1; display:block;}
+  66%{opacity:1}
+  100%{opacity:0; display: none;}
+}
+
+@-webkit-keyframes fadeout {
+  0%{opacity:1; display:block;}
+  66%{opacity:1}
+  100%{opacity:0; display: none;}
+}
+
+
+.hero-column-hide {
+  display: none;
+}
+
+.hero-column-show {
+  display: block;
+}
+
 
 .villain-column-hide {
   display: none;
@@ -704,7 +736,7 @@ p {
   transition: all 0.25s ease-in-out;
   width: 150px;
   height: 45px;
-}
+}❮
 
 .play-again-button:hover,
 .marvel-data-button:hover {
@@ -943,6 +975,14 @@ p {
 @media (min-width: 576px) {
   .hero-column {
   	margin-bottom: 0;
+  }
+
+  .hero-column-hide {
+    display: block;
+  }
+  
+  .hero-column-show {
+    display: block;
   }
 
   .villain-column-hide {
