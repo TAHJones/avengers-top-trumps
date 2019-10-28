@@ -998,18 +998,10 @@ p {
     display: block;
   }
   
-  .hero-column-show {
-    display: block;
-  }
-
   .villain-column-hide {
     display: block;
   }
-  
-  .villain-column-show {
-    display: block;
-  }
-  
+
   .hero-slider,
   .villain-slider {
   	width: 100%;
