@@ -3,6 +3,7 @@
 /*FONTS*/
 /*BANNER*/
 /*GENERAL*/
+/*KEYFRAMES*/
 /*SCORE-COUNTER*/
 /*IMAGE-SLIDER*/
 /*DOT-SELECTOR*/
@@ -61,6 +62,34 @@ p {
 
 /*GENERAL-END*/
 
+/*KEYFRAMES*/
+
+@keyframes fadein{
+  0%{opacity:0; display: none;}
+  66%{opacity:0}
+  100%{opacity:1; display: block;}
+}
+
+@-webkit-keyframes fadein{
+  0%{opacity:0; display: none;}
+  66%{opacity:0}
+  100%{opacity:1; display: block;}
+}
+
+@keyframes fadeout {
+  0%{opacity:1; display:block;}
+  66%{opacity:1}
+  100%{opacity:0; display: none;}
+}
+
+@-webkit-keyframes fadeout {
+  0%{opacity:1; display:block;}
+  66%{opacity:1}
+  100%{opacity:0; display: none;}
+}
+
+/*KEYFRAMES-END*/
+
 /*SCORE-COUNTER*/
 
 .score-counter-list {
@@ -91,18 +120,6 @@ p {
   animation-iteration-count: 1;
 }
 
-@keyframes fadeout {
-  0%{opacity:1; display:block;}
-  66%{opacity:1}
-  100%{opacity:0; display: none;}
-}
-
-@-webkit-keyframes fadeout {
-  0%{opacity:1; display:block;}
-  66%{opacity:1}
-  100%{opacity:0; display: none;}
-}
-
 .villain-column-fadein {
   animation-name: fadein;
   animation-duration: 1.5s;
@@ -111,18 +128,6 @@ p {
   animation-direction: normal;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
-}
-
-@keyframes fadein{
-  0%{opacity:0; display: none;}
-  66%{opacity:0}
-  100%{opacity:1; display: block;}
-}
-
-@-webkit-keyframes fadein{
-  0%{opacity:0; display: none;}
-  66%{opacity:0}
-  100%{opacity:1; display: block;}
 }
 
 .hero-column-hide {
