@@ -81,10 +81,6 @@ p {
 
 /*IMAGE-SLIDER*/
 
-.hero-column {
-  margin-bottom: 15px;
-}
-
 .hero-column-fadeout {
   animation-name: fadeout;
   animation-duration: 1.5s;
