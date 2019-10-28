@@ -83,7 +83,7 @@ p {
 
 .hero-column-fadeout {
   animation-name: fadeout;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-delay: 0s;
   animation-direction: normal;
