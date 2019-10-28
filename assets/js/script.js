@@ -486,7 +486,7 @@ function switchToVillainSlider(){
     setTimeout(function(){
       if(heroColumn.classList.contains("hero-column-fadeout")){
         heroColumn.classList.replace("hero-column-fadeout","hero-column-hide");
-        villainColumn.classList.replace("villain-column-hide","villain-column-show");
+        villainColumn.classList.replace("villain-column-hide","villain-column-fadein");
       }
     },1500);
   }
@@ -496,9 +496,9 @@ function switchToVillainSlider(){
  * Function is called by selectVillainButton function and automatically scrolls back up to the hero slider when the selectVillainButton is clicked and screen width is less than 768px
  */
 function switchToHeroSlider(){
-  if(villainColumn.classList.contains("villain-column-show")){
+  if(villainColumn.classList.contains("villain-column-fadein")){
     setTimeout(function(){
-      villainColumn.classList.replace("villain-column-show","villain-column-hide");
+      villainColumn.classList.replace("villain-column-fadein","villain-column-hide");
       heroColumn.classList.replace("hero-column-hide","hero-column-show");
     },3000);
   }
