@@ -437,10 +437,13 @@ function showMarvelAPIData(data) {
 function showMarvelAPIModal() {
   let marvelDataBg = document.getElementById("marvelDataBg");
   let infoOverlayButton = document.getElementById("infoOverlayButton");
+  let marvelDataButton;
   infoOverlayButton.addEventListener("click", function(){
     marvelDataBg.classList.replace("marvel-data-hide", "marvel-data-reveal");
-	  let marvelDataButton = document.getElementById("marvelDataButton");
+    copyRight.classList.add("copyright-hide");
+	  marvelDataButton = document.getElementById("marvelDataButton");
     marvelDataButton.addEventListener("click", function() {
+      copyRight.classList.remove("copyright-hide");
       marvelDataBg.classList.replace("marvel-data-reveal", "marvel-data-hide");
     }, false);
   }, false);
