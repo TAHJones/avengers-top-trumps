@@ -453,16 +453,18 @@ function selectSuperheroCatergory() {
 	let heroInfoLink = document.getElementById("heroList");
 	let heroInfoList = document.querySelectorAll(".hero-list > li");
 	let heroInfoArray = Array.from(heroInfoList);
+	let selectedCatergory;
 	heroInfoLink.addEventListener('click', function(e){
 	  if(e.target.className === "list-group-item hero-list-active"){
-	    e.target.className = "list-group-item selected-catergory";
+	    selectedCatergory = e.target;
+	    selectedCatergory.className = "list-group-item selected-catergory";
 			heroInfoArray.forEach(function(element, index){
 		    if(element.className === "list-group-item hero-list-active"){
 		      element.className = "list-group-item hero-list-inactive";
 		  	}
 		  });
 	  }
-	  if(selectHeroButton.classList.contains("select-hero-inactive")){
+	  if(selectHeroButton.classList.contains("select-hero-inactive") && selectedCatergory.classList.contains("selected-catergory")){
 	    selectHeroButton.className = "select-hero select-hero-active";
 	  }
 	}, false);
