@@ -749,6 +749,10 @@ p {
 	margin: 20px 0;
 }
 
+.copyright-hide {
+  display: none;
+}
+
 /*FOOTER-END*/
 
 /*INTROJS-GUIDE*/
