@@ -278,7 +278,7 @@ p {
 	background-color: rgba(34, 34, 34, 0.5);
 	color: #FF9404;
 	text-align: center;
-	padding: 8px 4px 8px;
+	padding: 0.8rem 0.4rem 0.8rem;
 	position: absolute;
 	z-index: 2;
 	font-size: 1.6rem;
@@ -360,7 +360,7 @@ p {
   color: #fff;
   cursor: pointer;
 	font-size: 1.5rem;
-	padding: 7px 0;
+	padding: 0.7rem 0;
 	width: 180px;
 }
 
@@ -484,7 +484,7 @@ p {
   background-color: #1D0B46;
   border: 4px solid #888;
   border-radius: 4px;
-	padding: 10px 5px;
+	padding: 1rem 0.5rem;
 	width: 96%;
 }
 
@@ -529,7 +529,7 @@ p {
 
 .infinitystone-modal-image {
   background-color: #000;
-  padding: 12px;
+  padding: 1.2rem;
   border-radius: 8px;
   display: block;
   margin: 0 auto 15px;
@@ -548,7 +548,7 @@ p {
 
 .game-complete-list > li > img {
 	width: 20px;
-	padding: 0px;
+	padding: 0;
 	border: 1px solid #1D0B46;
 	border-radius: 24px;
 }
@@ -704,7 +704,7 @@ p {
 .marvel-data-urls a {
 	font-size: 1.5rem;
 	margin: 0 auto 8px;
-	padding: 6px 0;
+	padding: 0.6rem 0;
 	width: 200px;
 }
 
@@ -796,7 +796,7 @@ p {
 .introjs-tooltip {
 	background-color: rgba(000, 0, 0, .8);
 	color: #e66b28;
-	padding: 20px;
+	padding: 2rem;
 	margin: 0 auto;
 	text-align: center;
 	border: solid 6px #7269C2;
@@ -999,7 +999,7 @@ p {
   }
   
   .score-counter-list > img {
-    padding: 6px;
+    padding: 0.6rem;
     height: 34px;
     width: 30px;
 }
@@ -1069,14 +1069,14 @@ p {
 
   .heroInfo,
   .villainInfo {
-  	padding: 0rem 1.25rem;
+  	padding: 0 1.25rem;
   }
 
   .hero-list li,
   .villain-list li {
   	font-size: 1.2rem;
   	margin: 0 auto 2px;
-  	padding: 6px;
+  	padding: 0.6rem;
   	width: 150px;
   }
  
@@ -1125,7 +1125,7 @@ p {
 
   .score-counter-list > img {
   	margin: 0 2px 20px;
-  	padding: 8px;
+  	padding: 0.8rem;
   	height: 44px;
   	width: 40px;
   }
@@ -1210,7 +1210,7 @@ p {
   .villain-list li {
     font-size: 1.6rem;
   	margin: 0 auto 4px;
-  	padding: 6px;
+  	padding: 0.6rem;
   	width: 200px;
   }
  
@@ -1276,7 +1276,7 @@ p {
 
   .score-counter-list > img {
   	margin: 2px 4px 20px;
-  	padding: 10px;
+  	padding: 1rem;
   	height: 50px;
   	width: 45px;
   }
@@ -1366,7 +1366,7 @@ p {
   .hero-list li,
   .villain-list li {
   	margin: 0 auto 4px;
-  	padding: 8px;
+  	padding: 0.8rem;
   	width: 215px;
   }
  
@@ -1404,7 +1404,7 @@ p {
   .score-counter-lis > img {
   	margin: 4px 4px 20px;
   	width: 48px;
-  	padding: 10px;
+  	padding: 1rem;
   }
 
   #startGuide {
@@ -1490,7 +1490,7 @@ p {
   .villain-list li {
     font-size: 1.8rem;
   	margin: 0 auto 4px;
-  	padding: 10px;
+  	padding: 1rem;
   	width: 250px;
   }
  
