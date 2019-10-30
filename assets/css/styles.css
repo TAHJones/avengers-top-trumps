@@ -1506,6 +1506,18 @@ p {
   }
 }
 
+/* smartphones, touchscreens */
+@media (hover: none) and (pointer: coarse) {
+  .dot {
+  	display: none;
+  }
+
+  #villainImg, #heroImg {
+  	height: 248px;
+  	width: 205px;
+  }
+}
+
 /*RESPONSIVE-STYLES-END*/
 
 /*JASMINE*/
