@@ -1506,8 +1506,8 @@ p {
   }
 }
 
-/* smartphones, touchscreens */
-@media (hover: none) and (pointer: coarse) {
+/* tablets, touchscreens */
+@media (hover: none) and (pointer: coarse) and (min-width: 576px) {
   .dot {
   	display: none;
   }
