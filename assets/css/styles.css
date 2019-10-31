@@ -1189,7 +1189,7 @@ p {
 
   .tooltip-selector > .tooltipimg {
   	top: -204px;
-  	left: -3px;
+  	left: -2.5px;
   	height: 205px;
   	width: 205px;
   }
@@ -1347,7 +1347,7 @@ p {
 
   .tooltip-selector > .tooltipimg {
   	top: -258px;
-  	left: -7px;
+  	left: -6px;
   	height: 255px;
   	width: 255px;
   }
@@ -1469,7 +1469,7 @@ p {
 
   .tooltip-selector > .tooltipimg {
   	top: -292px;
-  	left: -4px;
+  	left: -4.5px;
   	height: 290px;
   	width: 290px;
   }
