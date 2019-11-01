@@ -39,7 +39,7 @@ When the user obtains all six infinity stones a pop up message appears that says
 ### wireframes
 
 Wireframes for the avengers-top-trumps site can be found on github at the following location:
-https://github.com/TAHJones/avengers-top-trumps/tree/master/wireframes
+https://github.com/TAHJones/avengers-top-trumps/wireframes
 
 ## Features
 
@@ -266,9 +266,12 @@ iPhone 7, iOS 12.2, Safari 12
 
 ##Visual UI Testing
 ###Screen Shot Browser Testing - Desktop
-Testing were completed on the following desktop environments.
-The screen shots are located at https://github.com/TAHJones/avengers-top-trumps/testing/screenshots
+Desktop screenshots are located at the following locations:
+https://github.com/TAHJones/avengers-top-trumps/testing/screenshots/desktop_windows
+https://github.com/TAHJones/avengers-top-trumps/testing/screenshots/desktop_mac
+https://github.com/TAHJones/avengers-top-trumps/testing/screenshots/responsive_desktop
 
+Testing were completed on the following desktop environments:
 ###Windows PC
 Windows 10, Chrome 76, 75, 1024 x 768
 Windows 10, Firefox 67, 66, 1024 x 768
@@ -301,10 +304,30 @@ Mac OS Sierra, Firefox 67, 66, 1024 x 768
 Mac OS Sierra, Opera 62, 60, 1024 x 768
 Mac OS Sierra, Safari 10.1, 1024 x 768
 
-###Screen Shot Browser Testing - Mobile
-Testing was completed on the following mobile devices.
-The screen shots are located at https://github.com/TAHJones/avengers-top-trumps/testing/screenshots
+###Screenshot Browser Testing - Tablet
+Tablet screenshots are located at the following locations:
+https://github.com/TAHJones/avengers-top-trumps/testing/screenshots/tablet_ipad
+https://github.com/TAHJones/avengers-top-trumps/testing/screenshots/responsive_tablet
 
+Testing were completed on the following tablet devices:
+iPad (6th-Generation), iOS 12.4
+iPad Pro (12.9 inch) 3rd Generation, iOS 13.0
+iPad Pro (11-inch), iOS 12.4
+iPad Pro, iOS 10.3
+iPad Pro, iOS 9.3
+iPad Air 2, iOS 9.3
+iPad Air 2, iOS 8.1
+iPad Air, iOS 8.3
+iPad Mini 4, iOS 9.3
+iPad Mini 3, iOS 8.1
+
+###Screenshot Browser Testing - Mobile
+Mobile screenshots are located at the following locations:
+https://github.com/TAHJones/avengers-top-trumps/testing/screenshots/mobile_android
+https://github.com/TAHJones/avengers-top-trumps/testing/screenshots/mobile_iphone
+https://github.com/TAHJones/avengers-top-trumps/testing/screenshots/responsive_mobile
+
+Testing was completed on the following mobile devices:
 ###Android Phones
 Samsung Galaxy S10E Android 9.0 412x869
 Galaxy Note 9 Android 8.1 360x740
