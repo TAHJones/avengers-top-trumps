@@ -6,7 +6,18 @@
        url(/assets/fonts/AVENGEANCE-HEROIC-AVENGER.ttf) format('ttf'),
 }
 
-/*BANNER*/
+/*GENERAL*/
+
+html {
+	font-size: 10px;
+	margin: 10px;
+	padding: 10px;
+}
+
+body {
+	background-color: #0a1926;
+	font-family: sans-serif;
+}
 
 h1 {
 	color: #4239B8;
@@ -22,19 +33,6 @@ h1 {
 	text-align: center;
 	text-transform: uppercase;
 	margin: 1rem 0 0.8rem;
-}
-
-/*GENERAL*/
-
-html {
-	font-size: 10px;
-	margin: 10px;
-	padding: 10px;
-}
-
-body {
-	background-color: #0a1926;
-	font-family: sans-serif;
 }
 
 p {
