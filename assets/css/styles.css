@@ -744,6 +744,10 @@ p {
 	border: solid 6px #7269C2;
 }
 
+.introjs-tooltiptext {
+  font-size: 1.4rem;
+}
+
 .introjs-helperLayer {
 	background-color: #000;
 	border: 1px solid #e66b28;
@@ -907,6 +911,10 @@ p {
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
+  .introjs-tooltiptext {
+    font-size: 1.6rem;
+  }
+
   .hero-column {
   	margin-bottom: 0;
   }
@@ -1052,6 +1060,10 @@ p {
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
+  .introjs-tooltiptext {
+    font-size: 1.8rem;
+  }
+
   .hero-slider,
   .villain-slider {
   	width: 100%;
