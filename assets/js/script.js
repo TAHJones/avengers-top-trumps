@@ -1,21 +1,21 @@
 
 /*GLOBAL VARIABLES*/
-let villainColumn = document.getElementById("villainColumn");
-let heroColumn = document.getElementById("heroColumn");
-let heroImg = document.getElementById('heroImg');
-let villainImg = document.getElementById('villainImg');
 let slideIndex = 0; // set default value to show first slide
-let prevSlide = document.getElementById('prev');
-let nextSlide = document.getElementById('next');
-let dots = document.getElementsByClassName("dot");
-let hideDots = document.getElementById("dotSelector");
-let selectHeroButton = document.getElementById('selectHeroButton');
-let selectVillainButton = document.getElementById('selectVillainButton');
+const villainColumn = document.getElementById("villainColumn");
+const heroColumn = document.getElementById("heroColumn");
+const heroImg = document.getElementById('heroImg');
+const villainImg = document.getElementById('villainImg');
+const prevSlide = document.getElementById('prev');
+const nextSlide = document.getElementById('next');
+const dots = document.getElementsByClassName("dot");
+const hideDots = document.getElementById("dotSelector");
+const selectHeroButton = document.getElementById('selectHeroButton');
+const selectVillainButton = document.getElementById('selectVillainButton');
+const resultsModal = document.getElementById("resultsModal"); // declare resultsModal in global scope so is available to showResultsModal and playAgain.addEventListener
+const copyRight = document.getElementById("copyRight");
+const startGuide = document.getElementById("startGuide");
 let superheroName;
 let supervillainName;
-let resultsModal = document.getElementById("resultsModal"); // declare resultsModal in global scope so is available to showResultsModal and playAgain.addEventListener
-let copyRight = document.getElementById("copyRight");
-let startGuide = document.getElementById("startGuide");
 let heroScoreCounter;
 let infinityStoneName_Won;
 let infinityStoneColor_Won;
