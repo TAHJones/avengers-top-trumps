@@ -338,7 +338,6 @@ p {
   color: #968CF3;
 }
 
-/*styles for selected hero catergory*/
 .selected-catergory {
   background-color: #FFA94A;
   color: #F93D1D;
@@ -393,7 +392,6 @@ p {
 
 /*SLIDER-SCROLLER*/
 
-/* Next & previous buttons */
 .prev,
 .next {
   background-color: transparent;
@@ -407,7 +405,6 @@ p {
 	border-radius: 4px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0,0,0,0.9) !important;
@@ -542,7 +539,6 @@ p {
   z-index: 4;
 }
 
-/*match color of infinity stone name with image*/
 .power-stone-color {
   color: #9f7cdc;
 }
@@ -808,7 +804,6 @@ p {
 /*RESPONSIVE-STYLES*/
 
 /*mobile devices*/
-
 @media (min-width: 360px) {
   h1 {
     font-size: 1.7rem;
