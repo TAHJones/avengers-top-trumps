@@ -257,9 +257,6 @@ p {
 	border: none;
 	border-radius: 2px;
 	transition: all .75s ease-in;
-	-webkit-transition: all .75s ease-in;
-	-moz-transition: all .75s ease-in;
-	-o-transition: all .75s ease-in;
 }
 
 .tooltip-selector > .tooltipimg {
@@ -275,9 +272,6 @@ p {
 	width: 230px;
 	z-index: 3;
 	transition: all .75s ease-in;
-	-webkit-transition: all .75s ease-in;
-	-moz-transition: all .75s ease-in;
-	-o-transition: all .75s ease-in;
 }
 
 .tooltip-selector:hover > .tooltiptext {
