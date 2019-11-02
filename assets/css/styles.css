@@ -22,9 +22,6 @@ body {
 h1 {
 	color: #4239B8;
 	font-family: avengeance-heroic-avenger;
-	background: -webkit-linear-gradient(right, #4239B8 , #FFA94A, #4239B8);
-	background: -o-linear-gradient(right, #4239B8, #FFA94A, #4239B8);
-	background: -moz-linear-gradient(right, #4239B8, #FFA94A, #4239B8);
 	background: linear-gradient(to right, #4239B8 , #FFA94A, #4239B8);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
