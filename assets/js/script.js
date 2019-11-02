@@ -78,7 +78,7 @@ function characterInfoTemplate(charactertype) {
 }
 
 /**
- * Function is called within imgOverlayTemplate function. It creates img overlay for hero and villain img elements that displays the results of the match.
+ * Function is called within displayImgOverlay function. It creates img overlay for hero and villain img elements that displays the results of the match.
  * @param {string} result - can be "Winner", "Loser" or "Draw".
  * @param {object} parentElement - can be heroImg or villainImg variable.
  * @param {string} overlayId - can be "heroOverlayId" or "villainOverlayId".
@@ -221,7 +221,7 @@ copyRight.innerHTML = getCurrentYear("footer");
  * 
  */
 function hideStartGuide() {
-  let startGuideBg = document.getElementById("startGuideBg");
+  const startGuideBg = document.getElementById("startGuideBg");
   startGuideBg.classList.replace("start-guide-show","start-guide-hide");
 }
 
@@ -316,7 +316,7 @@ function showSuperhero(data, n) {
     slideIndex = data.length;
   }
 
-  let heroInfo = document.getElementById('heroInfo');
+  const heroInfo = document.getElementById('heroInfo');
   let superHero = data[slideIndex-1];
   heroFilePathName = superHero[0];
   superheroName = superHero[1].name;
@@ -387,9 +387,9 @@ function marvelHero(superheroName){
  */
 function getMarvelApiUrl() {
   let marvelHeroName = marvelHero(heroFilePathName);
-  let apiEndpoint = 'https://gateway.marvel.com/v1/public/';
-  let resourceType = 'characters';
-  let apiKey = 'e8e6c4f6d9f4f13655a0a25d4649f754';
+  const apiEndpoint = 'https://gateway.marvel.com/v1/public/';
+  const resourceType = 'characters';
+  const apiKey = 'e8e6c4f6d9f4f13655a0a25d4649f754';
   let apiURL = apiEndpoint + resourceType + '?name=' + marvelHeroName + '&apikey=' + apiKey;
   return apiURL;
 }
@@ -398,7 +398,7 @@ function getMarvelApiUrl() {
  * Function is called within getMarvelApiData function. It takes the json data from getMarvelApiData and filters it for marvelData characters name, image, description and urls for further character information on the Marvel website. The data is assigned to variables and inserted into a template literal then inserted into marvelData element.
  */
 function showMarvelAPIData(data) {
-    let marvelData = document.getElementById('marvelData');
+    const marvelData = document.getElementById('marvelData');
     let marvelName = data.data.results[0].name;
     let marvelDescription = data.data.results[0].description;
     let marvelResources = data.data.results[0].urls;
@@ -427,7 +427,7 @@ function showMarvelAPIData(data) {
                               <button id="marvelDataButton" class="marvel-data-button" type="button">Return</button>
                               <div id="marvelCopyRight"></div>  
                             </div>`;
-    let marvelCopyRight = document.getElementById("marvelCopyRight");
+    const marvelCopyRight = document.getElementById("marvelCopyRight");
     marvelCopyRight.innerHTML = getCurrentYear("marvelApiModal");
 }
 
@@ -435,8 +435,8 @@ function showMarvelAPIData(data) {
  * Function is called within getMarvelData function using "hero" and n parameter. It reveals Marvel API modal when infoOverlayButton is clicked and hides the modal when marvelDataButton is clicked.
  */
 function showMarvelAPIModal() {
-  let marvelDataBg = document.getElementById("marvelDataBg");
-  let infoOverlayButton = document.getElementById("infoOverlayButton");
+  const marvelDataBg = document.getElementById("marvelDataBg");
+  const infoOverlayButton = document.getElementById("infoOverlayButton");
   let marvelDataButton;
   infoOverlayButton.addEventListener("click", function(){
     marvelDataBg.classList.replace("marvel-data-hide", "marvel-data-reveal");
@@ -453,8 +453,8 @@ function showMarvelAPIModal() {
  * Function is called within getMarvelData function using "hero" and n parameter. It adds 'selected' styles to 'active' hero list item when clicked, adds 'inactive' styles to all other list items and adds 'active' styles to selectHeroButton.
  */
 function selectSuperheroCatergory() {
-	let heroInfoLink = document.getElementById("heroList");
-	let heroInfoList = document.querySelectorAll(".hero-list > li");
+	const heroInfoLink = document.getElementById("heroList");
+	const heroInfoList = document.querySelectorAll(".hero-list > li");
 	let heroInfoArray = Array.from(heroInfoList);
 	let selectedCatergory;
 	heroInfoLink.addEventListener('click', function(e){
@@ -523,8 +523,8 @@ function selectSuperheroButton() {
       prevSlide.style.visibility = "hidden";
       nextSlide.style.visibility = "hidden";
       selectVillainButton.className = "select-villain select-villain-active";
-      let infoOverlayId = document.getElementById("infoOverlayId");
-      let infoOverlayParent = infoOverlayId.parentNode;
+      const infoOverlayId = document.getElementById("infoOverlayId");
+      const infoOverlayParent = infoOverlayId.parentNode;
       infoOverlayParent.removeChild(infoOverlayId);
     }
 	 switchToVillainSlider();
@@ -538,7 +538,7 @@ function selectSuperheroButton() {
  */
 function showSupervillain(data, n) {
 	let superVillain = data[n];
-  let villainInfo = document.getElementById('villainInfo');
+  const villainInfo = document.getElementById('villainInfo');
   villainFilePathName = superVillain[0];
   supervillainName = superVillain[1].name;
   agility = superVillain[1].agility;
@@ -567,7 +567,7 @@ function selectedSupervillainStyles() {
  */
 function getHeroCatergoryScore(){
   let heroCatergoryScoreObject = {};
-  let heroList = document.querySelectorAll(".hero-list > li");
+  const heroList = document.querySelectorAll(".hero-list > li");
   let heroListArray = Array.from(heroList);
   heroListArray.forEach(function(element, index){
     if(element.classList.contains("selected-catergory")) {
@@ -587,7 +587,7 @@ function getHeroCatergoryScore(){
  */
 function getVillainCatergoryScore(heroCatergoryScoreObject){
   let catergoryScoreObject = heroCatergoryScoreObject;
-  let villainList = document.querySelectorAll(".villain-list > li");
+  const villainList = document.querySelectorAll(".villain-list > li");
   let villainListArray = Array.from(villainList);
   villainListArray.forEach(function(element, index){
     if(index === catergoryScoreObject.selectedCatergoryIndex){
@@ -732,7 +732,7 @@ function compareCatergoryScore(){
 	let catergoryScoreObject = getVillainCatergoryScore(heroCatergoryScoreObject);
   let heroCatergoryScore = catergoryScoreObject.heroCatergoryScore;
   let villainCatergoryScore = catergoryScoreObject.villainCatergoryScore;
-  let infinityStoneList = document.querySelectorAll(".score-counter-list > img");
+  const infinityStoneList = document.querySelectorAll(".score-counter-list > img");
   let infinityStoneArray = Array.from(infinityStoneList);
   
   if(heroCatergoryScore > villainCatergoryScore){
@@ -791,9 +791,9 @@ function compareCatergoryScore(){
  * Function is called by resultsModal event listener when playAgainButton button is clicked. It resets modified HTML elements and CSS styles after each match except the score counter which is only reset when game is complete.
  */
 function resetGame(){
-  let scoreCounter = document.getElementById("scoreCounter");
-  let heroInfo = document.getElementById('heroInfo');
-  let villainInfo = document.getElementById('villainInfo');
+  const scoreCounter = document.getElementById("scoreCounter");
+  const heroInfo = document.getElementById('heroInfo');
+  const villainInfo = document.getElementById('villainInfo');
   let dotsArray = Array.from(dots);
   
   if(heroScoreCounter === 7){
