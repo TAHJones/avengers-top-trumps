@@ -6,8 +6,6 @@
        url(/assets/fonts/AVENGEANCE-HEROIC-AVENGER.ttf) format('ttf'),
 }
 
-/*FONTS-END*/
-
 /*BANNER*/
 
 h1 {
@@ -25,8 +23,6 @@ h1 {
 	text-transform: uppercase;
 	margin: 1rem 0 0.8rem;
 }
-
-/*BANNER-END*/
 
 /*GENERAL*/
 
@@ -47,8 +43,6 @@ p {
   line-height: 25px;
   text-align: justify;
 }
-
-/*GENERAL-END*/
 
 /*KEYFRAMES*/
 
@@ -76,8 +70,6 @@ p {
   100%{opacity:0; display: none;}
 }
 
-/*KEYFRAMES-END*/
-
 /*SCORE-COUNTER*/
 
 .score-counter-list {
@@ -93,8 +85,6 @@ p {
 	height: 26px;
 	width: 24px;
 }
-
-/*SCORE-COUNTER-END*/
 
 /*IMAGE-SLIDER*/
 
@@ -223,8 +213,6 @@ p {
   text-shadow: none;
 }
 
-/*IMAGE-SLIDER-END*/
-
 /*DOT-SELECTOR*/
 
 .dot-selector {
@@ -303,8 +291,6 @@ p {
   display: block;
   z-index: 1;
 }
-
-/*DOT-SELECTOR-END*/
 
 /*HERO-INFO*/
 
@@ -405,8 +391,6 @@ p {
   color: #f93d1d;
 }
 
-/*HERO-INFO-END*/
-
 /*SLIDER-SCROLLER*/
 
 /* Next & previous buttons */
@@ -447,8 +431,6 @@ p {
 	height: 40px;
 	width: 140px;
 }
-
-/*SLIDER-SCROLLER-END*/
 
 /*RESULTS-MODAL*/
 
@@ -613,8 +595,6 @@ p {
     animation: glow 1s step-end infinite alternate;
 }
 
-/*RESULTS-MODAL-END*/
-
 /*API-MODAL*/
 
 .marvel-data-bg {
@@ -726,8 +706,6 @@ p {
 	margin-top: 2.5rem;
 }
 
-/*API-MODAL-END*/
-
 /*FOOTER*/
 
 #copyRight {
@@ -740,8 +718,6 @@ p {
 .copyright-hide {
   display: none;
 }
-
-/*FOOTER-END*/
 
 /*INTROJS-GUIDE*/
 
@@ -828,8 +804,6 @@ p {
   right: -23px;
   border-color: transparent transparent transparent #7269C2;
 }
-
-/*INTROJS-GUIDE-END*/
 
 /*RESPONSIVE-STYLES*/
 
@@ -1506,8 +1480,6 @@ p {
   }
 }
 
-/*RESPONSIVE-STYLES-END*/
-
 /*JASMINE*/
 
 /*overlay and hide hero and villain list used for jasmine testing*/
@@ -1521,5 +1493,3 @@ p {
   -ms-transform: translateX(-50%);
   visibility: hidden;
 }
-
-/*JASMINE-END*/
