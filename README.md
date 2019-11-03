@@ -84,24 +84,11 @@ To improve mobile UX experience overlay hero and villain and cards and results m
 
 ## Technologies Used
 
-HTML5
-CSS3
+HTML
+CSS
 Javascript
-
-Bootstrap - Only grid and cards were used for the site layout.
-https://getbootstrap.com/docs/4.1/layout/grid/
-https://getbootstrap.com/docs/4.1/components/card/
-
-Intro.js - Step-by-step website guide and feature introduction.
-https://introjs.com/
-
-AVENGEANCE-HEROIC-AVENGER font - Used for Avengers Top Trumps title.
-https://www.fontspace.com/the-fontry/avengeance
-
-GIMP 2.8.16 GNU Image Manipulation Program - Linux based open source software - Used to edit and manipulate pdf and jpg images.
-
-Gpick 0.2.5 Advanced color picker - Linux based open source software - Used to generate site colour scheme using Avengers Infinity War Logo.
-https://www.deviantart.com/mintmovi3/art/Avengers-Endgame-2019-Avengers-logo-png-793337436
+[Bootstrap](https://getbootstrap.com/docs/)
+[Intro.js](https://introjs.com/)
 
 ## Testing
 
