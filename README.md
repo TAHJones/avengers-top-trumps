@@ -404,11 +404,29 @@ iPhone 4s iOS 6.0 320x480
 
 ## Deployment
 
-The avengers-top-trumps site is deployed on GitHub Pages at:
-https://github.com/TAHJones/avengers-top-trumps
+To deploy Avengers Top Trumps to GitHub Pages from its [GitHub repository](https://github.com/TAHJones/avengers-top-trumps) do the following:
 
-The avengers-top-trumps site was developed on AWS Cloud9 at:
-https://vfs.cloud9.us-east-1.amazonaws.com
+    1. Log into GitHub.
+    2. From the list of repositories on the screen, select **avengers-top-trumps**.
+    3. Alternatively select **Repositories** from the menu items at the top of the page, then select **avengers-top-trumps**.
+    4. From the menu items at the top of the page, select **Settings**.
+    5. Scroll down to the **GitHub Pages** section.
+    6. Under **Source** click on the drop-down menu and select **Master Branch**.
+    7. On selecting Master Branch the page is automatically refreshed, Avengers Top Trumps is now deployed.
+    8. In the **GitHub Pages** section the URL for the deployed website will now be available.
+
+To clone Avengers Top Trumps from its [GitHub repository](https://github.com/TAHJones/avengers-top-trumps) and run on your local environment do the following:
+
+    1. Follow this link to the Avengers Top Trumps [GitHub repository](https://github.com/TAHJones/avengers-top-trumps).
+    2. Under the repository name, click "Clone or download".
+    3. In the **Clone with HTTPs** pop up window, copy the URL address for the Avengers Top Trumps repository.
+    4. In your local IDE open your preferred terminal.
+    5. Navigate to the location where the cloned respository will be downloaded.
+    6. Type `git clone` followed by the Avengers Top Trumps URL address as follows:
+
+    `git clone https://github.com/TAHJones/avengers-top-trumps`
+
+    7. Press Enter and the cloned respository will be created.
 
 ## Credits
 
