@@ -419,12 +419,17 @@ Content for Marvel API modal is taken from the [Marvel developer website](https:
 The Avengers title font is provided by [Fontry](https://www.fontspace.com/the-fontry/avengeance)
 
 ### Media
-The images used in this site were obtained from:
-https://dlpng.com
-http://pngimg.com
-https://www.deviantart.com
-https://www.pngix.com
-https://www.clipartmax.com/
+
+Images were obtained from:
+[dlpng](https://dlpng.com)
+[pngimg](http://pngimg.com)
+[deviantart](https://www.deviantart.com)
+[pngix](https://www.pngix.com)
+[clipartmax](https://www.clipartmax.com/)
+
+Images were edited using [GIMP](https://www.gimp.org/)
+
+Color scheme was created from the Avengers [logo](https://www.deviantart.com/mintmovi3/art/Avengers-Endgame-2019-Avengers-logo-png-793337436) using [Gpick](http://www.gpick.org/)
 
 ## Acknowledgements
 
