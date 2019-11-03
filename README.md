@@ -1,6 +1,6 @@
 # Avengers Top Trumps
 
-![Avengers Top Trumps Website](https://github.com/TAHJones/avengers-top-trumps/tree/master/assets/img/screenshot_avengers _tops_trumps.png)
+![Avengers Top Trumps Website](https://github.com/TAHJones/avengers-top-trumps/tree/master/assets/img/screenshot_avengers_tops_trumps.png)
 
 View website in [Github Pages](https://tahjones.github.io/avengers-top-trumps/)
 
