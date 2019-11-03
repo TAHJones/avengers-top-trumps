@@ -52,18 +52,21 @@ Wireframes for the avengers-top-trumps site can be found [here](https://github.c
 
 ## Features
 
-##Main page
+### Main page
+
 The layout of the main page is designed to resemble two top trump cards. The card on the left is for super heroes (selected by the user) and the card on the right is for super villains (selected by the computer).
 
-##Score Counter
+### Score Counter
+
 This feature is positioned at the top of the page and consists of six grey infinity stone place holder images. Each time the user wins a match one of the place holder images is replaced with a coloured infinity stone (from left to right). If the client loses a match then the most recently acquired infinity stone is replaced with the place  holder image again. This allows the user to keep track of the score and determine how close they are to completing the game.
 
-##Results Modal
+### Results Modal
+
 Once a character and an opponent have been selected then a modal appears with the match result. It informs the user whether they have won, lost or drawn with their opponent and which infinity stone they have won, lost or retained (this is also recorded by the score counter). When the user collects all six infinity stones then the results modal informs them that they have won the game.
 
-##API Modal
-At the bottom of the currently selected superhero image is an 'info' button . When the user clicks on this button the API modal appears. This modal connects to the Marvel API and provides data from the Marvel API for the selected character. This includes their name, image, a description (when available) and a series of links to the marvel website for more character information.
+### API Modal
 
+At the bottom of the currently selected superhero image is an 'info' button . When the user clicks on this button the API modal appears. This modal connects to the Marvel API and provides data from the Marvel API for the selected character. This includes their name, image, a description (when available) and a series of links to the marvel website for more character information.
 
 ### Features Left to Implement
 
