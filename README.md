@@ -1,7 +1,7 @@
 # Avengers Top Trumps
 
 <div align="center">
-<img src="https://ibb.co/5LzPxrB/screenshot_avengers_tops_trumps_ed.png" alt="Avengers Top Trumps Website" >
+<a href="https://ibb.co/5LzPxrB"><img src="https://i.ibb.co/w4bfrSM/screenshot-avengers-tops-trumps-ed.png" alt="screenshot-avengers-tops-trumps-ed" border="0"></a>
 </div>
 
 ![Avengers Top Trumps Website](https://github.com/TAHJones/avengers-top-trumps/tree/master/assets/img/screenshot_avengers_tops_trumps.png)
