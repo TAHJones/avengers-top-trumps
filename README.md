@@ -42,8 +42,7 @@ When the user obtains all six infinity stones a pop up message appears that says
 
 ### wireframes
 
-Wireframes for the avengers-top-trumps site can be found on github at the following location:
-https://github.com/TAHJones/avengers-top-trumps/wireframes
+Wireframes for the avengers-top-trumps site can be found [here](https://github.com/TAHJones/avengers-top-trumps/tree/master/wireframes)
 
 ## Features
 
@@ -122,54 +121,54 @@ Real Time Browser Testing was achieved manually using the following procedure:
 
 2. Site Navigation - Forward and back arrows:
 
-	1. Click on the forward navigation arrow to scroll through the list of available superheroes. Confirm that the hero image and superpower category scores are displayed correctly and the later is in an active state (light blue colour, goes white on hover).
-	2. Repeat the same procedure for the back navigation arrow.
-	3. When the first superhero is selected (Antman) check that the back arrow navigates to the last superhero (Vision).
-	4. When the last superhero is selected (Vision) check that the forward arrow navigates to the first superhero (Antman).
+	10. Click on the forward navigation arrow to scroll through the list of available superheroes. Confirm that the hero image and superpower category scores are displayed correctly and the later is in an active state (light blue colour, goes white on hover).
+	11. Repeat the same procedure for the back navigation arrow.
+	12. When the first superhero is selected (Antman) check that the back arrow navigates to the last superhero (Vision).
+	13. When the last superhero is selected (Vision) check that the forward arrow navigates to the first superhero (Antman).
 
 3. Site Navigation - Dots
 
-	1. Click on dot navigation elements to select individual superheroes. Confirm that the hero image and superpower category scores are displayed correctly and the later is in an active state (turns light blue colour, goes white on hover). Confirm that the selected dot is in an active state (orange colour).
-	2. Hover over the dots to display preview of superhero. Confirm that the hovered over dot is in an active state (white colour).
-	3. Confirm that hovering and clicking on the same dot displays the same superhero image. 
+	14. Click on dot navigation elements to select individual superheroes. Confirm that the hero image and superpower category scores are displayed correctly and the later is in an active state (turns light blue colour, goes white on hover). Confirm that the selected dot is in an active state (orange colour).
+	15. Hover over the dots to display preview of superhero. Confirm that the hovered over dot is in an active state (white colour).
+	16. Confirm that hovering and clicking on the same dot displays the same superhero image. 
 
 4. Marvel API
 
-	1. Click on the 'More Info' button. Confirm that the Marvel API modal appears and displays the correct hero name, image, description (when available) and Marvel comic book links.
-	2. Click on the 'detail', 'wiki' or 'comiclink' link to confirm it works.
-	3. Click on the 'Return' button to confirm this closes the modal and returns the user to the game.
+	17. Click on the 'More Info' button. Confirm that the Marvel API modal appears and displays the correct hero name, image, description (when available) and Marvel comic book links.
+	18. Click on the 'detail', 'wiki' or 'comiclink' link to confirm it works.
+	19. Click on the 'Return' button to confirm this closes the modal and returns the user to the game.
 
 5. Superhero superpower category scores
 
-	1. Click on a superhero superpower category score. Confirm that the selected category turns orange and the 'Select Hero' button becomes active (turns light blue colour, goes white on hover).
-	2. Click on the arrow or dot navigation elements to confirm that the selected superpower category becomes deselected.
-	3. Click on another superhero superpower category score. Confirm that the selected category turns orange and the 'Select Hero' button becomes active (turns light blue colour, goes white on hover).
+	20. Click on a superhero superpower category score. Confirm that the selected category turns orange and the 'Select Hero' button becomes active (turns light blue colour, goes white on hover).
+	21. Click on the arrow or dot navigation elements to confirm that the selected superpower category becomes deselected.
+	22. Click on another superhero superpower category score. Confirm that the selected category turns orange and the 'Select Hero' button becomes active (turns light blue colour, goes white on hover).
 
 6. Select superhero Button
 
-	1. Click on the 'Select Hero' button. Confirm that the button and the image border turns orange. Also confirm that the arrow and dot navigation elements disappear and the 'Select Villain' is in an active state (turns light blue colour, goes white on hover).
+	23. Click on the 'Select Hero' button. Confirm that the button and the image border turns orange. Also confirm that the arrow and dot navigation elements disappear and the 'Select Villain' is in an active state (turns light blue colour, goes white on hover).
 
 7. Select super villain button
 
-	1. Click on the 'Select Villain' button. Confirm the villain name, image and superpower category scores are displayed and the selected category and 'Select Villain' button turns orange.
+	24. Click on the 'Select Villain' button. Confirm the villain name, image and superpower category scores are displayed and the selected category and 'Select Villain' button turns orange.
 
 8. Display Results - Image overlay and results modal
 
-	1. Confirm the hero and villain image overlays display the correct result.
-	2. Confirm the results modal appears and displays the correct results title, image, infinity stone and results statement.
-	3. Click the 'Play Again' button to confirm this closes the results modal, resets the game and returns the user to the game.
+	25. Confirm the hero and villain image overlays display the correct result.
+	26. Confirm the results modal appears and displays the correct results title, image, infinity stone and results statement.
+	27. Click the 'Play Again' button to confirm this closes the results modal, resets the game and returns the user to the game.
 
 9. Score Counter
 
-	1. If the user wins the match check that an infinity stone is added to the score counter. Confirm that the infinity stone matches the stone displayed in the results modal.
+	28. If the user wins the match check that an infinity stone is added to the score counter. Confirm that the infinity stone matches the stone displayed in the results modal.
 
-	2. If the user draws the match check that the number of infinity stones displayed in the score counter remains the same. Confirm that this matches the information displayed in the results modal.
+	29. If the user draws the match check that the number of infinity stones displayed in the score counter remains the same. Confirm that this matches the information displayed in the results modal.
 
-	3. If the user loses the match check that the most recently acquired infinity stone is removed (unless this is the first match). Confirm that this matches the information displayed in the results modal.
+	30. If the user loses the match check that the most recently acquired infinity stone is removed (unless this is the first match). Confirm that this matches the information displayed in the results modal.
 
-	4. If the user wins the match and acquires all six infinity stones confirm that the 'Game Complete' results modal is displayed. Click the 'Play Again' button to confirm this closes the results modal, resets the game and score counter then returns the user to the game.
+	31. If the user wins the match and acquires all six infinity stones confirm that the 'Game Complete' results modal is displayed. Click the 'Play Again' button to confirm this closes the results modal, resets the game and score counter then returns the user to the game.
 
-	5. Continue to play the game until each of the scenarios above has been checked.
+	32. Continue to play the game until each of the scenarios above has been checked.
 
 ###Real Time Browser Testing - Desktop
 Testing was completed using the procedure described above on the following desktop configurations:
