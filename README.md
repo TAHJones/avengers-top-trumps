@@ -413,9 +413,10 @@ https://vfs.cloud9.us-east-1.amazonaws.com
 ## Credits
 
 ### Content
-The content of the Marvel API modal (accessed by clicking the 'info' button) is comic character data taken from the Marvel developer website - https://developer.marvel.com/
 
-The avengeance-heroic-avenger font used for the site title is provided by Fontry.
+Content for Marvel API modal is taken from the [Marvel developer website](https://developer.marvel.com/)
+
+The Avengers title font is provided by [Fontry](https://www.fontspace.com/the-fontry/avengeance)
 
 ### Media
 The images used in this site were obtained from:
