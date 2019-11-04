@@ -124,7 +124,7 @@ To clone Avengers Top Trumps from its [GitHub repository](https://github.com/TAH
 5. Navigate to the location where the cloned repository will be downloaded.
 6. Type ```git clone``` followed by the Avengers Top Trumps URL address as follows:
 
-```git clone https://github.com/TAHJones/avengers-top-trumps`
+```git clone https://github.com/TAHJones/avengers-top-trumps
 ```
 
 7. Press Enter and the cloned repository will be created.
