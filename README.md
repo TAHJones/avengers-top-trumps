@@ -92,11 +92,11 @@ To improve mobile UX experience overlay hero and villain and cards and results m
 
 ## Technologies Used
 
-HTML
-CSS
-Javascript
-[Bootstrap](https://getbootstrap.com/docs/)
-[Intro.js](https://introjs.com/)
+- HTML
+- CSS
+- Javascript
+- [Bootstrap](https://getbootstrap.com/docs/)
+- [Intro.js](https://introjs.com/)
 
 ## Testing
 
