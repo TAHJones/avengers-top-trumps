@@ -140,11 +140,11 @@ The Avengers title font is provided by [Fontry](https://www.fontspace.com/the-fo
 ### Media
 
 Images were obtained from:
-[dlpng](https://dlpng.com)
-[pngimg](http://pngimg.com)
-[deviantart](https://www.deviantart.com)
-[pngix](https://www.pngix.com)
-[clipartmax](https://www.clipartmax.com/)
+- [dlpng](https://dlpng.com)
+- [pngimg](http://pngimg.com)
+- [deviantart](https://www.deviantart.com)
+- [pngix](https://www.pngix.com)
+- [clipartmax](https://www.clipartmax.com/)
 
 Images were edited using [GIMP](https://www.gimp.org/)
 
