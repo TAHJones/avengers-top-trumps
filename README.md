@@ -160,9 +160,9 @@ To clone Avengers Top Trumps from its [GitHub repository](https://github.com/TAH
 
 ### Content
 
-Content for Marvel API modal is taken from the [Marvel developer website](https://developer.marvel.com/)
+Content for Marvel API modal is taken from the [Marvel developer website](https://developer.marvel.com/).
 
-The Avengers title font is provided by [Fontry](https://www.fontspace.com/the-fontry/avengeance)
+The Avengers title font is provided by [Fontry](https://www.fontspace.com/the-fontry/avengeance).
 
 ### Media
 
@@ -173,9 +173,9 @@ Images were obtained from:
 - [pngix](https://www.pngix.com)
 - [clipartmax](https://www.clipartmax.com/)
 
-Images were edited using [GIMP](https://www.gimp.org/)
+Images were edited using [GIMP](https://www.gimp.org/).
 
-Color scheme was created from the Avengers [logo](https://www.deviantart.com/mintmovi3/art/Avengers-Endgame-2019-Avengers-logo-png-793337436) using [Gpick](http://www.gpick.org/)
+Color scheme was created from the Avengers [logo](https://www.deviantart.com/mintmovi3/art/Avengers-Endgame-2019-Avengers-logo-png-793337436) using [Gpick](http://www.gpick.org/).
 
 ## Acknowledgements
 
