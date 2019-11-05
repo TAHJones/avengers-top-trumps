@@ -34,7 +34,7 @@ The site was designed to meet these requirements in the following ways:
 
 1. The game has a built in site guide to help new users quickly get up and running. There is a mobile and tablet/desktop version of the guide.
 
-2.The site is designed so that components only become active in the correct sequence preventing the user from clicking on the wrong link/button at the wrong time. Active components change colour to make this sequence intuitively obvious to the user.
+2. The site is designed so that components only become active in the correct sequence preventing the user from clicking on the wrong link/button at the wrong time. Active components change colour to make this sequence intuitively obvious to the user.
 
 3. The user has the option to select from 1 of 15 superhero's, and from 1 of 6 superpowers. This provides the user a wide variety of superhero's and superpowers to choose from.
 
