@@ -177,4 +177,6 @@ Color scheme was created from the Avengers [logo](https://www.deviantart.com/min
 
 ## Acknowledgements
 
-The project is inspired by the top trumps card game and features characters from the Marvel comic book universe. The concept of the game is loosely based on the plot of the Avengers Infinity War film and the Infinity Gauntlet comic book series.
+- The project is inspired by the top trumps card game and features characters from the Marvel comic book universe. The concept of the game is loosely based on the plot of the Avengers Infinity War film and the Infinity Gauntlet comic book series.
+
+- Special thanks to my Code Institute Mentor Simen Daehlin for his coding expertise, patience and generosity with his time.
