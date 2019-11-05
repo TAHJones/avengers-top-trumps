@@ -18,6 +18,8 @@ If the super hero wins then the user receives the 1st of 6 infinity stones. Each
 
 This site is primarily designed for older children, teenagers and young adults, specifically fans of the Marvel films and comic books. As well as being a top trumps game, the site is intended to be a fun way to interact with the Marvel website's API to get more information about Marvel film and comic book characters.
 
+### User Requirements
+
 User requirements for Avengers Top Trumps are:
 
 1. It's easy and intuitive to use.
