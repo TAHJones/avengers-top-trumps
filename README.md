@@ -56,7 +56,7 @@ Site overview on desktop, tablet and mobile
 Site navigation - steps 1-6
 ![Site navigation - steps 1-6](https://github.com/TAHJones/avengers-top-trumps/blob/master/wireframes/site_navigation_steps1-6.pdf)
 
-Wireframes for the avengers-top-trumps site can be found [here](https://github.com/TAHJones/avengers-top-trumps/tree/master/wireframes)
+Wireframes for this project were created using [Balsamiq](https://balsamiq.com/) and can be found [here](https://github.com/TAHJones/avengers-top-trumps/tree/master/wireframes)
 
 ## Features
 
