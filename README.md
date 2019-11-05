@@ -75,7 +75,7 @@ The site was designed to meet these requirements in the following ways:
 
 2. When the user obtains all six infinity stones a pop up message appears that says 'You are a Top Trumps Champion! You have collected all six infinity stones and won the game!' The user can click the 'Start Again' but to return to the game and start again.
 
-### wireframes
+### Wireframes
 
 Site overview on desktop, tablet and mobile
 ![Site overview on desktop, tablet and mobile](https://github.com/TAHJones/avengers-top-trumps/blob/master/wireframes/layout_overview.pdf)
@@ -83,7 +83,7 @@ Site overview on desktop, tablet and mobile
 Site navigation - steps 1-6
 ![Site navigation - steps 1-6](https://github.com/TAHJones/avengers-top-trumps/blob/master/wireframes/site_navigation_steps1-6.pdf)
 
-Wireframes for this project were created using [Balsamiq](https://balsamiq.com/) and can be found [here](https://github.com/TAHJones/avengers-top-trumps/tree/master/wireframes)
+Wireframes for this project were created using [Balsamiq](https://balsamiq.com/) and can be found [here](https://github.com/TAHJones/avengers-top-trumps/tree/master/wireframes).
 
 ## Features
 
