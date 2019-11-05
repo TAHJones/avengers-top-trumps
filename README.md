@@ -1,16 +1,16 @@
 <h1 align="center">
-    <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank"><img src="https://i.ibb.co/GPL0ywN/avengers-tops-trumps-title.png" alt="avengers tops trumps title"></a>
+    <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank"><a href="https://ibb.co/C9hD6jy"><img src="https://i.ibb.co/PWw0M2y/avengers tops trumps title.png" alt="avengers-tops-trumps-title" border="0"></a>
 </h1>
+
+<div align="center">
+    <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank"><img src="https://i.ibb.co/hms1cQb/avengers-tops-trumps.png" alt="avengers tops trumps site" border="0" border="0"></a>
+</div>
 
 <div align="center">
     <a href="https://tahjones.github.io/avengers-top-trumps/">View website in Github Pages</a>
 </div>
 
 The project is based on the top trumps card game and features characters from the Marvel comic book universe. The concept of the game is loosely based on the plot of the Avengers Infinity War film and the Infinity Gauntlet comic book series.
-
-<div align="center">
-    <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank"><img src="https://i.ibb.co/DzpVjPT/avengers-tops-trumps-site.png" alt="avengers tops trumps site"></a>
-</div>
 
 To play the game the user must select from 1 of 15 super heroes, then choose from 1 of 6 superpower categories for that character. Next an opponent is randomly selected from 1 of 15 super villains. The selected superpower category score for the super hero is compared with the corresponding superpower category score for the randomly selected super villain and the winner and loser is calculated.
 
