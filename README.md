@@ -1,10 +1,10 @@
-# Avengers Top Trumps
+<h1 align="center">
+    <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank"><img src="https://i.ibb.co/GPL0ywN/avengers-tops-trumps-title.png" alt="avengers tops trumps title"></a>
+</h1>
 
 <div align="center">
-<a href="https://ibb.co/5LzPxrB"><img src="https://i.ibb.co/w4bfrSM/screenshot-avengers-tops-trumps-ed.png" alt="screenshot-avengers-tops-trumps-ed" border="0"></a>
+    <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank"><img src="https://i.ibb.co/DzpVjPT/avengers-tops-trumps-site.png" alt="avengers tops trumps site"></a>
 </div>
-
-![Avengers Top Trumps Website](https://github.com/TAHJones/avengers-top-trumps/tree/master/assets/img/screenshot_avengers_tops_trumps.png)
 
 View website in [Github Pages](https://tahjones.github.io/avengers-top-trumps/)
 
