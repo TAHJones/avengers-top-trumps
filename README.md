@@ -18,35 +18,60 @@ If the super hero wins then the user receives the 1st of 6 infinity stones. Each
 
 This site is primarily designed for older children, teenagers and young adults, specifically fans of the Marvel films and comic books. As well as being a top trumps game, the site is intended to be a fun way to interact with the Marvel website's API to get more information about Marvel film and comic book characters.
 
+User requirements for Avengers Top Trumps are:
+
+1. It's easy and intuitive to use.
+2. It's entertaining and visually appealing.
+3. Clearly informs the user of match results and their current score.
+4. Is an easy and entertaining way to interact with the Marvel API/website.
+
+The site was designed to meet these requirements in the following ways:
+
+1. The game has a built in site guide to help new users quickly get up and running. There is a mobile and tablet/desktop version of the guide.
+
+2.The site is designed so that components only become active in the correct sequence preventing the user from clicking on the wrong link/button at the wrong time. Active components change colour to make this sequence intuitively obvious to the user.
+
+3. The user has the option to select from 1 of 15 superhero's, and from 1 of 6 superpowers. This provides the user a wide variety of superhero's and superpowers to choose from.
+
+4. Super-villains are selected randomly to add an element of chance to the game to keep things interesting.
+
+5. Each time the user wins a match they receive an infinity stone. If they lose a match then they lose an infinity stone. If they collect all 6 infinity stones then they win the game. This is recorded by the score counter at the top of the page. This allows the user to keep track of their progress and motivates them to keep playing the game. The infinity stone theme also links the game to the Avengers Infinity War and Endgame movies adding another dimension to the game and making it more interesting for Marvel fans.
+
+3. The site has a consistent, modern look. The colour scheme is based on the Avenger Endgame film [logo](https://www.deviantart.com/mintmovi3/art/Avengers-Endgame-2019-Avengers-logo-png-793337436) to connect the look of the site with the concept of the game.
+
+4. When the user has selected a superhero and super-villain opponent the result of the match is displayed as images overlays indicating which character has won, lost or drawn.This provides the user with immediate feedback in a visually appealing way. This is followed by a results modal confirming the result to the user. This provides more detailed information; who defeated who, which infinity stone they won or lost, what to do next. When the user returns to the game the score counter is updated to reflect the result adding a sense of continuity from one match to the next.
+
+5. When the user selects a superhero character they can click on the 'More Info' button to open the Marvel API modal which displays information about the selected character. This includes their name, image, a description (when available) and a series of links to the marvel website for further character information. This connects the game to the wider Marvel film/comic book universe adding a sense of depth to the superhero characters being selected and allowing the user to learn more about the characters if they wish.
+
 ### Selecting a Super Hero Character
 
-Firstly the user must select a superhero. The user can navigate through the list of superheroes by either clicking on the dots beneath the image slider or by clicking on the navigation arrows at the bottom of the 'hero card'. A preview of each character is available by hovering over each of the dots.
+1. Firstly the user must select a superhero. The user can navigate through the list of superheroes by either clicking on the dots beneath the image slider or by clicking on the navigation arrows at the bottom of the 'hero card'. A preview of each character is available by hovering over each of the dots.
 
-Secondly the user must select a superhero category from the list of 6 categories e.g. agility. The super hero categories become available once the user begins to scroll through the list of superheroes.
+2. Secondly the user must select a superhero category from the list of 6 categories e.g. agility. The super hero categories become available once the user begins to scroll through the list of superheroes.
 
-Once the user has selected a category for a superhero then they are able to select that character. This is indicated by the 'Select Hero' button which changes colour from faded-out blue to bright blue indicating it's change from inactive to active status.
+3. Once the user has selected a category for a superhero then they are able to select that character. This is indicated by the 'Select Hero' button which changes colour from faded-out blue to bright blue indicating it's change from inactive to active status.
 
-At this point the user is still able to select another character by using the dot and arrow navigation buttons. Once the user clicks the 'Select Hero' button their character choice is confirmed and cannot be undone. This is confirmed by the 'Select Hero' button going orange and inactive and the image border turning orange.
+4. At this point the user is still able to select another character by using the dot and arrow navigation buttons. Once the user clicks the 'Select Hero' button their character choice is confirmed and cannot be undone. This is confirmed by the 'Select Hero' button going orange and inactive and the image border turning orange.
 
 ### Selecting a Super Villain Opponent
 
-Once the user has confirmed their selection then the 'Select Villain' button changes colour from faded-out blue to bright blue indicating it's change from inactive to active status.
+1. Once the user has confirmed their selection then the 'Select Villain' button changes colour from faded-out blue to bright blue indicating it's change from inactive to active status.
 
-When the user clicks the 'Select Villain' button a super villain is randomly selected as an opponent. Once a super villain has been selected it's category score is compared with the corresponding superhero category score that was selected and the result of the match is determined e.g. the user either wins, draws or loses.
+2. When the user clicks the 'Select Villain' button a super villain is randomly selected as an opponent. Once a super villain has been selected it's category score is compared with the corresponding superhero category score that was selected and the result of the match is determined e.g. the user either wins, draws or loses.
 
-### The Result of the Match / How to play the Game
+### The Result of the Match
 
-If the user wins then a 'Winner' message appears over the image of their super hero character and a 'Loser' message appears over the image of their super villain opponent. If the user loses then a 'Loser' message appears over the image of their super hero character and a 'Winner' message appears over the image of their super villain opponent. If the result is a draw then a 'Draw' message appears over both characters.
+1. If the user wins then a 'Winner' message appears over the image of their super hero character and a 'Loser' message appears over the image of their super villain opponent. If the user loses then a 'Loser' message appears over the image of their super hero character and a 'Winner' message appears over the image of their super villain opponent. If the result is a draw then a 'Draw' message appears over both characters.
 
-This is followed by a pop up message which confirms the result of the match. If the user won then it informs them that they have gained an infinity stone. If they have lost then it informs them that they have lost an infinity stone.
+2. This is followed by a pop up message which confirms the result of the match. If the user won then it informs them that they have gained an infinity stone. If they have lost then it informs them that they have lost an infinity stone.
 
-The user can remove the pop up message and return to the main page by clicking on the 'Play Again' button. This resets the game and updates the number of infinity the user has on the score counter at the top of the main page.
+3. The user can remove the pop up message and return to the main page by clicking on the 'Play Again' button. This resets the game and updates the number of infinity the user has on the score counter at the top of the main page.
 
 ### How to win the game
 
-In order to win the game the user must continue to play matches until they have collected all six infinity stones. This can be achieved playing a minimum of six matches (without drawing or losing) or more likely over more than six matches winning, drawing and losing thereby gaining, losing and regaining infinity stones until the target of six stones is reached.
+1. In order to win the game the user must continue to play matches until they have collected all six infinity stones. This can be achieved playing a minimum of six matches (without drawing or losing) or more likely over more than six matches winning, drawing and losing thereby gaining, losing and regaining infinity stones until the target of six stones is reached.
 
-When the user obtains all six infinity stones a pop up message appears that says 'You are a Top Trumps Champion! You have collected all six infinity stones and won the game!' The user can click the 'Start Again' but to return to the game and start again.
+2. When the user obtains all six infinity stones a pop up message appears that says 'You are a Top Trumps Champion! You have collected all six infinity stones and won the game!' The user can click the 'Start Again' but to return to the game and start again.
 
 ### wireframes
 
