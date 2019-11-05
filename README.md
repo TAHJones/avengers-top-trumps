@@ -103,17 +103,17 @@ At the bottom of the currently selected superhero image is an 'info' button . Wh
 
 ### Features Left to Implement
 
-Currently it's too easy to win the with certain superhero characters. It would be good to reduce the category scores of some superhero characters.
+- Currently it's too easy to win the with certain superhero characters. It would be good to reduce the category scores of some superhero characters.
 
-A second infinity stone score counter for the super villains so it's possible for the user to lose the entire game as well as individual matches.
+- A second infinity stone score counter for the super villains so it's possible for the user to lose the entire game as well as individual matches.
 
-The option for users to select a super villains and have super heroes as opponents.
+- The option for users to select a super villains and have super heroes as opponents.
 
-Only allow the use of each character once. Once a superhero / super villain has been selected for a match they cannot be used again until the game has been completed.
+- Only allow the use of each character once. Once a superhero / super villain has been selected for a match they cannot be used again until the game has been completed.
 
-Have the option for the user to play the game in easy, normal or hard mode, which changes the category scores for superheroes and super villains accordingly.
+- Have the option for the user to play the game in easy, normal or hard mode, which changes the category scores for superheroes and super villains accordingly.
 
-To improve mobile UX experience overlay hero and villain and cards and results modal to remove need to scroll up and down the page - has been implemented.
+- To improve mobile UX experience overlay hero and villain and cards and results modal to remove need to scroll up and down the page - has been implemented.
 
 ## Technologies Used
 
