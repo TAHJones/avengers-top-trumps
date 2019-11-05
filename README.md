@@ -12,13 +12,11 @@
     <br>
     <a href="https://tahjones.github.io/avengers-top-trumps/">View website in Github Pages</a>
     <br>
+    <p>To play the game the user must select from 1 of 15 super heroes, then choose from 1 of 6 superpower categories for that character. Next an opponent is randomly selected from 1 of 15 super villains. The selected superpower category score for the super hero is compared with the corresponding superpower category score for the randomly selected super villain and the winner and loser is calculated.</p>
+    <br>
+    <p>If the super hero wins then the user receives the 1st of 6 infinity stones. Each time the user beats an opponent they win another stone. When the user loses they lose a stone and if they draw they neither gain or lose a stone. To win the game the user must collect all 6 infinity stones.</p>
 </div>
 
-
-
-To play the game the user must select from 1 of 15 super heroes, then choose from 1 of 6 superpower categories for that character. Next an opponent is randomly selected from 1 of 15 super villains. The selected superpower category score for the super hero is compared with the corresponding superpower category score for the randomly selected super villain and the winner and loser is calculated.
-
-If the super hero wins then the user receives the 1st of 6 infinity stones. Each time the user beats an opponent they win another stone. When the user loses they lose a stone and if they draw they neither gain or lose a stone. To win the game the user must collect all 6 infinity stones.
 
 ## UX
 
