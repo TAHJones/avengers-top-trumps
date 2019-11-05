@@ -3,10 +3,13 @@
 </h1>
 
 <div align="center">
+    <a href="https://tahjones.github.io/avengers-top-trumps/">View website in Github Pages</a>
+</div>
+
+<div align="center">
     <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank"><img src="https://i.ibb.co/DzpVjPT/avengers-tops-trumps-site.png" alt="avengers tops trumps site"></a>
 </div>
 
-View website in [Github Pages](https://tahjones.github.io/avengers-top-trumps/)
 
 The project is based on the top trumps card game and features characters from the Marvel comic book universe. The concept of the game is loosely based on the plot of the Avengers Infinity War film and the Infinity Gauntlet comic book series.
 
