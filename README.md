@@ -1,5 +1,5 @@
 <h1 align="center">
-    <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank"><a href="https://ibb.co/C9hD6jy"><img src="https://i.ibb.co/PWw0M2y/avengers tops trumps title.png" alt="avengers tops trumps title"></a>
+    <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank"><a href="https://ibb.co/C9hD6jy"<img src="https://i.ibb.co/h9S899m/avengers-tops-trumps-title.png" alt="avengers tops trumps title" border="0"></a>
 </h1>
 
 <div align="center">
