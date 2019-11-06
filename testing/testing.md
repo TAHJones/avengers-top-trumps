@@ -45,67 +45,63 @@ Real Time Browser Testing was done on an extensive number of desktop, tablet and
 
 ##### Intro.js Guide:
 
-   * Click on the 'Guide' button.
-   * Click on the 'Next' button, check the correct page element is highlighted and the correct message is displayed.
-   * Click the 'Next' button again, checking the correct element is highlighted and message is displayed.
-   * Continue to click the 'Next' button checking each step of the guide. Confirm no steps are missed and are displayed in the correct order.
-   * Click on one of the guides dot navigation buttons. Check that it navigates to the correct element/message.
-   * Repeat the previous step twice using clicking different dot buttons to select different steps.
-   * Click on the 'Back' button. Check that is navigates to the previous element/message. Repeat this step twice.
-   * Click on the 'Skip' button. Check that this exits the guide.
-   * Restart the guide and navigate to the final screen. Click on the 'Done' button to check that this exits the guide.
-   * Click on the site dot or arrow buttons to check that this removes the 'Guide' button from the screen.
+1. Click on the 'Guide' button.
+2. Click on the 'Next' button, check the correct page element is highlighted and the correct message is displayed.
+3. Click the 'Next' button again, checking the correct element is highlighted and message is displayed.
+4. Continue to click the 'Next' button checking each step of the guide. Confirm no steps are missed and are displayed in the correct order.
+5. Click on one of the guides dot navigation buttons. Check that it navigates to the correct element/message.
+6. Repeat the previous step twice using clicking different dot buttons to select different steps.
+7. Click on the 'Back' button. Check that is navigates to the previous element/message. Repeat this step twice.
+8. Click on the 'Skip' button. Check that this exits the guide.
+9. Restart the guide and navigate to the final screen. Click on the 'Done' button to check that this exits the guide.
+10. Click on the site dot or arrow buttons to check that this removes the 'Guide' button from the screen.
 
 ##### Site Navigation - Forward and back arrows:
 
-   * Click on the forward navigation arrow to scroll through the list of available superheroes. Confirm that the hero image and superpower category scores are displayed correctly and the later is in an active state (light blue colour, goes white on hover).
-   * Repeat the same procedure for the back navigation arrow.
-   * When the first superhero is selected (Antman) check that the back arrow navigates to the last superhero (Vision).
-   * When the last superhero is selected (Vision) check that the forward arrow navigates to the first superhero (Antman).
+1. Click on the forward navigation arrow to scroll through the list of available superheroes. Confirm that the hero image and superpower category scores are displayed correctly and the later is in an active state (light blue colour, goes white on hover).
+2. Repeat the same procedure for the back navigation arrow.
+3. When the first superhero is selected (Antman) check that the back arrow navigates to the last superhero (Vision).
+4. When the last superhero is selected (Vision) check that the forward arrow navigates to the first superhero (Antman).
 
 ##### Site Navigation - Dots
 
-   * Click on dot navigation elements to select individual superheroes. Confirm that the hero image and superpower category scores are displayed correctly and the later is in an active state (turns light blue colour, goes white on hover). Confirm that the selected dot is in an active state (orange colour).
-   * Hover over the dots to display preview of superhero. Confirm that the hovered over dot is in an active state (white colour).
-   * Confirm that hovering and clicking on the same dot displays the same superhero image.
+1. Click on dot navigation elements to select individual superheroes. Confirm that the hero image and superpower category scores are displayed correctly and the later is in an active state (turns light blue colour, goes white on hover). Confirm that the selected dot is in an active state (orange colour).
+2. Hover over the dots to display preview of superhero. Confirm that the hovered over dot is in an active state (white colour).
+3. Confirm that hovering and clicking on the same dot displays the same superhero image.
 
 ##### Marvel API
 
-   * Click on the 'More Info' button. Confirm that the Marvel API modal appears and displays the correct hero name, image, description (when available) and Marvel comic book links.
-   * Click on the 'detail', 'wiki' or 'comiclink' link to confirm it works.
-   * Click on the 'Return' button to confirm this closes the modal and returns the user to the game.
+1. Click on the 'More Info' button. Confirm that the Marvel API modal appears and displays the correct hero name, image, description (when available) and Marvel comic book links.
+2. Click on the 'detail', 'wiki' or 'comiclink' link to confirm it works.
+3. Click on the 'Return' button to confirm this closes the modal and returns the user to the game.
 
 ##### Superhero superpower category scores
 
-   * Click on a superhero superpower category score. Confirm that the selected category turns orange and the 'Select Hero' button becomes active (turns light blue colour, goes white on hover).
-   * Click on the arrow or dot navigation elements to confirm that the selected superpower category becomes deselected.
-   * Click on another superhero superpower category score. Confirm that the selected category turns orange and the 'Select Hero' button becomes active (turns light blue colour, goes white on hover).
+1. Click on a superhero superpower category score. Confirm that the selected category turns orange and the 'Select Hero' button becomes active (turns light blue colour, goes white on hover).
+2. Click on the arrow or dot navigation elements to confirm that the selected superpower category becomes deselected.
+3. Click on another superhero superpower category score. Confirm that the selected category turns orange and the 'Select Hero' button becomes active (turns light blue colour, goes white on hover).
 
 ##### Select superhero Button
 
-   * Click on the 'Select Hero' button. Confirm that the button and the image border turns orange. Also confirm that the arrow and dot navigation elements disappear and the 'Select Villain' is in an active state (turns light blue colour, goes white on hover).
+1. Click on the 'Select Hero' button. Confirm that the button and the image border turns orange. Also confirm that the arrow and dot navigation elements disappear and the 'Select Villain' is in an active state (turns light blue colour, goes white on hover).
 
 ##### Select super villain button
 
-   * Click on the 'Select Villain' button. Confirm the villain name, image and superpower category scores are displayed and the selected category and 'Select Villain' button turns orange.
+1. Click on the 'Select Villain' button. Confirm the villain name, image and superpower category scores are displayed and the selected category and 'Select Villain' button turns orange.
 
 ##### Display Results - Image overlay and results modal
 
-   * Confirm the hero and villain image overlays display the correct result.
-   * Confirm the results modal appears and displays the correct results title, image, infinity stone and results statement.
-   * Click the 'Play Again' button to confirm this closes the results modal, resets the game and returns the user to the game.
+1. Confirm the hero and villain image overlays display the correct result.
+2. Confirm the results modal appears and displays the correct results title, image, infinity stone and results statement.
+3. Click the 'Play Again' button to confirm this closes the results modal, resets the game and returns the user to the game.
 
 ##### Score Counter
 
-   * If the user wins the match check that an infinity stone is added to the score counter. Confirm that the infinity stone matches the stone displayed in the results modal.
-
-   * If the user draws the match check that the number of infinity stones displayed in the score counter remains the same. Confirm that this matches the information displayed in the results modal.
-
-   * If the user loses the match check that the most recently acquired infinity stone is removed (unless this is the first match). Confirm that this matches the information displayed in the results modal.
-
-   * If the user wins the match and acquires all six infinity stones confirm that the 'Game Complete' results modal is displayed. Click the 'Play Again' button to confirm this closes the results modal, resets the game and score counter then returns the user to the game.
-
-   * Continue to play the game until each of the scenarios above has been checked.
+1. If the user wins the match check that an infinity stone is added to the score counter. Confirm that the infinity stone matches the stone displayed in the results modal.
+2. If the user draws the match check that the number of infinity stones displayed in the score counter remains the same. Confirm that this matches the information displayed in the results modal.
+3. If the user loses the match check that the most recently acquired infinity stone is removed (unless this is the first match). Confirm that this matches the information displayed in the results modal.
+4. If the user wins the match and acquires all six infinity stones confirm that the 'Game Complete' results modal is displayed. Click the 'Play Again' button to confirm this closes the results modal, resets the game and score counter then returns the user to the game.
+5. Continue to play the game until each of the scenarios above has been checked.
 
 #### Screen Shot Browser Testing
 
