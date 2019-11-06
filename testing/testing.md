@@ -8,12 +8,12 @@ Return to [README.md](https://github.com/TAHJones/avengers-top-trumps/blob/maste
 
 The following validation services and linters were used to check the code for this project:
 
-[W3C Markup Validation](https://validator.w3.org/) was used to validate HTML.
-[W3C CSS validation](http://jigsaw.w3.org/css-validator/) was used to validate CSS.
-[JSHint](https://jshint.com/) was used to validate JavaScript.
-[Code Beautify](https://codebeautify.org/jsonviewer) was used to validate JSON data.
-[Can I Use](https://caniuse.com/) was used to check whether browser prefix's were necessary for newer CSS properties.
-[Should I Prefix](http://shouldiprefix.com/) was used to check whether browser prefix's were necessary for newer CSS properties.
+- [W3C Markup Validation](https://validator.w3.org/) was used to validate HTML.
+- [W3C CSS validation](http://jigsaw.w3.org/css-validator/) was used to validate CSS.
+- [JSHint](https://jshint.com/) was used to validate JavaScript.
+- [Code Beautify](https://codebeautify.org/jsonviewer) was used to validate JSON data.
+- [Can I Use](https://caniuse.com/) was used to check whether browser prefix's were necessary for newer CSS properties.
+- [Should I Prefix](http://shouldiprefix.com/) was used to check whether browser prefix's were necessary for newer CSS properties.
 
 ### Jasmine
 
@@ -161,4 +161,3 @@ Mobile screenshots can be found at the following locations:
    * 'Select Hero' button becomes active when hero list parent element ul#heroList is clicked. Modified selectSuperheroCatergory function conditional statement so button can only become active after hero list item has been selected first to prevent this from happening - fixed
 
    * Copyright statement is visible when api modal is active. Modified showMarvelAPIModal function to hide copyright statement when api modal is revealed - fixed.
-  
