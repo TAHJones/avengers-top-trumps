@@ -127,33 +127,21 @@ Mobile screenshots can be found at the following locations:
 ### Issue/Bugs
 
 #### Layout Problems
-
-   * Increase in font-size text when hero-list changes from 'active' to 'in-active' creating small downward shift of hero-column layout - fixed.
-
-   * Horizontal misalignment between hero image and hero image preview. Prevents a smooth transition from one state to the other - fixed.
-
-   * Small size difference and misalignment of hero image 'More Info' button and hero image preview text. Prevents a smooth transition from one state to the other - fixed.
-
-   * Alignment of tooltip img (superhero preview) and superhero image varies on different desktop, tablet and mobile devices - known issue.
+- Increase in font-size text when hero-list changes from 'active' to 'in-active' creating small downward shift of hero-column layout - fixed.
+- Horizontal misalignment between hero image and hero image preview. Prevents a smooth transition from one state to the other - fixed.
+- Small size difference and misalignment of hero image 'More Info' button and hero image preview text. Prevents a smooth transition from one state to the other - fixed.
+- Alignment of tooltip img (superhero preview) and superhero image varies on different desktop, tablet and mobile devices - known issue.
 
 #### UX Issues
 
-   * Cards (hero-column and villain-column) are too large on small screens and require user to scroll up and down to select a character. Removed card-body padding on the hero-info and villain-info sections on screens below 768px so that whole of card (hero-column or villain-column) is visible on small screens - fixed.
-
-   * Navigation on small screens is laborious. The user is required to scroll up and down the screen too much. This becomes tedious after 2-3 matches - fixed.
-
-     * Solution 1 - Use scrollIntoView method to automatically scroll down to villain-column when 'select hero' button is clicked or up to hero-column when 'select villain' button is clicked. Also use display property to hide when not in use. This solution was used initially then replaced with the solution below.
-
-     * Solution 2 - Use animation property to fadeout hero-column and fade in villain-column to replace it when 'select hero' button is clicked. Use display property to return hero-column and villain-column back to original state when 'select villain' button is clicked.
-
-   * Dot navigation is visible on touch screen devices larger than 768px width and doesn't work correctly. Added new media query that hides dot navigation on touch screens larger than 768px width - fixed.
-  
-   * Fade-in animation for img overlay and results modal felt sluggish. Decrease duration of fade-in animation from 3secs to 1.5secs - fixed.
+- Cards (hero-column and villain-column) are too large on small screens and require user to scroll up and down to select a character. Removed card-body padding on the hero-info and villain-info sections on screens below 768px so that whole of card (hero-column or villain-column) is visible on small screens - fixed.
+- Navigation on small screens is laborious. The user is required to scroll up and down the screen too much. This becomes tedious after 2-3 matches - fixed.
+ * Solution 1 - Use scrollIntoView method to automatically scroll down to villain-column when 'select hero' button is clicked or up to hero-column when 'select villain' button is clicked. Also use display property to hide when not in use. This solution was used initially then replaced with the solution below.
+ * Solution 2 - Use animation property to fadeout hero-column and fade in villain-column to replace it when 'select hero' button is clicked. Use display property to return hero-column and villain-column back to original state when 'select villain' button is clicked.
+- Dot navigation is visible on touch screen devices larger than 768px width and doesn't work correctly. Added new media query that hides dot navigation on touch screens larger than 768px width - fixed.
+- Fade-in animation for img overlay and results modal felt sluggish. Decrease duration of fade-in animation from 3secs to 1.5secs - fixed.
 
 #### Technical Problems
-
-   * Score counter was recording wins and draws but not recording losses. This was caused by compareCatergoryScore function trying to use innerHTML method to insert image into image element which doesn't work. This was fixed by replacing innerHTML with replaceWith method - fixed.
-
-   * 'Select Hero' button becomes active when hero list parent element ul#heroList is clicked. Modified selectSuperheroCatergory function conditional statement so button can only become active after hero list item has been selected first to prevent this from happening - fixed
-
-   * Copyright statement is visible when api modal is active. Modified showMarvelAPIModal function to hide copyright statement when api modal is revealed - fixed.
+- Score counter was recording wins and draws but not recording losses. This was caused by compareCatergoryScore function trying to use innerHTML method to insert image into image element which doesn't work. This was fixed by replacing innerHTML with replaceWith method - fixed.
+- 'Select Hero' button becomes active when hero list parent element ul#heroList is clicked. Modified selectSuperheroCatergory function conditional statement so button can only become active after hero list item has been selected first to prevent this from happening - fixed
+- Copyright statement is visible when api modal is active. Modified showMarvelAPIModal function to hide copyright statement when api modal is revealed - fixed.
