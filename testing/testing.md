@@ -37,7 +37,7 @@ Javascript source file for running Jasmine tests: [jasmineSrc.js](https://github
 
 ### Cross Browser Testing
 
-Cross browser testing was achieved using [Lambda Test](https://www.lambdatest.com/)
+Cross browser testing was achieved using [Lambda Test](https://www.lambdatest.com/).
 
 #### Real Time Browser Testing
 
