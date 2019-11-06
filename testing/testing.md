@@ -43,7 +43,7 @@ Cross browser testing was achieved using [Lambda Test](https://www.lambdatest.co
 
 Real Time Browser Testing was done on an extensive number of desktop, tablet and mobile devices using the latest 2 versions of Chrome, Firefox, Opera, Safari and Edge. These manual tests were achieved using the following procedure:
 
-1. Intro.js Guide:
+##### Intro.js Guide:
 
    * Click on the 'Guide' button.
    * Click on the 'Next' button, check the correct page element is highlighted and the correct message is displayed.
@@ -56,46 +56,46 @@ Real Time Browser Testing was done on an extensive number of desktop, tablet and
    * Restart the guide and navigate to the final screen. Click on the 'Done' button to check that this exits the guide.
    * Click on the site dot or arrow buttons to check that this removes the 'Guide' button from the screen.
 
-2. Site Navigation - Forward and back arrows:
+##### Site Navigation - Forward and back arrows:
 
    * Click on the forward navigation arrow to scroll through the list of available superheroes. Confirm that the hero image and superpower category scores are displayed correctly and the later is in an active state (light blue colour, goes white on hover).
    * Repeat the same procedure for the back navigation arrow.
    * When the first superhero is selected (Antman) check that the back arrow navigates to the last superhero (Vision).
    * When the last superhero is selected (Vision) check that the forward arrow navigates to the first superhero (Antman).
 
-3. Site Navigation - Dots
+##### Site Navigation - Dots
 
    * Click on dot navigation elements to select individual superheroes. Confirm that the hero image and superpower category scores are displayed correctly and the later is in an active state (turns light blue colour, goes white on hover). Confirm that the selected dot is in an active state (orange colour).
    * Hover over the dots to display preview of superhero. Confirm that the hovered over dot is in an active state (white colour).
    * Confirm that hovering and clicking on the same dot displays the same superhero image.
 
-4. Marvel API
+##### Marvel API
 
    * Click on the 'More Info' button. Confirm that the Marvel API modal appears and displays the correct hero name, image, description (when available) and Marvel comic book links.
    * Click on the 'detail', 'wiki' or 'comiclink' link to confirm it works.
    * Click on the 'Return' button to confirm this closes the modal and returns the user to the game.
 
-5. Superhero superpower category scores
+##### Superhero superpower category scores
 
    * Click on a superhero superpower category score. Confirm that the selected category turns orange and the 'Select Hero' button becomes active (turns light blue colour, goes white on hover).
    * Click on the arrow or dot navigation elements to confirm that the selected superpower category becomes deselected.
    * Click on another superhero superpower category score. Confirm that the selected category turns orange and the 'Select Hero' button becomes active (turns light blue colour, goes white on hover).
 
-6. Select superhero Button
+##### Select superhero Button
 
    * Click on the 'Select Hero' button. Confirm that the button and the image border turns orange. Also confirm that the arrow and dot navigation elements disappear and the 'Select Villain' is in an active state (turns light blue colour, goes white on hover).
 
-7. Select super villain button
+##### Select super villain button
 
    * Click on the 'Select Villain' button. Confirm the villain name, image and superpower category scores are displayed and the selected category and 'Select Villain' button turns orange.
 
-8. Display Results - Image overlay and results modal
+##### Display Results - Image overlay and results modal
 
    * Confirm the hero and villain image overlays display the correct result.
    * Confirm the results modal appears and displays the correct results title, image, infinity stone and results statement.
    * Click the 'Play Again' button to confirm this closes the results modal, resets the game and returns the user to the game.
 
-9. Score Counter
+##### Score Counter
 
    * If the user wins the match check that an infinity stone is added to the score counter. Confirm that the infinity stone matches the stone displayed in the results modal.
 
