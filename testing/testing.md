@@ -126,7 +126,7 @@ Mobile screenshots can be found at the following locations:
 
 ### Issue/Bugs
 
-1. Layout Problems
+#### Layout Problems
 
    * Increase in font-size text when hero-list changes from 'active' to 'in-active' creating small downward shift of hero-column layout - fixed.
 
@@ -136,7 +136,7 @@ Mobile screenshots can be found at the following locations:
 
    * Alignment of tooltip img (superhero preview) and superhero image varies on different desktop, tablet and mobile devices - known issue.
 
-2. UX Issues
+#### UX Issues
 
    * Cards (hero-column and villain-column) are too large on small screens and require user to scroll up and down to select a character. Removed card-body padding on the hero-info and villain-info sections on screens below 768px so that whole of card (hero-column or villain-column) is visible on small screens - fixed.
 
@@ -150,7 +150,7 @@ Mobile screenshots can be found at the following locations:
   
    * Fade-in animation for img overlay and results modal felt sluggish. Decrease duration of fade-in animation from 3secs to 1.5secs - fixed.
 
-3. Technical Problems
+#### Technical Problems
 
    * Score counter was recording wins and draws but not recording losses. This was caused by compareCatergoryScore function trying to use innerHTML method to insert image into image element which doesn't work. This was fixed by replacing innerHTML with replaceWith method - fixed.
 
