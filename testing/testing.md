@@ -109,20 +109,20 @@ Screen Shot Browser Testing was done on an extensive number of desktop, tablet a
 
 Desktop screenshots can be found at the following locations:
 
-* [Windows](https://github.com/TAHJones/avengers-top-trumps/tree/master/testing/screenshots/desktop_windows)
-* [Mac](https://github.com/TAHJones/avengers-top-trumps/tree/master/testing/screenshots/desktop_mac)
-* [Responsive](https://github.com/TAHJones/avengers-top-trumps/tree/master/testing/screenshots/responsive_desktop)
+- [Windows](https://github.com/TAHJones/avengers-top-trumps/tree/master/testing/screenshots/desktop_windows)
+- [Mac](https://github.com/TAHJones/avengers-top-trumps/tree/master/testing/screenshots/desktop_mac)
+- [Responsive](https://github.com/TAHJones/avengers-top-trumps/tree/master/testing/screenshots/responsive_desktop)
 
 Tablet screenshots can be found at the following locations:
 
-* [iPad](https://github.com/TAHJones/avengers-top-trumps/tree/master/testing/screenshots/tablet_ipad)
-* [Responsive](https://github.com/TAHJones/avengers-top-trumps/tree/master/testing/screenshots/responsive_tablet)
+- [iPad](https://github.com/TAHJones/avengers-top-trumps/tree/master/testing/screenshots/tablet_ipad)
+- [Responsive](https://github.com/TAHJones/avengers-top-trumps/tree/master/testing/screenshots/responsive_tablet)
 
 Mobile screenshots can be found at the following locations:
 
-* [android](https://github.com/TAHJones/avengers-top-trumps/tree/master/testing/screenshots/mobile_android)
-* [iPhone](https://github.com/TAHJones/avengers-top-trumps/tree/master/testing/screenshots/mobile_iphone)
-* [responsive](https://github.com/TAHJones/avengers-top-trumps/tree/master/testing/screenshots/responsive_mobile)
+- [android](https://github.com/TAHJones/avengers-top-trumps/tree/master/testing/screenshots/mobile_android)
+- [iPhone](https://github.com/TAHJones/avengers-top-trumps/tree/master/testing/screenshots/mobile_iphone)
+- [responsive](https://github.com/TAHJones/avengers-top-trumps/tree/master/testing/screenshots/responsive_mobile)
 
 ### Issue/Bugs
 
