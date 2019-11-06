@@ -45,37 +45,87 @@ The site was designed to meet these requirements in the following ways:
 
 5. When the user selects a superhero character they can click on the 'More Info' button to open the Marvel API modal which displays information about the selected character. This includes their name, image, a description (when available) and a series of links to the marvel website for further character information. This connects the game to the wider Marvel film/comic book universe adding a sense of depth to the superhero characters being selected and allowing the user to learn more about the characters if they wish.
 
-### Selecting a Super Hero Character
-
-1. Firstly the user must select a superhero. The user can navigate through the list of superheroes by either clicking on the dots beneath the image slider or by clicking on the navigation arrows at the bottom of the 'hero card'. A preview of each character is available by hovering over each of the dots.
-
-2. Secondly the user must select a superhero category from the list of 6 categories e.g. agility. The super hero categories become available once the user begins to scroll through the list of superheroes.
-
-3. Once the user has selected a category for a superhero then they are able to select that character. This is indicated by the 'Select Hero' button which changes colour from faded-out blue to bright blue indicating it's change from inactive to active status.
-
-4. At this point the user is still able to select another character by using the dot and arrow navigation buttons. Once the user clicks the 'Select Hero' button their character choice is confirmed and cannot be undone. This is confirmed by the 'Select Hero' button going orange and inactive and the image border turning orange.
-
-### Selecting a Super Villain Opponent
-
-1. Once the user has confirmed their selection then the 'Select Villain' button changes colour from faded-out blue to bright blue indicating it's change from inactive to active status.
-
-2. When the user clicks the 'Select Villain' button a super villain is randomly selected as an opponent. Once a super villain has been selected it's category score is compared with the corresponding superhero category score that was selected and the result of the match is determined e.g. the user either wins, draws or loses.
-
-### The Result of the Match
-
-1. If the user wins then a 'Winner' message appears over the image of their super hero character and a 'Loser' message appears over the image of their super villain opponent. If the user loses then a 'Loser' message appears over the image of their super hero character and a 'Winner' message appears over the image of their super villain opponent. If the result is a draw then a 'Draw' message appears over both characters.
-
-2. This is followed by a pop up message which confirms the result of the match. If the user won then it informs them that they have gained an infinity stone. If they have lost then it informs them that they have lost an infinity stone.
-
-3. The user can remove the pop up message and return to the main page by clicking on the 'Play Again' button. This resets the game and updates the number of infinity the user has on the score counter at the top of the main page.
-
-### How to win the game
-
-1. In order to win the game the user must continue to play matches until they have collected all six infinity stones. This can be achieved playing a minimum of six matches (without drawing or losing) or more likely over more than six matches winning, drawing and losing thereby gaining, losing and regaining infinity stones until the target of six stones is reached.
-
-2. When the user obtains all six infinity stones a pop up message appears that says 'You are a Top Trumps Champion! You have collected all six infinity stones and won the game!' The user can click the 'Start Again' but to return to the game and start again.
+<div align="center">
+  <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
+    <img src="https://i.ibb.co/LRp7yCW/Avengers-Top-Trumps-start.png" alt="Avengers Top Trumps start">
+  </a>
+</div>
 
 ### Wireframes
+
+Wireframes for this project were created using [Balsamiq](https://balsamiq.com/) and can be found [here](https://github.com/TAHJones/avengers-top-trumps/tree/master/wireframes).
+
+
+#### Selecting a Superhero
+
+<div align="center">
+  <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
+    <img src="https://i.ibb.co/WsKCfV9/step1.png" alt="step 1">
+  </a>
+</div>
+
+The user must select a superhero. The user can navigate through the list of superheroes by either clicking on the dots beneath the image slider or by clicking on the navigation arrows at the bottom of the 'hero card'. A preview of each character is available by hovering over each of the dots. The list of superhero powers become available once the user begins to scroll through the list of superheroes.
+
+
+#### Selecting a Superpower
+
+<div align="center">
+  <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
+    <img src="https://i.ibb.co/DVjbxCq/step2.png" alt="step 2">
+  </a>
+</div>
+
+The user must select a superpower from the list of 6 superpower categories e.g. agility. When the user has selected a superpower category it turns orange and the 'Select Hero' button becomes active. This is indicated by the 'Select Hero' button changing colour from faded-out blue to bright blue indicating it's change from inactive to active status. At this point the user is still able to select another character by using the dot and arrow navigation buttons.
+
+
+#### Confirming the Superhero & Superpower Selection
+
+<div align="center">
+  <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
+    <img src="https://i.ibb.co/Rzf4zJQ/step3.png" alt="step 3">
+  </a>
+</div>
+
+Once the user clicks the 'Select Hero' button their character choice is confirmed and cannot be undone. This is confirmed by the 'Select Hero' button going orange and inactive and the image border turning orange. Once the user has confirmed their selection then the 'Select Villain' button changes colour from faded-out blue to bright blue indicating it's change from inactive to active status.
+
+
+#### Selecting a Super-villain Opponent
+ 
+<div align="center">
+  <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
+    <img src="https://i.ibb.co/TmX37Ts/step4.png" alt="step 4">
+  </a>
+</div>
+
+When the user clicks the 'Select Villain' button a super-villain is randomly selected as an opponent. The selected characters image, name and superpower category scores are displayed. The 'Select Villain' button, selected superpower category score and image border turn orange, 
+
+
+#### Displaying the Result of the Match - Part 1
+
+<div align="center">
+  <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
+  <img src="https://i.ibb.co/K9B7d8m/step5.png" alt="step 5">
+  </a>
+</div>
+
+Once a super villain has been selected it's category score is compared with the corresponding superhero category score that was selected and the result of the match is determined e.g. the user either wins, draws or loses. If the user wins then a 'Winner' message appears over the image of their super hero character and a 'Loser' message appears over the image of their super villain opponent. If the user loses then a 'Loser' message appears over the image of their super hero character and a 'Winner' message appears over the image of their super villain opponent. If the result is a draw then a 'Draw' message appears over both characters.
+
+
+#### Displaying the Result of the Match - Part 2
+
+<div align="center">
+  <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
+    <img src="https://i.ibb.co/8DGQsHs/step6.png" alt="step 6">
+  </a>
+</div>
+
+Shortly after the 'Winner', 'Loser' or 'Draw' messages appear a results modal is displayed which confirms the result of the match. If the user won then it informs them that they have gained an infinity stone. If they have lost then it informs them that they have lost an infinity stone. The user can remove the pop up message and return to the main page by clicking on the 'Play Again' button. This resets the game and updates the number of infinity stones the user has on the score counter at the top of the main page (not shown in the wireframes).
+
+
+#### How to win the game
+
+In order to win the game the user must continue to play matches until they have collected all six infinity stones. This can be achieved playing a minimum of six matches (without drawing or losing) or more likely over more than six matches winning, drawing and losing thereby gaining, losing and regaining infinity stones until the target of six stones is reached. When the user obtains all six infinity stones a pop up message appears that says 'You are a Top Trumps Champion! You have collected all six infinity stones and won the game!' The user can click the 'Start Again' but to return to the game and start again.
+
 
 Site overview on desktop, tablet and mobile
 ![Site overview on desktop, tablet and mobile](https://github.com/TAHJones/avengers-top-trumps/blob/master/wireframes/layout_overview.pdf)
@@ -83,7 +133,7 @@ Site overview on desktop, tablet and mobile
 Site navigation - steps 1-6
 ![Site navigation - steps 1-6](https://github.com/TAHJones/avengers-top-trumps/blob/master/wireframes/site_navigation_steps1-6.pdf)
 
-Wireframes for this project were created using [Balsamiq](https://balsamiq.com/) and can be found [here](https://github.com/TAHJones/avengers-top-trumps/tree/master/wireframes).
+
 
 ## Features
 

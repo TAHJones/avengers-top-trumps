@@ -56,7 +56,7 @@ Real Time Browser Testing was done on an extensive number of desktop, tablet and
 9. Restart the guide and navigate to the final screen. Click on the 'Done' button to check that this exits the guide.
 10. Click on the site dot or arrow buttons to check that this removes the 'Guide' button from the screen.
 
-##### Site Navigation - Forward and back arrows:
+##### Site Navigation - Forward and Back Arrows:
 
 1. Click on the forward navigation arrow to scroll through the list of available superheroes. Confirm that the hero image and superpower category scores are displayed correctly and the later is in an active state (light blue colour, goes white on hover).
 2. Repeat the same procedure for the back navigation arrow.
@@ -75,21 +75,21 @@ Real Time Browser Testing was done on an extensive number of desktop, tablet and
 2. Click on the 'detail', 'wiki' or 'comiclink' link to confirm it works.
 3. Click on the 'Return' button to confirm this closes the modal and returns the user to the game.
 
-##### Superhero superpower category scores
+##### Superhero Superpower Category Scores
 
 1. Click on a superhero superpower category score. Confirm that the selected category turns orange and the 'Select Hero' button becomes active (turns light blue colour, goes white on hover).
 2. Click on the arrow or dot navigation elements to confirm that the selected superpower category becomes deselected.
 3. Click on another superhero superpower category score. Confirm that the selected category turns orange and the 'Select Hero' button becomes active (turns light blue colour, goes white on hover).
 
-##### Select superhero Button
+##### Select Superhero Button
 
 1. Click on the 'Select Hero' button. Confirm that the button and the image border turns orange. Also confirm that the arrow and dot navigation elements disappear and the 'Select Villain' is in an active state (turns light blue colour, goes white on hover).
 
-##### Select super villain button
+##### Select Super Villain Button
 
 1. Click on the 'Select Villain' button. Confirm the villain name, image and superpower category scores are displayed and the selected category and 'Select Villain' button turns orange.
 
-##### Display Results - Image overlay and results modal
+##### Display Results - Image Overlay and Results Modal
 
 1. Confirm the hero and villain image overlays display the correct result.
 2. Confirm the results modal appears and displays the correct results title, image, infinity stone and results statement.
