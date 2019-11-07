@@ -51,10 +51,44 @@ The site was designed to meet these requirements in the following ways:
   </a>
 </div>
 
+
+
+
 ### Wireframes
 
 Wireframes for this project were created using [Balsamiq](https://balsamiq.com/) and can be found [here](https://github.com/TAHJones/avengers-top-trumps/tree/master/wireframes).
 
+#### Site Layout on Desktop, Tablet & Mobile Devices
+
+Desktop Layout:
+
+<div align="center">
+  <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
+    <img src="https://i.ibb.co/w4hFJLS/desktop.png" alt="desktop">
+  </a>
+</div>
+
+On the desktop layout both the hero and villain cards are visible and placed side by side. Both the dot and arrow navigation elements are available to select a superhero character.
+
+Tablet Layout:
+
+<div align="center">
+  <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
+    <img src="https://i.ibb.co/THrLWmC/tablet.png" alt="tablet layout">
+  </a>
+</div>
+
+On the tablet layout both the hero and villain cards are visible and placed side by side. The dot navigation elements are hidden because they are too small to use on smaller screens and only the arrows are available to select a superhero character.
+
+Mobile Layout:
+
+<div align="center">
+  <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
+    <img src="https://i.ibb.co/bF6ZMyz/mobile.png" alt="mobile layout">
+  </a>
+</div>
+
+On the mobile layout only the hero or villain card is visible at one time. Originally they were stacked on top of one another but this was changed to improve the UX experience. The dot navigation elements are hidden because they are too small to useon smaller screens and only the arrows are available to select a superhero character.
 
 #### Selecting a Superhero
 
