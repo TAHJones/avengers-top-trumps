@@ -156,7 +156,14 @@ Once a super villain has been selected it's category score is compared with the 
 
 Shortly after the 'Winner', 'Loser' or 'Draw' messages appear a results modal is displayed which confirms the result of the match. If the user won then it informs them that they have gained an infinity stone. If they have lost then it informs them that they have lost an infinity stone. The user can remove the pop up message and return to the main page by clicking on the 'Play Again' button. This resets the game and updates the number of infinity stones the user has on the score counter at the top of the main page (not shown in the wireframes).
 
-##### How to win the game
+##### Step 7 - How to Complete the Game
+
+<div align="center">
+  <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
+    <img src="https://i.ibb.co/stkf3mc/step7-png.png" alt="step7-png">
+  </a>
+</div>
+<br>
 
 In order to win the game the user must continue to play matches until they have collected all six infinity stones. This can be achieved playing a minimum of six matches (without drawing or losing) or more likely over more than six matches winning, drawing and losing thereby gaining, losing and regaining infinity stones until the target of six stones is reached. When the user obtains all six infinity stones a pop up message appears that says 'You are a Top Trumps Champion! You have collected all six infinity stones and won the game!' The user can click the 'Start Again' but to return to the game and start again.
 
