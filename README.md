@@ -1,9 +1,13 @@
 <h1 align="center">
-    <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank"><img src="https://i.ibb.co/h9S899m/avengers-tops-trumps-title.png" alt="avengers tops trumps title"></a>
+  <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
+    <img src="https://i.ibb.co/h9S899m/avengers-tops-trumps-title.png" alt="avengers tops trumps title">
+  </a>
 </h1>
 
 <div align="center">
-    <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank"><img src="https://i.ibb.co/hms1cQb/avengers-tops-trumps.png" alt="avengers tops trumps site"></a>
+  <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
+    <img src="https://i.ibb.co/z4vXwRL/avengers-tops-trumps-site.png" alt="avengers tops trumps site" >
+  </a>
 </div>
 
 ## Introduction
