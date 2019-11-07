@@ -69,7 +69,7 @@ Tablet Layout:
   </a>
 </div>
 
-On the tablet layout both the hero and villain cards are visible and placed side by side. The dot navigation elements are hidden because they are too small to use on smaller screens and only the arrows are available to select a superhero character.
+On the tablet layout both the hero and villain cards are visible and placed side by side. The dot navigation elements are hidden because they are too small to use on smaller screens so only the arrows are available to select a superhero character.
 
 Mobile Layout:
 
