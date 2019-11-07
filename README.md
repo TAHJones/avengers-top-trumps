@@ -62,6 +62,7 @@ Desktop Layout:
     <img src="https://i.ibb.co/w4hFJLS/desktop.png" alt="desktop">
   </a>
 </div>
+<br>
 
 On the desktop layout both the hero and villain cards are visible and placed side by side. Both the dot and arrow navigation elements are available to select a superhero character.
 
@@ -72,6 +73,7 @@ Tablet Layout:
     <img src="https://i.ibb.co/THrLWmC/tablet.png" alt="tablet layout">
   </a>
 </div>
+<br>
 
 On the tablet layout both the hero and villain cards are visible and placed side by side. The dot navigation elements are hidden because they are too small to use on smaller screens so only the arrows are available to select a superhero character.
 
@@ -82,6 +84,7 @@ Mobile Layout:
     <img src="https://i.ibb.co/bF6ZMyz/mobile.png" alt="mobile layout">
   </a>
 </div>
+<br>
 
 On the mobile layout only the hero or villain card is visible at one time. Originally they were stacked on top of one another (as in the wireframe above) but this was changed to improve the UX experience. The dot navigation elements are hidden because they are too small to use on smaller screens so only the arrows are available to select a superhero character.
 
@@ -98,7 +101,6 @@ On the mobile layout only the hero or villain card is visible at one time. Origi
 
 The user must select a superhero. The user can navigate through the list of superheroes by either clicking on the dots beneath the image slider or by clicking on the navigation arrows at the bottom of the 'hero card'. A preview of each character is available by hovering over each of the dots. The list of superhero powers become available once the user begins to scroll through the list of superheroes.
 
-
 ##### Step 2 - Selecting a Superpower
 
 <div align="center">
@@ -106,9 +108,9 @@ The user must select a superhero. The user can navigate through the list of supe
     <img src="https://i.ibb.co/DVjbxCq/step2.png" alt="step 2">
   </a>
 </div>
+<br>
 
 The user must select a superpower from the list of 6 superpower categories e.g. agility. When the user has selected a superpower category it turns orange and the 'Select Hero' button becomes active. This is indicated by the 'Select Hero' button changing colour from faded-out blue to bright blue indicating it's change from inactive to active status. At this point the user is still able to select another character by using the dot and arrow navigation buttons.
-
 
 ##### Step 3 - Confirming the Superhero & Superpower Selection
 
@@ -117,9 +119,9 @@ The user must select a superpower from the list of 6 superpower categories e.g. 
     <img src="https://i.ibb.co/Rzf4zJQ/step3.png" alt="step 3">
   </a>
 </div>
+<br>
 
 Once the user clicks the 'Select Hero' button their character choice is confirmed and cannot be undone. This is confirmed by the 'Select Hero' button going orange and inactive and the image border turning orange. Once the user has confirmed their selection then the 'Select Villain' button changes colour from faded-out blue to bright blue indicating it's change from inactive to active status.
-
 
 ##### Step 4 - Selecting a Super-villain Opponent
  
@@ -128,9 +130,9 @@ Once the user clicks the 'Select Hero' button their character choice is confirme
     <img src="https://i.ibb.co/TmX37Ts/step4.png" alt="step 4">
   </a>
 </div>
+<br>
 
 When the user clicks the 'Select Villain' button a super-villain is randomly selected as an opponent. The selected characters image, name and superpower category scores are displayed. The 'Select Villain' button, selected superpower category score and image border turn orange, 
-
 
 ##### Step 5 - Displaying the Result of the Match - Image Overlays
 
@@ -139,9 +141,9 @@ When the user clicks the 'Select Villain' button a super-villain is randomly sel
   <img src="https://i.ibb.co/K9B7d8m/step5.png" alt="step 5">
   </a>
 </div>
+<br>
 
 Once a super villain has been selected it's category score is compared with the corresponding superhero category score that was selected and the result of the match is determined e.g. the user either wins, draws or loses. If the user wins then a 'Winner' message appears over the image of their super hero character and a 'Loser' message appears over the image of their super villain opponent. If the user loses then a 'Loser' message appears over the image of their super hero character and a 'Winner' message appears over the image of their super villain opponent. If the result is a draw then a 'Draw' message appears over both characters.
-
 
 ##### Step 6 -  Displaying the Result of the Match - Results Modal
 
@@ -150,14 +152,13 @@ Once a super villain has been selected it's category score is compared with the 
     <img src="https://i.ibb.co/8DGQsHs/step6.png" alt="step 6">
   </a>
 </div>
+<br>
 
 Shortly after the 'Winner', 'Loser' or 'Draw' messages appear a results modal is displayed which confirms the result of the match. If the user won then it informs them that they have gained an infinity stone. If they have lost then it informs them that they have lost an infinity stone. The user can remove the pop up message and return to the main page by clicking on the 'Play Again' button. This resets the game and updates the number of infinity stones the user has on the score counter at the top of the main page (not shown in the wireframes).
-
 
 ##### How to win the game
 
 In order to win the game the user must continue to play matches until they have collected all six infinity stones. This can be achieved playing a minimum of six matches (without drawing or losing) or more likely over more than six matches winning, drawing and losing thereby gaining, losing and regaining infinity stones until the target of six stones is reached. When the user obtains all six infinity stones a pop up message appears that says 'You are a Top Trumps Champion! You have collected all six infinity stones and won the game!' The user can click the 'Start Again' but to return to the game and start again.
-
 
 Site overview on desktop, tablet and mobile
 ![Site overview on desktop, tablet and mobile](https://github.com/TAHJones/avengers-top-trumps/blob/master/wireframes/layout_overview.pdf)
