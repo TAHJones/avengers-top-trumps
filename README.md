@@ -94,6 +94,7 @@ On the mobile layout only the hero or villain card is visible at one time. Origi
     <img src="https://i.ibb.co/WsKCfV9/step1.png" alt="step 1">
   </a>
 </div>
+<br>
 
 The user must select a superhero. The user can navigate through the list of superheroes by either clicking on the dots beneath the image slider or by clicking on the navigation arrows at the bottom of the 'hero card'. A preview of each character is available by hovering over each of the dots. The list of superhero powers become available once the user begins to scroll through the list of superheroes.
 
