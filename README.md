@@ -79,7 +79,7 @@ Mobile Layout:
   </a>
 </div>
 
-On the mobile layout only the hero or villain card is visible at one time. Originally they were stacked on top of one another but this was changed to improve the UX experience. The dot navigation elements are hidden because they are too small to useon smaller screens and only the arrows are available to select a superhero character.
+On the mobile layout only the hero or villain card is visible at one time. Originally they were stacked on top of one another (as in the wireframe above) but this was changed to improve the UX experience. The dot navigation elements are hidden because they are too small to use on smaller screens so only the arrows are available to select a superhero character.
 
 #### How to Play Avengers Top Trumps - Steps 1-6
 
@@ -152,6 +152,15 @@ Shortly after the 'Winner', 'Loser' or 'Draw' messages appear a results modal is
 ##### How to win the game
 
 In order to win the game the user must continue to play matches until they have collected all six infinity stones. This can be achieved playing a minimum of six matches (without drawing or losing) or more likely over more than six matches winning, drawing and losing thereby gaining, losing and regaining infinity stones until the target of six stones is reached. When the user obtains all six infinity stones a pop up message appears that says 'You are a Top Trumps Champion! You have collected all six infinity stones and won the game!' The user can click the 'Start Again' but to return to the game and start again.
+
+
+Site overview on desktop, tablet and mobile
+![Site overview on desktop, tablet and mobile](https://github.com/TAHJones/avengers-top-trumps/blob/master/wireframes/layout_overview.pdf)
+
+Site navigation - steps 1-6
+![Site navigation - steps 1-6](https://github.com/TAHJones/avengers-top-trumps/blob/master/wireframes/site_navigation_steps1-6.pdf)
+
+
 
 ## Features
 
