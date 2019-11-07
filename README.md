@@ -45,15 +45,6 @@ The site was designed to meet these requirements in the following ways:
 
 5. When the user selects a superhero character they can click on the 'More Info' button to open the Marvel API modal which displays information about the selected character. This includes their name, image, a description (when available) and a series of links to the marvel website for further character information. This connects the game to the wider Marvel film/comic book universe adding a sense of depth to the superhero characters being selected and allowing the user to learn more about the characters if they wish.
 
-<div align="center">
-  <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
-    <img src="https://i.ibb.co/LRp7yCW/Avengers-Top-Trumps-start.png" alt="Avengers Top Trumps start">
-  </a>
-</div>
-
-
-
-
 ### Wireframes
 
 Wireframes for this project were created using [Balsamiq](https://balsamiq.com/) and can be found [here](https://github.com/TAHJones/avengers-top-trumps/tree/master/wireframes).
