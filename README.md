@@ -160,7 +160,7 @@ Shortly after the 'Winner', 'Loser' or 'Draw' messages appear a results modal is
 
 <div align="center">
   <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
-    <img src="https://i.ibb.co/stkf3mc/step7-png.png" alt="step7-png">
+    <img src="https://i.ibb.co/stkf3mc/step7-png.png" alt="step 7">
   </a>
 </div>
 <br>
