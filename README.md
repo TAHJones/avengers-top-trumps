@@ -81,6 +81,8 @@ Mobile Layout:
 
 On the mobile layout only the hero or villain card is visible at one time. Originally they were stacked on top of one another but this was changed to improve the UX experience. The dot navigation elements are hidden because they are too small to useon smaller screens and only the arrows are available to select a superhero character.
 
+#### How to Play Avengers Top Trumps - Steps 1-6
+
 #### Selecting a Superhero
 
 <div align="center">
