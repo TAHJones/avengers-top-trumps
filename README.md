@@ -6,7 +6,7 @@
 
 <div align="center">
   <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
-    <img src="https://i.ibb.co/DQ62XW0/avengers-top-trumps-site.png" alt="avengers top trumps site">
+    <img src="https://i.ibb.co/99Sp6yH/avengers-tops-trumps-site.png" alt="avengers top trumps site">
   </a>
 </div>
 
