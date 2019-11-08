@@ -17,6 +17,8 @@ The following validation services and linters were used to check the code for th
 
 ### Jasmine
 
+54 test were run using Jasmine, all passed:
+
 <div align="center">
   <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
     <img src="https://i.ibb.co/5Gd9gNg/jasmine-testing.png" alt="jasmine testing">
