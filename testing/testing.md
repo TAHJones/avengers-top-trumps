@@ -17,8 +17,14 @@ The following validation services and linters were used to check the code for th
 
 ### Jasmine
 
-Approximately 50% of this projects functions have been tested with [Jasmine 3.3](https://jasmine.github.io/index.html).  
+<div align="center">
+  <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
+    <img src="https://i.ibb.co/5Gd9gNg/jasmine-testing.png" alt="jasmine testing">
+  </a>
+</div>
+<br>
 
+Approximately 50% of this projects functions have been tested with [Jasmine 3.3](https://jasmine.github.io/index.html).
 When I reorganized the entire javascript code and modified most of the functions, the majority of the Jasmine testing was rewritten to reflect this. However the original mock AJAX testing remains in place even though this method has been replaced by the fetch method.
 
 I found implementing Jasmine testing and TTD principles to be the most challenging aspect of this project. Being relative inexperienced with Javascript and completely new to Jasmine and Test Driven Development (TDD) I would often focus on getting the javascript to work first, then optimise my code, then finally implementing Jasmine testing. This would often require me to retrace my steps and rebuild my code for the purposes of testing.
