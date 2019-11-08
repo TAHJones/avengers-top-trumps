@@ -165,6 +165,13 @@ Shortly after the 'Winner', 'Loser' or 'Draw' messages appear a results modal is
 </div>
 <br>
 
+<div align="center">
+  <a href="https://tahjones.github.io/avengers-top-trumps/" target="_blank">
+    <img src="https://i.ibb.co/m6ckjsF/step7b.png" alt="step 7">
+  </a>
+</div>
+<br>
+
 In order to win the game the user must continue to play matches until they have collected all six infinity stones. This can be achieved playing a minimum of six matches (without drawing or losing) or more likely over more than six matches winning, drawing and losing thereby gaining, losing and regaining infinity stones until the target of six stones is reached. When the user obtains all six infinity stones a pop up message appears that says 'You are a Top Trumps Champion! You have collected all six infinity stones and won the game!' The user can click the 'Start Again' but to return to the game and start again.
 
 ## Features
